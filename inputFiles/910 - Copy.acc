@@ -1,0 +1,33 @@
+Begin Header
+	instrument = Wavetek 910
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 1.1 $
+
+	# Wavetek (Fluke) 910 Stable Frequency Reference
+	# Amplitude: Sine >0.6 Vrms in 50 Ohms
+	# Frequency Accuracy (assumes unit is locked to GPS): <2 x 10E-12
+
+Mode: Timebase
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    2.0E-10     0        NA
+
+Mode: AC-DC
+
+        # NOMINAL                 MOD1            Tolerance Floor   Resolution
+        # ----------------------- --------------- --------- ------- ----------
+
+        -1.1                1.1   NA     NA       NA        NA      NA
+         500e-3             1.1   5      9.99     NA        NA      NA
+         500e-3             1.1   10     19.999   0.004     0       NA
+         500e-3             1.1   20     39.999   0.004     0       NA
+         500e-3             1.1   40     1e3      0.0025    0       NA
+         500e-3             1.1   1e3    5e3      0.0025    0       NA
+         500e-3             1.1   5e3    10e3     0.003     0       NA
+         500e-3             1.1   10e3   20e3     0.0045    0       NA
+         500e-3             1.1   20e3   50e3     0.01      0       NA
+         500e-3             1.1   50e3   100e3    0.019     0       NA
