@@ -1,0 +1,361 @@
+Begin Header
+	instrument = HP 33120A
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# These specifications are valid after a warming-up time of
+	# 30 minutes (reference temperature 23 degC) and for a
+	# termination of the signal output with 50 Ohms.
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Frequency #####
+
+	# MOD1 limits are union of Vpp and Vrms limits.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Hertz
+
+	100e-6  15e6        3.3e-3   20       10e-4  0       NA     
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### DC Volts #####
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Volts L
+
+	# 50 Ohm terminated
+
+	 -5      5          NA       NA       2      2e-3    NA   
+
+Mode: Volts
+
+	# Open-circuit
+
+	 -10     10         NA       NA       2      4e-3    NA   
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Sine Wave #####
+
+	# Vrms and dBm are converted to Vpp for lookup.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp SI L
+
+	# 50 Ohm terminated
+
+    50e-3    2.999      1e+3     1e+3     1.0    0       NA
+    50e-3    2.999      100e+3   1e+6     2.5    0       NA
+    50e-3    2.999      100e-6   100e+3   2.0    0       NA
+    50e-3    2.999      1e+6     15e+6    4.5    0       NA
+
+    3        10         1e+3     1e+3     1.0    0       NA
+    3        10         100e+3   1e+6     2.5    0       NA
+    3        10         100e-6   100e+3   2.0    0       NA
+    3        10         1e+6     15e+6    3.0    0       NA
+
+Mode: Vpp SI 
+
+	# Open-circuit
+
+    100e-3   5.999      1e+3     1e+3     1.0    0       NA
+    100e-3   5.999      100e+3   1e+6     2.5    0       NA
+    100e-3   5.999      100e-6   100e+3   2.0    0       NA
+    100e-3   5.999      1e+6     15e+6    4.5    0       NA
+
+    6        20         1e+3     1e+3     1.0    0       NA
+    6        20         100e+3   1e+6     2.5    0       NA
+    6        20         100e-6   100e+3   2.0    0       NA
+    6        20         1e+6     15e+6    3.0    0       NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Square Wave #####
+
+	# Vrms is converted to Vpp for lookup.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp SQ L
+
+	# 50 Ohm terminated
+
+    50e-3    2.999      1e+3     1e+3     3.0    0       NA
+    50e-3    2.999      100e+3   1e+6     4.5    0       NA
+    50e-3    2.999      100e-6   100e+3   4.0    0       NA
+    50e-3    2.999      1e+6     15e+6    6.5    0       NA
+
+    3        10         1e+3     1e+3     3.0    0       NA
+    3        10         100e+3   1e+6     4.5    0       NA
+    3        10         100e-6   100e+3   4.0    0       NA
+    3        10         1e+6     15e+6    6.0    0       NA
+
+Mode: Vpp SQ
+
+	# Open-circuit
+
+    100e-3   5.999      1e+3     1e+3     3.0    0       NA
+    100e-3   5.999      100e+3   1e+6     4.5    0       NA
+    100e-3   5.999      100e-6   100e+3   4.0    0       NA
+    100e-3   5.999      1e+6     15e+6    6.5    0       NA
+
+    6        20         1e+3     1e+3     3.0    0       NA
+    6        20         100e+3   1e+6     4.5    0       NA
+    6        20         100e-6   100e+3   4.0    0       NA
+    6        20         1e+6     15e+6    6.0    0       NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Triangle Wave #####
+
+	# Vrms is converted to Vpp for lookup.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp TI L
+
+	# 50 Ohm terminated
+
+    50e-3    10         1e+3     1e+3     1.0    0       NA
+    50e-3    10         100e+3   100e+3   2.5    0       NA
+    50e-3    10         100e-6   100e+3   2.0    0       NA
+
+Mode: Vpp TI
+
+	# Open-circuit
+
+    100e-3   20         1e+3     1e+3     1.0    0       NA
+    100e-3   20         100e+3   100e+3   2.5    0       NA
+    100e-3   20         100e-6   100e+3   2.0    0       NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Ramp Wave #####
+
+	# Vrms is converted to Vpp for lookup.
+	# MOD1 goes to 5MHz for negative ramp (arbitrary waveform)
+	# Positive ramp is restricted to 100kHz.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp RP L
+
+	# 50 Ohm terminated
+
+    50e-3    2.999      1e+3     1e+3     1.0    0       NA
+    50e-3    2.999      100e+3   1e+6     2.5    0       NA
+    50e-3    2.999      100e-6   100e+3   2.0    0       NA
+    50e-3    2.999      1e+6     5e+6     4.5    0       NA
+
+    3        10         1e+3     1e+3     1.0    0       NA
+    3        10         100e+3   1e+6     2.5    0       NA
+    3        10         100e-6   100e+3   2.0    0       NA
+    3        10         1e+6     5e+6     3.0    0       NA
+
+Mode: Vpp RP
+
+	# Unterminated, not spec'd
+
+    100e-3   5.999      1e+3     1e+3     1.0    0       NA
+    100e-3   5.999      100e+3   1e+6     2.5    0       NA
+    100e-3   5.999      100e-6   100e+3   2.0    0       NA
+    100e-3   5.999      1e+6     5e+6     4.5    0       NA
+
+    6        20         1e+3     1e+3     1.0    0       NA
+    6        20         100e+3   1e+6     2.5    0       NA
+    6        20         100e-6   100e+3   2.0    0       NA
+    6        20         1e+6     5e+6     3.0    0       NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Exponential Wave #####
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp EXP L
+
+	# 50 Ohm terminated
+
+    50e-3    2.999      1e+3     1e+3     1.0    0       NA
+    50e-3    2.999      100e+3   1e+6     2.5    0       NA
+    50e-3    2.999      100e-6   100e+3   2.0    0       NA
+    50e-3    2.999      1e+6     5e+6     4.5    0       NA
+
+    3        10         1e+3     1e+3     1.0    0       NA
+    3        10         100e+3   1e+6     2.5    0       NA
+    3        10         100e-6   100e+3   2.0    0       NA
+    3        10         1e+6     5e+6     3.0    0       NA
+
+Mode: Vpp EXP 
+
+	# Open circuit
+
+    100e-3   5.999      1e+3     1e+3     1.0    0       NA
+    100e-3   5.999      100e+3   1e+6     2.5    0       NA
+    100e-3   5.999      100e-6   100e+3   2.0    0       NA
+    100e-3   5.999      1e+6     5e+6     4.5    0       NA
+
+    6        20         1e+3     1e+3     1.0    0       NA
+    6        20         100e+3   1e+6     2.5    0       NA
+    6        20         100e-6   100e+3   2.0    0       NA
+    6        20         1e+6     5e+6     3.0    0       NA
+
+Mode: Volts EXP L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    11.84e-3 2.366      100e-6   5e+6     NA     NA      NA
+
+Mode: Volts EXP
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    23.68e-3 4.732      100e-6   15e+6    NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Sync Wave #####
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp SY L
+
+	# 50 Ohm terminated
+
+    30.42e-3 2.999      1e+3     1e+3     1.0    0       NA
+    30.42e-3 2.999      100e+3   1e+6     2.5    0       NA
+    30.42e-3 2.999      100e-6   100e+3   2.0    0       NA
+    30.42e-3 2.999      1e+6     5e+6     4.5    0       NA
+
+    3        6.084      1e+3     1e+3     1.0    0       NA
+    3        6.084      100e+3   1e+6     2.5    0       NA
+    3        6.084      100e-6   100e+3   2.0    0       NA
+    3        6.084      1e+6     5e+6     3.0    0       NA
+
+Mode: Vpp SY 
+
+	# Open-circuit
+
+    60.85e-3 5.999      1e+3     1e+3     1.0    0       NA
+    60.85e-3 5.999      100e+3   1e+6     2.5    0       NA
+    60.85e-3 5.999      100e-6   100e+3   2.0    0       NA
+    60.85e-3 5.999      1e+6     5e+6     4.5    0       NA
+
+    6        12.16      1e+3     1e+3     1.0    0       NA
+    6        12.16      100e+3   1e+6     2.5    0       NA
+    6        12.16      100e-6   100e+3   2.0    0       NA
+    6        12.16      1e+6     5e+6     3.0    0       NA
+
+Mode: Volts SY L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    3.90e-3  778.2e-3   100e-6   5e+6     NA     NA      NA
+
+Mode: Volts SY
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    7.78e-3  1.555      100e-6   15e+6    NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Cardiac Wave #####
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp CD L
+
+	# 50 Ohm terminated
+
+    31.73e-3 2.999      1e+3     1e+3     1.0    0       NA
+    31.73e-3 2.999      100e+3   1e+6     2.5    0       NA
+    31.73e-3 2.999      100e-6   100e+3   2.0    0       NA
+    31.73e-3 2.999      1e+6     5e+6     4.5    0       NA
+
+    3        6.345      1e+3     1e+3     1.0    0       NA
+    3        6.345      100e+3   1e+6     2.5    0       NA
+    3        6.345      100e-6   100e+3   2.0    0       NA
+    3        6.345      1e+6     5e+6     3.0    0       NA
+
+Mode: Vpp CD 
+
+	# Open-circuit
+
+    63.46e-3 5.999      1e+3     1e+3     1.0    0       NA
+    63.46e-3 5.999      100e+3   1e+6     2.5    0       NA
+    63.46e-3 5.999      100e-6   100e+3   2.0    0       NA
+    63.46e-3 5.999      1e+6     5e+6     4.5    0       NA
+
+    6        12.68      1e+3     1e+3     1.0    0       NA
+    6        12.68      100e+3   1e+6     2.5    0       NA
+    6        12.68      100e-6   100e+3   2.0    0       NA
+    6        12.68      1e+6     5e+6     3.0    0       NA
+
+Mode: Volts CD L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    3.30e-3  659.2e-3   100e-6   5e+6     NA     NA      NA
+
+Mode: Volts CD
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    6.59e-3  1.317      100e-6   15e+6    NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Noise #####
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp OI L
+
+	# 50 Ohm terminated
+
+    50.0e-3  10         NA       NA       NA     NA      NA
+
+Mode: Vpp OI 
+
+	# Open-circuit 
+
+    100e-3   20         NA       NA       NA     NA      NA
+
+Mode: Volts OI L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    6.09e-3  1.217      NA       NA       NA     NA      NA
+
+Mode: Volts OI
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    12.18e-3 2.434      NA       NA       NA     NA      NA

@@ -1,0 +1,149 @@
+Begin Header
+	instrument = Wavetek 901
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 9490 $
+
+Mode: Timebase
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    7.0E-4     0        NA
+   
+Mode: Timebase PM9678B
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    7.0E-5     0        NA
+   
+Mode: Timebase PM9691
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-5     0        NA
+   
+Mode: Timebase PM9692
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    2.5E-6     0        NA
+   
+Mode: Timebase PM6681R
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    2.5E-8     0        NA
+   
+	# Note:
+	# LSD displayed is calculated LSD, rounded to the nearest
+	# decade value.
+	# Resolution is 1 LSD.
+	# Accuracy as percent of nominal = crystal accuracy = 5e-6/year.
+	# Floor spec is 1 LSD.
+
+	# Calculated LSD: 500e-12 * FREQ/MEAS.TIME
+
+Mode: Hertz FA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	1e-10     300e6           0.06 100   NA         NA       NA
+   
+Mode: Hertz FC (PM 9621)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	70e6      900e6           10e-3  12  NA         NA       NA    
+	900e6     1.1e9           15e-3  12  NA         NA       NA    
+	1.1e9     1.3e9           40e-3  12  NA         NA       NA
+     
+Mode: Hertz FC (PM 9624)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+ 	100e6     300e6           20e-3  12  NA         NA       NA     
+ 	300e6     2.5e9           10e-3  12  NA         NA       NA     
+ 	2.5e9     2.7e9           20e-3  12  NA         NA       NA     
+     
+Mode: Hertz FC (PM 9625)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+ 	150e6     300e6           20e-3  1   NA         NA       NA     
+ 	300e6     2.5e9           10e-3  1   NA         NA       NA     
+ 	2.5e9     3.7e9           15e-3  1   NA         NA       NA     
+ 	3.7e9     4.2e9           20e-3  1   NA         NA       NA     
+ 	4.2e9     4.5e9           50e-3  1   NA         NA       NA     
+     
+Mode: Hertz FC (PM 9638)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+ 	300e6     500e6           20e-3  7   NA         NA       NA     
+ 	500e6     3.0e9           10e-3  7   NA         NA       NA     
+ 	3.0e9     4.5e9           20e-3  7   NA         NA       NA     
+ 	4.5e9     6.0e9           40e-3  7   NA         NA       NA     
+ 	6.0e9     8.0e9           80e-3  7   NA         NA       NA     
+     
+Mode: Hertz FR
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	10e-9    10e15            0.06 100   NA         NA       NA
+
+Mode: Seconds PA
+
+	# Calculated LSD: 500e-12 * PERIOD/MEAS.TIME
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	6e-9     1e10             0.06 100   NA         NA       NA    
+
+Mode: Seconds TI
+
+	# Resolution depends on the pulse repetition rate, which
+	# is not known when the time-interval measurement is made.
+	# LSD = 500ps / sqrt(N)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0        1e10             0.06 100   NA         NA       NA    
+
+Mode: Degrees PR
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	-180     360              0.01 160e6 NA         NA       NA     
+
+Mode: Seconds WA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	3e-9     1e10             120e-3 140 NA         NA       NA     
+
+Mode: Duty Factor
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0        1                0.01 160e6 NA         NA       NA     
+
+Mode: Seconds RF
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	3e-9     1e10             60e-3 70   NA         NA       NA     
+
+Mode: Volts MX MN
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	-51      51               NA   NA    NA         NA       NA     
+	-51      51               1    100e6 NA         NA       NA     
+
+Mode: Vpp PP
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	-51      51               1    100e6 NA         NA       NA     

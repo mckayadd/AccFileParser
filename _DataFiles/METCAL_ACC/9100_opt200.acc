@@ -1,0 +1,28 @@
+Begin Header
+	instrument = Datron 9100 Opt200
+	interval   = 365 days
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 9490 $
+
+	# General Specifications
+	# Model 9100
+	# Option 200: x10/x50 Current Coils
+	# 85094-1.1
+
+Mode: 10-Turn
+
+	# Amp-turns                Hertz            Tol.   Floor    Res.
+	# -----------------------  ---------------  -----  -------  -----
+	-200          200          NA     NA        0.2    0.0      NA
+	 0            200          10     500       0.2    0.0      NA
+	 0            200          0      1E+6      NA     NA       NA
+
+Mode: 50-Turn
+
+	# Amp-turns                Hertz            Tol.   Floor    Res.
+	# -----------------------  ---------------  -----  -------  -----
+    -1000         1000         NA     NA        0.2    0.0      NA
+	 0            1000         10     500       0.2    0.0      NA
+	 0            1000         0      1E+6      NA     NA       NA

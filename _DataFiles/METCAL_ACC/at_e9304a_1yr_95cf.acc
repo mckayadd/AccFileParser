@@ -1,0 +1,213 @@
+Begin Header
+              Instrument  = Agilent E9304A
+              Interval    = 365 days
+              Confidence  = 2 sigma
+End Header
+
+# $Revision: 10961 $
+#
+# This file contains Specifications for the Equipment and Parameters
+# identified within the Header above.
+#
+# Source(s):
+# Operating and Service Guide, Agilent E-Series E9300 Power Sensors,
+# Manual Part Number E9300-90016, Sixth Edition, April 19, 2011
+#
+# User's and Service Guide Supplement, Agilent E9300A Option H24,
+# Part Number E9300-90023, April 18, 2011
+#
+# User's and Service Guide Supplement, Agilent E9300A Option H25,
+# Part Number E9300-90028, April 18, 2011
+#
+# Email from Agilent Tech Support, December 20, 2011, Case ID# 4005643572
+# "The specification for the H25's linearity is the same as the standard
+# E9300A, except that the specifications for the power levels is 10 dB
+# higher than the standard sensor."
+#
+#                           Frequency R     9.0E+3to     6.0E+9Hz
+#                             Opt H18:      9.0E+3to    18.0E+9Hz
+#                             Opt H19:      9.0E+3to    18.0E+9Hz
+#
+#                           Power Range     1.0E-9to   100.0E-3W
+#                             Opt H18:      1.0E-9to   100.0E-3W
+#                             Opt H19:     10.0E-9to        1.0W
+#
+# Specifications are valid with EPM and EPM-P Series of Power Meters and are
+# in conjunction with and/or in addition to those of the power meter utilized.
+#
+# ============================================================================
+# Cal Factor Uncertainty
+#
+# Values represent maximum specified uncertainties from the manufacturer.
+#
+# Per Agilent: Cal factor measurement uncertainty for a test frequency between
+# two (explicitly specified) cal factor frequencies is the worst case uncertainty
+# of the two cal frequency points on either side of the test frequency.
+
+Mode: CF Unc
+
+# Power (W)                 Frequency (Hz)            Tol (%)     Floor   Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-9    100.0E-3      50.0E+6    50.0E+6         0.00          0         NA
+
+        1.0E-9    100.0E-6       9.0E+3    10.0E+6         1.70          0         NA
+        1.0E-9    100.0E-6      10.0E+6    30.0E+6         1.70          0         NA
+        1.0E-9    100.0E-6      30.0E+6   500.0E+6         1.70          0         NA
+        1.0E-9    100.0E-6     500.0E+6     1.2E+9         1.70          0         NA
+        1.0E-9    100.0E-6       1.2E+9     6.0E+9         1.70          0         NA
+
+      100.0E-6    100.0E-3       9.0E+3    10.0E+6         2.00          0         NA
+      100.0E-6    100.0E-3      10.0E+6    30.0E+6         2.00          0         NA
+      100.0E-6    100.0E-3      30.0E+6   500.0E+6         2.00          0         NA
+      100.0E-6    100.0E-3     500.0E+6   1.199E+9         2.20          0         NA
+      100.0E-6    100.0E-3       1.2E+9     6.0E+9         1.80          0         NA
+
+
+
+Mode: CF Unc OptH18
+
+# Power (W)                 Frequency (Hz)            Tol (%)     Floor   Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-9    100.0E-3      50.0E+6    50.0E+6         0.00          0         NA
+
+        1.0E-9    100.0E-6       9.0E+3     6.0E+9         1.70          0         NA
+        1.0E-9    100.0E-6       6.0E+9    14.0E+9         1.80          0         NA
+        1.0E-9    100.0E-6      14.0E+9    18.0E+9         2.00          0         NA
+
+      100.0E-6    100.0E-3       9.0E+3   500.0E+6         2.00          0         NA
+      100.0E-6    100.0E-3     500.0E+6   1.199E+9         2.20          0         NA
+      100.0E-6    100.0E-3       1.2E+9     6.0E+9         1.80          0         NA
+      100.0E-6    100.0E-3       6.0E+9    14.0E+9         1.90          0         NA
+      100.0E-6    100.0E-3      14.0E+9    18.0E+9         2.20          0         NA
+
+Mode: CF Unc OptH19
+
+# Power (W)                 Frequency (Hz)            Tol (%)     Floor   Resolution
+# ------------------------  ----------------------  ---------------------------------
+       10.0E-9         1.0      50.0E+6    50.0E+6         0.00          0         NA
+
+       10.0E-9      1.0E-3       9.0E+3     6.0E+9         2.00          0         NA
+       10.0E-9      1.0E-3       6.0E+9    14.0E+9         2.00          0         NA
+       10.0E-9      1.0E-3      14.0E+9    18.0E+9         2.20          0         NA
+
+        1.0E-3         1.0       9.0E+3   500.0E+6         3.50          0         NA
+        1.0E-3         1.0     500.0E+6   1.199E+9         4.50          0         NA
+        1.0E-3         1.0       1.2E+9     6.0E+9         2.60          0         NA
+        1.0E-3         1.0       6.0E+9    14.0E+9         2.80          0         NA
+        1.0E-3         1.0      14.0E+9    18.0E+9         3.80          0         NA
+
+# ============================================================================
+# Maximum SWR
+#
+# Floor value represents maximum (worst case) specified SWR value for adjacent
+# frequency.
+
+Mode: SWR
+
+# Frequency (Hz)            (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+        9.0E+3      2.0E+9           NA         NA            0       1.13         NA
+        2.0E+9      6.0E+9           NA         NA            0       1.19         NA
+
+Mode: SWR OptH18
+
+# Frequency (Hz)            (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+        9.0E+3      2.0E+9           NA         NA            0       1.13         NA
+        2.0E+9     14.0E+9           NA         NA            0       1.19         NA
+       14.0E+9     16.0E+9           NA         NA            0       1.22         NA
+       16.0E+9     18.0E+9           NA         NA            0       1.26         NA
+
+Mode: SWR OptH19
+
+# Frequency (Hz)            (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+        9.0E+3      8.0E+9           NA         NA            0       1.15         NA
+        8.0E+9     12.4E+9           NA         NA            0       1.25         NA
+       12.4E+9     18.0E+9           NA         NA            0       1.28         NA
+
+# ============================================================================
+# Power Linearity Adder
+#
+# Additional error due to non-linearity of the sensor relative to input power
+# level after zero and calibration at ambient environmental conditions.
+
+Mode: PwrLin
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-9   99.999E-6           NA         NA         3.00          0         NA
+      100.0E-6   999.99E-6           NA         NA         2.50          0         NA
+        1.0E-3    100.0E-3           NA         NA         2.00          0         NA
+
+Mode: PwrLin OptH19
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+       10.0E-9  999.990E-6           NA         NA         3.00          0         NA
+        1.0E-3   10.000E-3           NA         NA         2.50          0         NA
+       10.0E-3         1.0           NA         NA         2.00          0         NA
+
+# ============================================================================
+# Zero Set
+#
+# Precision or floor of the power meter zeroing operation with the sensor
+# connected.
+
+Mode: ZeroSet
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-9    100.0E-6           NA         NA            0  500.0E-12         NA
+      100.0E-6    100.0E-3           NA         NA            0   500.0E-9         NA
+
+Mode: ZeroSet OptH19
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+       10.0E-6      1.0E-3           NA         NA            0     5.0E-9         NA
+        1.0E-3         1.0           NA         NA            0     5.0E-6         NA
+
+# ============================================================================
+# Zero Drift
+#
+# Long-term (typically an hour) stability for a constant input power at a
+# constant temperature following a defined warm-up time.
+
+Mode: ZeroDrift
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-9    100.0E-6           NA         NA            0  150.0E-12         NA
+      100.0E-6    100.0E-3           NA         NA            0   150.0E-9         NA
+
+Mode: ZeroDrift OptH19
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+       10.0E-6      1.0E-3           NA         NA            0     1.5E-9         NA
+        1.0E-3         1.0           NA         NA            0     1.5E-6         NA
+
+# ============================================================================
+# Measurement Noise
+#
+# Short-term (typically less than a minute) stability for a constant input
+# power at a constant temperature following a defined warm-up time.
+#
+# Specified with power meter number of averages at 16 (Normal Mode) or
+# 32 (x2 Mode), at room temperature, measured over a one minute interval and
+# two standard deviations.
+
+Mode: Noise
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-9    100.0E-6           NA         NA            0  700.0E-12         NA
+      100.0E-6    100.0E-3           NA         NA            0   500.0E-9         NA
+
+Mode: Noise OptH19
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+       10.0E-6      1.0E-3           NA         NA            0     7.0E-9         NA
+        1.0E-3         1.0           NA         NA            0     5.0E-6         NA

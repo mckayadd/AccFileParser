@@ -1,0 +1,50 @@
+Begin Header
+	instrument = Fluke 5450A
+	interval   = 365 days
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# 23 +/- 5 degC.
+
+Mode: Ohms 2W
+
+        # 2-Wire connections to become accurate at 10 kOhms
+
+        #      Nominal            Mod 1  Tolerance Floor  Resolution
+        # ------------------   --------- -------- ------- ----------
+
+        0          19.00095e3    NA  NA   NA         NA      NA
+        99.995e3   100.005e3     NA  NA   0.0014     0       NA
+        189.9905e3 190.0095e3    NA  NA   0.00135    0       NA
+        0.99995e6  1.00005e6     NA  NA   0.0019     0       NA
+        1.899905e6 1.900095e6    NA  NA   0.0019     0       NA
+        9.9990e6   10.001e6      NA  NA   0.005      0       NA
+        18.9981e6  19.0019e6     NA  NA   0.0056     0       NA
+        99.95e6    100.05e6      NA  NA   0.02       0       NA
+
+
+Mode: Ohms 4W
+
+        #      Nominal            Mod 1  Tolerance Floor  Resolution
+        # ------------------   --------- -------- ------- ----------
+
+        0          0.0001        NA  NA   0          0.0001  NA
+        0.999      1.001         NA  NA   0.011      0       NA
+        1.8981     1.9019        NA  NA   0.01       0       NA
+        9.995      10.005        NA  NA   0.0033     0       NA
+        18.9905    19.0095       NA  NA   0.0031     0       NA
+        99.9825    100.0175      NA  NA   0.0016     0       NA
+        189.9715   190.0285      NA  NA   0.00155    0       NA
+        0.9999e3   1.0001e3      NA  NA   0.00135    0       NA
+        1.89981e3  1.90019e3     NA  NA   0.0013     0       NA
+        9.9994e3   10.0006e3     NA  NA   0.0013     0       NA
+        18.99905e3 19.00095e3    NA  NA   0.00125    0       NA
+        99.995e3   100.005e3     NA  NA   0.0014     0       NA
+        189.9905e3 190.0095e3    NA  NA   0.00135    0       NA
+        0.99995e6  1.00005e6     NA  NA   0.0019     0       NA
+        1.899905e6 1.900095e6    NA  NA   0.0019     0       NA
+        9.999e6    10.001e6      NA  NA   0.005      0       NA
+        18.9981e6  19.0019e6     NA  NA   0.0056     0       NA
+        99.95e6    100.05e6      NA  NA   0.02       0       NA

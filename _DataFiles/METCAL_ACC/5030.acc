@@ -1,0 +1,134 @@
+Begin Header
+	instrument = Tektronix SG5030
+	interval   = 90 days
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the Tek 
+	# SG5030 Programmable Leveled Since Wave generator.
+	# The amplitude values and accuracies are in volts
+	# PEAK-TO-PEAK!
+
+	# These appear to be 1-year specs. The manual really doesn't say,
+	# but comments in the manual by the timebase spec. indicate
+	# 1 year.
+
+Mode: Hertz
+
+	#      Nominal         Mod 1      Tolerance  Floor  Resolution
+	# ----------------  ------------- ---------  ------- ----------
+
+	  0.1     4.9999e3   4.5e-3   5.5   0.0003    0.06    0.1
+	  5e3     49.999e3   4.5e-3   5.5   0.0003    0.3     1
+	  50e3    550e6      4.5e-3   5.5   0.0003    3       10
+
+Mode: Vpp
+
+	#      Nominal         Mod 1   Tolerance Floor Resolution
+	# --------------- --------------  ----      ---    -----
+	  4.5e-3   55e-3  0.1     50e3    1.5       0      0.02e-3
+	  55e-3    550e-3 0.1     50e3    1.5       0      0.2e-3
+	  550e-3   5.5    0.1     50e3    1.5       0      2e-3
+	  4.5e-3   55e-3  50e3    100e6   1.5       0      0.02e-3
+	  55e-3    550e-3 50e3    100e6   1.5       0      0.2e-3
+	  550e-3   5.5    50e3    100e6   1.5       0      2e-3
+	  4.5e-3   55e-3  100e6   250e6   3         0      0.02e-3
+	  55e-3    550e-3 100e6   250e6   3         0      0.2e-3
+	  550e-3   5.5    100e6   250e6   3         0      2e-3
+	  4.5e-3   55e-3  250e6   550e6   4         0      0.02e-3
+	  55e-3    550e-3 250e6   550e6   4         0      0.2e-3
+	  550e-3   5.5    250e6   550e6   4         0      2e-3
+
+Mode: Vpp CH1
+
+	# Signal is routed through the 5800A or 5820A Ch 1 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+
+	#      Nominal         Mod 1   Tolerance Floor Resolution
+	# --------------- --------------  ----      ---    -----
+	  4.5e-3   55e-3  0.1     50e3    NA        NA     0.02e-3
+	  55e-3    550e-3 0.1     50e3    NA        NA     0.2e-3
+	  550e-3   5.5    0.1     50e3    NA        NA     2e-3
+	  4.5e-3   55e-3  50e3    100e6   NA        NA     0.02e-3
+	  55e-3    550e-3 50e3    100e6   NA        NA     0.2e-3
+	  550e-3   5.5    50e3    100e6   NA        NA     2e-3
+	  4.5e-3   55e-3  100e6   250e6   NA        NA     0.02e-3
+	  55e-3    550e-3 100e6   250e6   NA        NA     0.2e-3
+	  550e-3   5.5    100e6   250e6   NA        NA     2e-3
+	  4.5e-3   55e-3  250e6   550e6   NA        NA     0.02e-3
+	  55e-3    550e-3 250e6   550e6   NA        NA     0.2e-3
+	  550e-3   5.5    250e6   550e6   NA        NA     2e-3
+
+Mode: Vpp CH2
+
+	# Signal is routed through the 5800A or 5820A Ch 2 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+
+	#      Nominal         Mod 1   Tolerance Floor Resolution
+	# --------------- --------------  ----      ---    -----
+	  4.5e-3   55e-3  0.1     50e3    NA        NA     0.02e-3
+	  55e-3    550e-3 0.1     50e3    NA        NA     0.2e-3
+	  550e-3   5.5    0.1     50e3    NA        NA     2e-3
+	  4.5e-3   55e-3  50e3    100e6   NA        NA     0.02e-3
+	  55e-3    550e-3 50e3    100e6   NA        NA     0.2e-3
+	  550e-3   5.5    50e3    100e6   NA        NA     2e-3
+	  4.5e-3   55e-3  100e6   250e6   NA        NA     0.02e-3
+	  55e-3    550e-3 100e6   250e6   NA        NA     0.2e-3
+	  550e-3   5.5    100e6   250e6   NA        NA     2e-3
+	  4.5e-3   55e-3  250e6   550e6   NA        NA     0.02e-3
+
+Mode: Vpp CH3
+
+	# Signal is routed through the 5800A or 5820A Ch 3 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+
+	#      Nominal         Mod 1   Tolerance Floor Resolution
+	# --------------- --------------  ----      ---    -----
+	  4.5e-3   55e-3  0.1     50e3    NA        NA     0.02e-3
+	  55e-3    550e-3 0.1     50e3    NA        NA     0.2e-3
+	  550e-3   5.5    0.1     50e3    NA        NA     2e-3
+	  4.5e-3   55e-3  50e3    100e6   NA        NA     0.02e-3
+	  55e-3    550e-3 50e3    100e6   NA        NA     0.2e-3
+	  550e-3   5.5    50e3    100e6   NA        NA     2e-3
+	  4.5e-3   55e-3  100e6   250e6   NA        NA     0.02e-3
+	  55e-3    550e-3 100e6   250e6   NA        NA     0.2e-3
+	  550e-3   5.5    100e6   250e6   NA        NA     2e-3
+	  4.5e-3   55e-3  250e6   550e6   NA        NA     0.02e-3
+
+Mode: Vpp CH4
+
+	# Signal is routed through the 5800A or 5820A Ch 4 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+
+	#      Nominal         Mod 1   Tolerance Floor Resolution
+	# --------------- --------------  ----      ---    -----
+	  4.5e-3   55e-3  0.1     50e3    NA        NA     0.02e-3
+	  55e-3    550e-3 0.1     50e3    NA        NA     0.2e-3
+	  550e-3   5.5    0.1     50e3    NA        NA     2e-3
+	  4.5e-3   55e-3  50e3    100e6   NA        NA     0.02e-3
+	  55e-3    550e-3 50e3    100e6   NA        NA     0.2e-3
+	  550e-3   5.5    50e3    100e6   NA        NA     2e-3
+	  4.5e-3   55e-3  100e6   250e6   NA        NA     0.02e-3
+	  55e-3    550e-3 100e6   250e6   NA        NA     0.2e-3
+	  550e-3   5.5    100e6   250e6   NA        NA     2e-3
+	  4.5e-3   55e-3  250e6   550e6   NA        NA     0.02e-3
+
+Mode: Vpp CH5
+
+	# Signal is routed through the 5800A or 5820A Ch 5 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+
+	#      Nominal         Mod 1   Tolerance Floor Resolution
+	# --------------- --------------  ----      ---    -----
+	  4.5e-3   55e-3  0.1     50e3    NA        NA     0.02e-3
+	  55e-3    550e-3 0.1     50e3    NA        NA     0.2e-3
+	  550e-3   5.5    0.1     50e3    NA        NA     2e-3
+	  4.5e-3   55e-3  50e3    100e6   NA        NA     0.02e-3
+	  55e-3    550e-3 50e3    100e6   NA        NA     0.2e-3
+	  550e-3   5.5    50e3    100e6   NA        NA     2e-3
+	  4.5e-3   55e-3  100e6   250e6   NA        NA     0.02e-3
+	  55e-3    550e-3 100e6   250e6   NA        NA     0.2e-3
+	  550e-3   5.5    100e6   250e6   NA        NA     2e-3
+	  4.5e-3   55e-3  250e6   550e6   NA        NA     0.02e-3

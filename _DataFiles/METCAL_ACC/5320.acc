@@ -1,0 +1,743 @@
+Begin Header
+	Instrument = Fluke 5320A
+	Interval   = 365 days
+	Confidence = 2 sigma
+End Header
+
+	# $Revision: 4610 $
+	# 23 +/-2 degC
+
+	# Source: Fluke 5320A Multifunction Electrical Tester Calibrator
+	#         Extended Specifications
+
+# ----- Low Resistance mode
+
+Mode: Ohms LR 2W
+
+	# Resistance (Short)        Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- --------
+	0             0             NA     NA       0         100E-3  NA
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- --------
+	100.0E-3      199.9E-3      NA     NA       0.3       25E-3   0.1E-3
+
+	0.200         1.999         NA     NA       0.3       25E-3   0.001
+
+	2.00          4.99          NA     NA       0.3       25E-3   0.01
+	5.00          29.99         NA     NA       0.2       25E-3   0.01
+
+	30.0          199.9         NA     NA       0.2       25E-3   0.1
+
+	0.200E+3      0.499E+3      NA     NA       0.2       0       0.001E+3
+	0.500E+3      1.999E+3      NA     NA       0.2       0       0.001E+3
+
+	2.00E+3       4.99E+3       NA     NA       0.2       0       0.01E+3
+	5.00E+3       10.00E+3      NA     NA       0.2       0       0.01E+3
+
+Mode: Ohms LR 4W
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	100.0E-3      199.9E-3      NA     NA       0.3       10E-3   0.1E-3
+
+	0.200         1.999         NA     NA       0.3       10E-3   0.001
+
+	2.00          4.99          NA     NA       0.3       10E-3   0.01
+	5.00          29.99         NA     NA       0.2       10E-3   0.01
+
+	30.0          199.9         NA     NA       0.2       10E-3   0.1
+
+	0.200E+3      0.499E+3      NA     NA       0.2       0       0.001E+3
+	0.500E+3      1.999E+3      NA     NA       0.2       0       0.001E+3
+
+	2.00E+3       4.99E+3       NA     NA       0.2       0       0.01E+3
+	5.00E+3       10.00E+3      NA     NA       0.2       0       0.01E+3
+
+Mode: Amps LR
+
+	# Accuracy is: (20 / SQRT(Resistance)) + 0.1 mA
+
+	# TestCurrent               Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- ------
+	0             400E-3        NA     NA       0.0       0.1E-3  NA
+
+Mode: Volts LR
+
+	# TestVoltage (Open)        Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- ------
+	0             50            NA     NA       5         2       NA
+
+# ----- High Resistance mode
+
+Mode: Ohms HR
+
+	# Resistance (Short)        Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             0             NA     NA       0         100     NA
+
+	# For test voltages above 500 V, 0.1% is added for each 200 V above 500 V.
+
+	# Resistance                Test Voltage    Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	10.000E+3     19.999E+3     0      55       0.2       0       1
+
+	20.00E+3      39.99E+3      0      55       0.2       0       10
+
+	40.00E+3      99.99E+3      0      400      0.2       0       10
+
+	100.00E+3     199.99E+3     0      500      0.2       0       10
+	100.00E+3     199.99E+3     500    700      0.3       0       10
+	100.00E+3     199.99E+3     700    800      0.4       0       10
+
+	200.0E+3      999.9E+3      0      500      0.2       0       100
+	200.0E+3      999.9E+3      500    700      0.3       0       100
+	200.0E+3      999.9E+3      700    900      0.4       0       100
+	200.0E+3      999.9E+3      900    1100     0.5       0       100
+
+	1.0000E+6     1.9999E+6     0      500      0.3       0       100
+	1.0000E+6     1.9999E+6     500    700      0.4       0       100
+	1.0000E+6     1.9999E+6     700    900      0.5       0       100
+	1.0000E+6     1.9999E+6     900    1100     0.6       0       100
+	1.0000E+6     1.9999E+6     1100   1150     0.7       0       100
+
+	2.000E+6      9.999E+6      0      500      0.3       0       1E+3
+	2.000E+6      9.999E+6      500    700      0.4       0       1E+3
+	2.000E+6      9.999E+6      700    900      0.5       0       1E+3
+	2.000E+6      9.999E+6      900    1100     0.6       0       1E+3
+	2.000E+6      9.999E+6      1100   1150     0.7       0       1E+3
+
+	10.000E+6     19.999E+6     0      500      0.5       0       1E+3
+	10.000E+6     19.999E+6     500    700      0.6       0       1E+3
+	10.000E+6     19.999E+6     700    900      0.7       0       1E+3
+	10.000E+6     19.999E+6     900    1100     0.8       0       1E+3
+	10.000E+6     19.999E+6     1100   1300     0.9       0       1E+3
+	10.000E+6     19.999E+6     1300   1500     1.0       0       1E+3
+	10.000E+6     19.999E+6     1500   1575     1.1       0       1E+3
+
+	20.00E+6      199.99E+6     0      500      0.5       0       10E+3
+	20.00E+6      199.99E+6     500    700      0.6       0       10E+3
+	20.00E+6      199.99E+6     700    900      0.7       0       10E+3
+	20.00E+6      199.99E+6     900    1100     0.8       0       10E+3
+	20.00E+6      199.99E+6     1100   1300     0.9       0       10E+3
+	20.00E+6      199.99E+6     1300   1500     1.0       0       10E+3
+	20.00E+6      199.99E+6     1500   1575     1.1       0       10E+3
+
+	200.0E+6      999.9E+6      0      500      0.5       0       100E+3
+	200.0E+6      999.9E+6      500    700      0.6       0       100E+3
+	200.0E+6      999.9E+6      700    900      0.7       0       100E+3
+	200.0E+6      999.9E+6      900    1100     0.8       0       100E+3
+	200.0E+6      999.9E+6      1100   1300     0.9       0       100E+3
+	200.0E+6      999.9E+6      1300   1500     1.0       0       100E+3
+	200.0E+6      999.9E+6      1500   1575     1.1       0       100E+3
+
+	1.0000E+9     1.9999E+9     0      500      1.0       0       100E+3
+	1.0000E+9     1.9999E+9     500    700      1.1       0       100E+3
+	1.0000E+9     1.9999E+9     700    900      1.2       0       100E+3
+	1.0000E+9     1.9999E+9     900    1100     1.3       0       100E+3
+	1.0000E+9     1.9999E+9     1100   1300     1.4       0       100E+3
+	1.0000E+9     1.9999E+9     1300   1500     1.5       0       100E+3
+	1.0000E+9     1.9999E+9     1500   1575     1.6       0       100E+3
+
+	2.000E+9      10.000E+9     0      500      1.0       0       1E+6
+	2.000E+9      10.000E+9     500    700      1.1       0       1E+6
+	2.000E+9      10.000E+9     700    900      1.2       0       1E+6
+	2.000E+9      10.000E+9     900    1100     1.3       0       1E+6
+	2.000E+9      10.000E+9     1100   1300     1.4       0       1E+6
+	2.000E+9      10.000E+9     1300   1500     1.5       0       1E+6
+	2.000E+9      10.000E+9     1500   1575     1.6       0       1E+6
+
+Mode: Ohms HR Mult
+
+	# 5320A Option 190-06 Resistance multiplier
+
+	# Resistance                Test Voltage    Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	300.0E+6      349.9E+6      0      5500     NA        NA      100E+3
+
+	350.0E+6      999.9E+6      0      5500     1.2       0       100E+3
+	1.0000E+9     1.9999E+9     0      5500     1.3       0       100E+3
+
+	2.000E+9      9.999E+9      0      5500     1.3       0       1E+6
+	10.000E+9     19.999E+9     0      5500     2.5       0       1E+6
+
+	20.00E+9      199.99E+9     0      5500     2.5       0       10E+6
+
+	200.0E+9      999.9E+9      0      5500     2.5       0       100E+6
+	1.0000E+12    1.9999E+12    0      5500     4.0       0       100E+6
+
+	2.000E+12     10.000E+12    0      5500     4.0       0       1E+9
+
+Mode: Amps HR
+
+	# = 0 Ohms (Short): 2 % + 0.5 mA
+	# > 0 Ohms:         1.5 % + 5 V / R (where R is the selected resistance)
+
+	# TestCurrent               Resistance      Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.0E-3        50.0E-3       0.0    0.0      2         0.5E-3  0.1
+	0.0E-3        9.9E-3        10E+3  100E+9   1.5       0.0     0.1
+
+Mode: Volts HR
+
+	# TestVoltage               Resistance      Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             1575          10E+3  1E+6     1         2       1
+	0             1575          1E+6   10E+9    1         5       1
+
+Mode: Volts HR Mult
+
+	# 5320A Option 190-06 Resistance multiplier
+
+	# TestVoltage               Resistance      Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             5500          350E+6 1E+9     1         2       1
+	0             5500          1E+9   10E+12   1         5       1
+
+# ----- High Resistance Fixed mode
+
+Mode: Ohms HRF
+
+	# Resistance                Test Voltage    Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	100E+9        100E+9        0      500      3.0       0       NA
+	100E+9        100E+9        500    700      3.1       0       NA
+	100E+9        100E+9        700    900      3.2       0       NA
+	100E+9        100E+9        900    1100     3.3       0       NA
+	100E+9        100E+9        1100   1300     3.4       0       NA
+	100E+9        100E+9        1300   1500     3.5       0       NA
+	100E+9        100E+9        1500   1575     3.6       0       NA
+
+Mode: Volts HRF
+
+	# TestVoltage               Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             1575          NA     NA       1         5       1
+
+# ----- Ground Bond Resistance mode 
+
+Mode: Ohms GBR
+
+	# Note EvalQuan range is Nominal Value +/- Nominal Range
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	12.5E-3       37.5E-3       NA     NA       0         5E-3    NA
+	25E-3         75E-3         NA     NA       0         5E-3    NA
+	70E-3         130E-3        NA     NA       0         5E-3    NA
+	264E-3        396E-3        NA     NA       0         7E-3    NA
+	450E-3        550E-3        NA     NA       0         8E-3    NA
+	0.1           1.1           NA     NA       0         10E-3   NA
+	1.62          1.98          NA     NA       0         18E-3   NA
+	4.5           5.5           NA     NA       0         30E-3   NA
+	9             11            NA     NA       0         60E-3   NA
+	16.2          19.8          NA     NA       0         100E-3  NA
+	45            55            NA     NA       0         300E-3  NA
+	90            110           NA     NA       0         500E-3  NA
+	162           198           NA     NA       0         1       NA
+	450           550           NA     NA       0         2.5     NA
+	0.9E+3        1.1E+3        NA     NA       0         5       NA
+	1.62E+3       1.98E+3       NA     NA       0         10      NA
+
+Mode: Amps GBR
+
+	# TestCurrent               Resistance      Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             30            12.5E-3 37.5E-3 1.5       0.7     NA
+	0             28            25.0E-3 75.0E-3 1.5       0.5     NA
+	0             25            70.0E-3 130E-3  1.5       0.35    NA
+	0             14            264E-3  396E-3  1.5       0.3     NA
+	0             10            450E-3  550E-3  1.5       0.2     NA
+	0             8             0.90    1.10    1.5       150E-3  NA
+	0             6             1.62    1.98    1.5       100E-3  NA
+	0             3.2           4.50    5.50    1.5       70E-3   NA
+	0             2.0           9.0     11.0    1.5       50E-3   NA
+	0             1.5           16.2    19.8    1.5       30E-3   NA
+	0             0.8           45.0    55.0    1.5       20E-3   NA
+	0             0.5           90      110     1.5       10E-3   NA
+	0             0.25          162     198     1.5       5E-3    NA
+	0             0.10          450     550     1.5       3E-3    NA
+	0             0.05          0.90E+3 1.10E+3 1.5       2E-3    NA
+	0             0.025         1.62E+3 1.98E+3 1.5       2E-3    NA
+
+Mode: Volts GBR
+
+	# TestVoltage (Open)        Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             50            NA     NA       2         2       NA
+
+# ----- Ground Bond Transfer mode 
+
+Mode: Ohms GBTFR
+
+	# Resistance                Test Current    Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+
+	# 0: 52 mOhm Nominal Current Shunt Resistance
+	52E-3         52E-3         29.0   30.0     0         0.8E-3  NA
+	52E-3         52E-3         26.5   29.0     0         0.8E-3  NA
+	52E-3         52E-3         22.5   26.5     0         0.8E-3  NA
+	52E-3         52E-3         17.0   22.5     0         0.9E-3  NA
+	52E-3         52E-3         12.0   17.0     0         1.0E-3  NA
+	52E-3         52E-3         9.0    12.0     0         1.2E-3  NA
+	52E-3         52E-3         5.0    9.0      0         1.3E-3  NA
+	52E-3         52E-3         3.0    5.0      0         2.6E-3  NA
+
+	# R1: 25 mOhm + Nominal Current Shunt Resistance
+	77E-3         77E-3         29.0   30.0     0         0.9E-3  NA
+	77E-3         77E-3         26.5   29.0     0         1.0E-3  NA
+	77E-3         77E-3         22.5   26.5     0         1.0E-3  NA
+	77E-3         77E-3         17.0   22.5     0         1.0E-3  NA
+	77E-3         77E-3         12.0   17.0     0         1.2E-3  NA
+	77E-3         77E-3         9.0    12.0     0         1.4E-3  NA
+	77E-3         77E-3         5.0    9.0      0         1.5E-3  NA
+	77E-3         77E-3         3.0    5.0      0         2.9E-3  NA
+
+	# R2: 50 mOhm + Nominal Current Shunt Resistance
+	102E-3        102E-3        26.5   28.0     0         1.1E-3  NA
+	102E-3        102E-3        22.5   26.5     0         1.1E-3  NA
+	102E-3        102E-3        17.0   22.5     0         1.2E-3  NA
+	102E-3        102E-3        12.0   17.0     0         1.3E-3  NA
+	102E-3        102E-3        9.0    12.0     0         1.5E-3  NA
+	102E-3        102E-3        5.0    9.0      0         1.7E-3  NA
+	102E-3        102E-3        3.0    5.0      0         3.1E-3  NA
+
+	# R3: 100 mOhm + Nominal Current Shunt Resistance
+	152E-3        152E-3        22.5   25.0     0         1.4E-3  NA
+	152E-3        152E-3        17.0   22.5     0         1.4E-3  NA
+	152E-3        152E-3        12.0   17.0     0         1.6E-3  NA
+	152E-3        152E-3        9.0    12.0     0         1.8E-3  NA
+	152E-3        152E-3        5.0    9.0      0         2.0E-3  NA
+	152E-3        152E-3        3.0    5.0      0         3.6E-3  NA
+
+	# R4: 330 mOhm + Nominal Current Shunt Resistance
+	382E-3        382E-3        12.0   14.0     0         3.0E-3  NA
+	382E-3        382E-3        9.0    12.0     0         3.3E-3  NA
+	382E-3        382E-3        5.0    9.0      0         3.6E-3  NA
+	382E-3        382E-3        3.0    5.0      0         6.0E-3  NA
+
+	# R5: 500 mOhm + Nominal Current Shunt Resistance
+	552E-3        552E-3        9.0    10.0     0         4.1E-3  NA
+	552E-3        552E-3        5.0    9.0      0         4.4E-3  NA
+	552E-3        552E-3        3.0    5.0      0         7.2E-3  NA
+
+# ----- Line/Loop Impedance modes
+
+Mode: Ohms Line/Loop Corr Off
+
+	# Uncertainty of selected resistance value only.
+
+	# Note EvalQuan range is Nominal Value +/- Nominal Range
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	12.5E-3       37.5E-3       NA     NA       0         5E-3    NA
+	25E-3         75E-3         NA     NA       0         5E-3    NA
+	70E-3         130E-3        NA     NA       0         5E-3    NA
+	264E-3        396E-3        NA     NA       0         7E-3    NA
+	450E-3        550E-3        NA     NA       0         8E-3    NA
+	0.1           1.1           NA     NA       0         10E-3   NA
+	1.62          1.98          NA     NA       0         18E-3   NA
+	4.5           5.5           NA     NA       0         30E-3   NA
+	9             11            NA     NA       0         60E-3   NA
+	16.2          19.8          NA     NA       0         100E-3  NA
+	45            55            NA     NA       0         300E-3  NA
+	90            110           NA     NA       0         500E-3  NA
+	162           198           NA     NA       0         1       NA
+	450           550           NA     NA       0         2.5     NA
+	0.9E+3        1.1E+3        NA     NA       0         5       NA
+	1.62E+3       1.98E+3       NA     NA       0         10      NA
+
+Mode: Ohms Line/Loop Corr Manual
+
+	# Uncertainty of selected resistance value only.
+
+	# Procedure must use ACCV MATH FSC function to retrieve uncertainty,
+	# add the uncertainty of the manually entered correction, and use
+	# ACC FSC to establish the total system accuracy. 
+
+	# Note EvalQuan range is Nominal Value +/- Nominal Range
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	12.5E-3       37.5E-3       NA     NA       0         5E-3    NA
+	25E-3         75E-3         NA     NA       0         5E-3    NA
+	70E-3         130E-3        NA     NA       0         5E-3    NA
+	264E-3        396E-3        NA     NA       0         7E-3    NA
+	450E-3        550E-3        NA     NA       0         8E-3    NA
+	0.1           1.1           NA     NA       0         10E-3   NA
+	1.62          1.98          NA     NA       0         18E-3   NA
+	4.5           5.5           NA     NA       0         30E-3   NA
+	9             11            NA     NA       0         60E-3   NA
+	16.2          19.8          NA     NA       0         100E-3  NA
+	45            55            NA     NA       0         300E-3  NA
+	90            110           NA     NA       0         500E-3  NA
+	162           198           NA     NA       0         1       NA
+	450           550           NA     NA       0         2.5     NA
+	0.9E+3        1.1E+3        NA     NA       0         5       NA
+	1.62E+3       1.98E+3       NA     NA       0         10      NA
+
+Mode: Ohms Line/Loop Corr Scan
+
+	# Uncertainty of selected resistance value only.
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	12.5E-3       37.5E-3       NA     NA       0         5E-3    NA
+	25E-3         75E-3         NA     NA       0         5E-3    NA
+	70E-3         130E-3        NA     NA       0         5E-3    NA
+	264E-3        396E-3        NA     NA       0         7E-3    NA
+	450E-3        550E-3        NA     NA       0         8E-3    NA
+	0.1           1.1           NA     NA       0         10E-3   NA
+	1.62          1.98          NA     NA       0         18E-3   NA
+	4.5           5.5           NA     NA       0         30E-3   NA
+	9             11            NA     NA       0         60E-3   NA
+	16.2          19.8          NA     NA       0         100E-3  NA
+	45            55            NA     NA       0         300E-3  NA
+	90            110           NA     NA       0         500E-3  NA
+	162           198           NA     NA       0         1       NA
+	450           550           NA     NA       0         2.5     NA
+	0.9E+3        1.1E+3        NA     NA       0         5       NA
+	1.62E+3       1.98E+3       NA     NA       0         10      NA
+
+Mode: Ohms Line/Loop Corr Comp
+
+	# Uncertainty of selected resistance value only.
+
+	# Resistance                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	12.5E-3       37.5E-3       NA     NA       0         5E-3    NA
+	25E-3         75E-3         NA     NA       0         5E-3    NA
+	70E-3         130E-3        NA     NA       0         5E-3    NA
+	264E-3        396E-3        NA     NA       0         7E-3    NA
+	450E-3        550E-3        NA     NA       0         8E-3    NA
+	0.1           1.1           NA     NA       0         10E-3   NA
+	1.62          1.98          NA     NA       0         18E-3   NA
+	4.5           5.5           NA     NA       0         30E-3   NA
+	9             11            NA     NA       0         60E-3   NA
+	16.2          19.8          NA     NA       0         100E-3  NA
+	45            55            NA     NA       0         300E-3  NA
+	90            110           NA     NA       0         500E-3  NA
+	162           198           NA     NA       0         1       NA
+	450           550           NA     NA       0         2.5     NA
+	0.9E+3        1.1E+3        NA     NA       0         5       NA
+	1.62E+3       1.98E+3       NA     NA       0         10      NA
+
+Mode: Ohms Line/Loop Corr Adder
+
+	# Residual Impedance Correction Adder for Scan and Comp modes.
+
+	# Correction Value (Ohms)   Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             10            NA     NA       1.0       15E-3   NA
+
+Mode: Amps Line/Loop
+
+	# TestCurrent               Resistance      Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             30            12.5E-3 37.5E-3 1.5       0.7     NA
+	0             28            25.0E-3 75.0E-3 1.5       0.5     NA
+	0             25            70.0E-3 130E-3  1.5       0.35    NA
+	0             14            264E-3  396E-3  1.5       0.3     NA
+	0             10            450E-3  550E-3  1.5       0.2     NA
+	0             8             0.90    1.10    1.5       150E-3  NA
+	0             6             1.62    1.98    1.5       100E-3  NA
+	0             3.2           4.50    5.50    1.5       70E-3   NA
+	0             2.0           9.0     11.0    1.5       50E-3   NA
+	0             1.5           16.2    19.8    1.5       30E-3   NA
+	0             0.8           45.0    55.0    1.5       20E-3   NA
+	0             0.5           90      110     1.5       10E-3   NA
+	0             0.25          162     198     1.5       5E-3    NA
+	0             0.10          450     550     1.5       3E-3    NA
+	0             0.05          0.90E+3 1.10E+3 1.5       2E-3    NA
+	0             0.025         1.62E+3 1.98E+3 1.5       2E-3    NA
+
+Mode: Amps Line/Loop PFC
+
+	# Not spec'd
+
+	# PFC                       Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             10E+3         NA     NA       NA        NA      NA
+
+# ----- Leakage Current Passive mode
+
+Mode: Amps IDP
+
+	# LeakageCurrent            Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.1E-3        30E-3         NA     NA       0.3       2E-6    1E-6
+
+# ----- Leakage Current Differential mode
+
+Mode: Amps IDD
+
+	# LeakageCurrent            Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.1E-3        30E-3         NA     NA       0.3       2E-6    1E-6
+
+# ----- Leakage Current Substitute mode
+
+Mode: Amps IDS
+
+	# LeakageCurrent            Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.1E-3        30E-3         NA     NA       0.3       2E-6    10E-6
+
+# ----- Leakage Current Active mode
+
+Mode: Amps IDA
+
+	# LeakageCurrent            Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.1E-3        30E-3         NA     NA       0.3       1E-6    10E-6
+
+# ----- RCD Trip Time & Trip Current modes
+
+Mode: Amps RCD
+
+	# Multiplier not specified:  Default 1x
+
+	# TripCurrent               Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	3E-3          3000E-3       NA     NA       1         0       1E-3
+
+Mode: Amps RCD Mult
+
+	# TripCurrent               Modifier(2)     Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	3E-3          3000E-3       0.5    0.5      1         0       1E-3
+	3E-3          3000E-3       1.0    1.0      1         0       1E-3
+	3E-3          1500E-3       1.4    1.4      2         0       1E-3
+	3E-3          1500E-3       2.0    2.0      2         0       1E-3
+	3E-3          600E-3        5.0    5.0      5         0       1E-3
+
+	# 2. Modifier is TripCurrentMultiplier.
+
+Mode: Seconds RCD
+
+	# Multiplier not specified:  Default 1x
+
+	# TripTime                  Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	10E-3         5000E-3       NA     NA       0.02      0.25E-3 NA  
+
+Mode: Volts RCD
+
+	# Line or TouchVoltage      Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             250           NA     NA       5         3       NA
+
+# ----- Voltage Calibrator mode
+
+Mode: Volts Cal
+
+	# Voltage (DC)              Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	3.00          29.99         NA     NA       0.1       9E-3    0.01
+	30.00         149.99        NA     NA       0.1       45E-3   0.01
+	150.00        600.00        NA     NA       0.1       180E-3  0.01
+
+	# Voltage (AC)              Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	3.00          29.99         40     400      0.1       9E-3    0.01
+	30.00         99.99         40     400      0.1       30E-3   0.01
+	100.00        299.99        40     400      0.1       90E-3   0.01
+	300.00        600.00        40     400      0.1       180E-3  0.01
+
+Mode: Amps Cal AC
+
+	# Load Current              Voltage         Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             50E-3         300    600      0         5E-3    1E-3
+	0             150E-3        100    299.9    0         5E-3    1E-3
+	0             300E-3        30     99.99    0         5E-3    1E-3
+	0             500E-3        3      29.99    0         5E-3    1E-3
+
+Mode: Amps Cal DC
+
+	# Load Current              Voltage         Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             2E-3          3      29.99    0         5E-3    1E-3
+	0             3E-3          30     149.9    0         5E-3    1E-3
+	0             5E-3          150    600      0         5E-3    1E-3
+
+Mode: Hertz Cal
+
+	# Frequency                 Voltage         Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	40.0          400.0         3      600      0.02      0       0.1 
+
+# ----- Multimeter mode
+
+Mode: Volts Meter
+
+	# Voltage (DC)              Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-10.000       10.000        NA     NA       0.15      5E-3    0.001
+	-100.00       100.00        NA     NA       0.20      50E-3   0.01
+	-1100.0       1100.0        NA     NA       0.20      550E-3  0.1
+
+	# Voltage (AC)              Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.000         10.000        10     2E+3     0.15      5E-3    0.001
+	10.00         100.00        10     2E+3     0.20      50E-3   0.01
+	100.0         1100.0        10     2E+3     0.20      550E-3  0.1
+
+Mode: Volts Meter 10kV
+
+	# Voltage (DC)              Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-10E+3        10E+3         NA     NA       0.3       5       1
+
+	# Voltage (AC)              Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             10E+3         50     50       0.5       5       1
+	0             10E+3         60     60       0.5       5       1
+	0             10E+3         10     2E+3     NA        NA      1
+
+Mode: Volts Meter 40kV
+
+	# Fluke 80K-40 Probe
+
+	# Voltage (DC)              Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-40E+3        40E+3         NA     NA       0.5       10      1
+
+	# Voltage (AC)              Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             40E+3         50     50       0.5       10      1
+	0             40E+3         60     60       0.5       10      1
+	0             40E+3         10     2E+3     NA        NA      1
+
+Mode: Amps Meter
+
+	# Current (DC)              Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	-300.00E-3    300.00E-3     NA     NA       0.15      0.15E-3 0.01E-3
+	-3.0000       3.0000        NA     NA       0.15      1.5E-3  0.0001
+	-30.000       30.000        NA     NA       0.30      15E-3   0.001
+
+	# Current (AC)              Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	0.00E-3       300.00E-3     10     2E+3     0.15      0.15E-3 0.01E-3
+	0.3000        3.0000        10     2E+3     0.15      1.5E-3  0.0001
+	3.000         30.000        10     2E+3     0.30      15E-3   0.001
+
+Mode: Volt-Amps Meter
+
+	# Not spec'd
+
+	# Power (DC)                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-33E+3        33E+3         NA     NA       NA        NA      NA
+
+	# Power (AC)                Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             33E+3         10     2E+3     NA        NA      NA
+
+Mode: Volt-Amps Meter 10kV
+
+	# Not spec'd
+
+	# Power (DC)                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-300E+3       300E+3        NA     NA       NA        NA      NA
+
+	# Power (AC)                Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             300E+3        10     2E+3     NA        NA      NA
+
+Mode: Volt-Amps Meter 40kV
+
+	# Fluke 80K-40 Probe
+
+	# Not spec'd
+
+	# Power (DC)                Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-1200E+3      1200E+3       NA     NA       NA        NA      NA
+
+	# Power (AC)                Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             1200E+3       10     2E+3     NA        NA      NA
+
+Mode: Amps HIPL
+
+	# LeakageCurrent (DC)       Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	-300.0E-6     300.0E-6      NA     NA       0.3       0.21E-6 0.1E-6
+	-3.000E-3     3.000E-3      NA     NA       0.2       1.5E-6  0.001E-3
+	-30.00E-3     30.00E-3      NA     NA       0.2       15E-6   0.01E-3
+	-300.0E-3     300.0E-3      NA     NA       0.2       150E-6  0.1E-3
+
+	# LeakageCurrent (AC)       Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	-300.0E-6     300.0E-6      20     400      0.3       0.21E-6 0.1E-6
+	-3.000E-3     3.000E-3      20     400      0.2       1.5E-6  0.001E-3
+	-30.00E-3     30.00E-3      20     400      0.2       15E-6   0.01E-3
+	-300.0E-3     300.0E-3      20     400      0.2       150E-6  0.1E-3
+
+Mode: Volts HIPL
+
+	# TestVoltage (DC)          Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-10.000       10.000        NA     NA       0.15      5E-3    0.001
+	-100.00       100.00        NA     NA       0.20      50E-3   0.01
+	-1100.0       1100.0        NA     NA       0.20      550E-3  0.1
+
+	# TestVoltage (AC)          Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.000         10.000        20     400      0.15      5E-3    0.001
+	10.00         100.00        20     400      0.20      50E-3   0.01
+	100.0         1100.0        20     400      0.20      550E-3  0.1
+
+Mode: Volts HIPL 10kV
+
+	# TestVoltage (DC)          Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-10E+3        10E+3         NA     NA       0.3       5       1
+
+	# TestVoltage (AC)          Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             10E+3         50     50       0.5       5       1
+	0             10E+3         60     60       0.5       5       1
+	0             10E+3         20     400      NA        NA      1
+
+Mode: Volts HIPL 40kV
+
+	# Fluke 80K-40 Probe
+
+	# TestVoltage (DC)          Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-40E+3        40E+3         NA     NA       0.5       10      1
+
+	# TestVoltage (AC)          Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0             40E+3         50     50       0.5       10      1
+	0             40E+3         60     60       0.5       10      1
+	0             40E+3         20     400      NA        NA      1
+
+Mode: Seconds HIPT
+
+	# TimeInterval (DC)         Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	 0.100        999.000       NA     NA       0.02      2E-3    1E-3
+
+	# TimeInterval (AC)         Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -------
+	 0.100        999.000       50     60       0.02      20E-3   1E-3
+
+Mode: Volts HIPT
+
+	# TestVoltage (DC)          Not used        Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	-10.000       10.000        NA     NA       0.15      5E-3    0.001
+	-100.00       100.00        NA     NA       0.20      50E-3   0.01
+	-1100.0       1100.0        NA     NA       0.20      550E-3  0.1
+
+	# TestVoltage (AC)          Frequency       Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+	0.000         10.000        20     400      0.15      5E-3    0.001
+	10.00         100.00        20     400      0.20      50E-3   0.01
+	100.0         1100.0        20     400      0.20      550E-3  0.1

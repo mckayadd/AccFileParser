@@ -1,0 +1,145 @@
+Begin Header
+	instrument = Fluke 271
+	interval   = 365 days
+	confidence = 1 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# These specifications are valid after a warming-up time of
+	# 20 minutes (temperature 25 +/-10 degC) and for a termination
+	# of the signal output with 50 Ohms.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Hertz SI
+
+	0.1e-3   10e+6      -10      10       30e-4  0       NA     
+	20e+6    10e+6      -10      10       100e-4 0       NA     
+
+Mode: Hertz SQ
+
+	1e-3     10e+6      -10      10       100e-4 0       NA     
+
+Mode: Hertz TI
+
+	0.1e-3   100e+3     -10      10       30e-4  0       NA     
+
+Mode: Hertz RP
+
+	0.1e-3   100e+3     -10      10       30e-4  0       NA     
+
+Mode: Period PU
+
+	100e-9   100        -10      10       100e-4 0       NA
+
+Mode: Width PU
+
+	26e-9    99.99      -10      10       0.1    5e-9    NA
+
+Mode: Volts L
+
+	# 50 Ohm terminated
+
+	-5       5          NA       NA       1      20e-3   NA   
+
+Mode: Volts
+
+	# Open-circuit
+
+	-10      10         NA       NA       NA     NA      NA   
+
+Mode: Vpp SI L
+
+	# 50 Ohm terminated
+
+	2.5e-3   10.05      0.1e-3   16e+6    1      2e-3    NA
+
+Mode: Vpp SI
+
+	# Open-circuit
+
+	5.0e-3   20.1       0.1e-3   16e+6    NA     NA      NA
+
+Mode: Vpp SQ L
+
+	# 50 Ohm terminated
+
+	2.5e-3   10         1.0e-3   16e+6    1      2e-3    NA
+
+Mode: Vpp SQ
+
+	# Open-circuit 
+
+	5.0e-3   20         1.0e-3   16e+6    NA     NA      NA
+
+Mode: Vpp TI L
+
+	# 50 Ohm terminated
+
+	2.5e-3   10         0.1e-3   100e+3   1      2e-3    NA
+
+Mode: Vpp TI
+
+	# Open-circuit
+
+	5.0e-3   20.1       0.1e-3   100e+3   NA     NA      NA
+
+Mode: Vpp RP L
+
+	# 50 Ohm terminated
+
+	2.5e-3   10         0.1e-3   100e+3   1      2e-3    NA
+
+Mode: Vpp RP
+
+	# Open-circuit
+
+	5.0e-3   20.1       0.1e-3   100e+3   NA     NA      NA
+
+Mode: Vpp PU L
+
+	# 50 Ohm terminated
+
+	1.25e-3  5.02       25e-9    100      1      2e-3    NA
+
+Mode: Vpp PU
+
+	# Open-circuit
+
+	2.5e-3   10         25e-9    100      NA     NA      NA
+
+# Unspec'd with non-zero DC offset.
+
+Mode: Vpp SI Voff L
+
+	2.5e-3   10         0.1e-3   10e+6    NA     NA      NA
+
+Mode: Vpp SI Voff
+
+	5.0e-3   20         0.1e-3   10e+6    NA     NA      NA
+
+Mode: Vpp SQ Voff L
+
+	2.5e-3   10         1.0e-3   10e+6    NA     NA      NA
+
+Mode: Vpp SQ Voff
+
+	5.0e-3   20         1.0e-3   10e+6    NA     NA      NA
+
+Mode: Vpp TI Voff L
+
+	2.5e-3   10         0.1e-3   100e+3   NA     NA      NA
+
+Mode: Vpp TI Voff
+
+	5.0e-3   20         0.1e-3   100e+3   NA     NA      NA
+
+Mode: Vpp RP Voff L
+
+	2.5e-3   10         0.1e-3   100e+3   NA     NA      NA
+
+Mode: Vpp RP Voff
+
+	5.0e-3   20         0.1e-3   100e+3   NA     NA      NA

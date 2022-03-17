@@ -1,0 +1,24 @@
+Begin Header
+	instrument = Fluke 5205A
+	interval   = 6 months 
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the 5205A
+	# voltage output capability when driven by a 5100B
+	# directly.
+
+	#See 5100B manual P/N 858290 Rev1 July 89 for specs.
+
+Mode: Volts
+
+	# No accuracy enhancement.
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	-1100       1100   NA   NA    0.07     0.03   .01
+	20          1100   50   10e3  0.08     0.1    .01
+	20          1100   20e3 50e3  0.12     0.15   .01

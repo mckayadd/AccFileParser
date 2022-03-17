@@ -1,0 +1,184 @@
+Begin Header
+	instrument = HP 5352B
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+##### Input 1 #####
+
+	# Accuracy is:
+	#
+	#   +/-LSD +/-time base error x frequency
+    #
+	# time base error is for TCXO oscillator.
+
+Mode: Hertz I1
+
+	# Resolution not known, no accuracy specified.
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      NA         NA       NA
+   
+Mode: Hertz I1 Res 1Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     1        1
+   
+Mode: Hertz I1 Res 10Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     10       10
+   
+Mode: Hertz I1 Res 100Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     100      100
+   
+Mode: Hertz I1 Res 1kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     1e+3     1e+3
+   
+Mode: Hertz I1 Res 10kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     10e+3    10e+3
+   
+Mode: Hertz I1 Res 100kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     100e+3   100e+3
+   
+Mode: Hertz I1 Res 1MHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	500e+6    46e+9           -25   +7      0.0001     1e+6     1e+6
+
+##### Input 2 #####
+
+	# Accuracy is:
+	#
+	#               (1.4 x trigger error)
+	#   +/-LSD +/-( --------------------- +/-time base error) x frequency
+	#                    gate time
+	#
+	# No Tolerance or Floor entered.  This form of accuracy computation
+	# is not supported in a MET/CAL accuracy file.
+	   
+Mode: Hertz I2 dBm
+
+	# Resolution not known, no accuracy specified.
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         NA       NA
+   
+Mode: Hertz I2 dBm Res 1Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         1        1
+   
+Mode: Hertz I2 dBm Res 10Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         10       10
+   
+Mode: Hertz I2 dBm Res 100Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         100      100
+   
+Mode: Hertz I2 dBm Res 1kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         1e+3     1e+3
+   
+Mode: Hertz I2 dBm Res 10kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         10e+3    10e+3
+   
+Mode: Hertz I2 dBm Res 100kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         100e+3   100e+3
+   
+Mode: Hertz I2 dBm Res 1MHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10e6      525e+6          -62  +10      NA         1e+6     1e+6
+
+Mode: Hertz I2 Volts
+
+	# Resolution not known, no accuracy specified.
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         NA       NA
+   
+Mode: Hertz I2 Volts HiRes
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        99.999999e+3    25e-3  1      NA         1e-3     1e-3
+	100e+3    999.99999e+3    25e-3  1      NA         10e-3    10e-3
+	1e+6      9.9999999e+6    25e-3  1      NA         100e-3   100e-3
+   
+Mode: Hertz I2 Volts Res 1Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         1        1
+   
+Mode: Hertz I2 Volts Res 10Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         10       10
+   
+Mode: Hertz I2 Volts Res 100Hz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         100      100
+   
+Mode: Hertz I2 Volts Res 1kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         1e+3     1e+3
+   
+Mode: Hertz I2 Volts Res 10kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         10e+3    10e+3
+   
+Mode: Hertz I2 Volts Res 100kHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         100e+3   100e+3
+   
+Mode: Hertz I2 Volts Res 1MHz
+
+	# NOMINAL (Freq)          MOD1 (dBm)    Tolerance  Floor    Resolution
+	#-----------------------  ------------  ---------  -------  ----------
+	10        80e+6           25e-3  1      NA         1e+6     1e+6

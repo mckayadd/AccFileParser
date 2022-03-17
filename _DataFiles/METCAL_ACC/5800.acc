@@ -1,0 +1,487 @@
+Begin Header
+	instrument = Fluke 5800A
+	interval   = 365 days
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 8550 $
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Voltage Mode
+
+# DC Voltage
+
+Mode: Volts S6 L
+
+	# Voltage (V)              Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	-6.599        6.599        NA      NA        0.25   40E-6   NA    
+
+Mode: Volts S6
+
+	# Voltage (V)              Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	-130          130          NA      NA        0.025  25E-6   NA    
+
+# AC  Voltage
+
+Mode: Vpp ZQ ZN S6 L
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	1E-3          6.599        10      10E+3     0.25   40E-6   NA      
+
+Mode: Vpp ZQ ZN S6
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	1E-3          130          10      1E+3      0.05   5E-6    NA      
+	1E-3          130          1E+3    10E+3     0.25   40E-6   NA      
+
+Mode: Hertz ZQ ZN S6
+
+	# Note, Amplitude is in Vpp or App.
+
+	# Frequency (Hz)           Amplitude         Tol.    Floor   Res.
+	# -----------------------  ----------------- ------  ------  -----
+	10            10E+3        100E-6  130       0.33E-4 0.0     NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Edge Mode
+
+# The O_CAL NVI FSC returns the rise time in MEM1.
+# The 5820A published rise time uncertainty is assymetrical, and returns NA.
+
+Mode: Time ED S6
+
+	# Rise/Fall Time (s)       Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+    0             1E-3         NA      NA        NA     NA      NA
+
+Mode: Vpp ED S6
+
+	# Unspec'd above 10MHz
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	4.5E-3        2.75         1E+3    10E+6     2      200E-6  NA     
+	4.5E-3        2.75         900     11E+6     NA     NA      NA     
+
+Mode: Hertz ED S6
+
+	# Frequency (Hz)           Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  ------  ------  -----
+	1E+3          10E+6        4.5E-3  2.75      0.33E-4 0.0     NA      
+	900           11E+6        4.5E-3  2.75      NA      NA      NA      
+
+# Fast Edge (GHz option only)
+
+Mode: Vpp FE S6
+
+	# Unspec'd
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	250E-3        250E-3       900     1E+6      NA     NA      NA     
+
+Mode: Hertz FE S6
+
+	# Frequency (Hz)           Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  ------  ------  -----
+	1E+3          100E+3       250E-3  250E-3    0.33E-4 0.0     NA      
+	900           1E+6         250E-3  250E-3    NA      NA      NA      
+
+# Tunnel Diode Pulser driver signal
+
+Mode: Vpp ED S6 TD
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	11            100          100     100E+3    NA     NA      NA
+
+Mode: Hertz ED S6 TD
+
+	# Frequency (Hz)           Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  ------  ------  -----
+	100           100E+3       11      59.9      NA      NA      NA
+	100           100E+3       60      100       0.33E-4 0.0     NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Leveled Sine Mode
+
+Mode: Vpp LS S6
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	5.00E-3       5.5          50E+3   50E+3     2.0    300E-6  NA     
+	5.00E-3       5.5          50E+3   100E+6    3.5    300E-6  NA     
+	5.00E-3       5.5          100E+6  300E+6    4.0    300E-6  NA     
+	5.00E-3       5.5          300E+6  500E+6    5.5    300E-6  NA     
+	5.00E-3       5.5          500E+6  600E+6    6.0    300E-6  NA     
+	5.00E-3       5.5          600E+6  1.1E+9    7.0    300E-6  NA     
+	5.00E-3       3.5          1.1E+9  1.6E+9    7.0    300E-6  NA     
+	5.00E-3       3.5          1.6E+9  2.1E+9    8.0    300E-6  NA     
+	5.00E-3       3.5          2.1E+9  2.4E+9    NA     NA      NA     
+
+Mode: Hertz LS S6
+
+	# Frequency (Hz)           Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  ------  ------  -----
+	50E+3         600E+6       5E-3    5.5       0.33E-4 0.4     NA      
+
+	600E+6        2.1E+9       5E-3    3.5       0.33E-4 0.4     NA      
+
+	2.1E+9        2.4E+9       5E-3    3.5       NA      NA      NA      
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Marker Mode
+
+Mode: Hertz M1 S6
+
+	# Spike Markers
+
+	# Frequency (Hz)           Not Used          Tol.     Floor  Res.
+	# -----------------------  ----------------  -------  -----  -----
+	# 1-2-5 cardinal points
+	200E-3        200E-3       NA      NA        2.50E-4  5E-6   NA
+	500E-3        500E-3       NA      NA        2.50E-4  5E-6   NA
+	1             1            NA      NA        2.50E-4  5E-6   NA
+	2             2            NA      NA        2.50E-4  5E-6   NA
+	5             5            NA      NA        2.50E-4  5E-6   NA
+	10            10           NA      NA        2.50E-4  5E-6   NA
+	20            20           NA      NA        2.50E-4  5E-6   NA
+	50            50           NA      NA        0.33E-4  0.0    NA
+	100           100          NA      NA        0.33E-4  0.0    NA
+	200           200          NA      NA        0.33E-4  0.0    NA
+	500           500          NA      NA        0.33E-4  0.0    NA
+	1E+3          1E+3         NA      NA        0.33E-4  0.0    NA
+	2E+3          2E+3         NA      NA        0.33E-4  0.0    NA
+	5E+3          5E+3         NA      NA        0.33E-4  0.0    NA
+	10E+3         10E+3        NA      NA        0.33E-4  0.0    NA
+	20E+3         20E+3        NA      NA        0.33E-4  0.0    NA
+	50E+3         50E+3        NA      NA        0.33E-4  0.0    NA
+	100E+3        100E+3       NA      NA        0.33E-4  0.0    NA
+	200E+3        200E+3       NA      NA        0.33E-4  0.0    NA
+	500E+3        500E+3       NA      NA        0.33E-4  0.0    NA
+	1E+6          1E+6         NA      NA        0.33E-4  0.0    NA
+	2E+6          2E+6         NA      NA        0.33E-4  0.0    NA
+	5E+6          5E+6         NA      NA        0.33E-4  0.0    NA
+	10E+6         10E+6        NA      NA        0.33E-4  0.0    NA
+	20E+6         20E+6        NA      NA        0.33E-4  0.0    NA
+	50E+6         50E+6        NA      NA        0.33E-4  0.0    NA
+
+	# Non-cardinal points, includes 50 ppm adder
+	180E-3        220E-3       NA      NA        52.50E-4 5E-6   NA
+	450E-3        550E-3       NA      NA        52.50E-4 5E-6   NA
+	0.9           1.1          NA      NA        52.50E-4 5E-6   NA
+	1.8           2.2          NA      NA        52.50E-4 5E-6   NA
+	4.5           5.5          NA      NA        52.50E-4 5E-6   NA
+	9.0           11           NA      NA        52.50E-4 5E-6   NA
+	18            22           NA      NA        52.50E-4 5E-6   NA
+	45            55           NA      NA        50.33E-4 0.0    NA
+	90            110          NA      NA        50.33E-4 0.0    NA
+	180           220          NA      NA        50.33E-4 0.0    NA
+	450           550          NA      NA        50.33E-4 0.0    NA
+	0.9E+3        1.1E+3       NA      NA        50.33E-4 0.0    NA
+	1.8E+3        2.2E+3       NA      NA        50.33E-4 0.0    NA
+	4.5E+3        5.5E+3       NA      NA        50.33E-4 0.0    NA
+	9E+3          11E+3        NA      NA        50.33E-4 0.0    NA
+	18E+3         22E+3        NA      NA        50.33E-4 0.0    NA
+	45E+3         55E+3        NA      NA        50.33E-4 0.0    NA
+	90E+3         110E+3       NA      NA        50.33E-4 0.0    NA
+	180E+3        220E+3       NA      NA        50.33E-4 0.0    NA
+	450E+3        550E+3       NA      NA        50.33E-4 0.0    NA
+	0.9E+6        1.1E+6       NA      NA        50.33E-4 0.0    NA
+	1.8E+6        2.2E+6       NA      NA        50.33E-4 0.0    NA
+	4.5E+6        5.5E+6       NA      NA        50.33E-4 0.0    NA
+	9E+6          11E+6        NA      NA        50.33E-4 0.0    NA
+	18E+6         22E+6        NA      NA        50.33E-4 0.0    NA
+	45E+6         55E+6        NA      NA        50.33E-4 0.0    NA
+
+	# Not a cardinal point +/-10 %, unspec'd
+	0.18          55.55556E+6  NA      NA        NA       NA     NA      
+
+Mode: Hertz M2 S6
+
+	# Square Markers
+
+	# Frequency (Hz)           Not Used          Tol.     Floor  Res.
+	# -----------------------  ----------------  -------  -----  -----
+	# 1-2-5 cardinal points
+	200E-3        200E-3       NA      NA        2.50E-4  5E-6   NA
+	500E-3        500E-3       NA      NA        2.50E-4  5E-6   NA
+	1             1            NA      NA        2.50E-4  5E-6   NA
+	2             2            NA      NA        2.50E-4  5E-6   NA
+	5             5            NA      NA        2.50E-4  5E-6   NA
+	10            10           NA      NA        2.50E-4  5E-6   NA
+	20            20           NA      NA        2.50E-4  5E-6   NA
+	50            50           NA      NA        0.33E-4  0.0    NA
+	100           100          NA      NA        0.33E-4  0.0    NA
+	200           200          NA      NA        0.33E-4  0.0    NA
+	500           500          NA      NA        0.33E-4  0.0    NA
+	1E+3          1E+3         NA      NA        0.33E-4  0.0    NA
+	2E+3          2E+3         NA      NA        0.33E-4  0.0    NA
+	5E+3          5E+3         NA      NA        0.33E-4  0.0    NA
+	10E+3         10E+3        NA      NA        0.33E-4  0.0    NA
+	20E+3         20E+3        NA      NA        0.33E-4  0.0    NA
+	50E+3         50E+3        NA      NA        0.33E-4  0.0    NA
+	100E+3        100E+3       NA      NA        0.33E-4  0.0    NA
+	200E+3        200E+3       NA      NA        0.33E-4  0.0    NA
+	500E+3        500E+3       NA      NA        0.33E-4  0.0    NA
+	1E+6          1E+6         NA      NA        0.33E-4  0.0    NA
+	2E+6          2E+6         NA      NA        0.33E-4  0.0    NA
+	5E+6          5E+6         NA      NA        0.33E-4  0.0    NA
+	10E+6         10E+6        NA      NA        0.33E-4  0.0    NA
+	20E+6         20E+6        NA      NA        0.33E-4  0.0    NA
+	50E+6         50E+6        NA      NA        0.33E-4  0.0    NA
+	100E+6        100E+6       NA      NA        0.33E-4  0.0    NA
+
+	# Non-cardinal points, includes 50 ppm adder
+	180E-3        220E-3       NA      NA        52.50E-4 5E-6   NA
+	450E-3        550E-3       NA      NA        52.50E-4 5E-6   NA
+	0.9           1.1          NA      NA        52.50E-4 5E-6   NA
+	1.8           2.2          NA      NA        52.50E-4 5E-6   NA
+	4.5           5.5          NA      NA        52.50E-4 5E-6   NA
+	9.0           11           NA      NA        52.50E-4 5E-6   NA
+	18            22           NA      NA        52.50E-4 5E-6   NA
+	45            55           NA      NA        50.33E-4 0.0    NA
+	90            110          NA      NA        50.33E-4 0.0    NA
+	180           220          NA      NA        50.33E-4 0.0    NA
+	450           550          NA      NA        50.33E-4 0.0    NA
+	0.9E+3        1.1E+3       NA      NA        50.33E-4 0.0    NA
+	1.8E+3        2.2E+3       NA      NA        50.33E-4 0.0    NA
+	4.5E+3        5.5E+3       NA      NA        50.33E-4 0.0    NA
+	9E+3          11E+3        NA      NA        50.33E-4 0.0    NA
+	18E+3         22E+3        NA      NA        50.33E-4 0.0    NA
+	45E+3         55E+3        NA      NA        50.33E-4 0.0    NA
+	90E+3         110E+3       NA      NA        50.33E-4 0.0    NA
+	180E+3        220E+3       NA      NA        50.33E-4 0.0    NA
+	450E+3        550E+3       NA      NA        50.33E-4 0.0    NA
+	0.9E+6        1.1E+6       NA      NA        50.33E-4 0.0    NA
+	1.8E+6        2.2E+6       NA      NA        50.33E-4 0.0    NA
+	4.5E+6        5.5E+6       NA      NA        50.33E-4 0.0    NA
+	9E+6          11E+6        NA      NA        50.33E-4 0.0    NA
+	18E+6         22E+6        NA      NA        50.33E-4 0.0    NA
+	45E+6         55E+6        NA      NA        50.33E-4 0.0    NA
+	90E+6         120E+6       NA      NA        50.33E-4 0.0    NA
+
+	# Not a cardinal point +/-10 %, unspec'd
+	0.18          133.3334E+6  NA      NA        NA       NA     NA      
+
+Mode: Hertz M3 S6
+
+	# 20% Duty Cycle Markers
+
+	# Frequency (Hz)           Not used          Tol.     Floor  Res.
+	# -----------------------  ----------------  ------   -----  -----
+	# 1-2-5 cardinal points
+	50            50           NA      NA        0.33E-4  0.0    NA
+	100           100          NA      NA        0.33E-4  0.0    NA
+	200           200          NA      NA        0.33E-4  0.0    NA
+	500           500          NA      NA        0.33E-4  0.0    NA
+	1E+3          1E+3         NA      NA        0.33E-4  0.0    NA
+	2E+3          2E+3         NA      NA        0.33E-4  0.0    NA
+	5E+3          5E+3         NA      NA        0.33E-4  0.0    NA
+	10E+3         10E+3        NA      NA        0.33E-4  0.0    NA
+	20E+3         20E+3        NA      NA        0.33E-4  0.0    NA
+	50E+3         50E+3        NA      NA        0.33E-4  0.0    NA
+	100E+3        100E+3       NA      NA        0.33E-4  0.0    NA
+	200E+3        200E+3       NA      NA        0.33E-4  0.0    NA
+	500E+3        500E+3       NA      NA        0.33E-4  0.0    NA
+	1E+6          1E+6         NA      NA        0.33E-4  0.0    NA
+	2E+6          2E+6         NA      NA        0.33E-4  0.0    NA
+	5E+6          5E+6         NA      NA        0.33E-4  0.0    NA
+	10E+6         10E+6        NA      NA        0.33E-4  0.0    NA
+
+	# Non-cardinal points, includes 50 ppm adder
+	45            55           NA      NA        50.33E-4 0.0    NA
+	90            110          NA      NA        50.33E-4 0.0    NA
+	180           220          NA      NA        50.33E-4 0.0    NA
+	450           550          NA      NA        50.33E-4 0.0    NA
+	0.9E+3        1.1E+3       NA      NA        50.33E-4 0.0    NA
+	1.8E+3        2.2E+3       NA      NA        50.33E-4 0.0    NA
+	4.5E+3        5.5E+3       NA      NA        50.33E-4 0.0    NA
+	9E+3          11E+3        NA      NA        50.33E-4 0.0    NA
+	18E+3         22E+3        NA      NA        50.33E-4 0.0    NA
+	45E+3         55E+3        NA      NA        50.33E-4 0.0    NA
+	90E+3         110E+3       NA      NA        50.33E-4 0.0    NA
+	180E+3        220E+3       NA      NA        50.33E-4 0.0    NA
+	450E+3        550E+3       NA      NA        50.33E-4 0.0    NA
+	0.9E+6        1.1E+6       NA      NA        50.33E-4 0.0    NA
+	1.8E+6        2.2E+6       NA      NA        50.33E-4 0.0    NA
+	4.5E+6        5.5E+6       NA      NA        50.33E-4 0.0    NA
+	9E+6          11E+6        NA      NA        50.33E-4 0.0    NA
+	18E+6         22E+6        NA      NA        50.33E-4 0.0    NA
+	45E+6         55E+6        NA      NA        50.33E-4 0.0    NA
+	90E+6         120E+6       NA      NA        50.33E-4 0.0    NA
+
+	# Not a cardinal point +/-10 %, unspec'd
+	28.57         133.3336E+6  NA      NA        NA       NA     NA      
+
+Mode: Hertz M4 S6
+
+	# Sinusoid Markers
+
+	# Frequency (Hz)           Not used          Tol.     Floor  Res.
+	# -----------------------  ----------------  -------  -----  ----
+	# 1-2-5 cardinal points
+	100E+6        100E+6       NA      NA        0.33E-4  0.0    NA
+	200E+6        200E+6       NA      NA        0.33E-4  0.0    NA
+	500E+6        500E+6       NA      NA        0.33E-4  0.0    NA
+	1000E+6       1000E+6      NA      NA        0.33E-4  0.0    NA
+	2000E+6       2000E+6      NA      NA        0.33E-4  0.0    NA
+
+	# Non-cardinal points, includes 50 ppm adder
+	90E+6         110E+6       NA      NA        50.33E-4 0.0    NA
+	180E+6        220E+6       NA      NA        50.33E-4 0.0    NA
+	450E+6        550E+6       NA      NA        50.33E-4 0.0    NA
+	0.9E+9        1.1E+9       NA      NA        50.33E-4 0.0    NA
+	1.8E+9        2.2E+9       NA      NA        50.33E-4 0.0    NA
+
+	# Not a cardinal point +/-10 %, unspec'd
+	55.586E+6     2.222223E+9  NA      NA        NA      NA      NA      
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+	# Wave Generator Mode
+
+	# SI, SQ, & TI
+
+Mode: Vpp WG SC L
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	 1.8E-3       2.5          0.01    100E+3    3      100E-6  NA     
+	 1.8E-3       2.5          100E+3  500E+3    NA     NA      NA     
+
+Mode: Vpp WG SC
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+
+	 1.8E-3       55.0         0.01    100E+3    3      100E-6  NA     
+	 1.8E-3       55.0         100E+3  500E+3    NA     NA      NA     
+
+Mode: Hertz WG SC
+
+	# SI, SQ, & TI
+
+	# Frequency (Hz)           Voltage (Vpp)     Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  -----  -----
+	0.01          100E+3       1.8E-3  55        2.5E-4 5E-6     NA      
+	100E+3        500E+3       1.8E-3  55        NA     NA       NA      
+
+Mode: Volts WG SC L
+
+	# Offset (V)               Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+    -2            2            NA      NA        NA     NA      NA
+
+Mode: Volts WG SC
+
+	# Offset (V)               Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+    -27           27           NA      NA        NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Video Mode
+
+Mode: Percent Video S6
+
+	# Amplitude (%)            Line Marker       Tol.    Floor   Res.
+	# -----------------------  ----------------  ------  ------  -----
+	-150          150          0       626       7       0.0     NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Pulse Mode
+
+Mode: Time PU S6
+
+	# Pulse Width (s)          Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  -----   ------  -----
+    1E-9          500E-9       10E-3   2.5       5       200E-12 NA
+    400E-12       1E-9         10E-3   2.5       NA      NA      NA
+
+Mode: Hertz PU S6
+
+	# Pulse Repetition Frequency (PRF)
+
+	# Frequency (Hz)           Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  -----   ------  -----
+	# 22ms to 200ns (45.4545...Hz to 5MHz)
+	45.454        5.0000E+6    10E-3   2.5       0.33E-4 0.0     NA      
+
+Mode: Skew PU S6
+
+	# Pulse Trigger Skew (used by 5820/M5820 FSCs and 5800/M5800 device mapped to 5820A)
+
+	# Trigger Skew (s)         Voltage (Vpp)     Tol.    Floor   Res.
+	# -----------------------  ----------------  -----   ------  -----
+	-10e-9        30e-9        10E-3   2.5       0.0     500E-12 NA      
+
+Mode: Seconds Skew PU S6
+
+    # Pulse Trigger Skew (used by O_CAL NVI FSC)
+
+    # Trigger Skew (s)         Period (s)        Tol.    Floor   Res.
+    # -----------------------  ----------------  -----   ------  -----
+    -10e-9        30e-9        3E-6    22E-3     0.0     500E-12 NA
+    -20e-9        40e-9        200E-9  22E-3     NA      NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# Impedance Measurement Mode (MEAS Z)
+
+Mode: Ohms ZM
+
+	# Resistance (Ohms)        Not used          Tol.    Floor   Res.
+	# -----------------------  ----------------  -----   ------  -----
+	40            60           NA      NA        0.1     0.0     NA      
+	500           1.5E+6       NA      NA        0.1     0.0     NA      
+
+Mode: Farads ZM
+
+	# Capacitance (F)          Not Used          Tol.    Floor   Res.
+	# -----------------------  ----------------  -----   ------  -----
+	5E-12         50E-12       NA      NA        5.0     0.5E-12 NA      
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# 50 Ohm Input Overload Mode (OVERLD)
+
+Mode: Volts OM
+
+	# No accuracy spec for overload measurement voltage.
+
+	# Voltage (V)              Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+	5             9            NA      NA        NA     NA      NA    
+
+Mode: Vpp ZQ OM
+
+	# No accuracy spec for overload measurement voltage.
+
+	# Voltage (Vpp)            Frequency (Hz)    Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+	5             9            1E+3    1E+3      NA     NA      NA    
+
+Mode: Seconds OM
+
+	# Overload Trip Time (s)   Not used          Tol.   Floor   Res.
+	# -----------------------  ----------------  -----  ------  -----
+	1             60           NA      NA        NA     NA      NA    

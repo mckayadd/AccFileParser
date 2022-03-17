@@ -1,0 +1,92 @@
+Begin Header
+               instrument   = Agilent N1914A
+               interval     = 365 days
+               confidence   = 2 sigma
+End Header
+
+# $Revision: 10417 $
+#
+# This file contains accuracy information for the
+# Agilent N1914A Power Meter.
+#
+# Source(s):
+# Agilent N1913A/1914A EPM Series Power Meters, Fifth Edition User's Guide, PN: N1913-90001, 11/04/2010
+
+# ============================================================================
+# Instrumentation Accuracy
+
+# Power (dBm)                 Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: InstrAcc Abs Log
+            -70           44            NA           NA             0.0         0.02         0.01
+
+Mode: InstrAcc Rel Log
+            -70           44            NA           NA             0.0         0.04         0.01
+
+# Power (W)                   Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: InstrAcc Abs Lin
+      100.0E-12           25            NA           NA             0.5          0.0         0.01
+
+Mode: InstrAcc Rel Lin
+      100.0E-12           25            NA           NA             1.0          0.0         0.01
+
+# ============================================================================
+# Noise Multiplier
+#
+# Averaging over 1 to 1024 readings is available for reducing noise.
+# Use the Noise Multiplier for the appropriate mode and number of averages
+# to determine the total measurement noise value.
+
+# Sensor dependent; refer to power sensor accuracy files for their
+# measurement noise contribution.
+#
+# Number of Averages          Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: NoiseMultiplier
+              1            1            NA           NA             0.0         5.50         0.01
+              2            2            NA           NA             0.0         3.89         0.01
+              4            4            NA           NA             0.0         2.75         0.01
+              8            8            NA           NA             0.0         1.94         0.01
+             16           16            NA           NA             0.0         1.00         0.01
+             32           32            NA           NA             0.0         0.85         0.01
+             64           64            NA           NA             0.0         0.61         0.01
+            128          128            NA           NA             0.0         0.49         0.01
+            256          256            NA           NA             0.0         0.34         0.01
+            512          512            NA           NA             0.0         0.24         0.01
+           1024         1024            NA           NA             0.0         0.17         0.01
+              0         1024            NA           NA             NA           NA          0.01
+
+Mode: NoiseMultiplier x2
+              1            1            NA           NA             0.0         6.50         0.01
+              2            2            NA           NA             0.0         4.60         0.01
+              4            4            NA           NA             0.0         3.25         0.01
+              8            8            NA           NA             0.0         2.30         0.01
+             16           16            NA           NA             0.0         1.18         0.01
+             32           32            NA           NA             0.0         1.00         0.01
+             64           64            NA           NA             0.0         0.72         0.01
+            128          128            NA           NA             0.0         0.57         0.01
+            256          256            NA           NA             0.0         0.41         0.01
+            512          512            NA           NA             0.0         0.29         0.01
+           1024         1024            NA           NA             0.0         0.20         0.01
+              0         1024            NA           NA             NA           NA          0.01
+
+# ============================================================================
+# Power Reference Output
+
+Mode: PwrRef Unc
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+         1.0E-6       1.0E-6        50.0E+6      50.0E+6            0.4          0.0         0.01
+         1.0E-3       1.0E-3        50.0E+6      50.0E+6            0.4          0.0         0.01
+
+Mode: PwrRef SWR
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+         1.0E-6       1.0E-6        50.0E+6      50.0E+6            0.0         1.08         0.01
+         1.0E-3       1.0E-3        50.0E+6      50.0E+6            0.0         1.08         0.01

@@ -1,0 +1,54 @@
+Begin Header
+	instrument = Agilent 11667A
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 21954 $
+
+# This file contains accuracy information for
+# the HP/Agilent 11667A Power Splitter 1 year
+# specifications
+
+# 11667A Power Splitter Operating and Service Manual,
+# Part Number 11667-90003, June 2001
+
+# Standard configuration: Type N female on all ports
+# Option 001: Type N male input, Type N female on output ports
+# Option 002: Type N female input, APC-7 on output ports
+
+# Floor values represents specified SWR value for adjacent frequency
+# Lookup is via ACCVF function
+
+Mode: Input SWR
+
+# Input SWR
+
+# Maximum Input Power: +27 dBm (0.5 W)
+# Insertion loss: 7 dB
+
+# Frequency (Hz)      Not used  Tolerance Floor  Resolution
+# ------------------- --------- --------- ------- ----------
+0               4E+9   NA    NA  0         1.15      NA
+4E+9            8E+9   NA    NA  0         1.25      NA
+8E+9           18E+9   NA    NA  0         1.45      NA
+
+Mode: Output SWR
+
+# Output SWR
+
+# Frequency (Hz)      Not used  Tolerance Floor  Resolution
+# ------------------- --------- --------- ------- ----------
+0               4E+9   NA    NA  0         1.10      NA
+4E+9            8E+9   NA    NA  0         1.20      NA
+8E+9           18E+9   NA    NA  0         1.33      NA
+
+Mode: Tracking
+
+# Output Tracking (dB)
+
+# Frequency (Hz)      Not used  Tolerance Floor  Resolution
+# ------------------- --------- --------- ------- ----------
+0               4E+9   NA    NA  0         0.15      NA
+4E+9            8E+9   NA    NA  0         0.20      NA
+8E+9           18E+9   NA    NA  0         0.25      NA

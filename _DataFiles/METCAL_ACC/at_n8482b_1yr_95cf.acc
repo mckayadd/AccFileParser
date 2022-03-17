@@ -1,0 +1,142 @@
+Begin Header
+              Instrument  = Agilent N8482B
+              Interval    = 365 days
+              Confidence  = 2 sigma
+End Header
+
+# $Revision: 10961 $
+#
+# This file contains Specifications for the Equipment and Parameters
+# identified within the Header above.
+#
+# Source: Operating and Service Guide, Agilent N8480 Series Power Sensors,
+# Manual Part Number N8481-90000, Fourth Edition, November 11, 2011
+#
+#                           Frequency R   100.0E+3to     6.0E+9Hz
+#                           Power Range   316.2E-6to       25.0W
+#
+# Specifications are valid with EPM and EPM-P Series of Power Meters and are
+# in conjunction with and/or in addition to those of the power meter utilized.
+#
+# ============================================================================
+# Cal Factor Uncertainty
+#
+# Values represent maximum specified uncertainties from the manufacturer.
+#
+# Per Agilent: Cal factor measurement uncertainty for a test frequency between
+# two (explicitly specified) cal factor frequencies is the worst case uncertainty
+# of the two cal frequency points on either side of the test frequency.
+
+Mode: CF Unc
+
+# Power (W)                 Frequency (Hz)            Tol (%)     Floor   Resolution
+# ------------------------  ----------------------  ---------------------------------
+      316.2E-6        25.0      50.0E+6    50.0E+6         0.00          0         NA
+      316.2E-6        25.0     100.0E+3   9.999E+6         1.48          0         NA
+      316.2E-6        25.0      10.0E+6    30.0E+6         1.43          0         NA
+      316.2E-6        25.0      30.0E+6   500.0E+6         1.49          0         NA
+      316.2E-6        25.0     500.0E+6     1.2E+9         1.49          0         NA
+      316.2E-6        25.0       1.2E+9     6.0E+9         1.56          0         NA
+
+
+
+
+
+
+
+
+# ============================================================================
+# Maximum SWR
+#
+# Floor value represents maximum (worst case) specified SWR value for adjacent
+# frequency.
+
+Mode: SWR
+
+# Frequency (Hz)            (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+      100.0E+3      2.0E+9           NA         NA            0       1.08         NA
+        2.0E+9      6.0E+9           NA         NA            0       1.16         NA
+
+
+
+
+
+
+
+# ============================================================================
+# Power Linearity Adder
+#
+# Additional error due to non-linearity of the sensor relative to input power
+# level after zero and calibration at ambient environmental conditions.
+
+
+
+Mode: PwrLin
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      316.2E-6    794.3E-3           NA         NA         0.00          0         NA
+      794.3E-3      7.9433           NA         NA         0.52          0         NA
+        7.9433        25.0           NA         NA         0.80          0         NA
+
+# ============================================================================
+# Zero Set
+#
+# Precision or floor of the power meter zeroing operation with the sensor
+# connected.
+
+Mode: ZeroSet
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      316.2E-6    794.3E-3           NA         NA            0    25.0E-6         NA
+      794.3E-3        25.0           NA         NA            0    63.0E-6         NA
+
+Mode: ZeroSet OptCFT
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-3        25.0           NA         NA            0    63.0E-6         NA
+
+# ============================================================================
+# Zero Drift
+#
+# Long-term (typically an hour) stability for a constant input power at a
+# constant temperature following a defined warm-up time.
+
+Mode: ZeroDrift
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      316.2E-6    794.3E-3           NA         NA            0     3.0E-6         NA
+      794.3E-3        25.0           NA         NA            0     7.0E-6         NA
+
+Mode: ZeroDrift OptCFT
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-3        25.0           NA         NA            0     7.0E-6         NA
+
+# ============================================================================
+# Measurement Noise
+#
+# Short-term (typically less than a minute) stability for a constant input
+# power at a constant temperature following a defined warm-up time.
+#
+# Specified with power meter number of averages at 16 (Normal Mode) or
+# 32 (x2 Mode), at room temperature, measured over a one minute interval and
+# two standard deviations.
+
+Mode: Noise
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      316.2E-6    794.3E-3           NA         NA            0    80.0E-6         NA
+      794.3E-3        25.0           NA         NA            0   114.0E-6         NA
+
+Mode: Noise OptCFT
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-3        25.0           NA         NA            0   114.0E-6         NA

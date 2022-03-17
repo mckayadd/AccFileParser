@@ -1,0 +1,68 @@
+Begin Header
+	instrument = HP 8662A
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Hewlett-Packard 8662A RF Signal Generator.
+
+	# Source: HP 8662A Synthesized Signal Generator, Operating
+	# and Service Manual, Volume 1, Part No. 08662-90061,
+	# February 1982, Addenda dated 2 July 1984
+
+	# Most specifications are valid after a 1 hour warmup time,
+	# except as noted below.
+
+	# The amplitude values and accuracies are in dBm.
+
+	# The frequency reference specifications are for a unit that
+	# has been connected to AC mains (unit in ON or STANDBY) for
+	# 10 days continuously. If disconnected from AC power for less
+	# than 24 hours following previous established stability, the
+	# specified aging rate performance is achieved following a
+	# 24 hour warm up.
+
+	# Specifications for level and flatness apply within an ambient
+	# temperature range of 15 to 45 degC.
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Hertz
+ 
+	# Specification is 5 * 10E-10/day, derived from Internal
+	# Reference Oscillator.
+
+	# Specs below are normalized for 365 days.
+
+	# NOMINAL          MOD1             Tol.      Floor  Res.
+	#----------------  ---------------  --------  -----  ----
+	10E+3    1280E+6   -139.9   +13     1.825E-5  0      NA
+
+Mode: Decibels
+
+	# Level correction (default) on
+
+	# Includes flatness, attenuator error, detector error, and
+	# measurement uncertainty
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-139.9   -130.1    10E+3   1280E+6  NA       NA     0.1
+	-130     -120.1    10E+3   1280E+6  0        3.0    0.1
+	-120        +13    10E+3   1280E+6  0        1.0    0.1
+
+Mode: dB Flat 
+
+      # Flatness, referenced to 100 MHz, without correction (level
+	# correction is defeated using Special Function 85 and is
+	# only valid from -120 to +13 dBm)
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-139.9   -120.1    10E+3   1280E+6  NA       NA     0.1
+	-120        +13    10E+3    640E+6  0        1.5    0.1
+	-120        +13    640E+6  1280E+6  0        3.5    0.1

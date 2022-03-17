@@ -1,0 +1,38 @@
+Begin Header
+  instrument = Guildline 9334A-0.001
+  interval   = 365 days
+  confidence = 2 sigma
+End Header
+
+# $Revision: 9490 $
+
+# Reference document:
+#
+#   guildline9334adatasheet.pdf
+#
+#   9334A Series
+#   Ultra-Precise "Air" Resistance Standards
+#
+#   Download from Guildline Instruments on 15 May 2011
+
+# Calibration Uncertainty.
+
+Mode: UCal
+
+# Resistance          Not Used  Tolerance  Floor  Resolution
+# ----------------------------------------------------------
+  0.999E-3  1.001E-3  NA   NA   20E-4      0      NA 
+
+Mode: Stability
+
+# Resistance          Not Used  Tolerance  Floor  Resolution
+# ----------------------------------------------------------
+  0.999E-3  1.001E-3  NA   NA   15E-4      0      NA 
+
+Mode: Temp Coefficient
+
+# Specification is +/-ppm/degC
+
+# Resistance          Not Used  Tolerance  Floor  Resolution
+# ----------------------------------------------------------
+  0.999E-3  1.001E-3  NA   NA   1.5E-4     0      NA 

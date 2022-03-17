@@ -1,0 +1,39 @@
+Begin Header
+	instrument = Spectracom 9383
+	interval   = 1 day
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 4016 $
+
+	# Spectracom 9383 NetClock Time Server
+	# Technical Specifications: NetClock® 9383, May 24, 2011
+
+Mode: Timebase
+
+	# Standard (TCXO)
+	# Frequency Stability (24 hour average): <1.0 x 10E-10 (locked to GPS)
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-8     0        NA
+   
+Mode: Timebase 05
+
+	# Option 05 (OCXO)
+	# Frequency Stability (24 hour average): <1.0 x 10E-11 (locked to GPS)
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-9     0        NA
+   
+Mode: Timebase 04
+
+	# Option 04 (Rubidium)
+	# Frequency Stability (24 hour average): <1.0 x 10E-12 (locked to GPS)
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-10     0        NA
+   
+

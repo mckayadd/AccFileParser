@@ -1,0 +1,28 @@
+  # This file contains 365 day accuracy information for the
+  # Yokogawa / Model 279301
+
+  # $Revision: 1.1 $
+
+Begin Header
+  instrument      =               Yokogawa 279301
+  interval        =               365 days
+  confidence      =               2 sigma
+End Header
+
+  # Any special Notes
+                # Reference document was downloaded from Yokogawa website on Mar 26, 2010
+                # The is for the Yokogawa Decade Resistance Standard
+
+                # The below specifications only applies to the above reference device
+
+  # Nominal                       Mod 1                   Tolerance   Floor       Resolution
+  # ---------------------------------------------------------------------------------------------
+
+Mode:           UCal
+                # Calibration Uncertainty.
+
+           0.100           1.210  NA          NA            0.010000       2E-03       1E-03
+           1.211          11.210  NA          NA            0.010000       2E-03       1E-03
+          11.211         111.210  NA          NA            0.010000       2E-03       1E-03
+         111.211        1111.210  NA          NA            0.010000       2E-03       1E-03
+

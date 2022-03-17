@@ -1,0 +1,66 @@
+Begin Header
+	instrument = HP 8663A
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Hewlett-Packard 8663A RF Signal Generator.
+
+	# Source: HP 8663A Synthesized Signal Generator (Including
+	# Options 001, 002, & 003) Operation and Calibration Manual,
+	# Part No. 08663-90069, Rev. 12 Aug 91
+
+	# Most specifications are valid after a 1 hour warmup time,
+	# except as noted below.
+
+	# The amplitude values and accuracies are in dBm.
+
+	# The frequency reference specifications are for a unit that
+	# has been connected to AC mains (unit in ON or STANDBY) for
+	# 10 days continuously. If disconnected from AC power for less
+	# than 24 hours following previous established stability, the
+	# specified aging rate performance is achieved following a
+	# 24 hour warm up.
+
+	# Specifications for level and flatness apply within an ambient
+	# temperature range of 15 to 45 degC.
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Hertz
+ 
+	# Specification is 5 * 10E-10/day, derived from Internal
+	# Reference Oscillator.
+
+	# Specs below are normalized for 365 days.
+
+	# NOMINAL          MOD1             Tol.      Floor  Res.
+	#----------------  ---------------  --------  -----  ----
+	100E+3   2560E+6   -129.9   +16     1.825E-5  0      NA
+
+Mode: Decibels
+
+	# Level correction (default) on
+
+	# Includes flatness, attenuator error, detector error, and
+	# measurement uncertainty
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-129.9     -120    100E+3  2560E+6  0        3.0    0.1
+	-119.9      +16    100E+3  2560E+6  0        1.0    0.1
+
+Mode: dB Flat 
+
+      # Flatness in Sweep Mode (Uncorrected). Level correction
+	# is defeated using Special Function 85 and is only valid
+	# from -119.9 to +16 dBm)
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-129.9      +16    100E+3  1280E+6  0        1.1    0.1
+	-129.9      +16    1280E+6 2560E+6  0        1.5    0.1

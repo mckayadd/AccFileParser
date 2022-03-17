@@ -1,0 +1,1556 @@
+Begin Header
+                       instrument = Fluke 5500A
+                         interval = 365 days
+                       confidence = 2.58 sigma
+End Header
+
+# $Revision: 14041 $
+#
+# Sections of this accuracy file may appear to be redundant but are required
+# to support both the legacy FSCs and newer NVIs.
+#
+# Specification Source:
+# Product Specifications for 5500A, Rev D, 07/12/2011
+# Product Specifications for 5500A-SC300, Rev D, 06/22/2011
+# Product Specifications for 5500A-SC600, Rev F, 04/25/2011
+# Instruction Sheet Model 5500A/COIL, PN 600616, August 1995, Rev.8, 1/09
+# 7405A-4207T AC Divider Instruction Sheet, PN 881826, February 1992
+#
+# ============================================================================
+# DC Voltage Specifications
+#
+# Output (V)                        (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Normal Output, Range Locked
+Mode: 330mV
+      -329.9999E-3     329.9999E-3            NA           NA        0.0060           3E-6      100E-9
+
+Mode: 3.3V
+         -3.299999        3.299999            NA           NA        0.0050           5E-6        1E-6
+
+Mode: 33V
+         -32.99999        32.99999            NA           NA        0.0050          50E-6       10E-6
+
+Mode: 330V
+         -329.9999             -30            NA           NA        0.0055         500E-6      100E-6
+                30        329.9999            NA           NA        0.0055         500E-6      100E-6
+
+Mode: 1100V
+             -1040            -100            NA           NA        0.0055         1.5E-3        1E-3
+               100            1040            NA           NA        0.0055         1.5E-3        1E-3
+
+# Normal Output, Autorange
+Mode: Volts
+      -329.9999E-3     329.9999E-3            NA           NA        0.0060           3E-6      100E-9
+         -3.299999        3.299999            NA           NA        0.0050           5E-6        1E-6
+         -32.99999        32.99999            NA           NA        0.0050          50E-6       10E-6
+         -329.9999             -30            NA           NA        0.0055         500E-6      100E-6
+                30        329.9999            NA           NA        0.0055         500E-6      100E-6
+             -1020            -100            NA           NA        0.0055         1.5E-3        1E-3
+               100            1020            NA           NA        0.0055         1.5E-3        1E-3
+
+# Output (V)                        (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output
+Mode: Volts AX
+       -329.999E-3      329.999E-3            NA           NA          0.04         350E-6        1E-6
+              -3.3             3.3            NA           NA          0.04         350E-6       10E-6
+
+# Thermocouple Terminals
+Mode: Volts TC
+      -329.9999E-3     329.9999E-3            NA           NA         0.006           3E-6      100E-9
+
+# ============================================================================
+# DC Current Specifications
+#
+# Output (A)                        (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, Range Locked
+Mode: 3.3mA
+       -3.29999E-3      3.29999E-3            NA           NA         0.013          50E-9       10E-9
+
+Mode: 33mA
+       -32.9999E-3      32.9999E-3            NA           NA         0.010         250E-9      100E-9
+
+Mode: 330mA
+       -329.999E-3      329.999E-3            NA           NA         0.010         3.3E-6        1E-6
+
+Mode: 2.2A
+              -2.2             2.2            NA           NA         0.030          44E-6       10E-6
+
+Mode: 11A
+               -11              11            NA           NA         0.060         330E-6      100E-6
+
+Mode: 11A BC
+               -11              11            NA           NA         0.040         330E-6      0.0001
+
+# Output (A)                        (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, Autorange
+Mode: Amps
+       -3.29999E-3      3.29999E-3            NA           NA         0.013          50E-9       10E-9
+       -32.9999E-3      32.9999E-3            NA           NA         0.010         250E-9      100E-9
+       -329.999E-3      329.999E-3            NA           NA         0.010         3.3E-6        1E-6
+              -2.2             2.2            NA           NA         0.030          44E-6       10E-6
+               -11              11            NA           NA         0.060         330E-6      100E-6
+
+# 5725A Output, Boost On
+Mode: Amps BC
+               -11              11            NA           NA         0.040         330E-6      0.0001
+
+# ----------------------------------------------------------------------------
+# DC Current Specifications with a 50-turn coil
+#
+# Effective Output (A)              (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, 5500A/COIL, Ranged Locked, Toroidal UUT
+Mode: 3.3mA FT50T
+        -0.1649995       0.1649995            NA           NA           NA             NA       500E-9
+
+Mode: 33mA FT50T
+         -1.649995        1.649995            NA           NA           NA             NA         5E-6
+
+Mode: 330mA FT50T
+         -16.49995        16.49995            NA           NA           NA             NA        50E-6
+
+Mode: 2.2A FT50T
+              -110             110            NA           NA           NA             NA       500E-6
+
+Mode: 11A FT50T
+              -550             550            NA           NA           NA             NA         5E-3
+
+# 5725A Output, Boost On, Range Locked
+Mode: 11A BC FT50T
+              -550             550            NA           NA           NA             NA         5E-3
+
+# Auxiliary Output, 5500A/COIL, Autorange, Toroidal UUT
+Mode: Amps FT50T
+        -0.1649995       0.1649995            NA           NA           NA             NA       500E-9
+         -1.649995        1.649995            NA           NA           NA             NA         5E-6
+         -16.49995        16.49995            NA           NA           NA             NA        50E-6
+              -110             110            NA           NA           NA             NA       500E-6
+              -550             550            NA           NA           NA             NA         5E-3
+
+# 5725A Output, Boost On, Autorange
+Mode: Amps BC FT50T
+              -550             550            NA           NA           NA             NA         5E-3
+
+# Effective Output (A)              (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, 5500A/COIL, Ranged Locked, Non-Toroidal UUT
+Mode: 3.3mA FT50X
+        -0.1649995       0.1649995            NA           NA           NA             NA       500E-9
+
+Mode: 33mA FT50X
+         -1.649995        1.649995            NA           NA           NA             NA         5E-6
+
+Mode: 330mA FT50X
+          -9.99995         9.99995            NA           NA           NA             NA        50E-6
+         -16.49995        16.49995            NA           NA        0.5001         0.0200       50E-6
+
+Mode: 2.2A FT50X
+          -16.4999         16.4999            NA           NA           NA             NA       500E-6
+              -110             110            NA           NA        0.5009         0.1400      500E-6
+
+Mode: 11A FT50X
+          -16.4999         16.4999            NA           NA           NA             NA         5E-3
+              -550             550            NA           NA        0.5036         0.1410        5E-3
+
+# 5725A Output, Boost On, Range Locked
+Mode: 11A BC FT50X
+          -16.4999         16.4999            NA           NA           NA             NA         5E-3
+              -550             550            NA           NA        0.5016         0.1410        5E-3
+
+# Auxiliary Output, 5500A/COIL, Autorange, Non-Toroidal UUT
+Mode: Amps FT50X
+        -0.1649995       0.1649995            NA           NA           NA             NA       500E-9
+         -1.649995        1.649995            NA           NA           NA             NA         5E-6
+          -9.99995         9.99995            NA           NA           NA             NA        50E-6
+          -16.4999         16.4999            NA           NA        0.5001         0.0200       50E-6
+              -110             110            NA           NA        0.5009         0.1400      500E-6
+              -550             550            NA           NA        0.5036         0.1410        5E-3
+
+# 5725A Output, Boost On, Autorange
+Mode: Amps BC FT50X
+            -9.995           9.995            NA           NA           NA             NA         5E-3
+          -16.4999         16.4999            NA           NA        0.5016         0.0259        5E-3
+          -149.999         149.999            NA           NA        0.5016         0.1410        5E-3
+              -550             550            NA           NA        0.5016         0.5003        5E-3
+
+# Effective Output (A)              (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, generic 50-turn coil, Ranged Locked
+Mode: 3.3mA T50
+        -0.1649995       0.1649995            NA           NA           NA             NA       500E-9
+
+Mode: 33mA T50
+         -1.649995        1.649995            NA           NA           NA             NA         5E-6
+
+Mode: 330mA T50
+         -16.49995        16.49995            NA           NA           NA             NA        50E-6
+
+Mode: 2.2A T50
+              -110             110            NA           NA           NA             NA       500E-6
+
+Mode: 11A T50
+              -550             550            NA           NA           NA             NA         5E-3
+
+# 5725A Output, Boost On, Range Locked
+Mode: 11A BC T50
+              -550             550            NA           NA           NA             NA         5E-3
+
+# Auxiliary Output, generic 50-turn coil, Autorange
+Mode: Amps T50
+        -0.1649995       0.1649995            NA           NA           NA             NA       500E-9
+         -1.649995        1.649995            NA           NA           NA             NA         5E-6
+         -16.49995        16.49995            NA           NA           NA             NA        50E-6
+              -110             110            NA           NA           NA             NA       500E-6
+              -550             550            NA           NA           NA             NA         5E-3
+
+# 5725A Output, Boost On, Autorange
+Mode: Amps BC T50
+              -550             550            NA           NA           NA             NA         5E-3
+
+# ----------------------------------------------------------------------------
+# DC Current Specifications with a 30-turn coil
+#
+# Effective Output (A)              (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, generic 30-turn coil, Range Locked, Toroidal UUT
+Mode: 3.3mA T30
+        -0.0989997       0.0989997            NA           NA           NA             NA       300E-9
+
+Mode: 33mA T30
+         -0.989997        0.989997            NA           NA           NA             NA         3E-6
+
+Mode: 330mA T30
+          -9.89997         9.89997            NA           NA           NA             NA        30E-6
+
+Mode: 2.2A T30
+               -66              66            NA           NA           NA             NA       300E-6
+
+Mode: 11A T30
+              -330             330            NA           NA           NA             NA         3E-3
+
+# 5725A Output, Boost On, Range Locked
+Mode: 11A BC T30
+              -330             330            NA           NA           NA             NA         3E-3
+
+# Auxiliary Output, generic 30-turn coil, Autorange, Toroidal UUT
+Mode: Amps T30
+        -0.0989997       0.0989997            NA           NA           NA             NA       300E-9
+         -0.989997        0.989997            NA           NA           NA             NA         3E-6
+          -9.89997         9.89997            NA           NA           NA             NA        30E-6
+               -66              66            NA           NA           NA             NA       300E-6
+              -330             330            NA           NA           NA             NA         3E-3
+
+# 5725A Output, Boost On, Autorange
+Mode: Amps BC T30
+              -330             330            NA           NA           NA             NA         3E-3
+
+# ----------------------------------------------------------------------------
+# DC Current Specifications with a 10-turn coil
+#
+# Effective Output (A)              (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, generic 10-turn coil, Range Locked, Toroidal UUT
+Mode: 3.3mA T10
+        -0.0329999       0.0329999            NA           NA           NA             NA       100E-9
+
+Mode: 33mA T10
+         -0.329999        0.329999            NA           NA           NA             NA         1E-6
+
+Mode: 330mA T10
+          -3.29999         3.29999            NA           NA           NA             NA        10E-6
+
+Mode: 2.2A T10
+               -22              22            NA           NA           NA             NA       100E-6
+
+Mode: 11A T10
+              -110             110            NA           NA           NA             NA         1E-3
+
+# 5725A Output, Boost On, Range Locked
+Mode: 11A BC T10
+              -110             110            NA           NA           NA             NA         1E-3
+
+# Auxiliary Output, generic 10-turn coil, Autorange, Toroidal UUT
+Mode: Amps T10
+        -0.0329999       0.0329999            NA           NA           NA             NA       100E-9
+         -0.329999        0.329999            NA           NA           NA             NA         1E-6
+          -3.29999         3.29999            NA           NA           NA             NA        10E-6
+               -22              22            NA           NA           NA             NA       100E-6
+              -110             110            NA           NA           NA             NA         1E-3
+
+# 5725A Output, Boost On, Autorange
+Mode: Amps BC T10
+              -110             110            NA           NA           NA             NA         1E-3
+
+# ============================================================================
+# Resistance Specifications
+#
+# Output (ohms)                     (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# 4-WIRE & 2-WIRE COMP
+Mode: Ohms 4W
+                 0          10.999            NA           NA         0.012          0.008        1E-3
+                11          32.999            NA           NA         0.012          0.015        1E-3
+                33         109.999            NA           NA         0.009          0.015        1E-3
+               110         329.999            NA           NA         0.009          0.015        1E-3
+               330      1.09999E+3            NA           NA         0.009           0.06       10E-3
+            1.1E+3      3.29999E+3            NA           NA         0.009           0.06       10E-3
+            3.3E+3      10.9999E+3            NA           NA         0.009            0.6      100E-3
+             11E+3      32.9999E+3            NA           NA         0.009            0.6      100E-3
+             33E+3      109.999E+3            NA           NA         0.011              6           1
+
+# Output (ohms)                     (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# 2-WIRE
+Mode: Ohms 2W
+                 0          10.999            NA           NA         0.012          0.008        1E-3
+                11          32.999            NA           NA         0.012          0.015        1E-3
+                33         109.999            NA           NA         0.009          0.015        1E-3
+               110         329.999            NA           NA         0.009          0.015        1E-3
+               330      1.09999E+3            NA           NA         0.009           0.06       10E-3
+            1.1E+3      3.29999E+3            NA           NA         0.009           0.06       10E-3
+            3.3E+3      10.9999E+3            NA           NA         0.009            0.6      100E-3
+             11E+3      32.9999E+3            NA           NA         0.009            0.6      100E-3
+             33E+3      109.999E+3            NA           NA         0.011              6           1
+            110E+3      329.999E+3            NA           NA         0.012              6           1
+            330E+3      1.09999E+6            NA           NA         0.015             55          10
+            1.1E+6      3.29999E+6            NA           NA         0.015             55          10
+            3.3E+6      10.9999E+6            NA           NA          0.06            550         100
+             11E+6      32.9999E+6            NA           NA           0.1            550         100
+             33E+6      109.999E+6            NA           NA         0.500           5500        1000
+            110E+6      330.000E+6            NA           NA         0.500          16500        1000
+
+# ============================================================================
+# AC Voltage (Sine Wave) Specifications
+# Extended BW voltage ranges are offset to accommodate the calibrator's
+# resolution capabilities when converting dBm to voltage.
+#
+# Output (V rms)                    Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Normal Output
+Mode: Volts SI
+              1E-3       33.470E-3           0.01         9.99         5.00         165E-6        1E-3
+              1E-3       32.999E-3             10        44.99         0.35          20E-6        1E-6
+              1E-3       32.999E-3             45        10E+3         0.15          20E-6        1E-6
+              1E-3       32.999E-3          10E+3        20E+3          0.2          20E-6        1E-6
+              1E-3       32.999E-3          20E+3        50E+3         0.25          20E-6        1E-6
+              1E-3       32.999E-3          50E+3       100E+3         0.35          33E-6        1E-6
+              1E-3       32.999E-3         100E+3       500E+3            1          60E-6        1E-6
+
+          33.50E-3      330.500E-3           0.01         9.99         5.00        1.65E-3        1E-3
+          33.00E-3      329.999E-3             10        44.99         0.25          50E-6        1E-6
+          33.00E-3      329.999E-3             45        10E+3         0.05          20E-6        1E-6
+          33.00E-3      329.999E-3          10E+3        20E+3          0.1          20E-6        1E-6
+          33.00E-3      329.999E-3          20E+3        50E+3         0.16          40E-6        1E-6
+          33.00E-3      329.999E-3          50E+3       100E+3         0.24         170E-6        1E-6
+          33.00E-3      329.999E-3         100E+3       500E+3          0.7         330E-6        1E-6
+
+           0.33080         3.34700           0.01         9.99         5.00       16.50E-3      100E-3
+           0.33000         3.29999             10        44.99         0.15         250E-6       10E-6
+           0.33000         3.29999             45        10E+3         0.03          60E-6       10E-6
+           0.33000         3.29999          10E+3        20E+3         0.08          60E-6       10E-6
+           0.33000         3.29999          20E+3        50E+3         0.14         300E-6       10E-6
+           0.33000         3.29999          50E+3       100E+3         0.24         1.7E-3       10E-6
+           0.33000         3.29999         100E+3       500E+3          0.5         3.3E-3       10E-6
+           0.30000         3.30000         500E+3         2E+6          NA             NA       100E-3
+
+              3.35         33.0050           0.01         9.99         5.00         165E-3           1
+              3.30         32.9999             10        44.99         0.15         2.5E-3      100E-6
+              3.30         32.9999             45        10E+3         0.04         600E-6      100E-6
+              3.30         32.9999          10E+3        20E+3         0.08         2.6E-3      100E-6
+              3.30         32.9999          20E+3        50E+3         0.19           5E-3      100E-6
+              3.30         32.9999          50E+3       100E+3         0.24          17E-3      100E-6
+
+                33         329.999             45         1E+3         0.05         6.6E-3        1E-3
+                33         329.999           1E+3        10E+3         0.08          15E-3        1E-3
+                33         329.999          10E+3        20E+3         0.09          33E-3        1E-3
+
+               330            1020             45         1E+3         0.05          80E-3       10E-3
+               330            1020           1E+3         5E+3          0.2         100E-3       10E-3
+               330            1020           5E+3        10E+3          0.2         500E-3       10E-3
+
+# Output (V rms)                    Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output
+Mode: Volts SI AX
+             10E-3      330.500E-3           0.01         9.99         5.00        1.65E-3        1E-3
+             10E-3      329.999E-3             10        19.99          0.2         370E-6        1E-6
+             10E-3      329.999E-3             20        44.99          0.1         370E-6        1E-6
+             10E-3      329.999E-3             45         1E+3          0.1         370E-6        1E-6
+             10E-3      329.999E-3           1E+3         5E+3          0.2         450E-6        1E-6
+             10E-3      329.999E-3           5E+3        10E+3         0.40         450E-6        1E-6
+
+              0.33           3.347           0.01         9.99         5.00        16.5E-3      100E-3
+              0.33             3.3             10        19.99          0.2         450E-6       10E-6
+              0.33             3.3             20        44.99          0.1         450E-6       10E-6
+              0.33             3.3             45         1E+3         0.09         450E-6       10E-6
+              0.33             3.3           1E+3         5E+3          0.2         1.4E-3       10E-6
+              0.33             3.3           5E+3        10E+3         0.40         1.4E-3       10E-6
+               0.3             3.4           0.01         9.99          NA             NA        10E-6
+
+# Normal Output, 5725A Boost
+Mode: Volts SI BV
+               100            1020             45         1E+3         0.05          80E-3       10E-3
+               100            1020           1E+3        20E+3         0.08         100E-3       10E-3
+               100            1020          20E+3        30E+3          0.1         100E-3       10E-3
+               100             750          30E+3       100E+3          0.5         500E-3       10E-3
+
+# ============================================================================
+# AC Voltage (Sine): Normal Output, External 1000:1 divider
+# Less than 20 mV rms.
+#
+# Accuracy is the 7405A-4207T AC Divider Tol (%) specifications RSS'd with the
+# 5500A 3.3V & 33V range specifications.  Floor values are from the 5500A, and
+# can be less than 1 µV when proper means are taken to minimize ground current
+# errors.
+#
+# Divider Specs, 18 to 28 °C:
+# 0.25% + floor, 50 Hz to 10 kHz
+# 0.30% + floor, 10 kHz to 50 kHz
+
+Mode: Volts SI DV
+
+# Divider Output (Vrms)             Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+            330E-6      3.29999E-3             50        10E+3     0.251794          60E-9         NA
+            330E-6      3.29999E-3          10E+3        20E+3     0.310483          60E-9         NA
+            330E-6      3.29999E-3          20E+3        50E+3     0.331059         300E-9         NA
+
+            3.3E-3           20E-3             50        10E+3     0.253180         600E-9         NA
+            3.3E-3           20E-3          10E+3        20E+3     0.310483         2.6E-6         NA
+            3.3E-3           20E-3          20E+3        50E+3     0.355106           5E-6         NA
+
+# ============================================================================
+# AC Current (Sine Wave) Specifications
+#
+# Output (A rms)                    Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, LCOMP OFF
+Mode: Amps SI
+
+             29E-6          330E-6           0.01         9.99         5.00        1.65E-6        1E-6
+             29E-6       329.99E-6             10        19.99         0.25         150E-9       10E-9
+             29E-6       329.99E-6             20        44.99        0.125         150E-9       10E-9
+             29E-6       329.99E-6             45         1E+3        0.125         250E-9       10E-9
+             29E-6       329.99E-6           1E+3         5E+3         0.40         150E-9       10E-9
+             29E-6       329.99E-6           5E+3        10E+3         1.25         150E-9       10E-9
+
+            400E-6          3.3E-3           0.01         9.99         5.00        16.5E-6      100E-6
+            330E-6      3.29999E-3             10        19.99          0.2         300E-9       10E-9
+            330E-6      3.29999E-3             20        44.99          0.1         300E-9       10E-9
+            330E-6      3.29999E-3             45         1E+3          0.1         300E-9       10E-9
+            330E-6      3.29999E-3           1E+3         5E+3          0.2         300E-9       10E-9
+            330E-6      3.29999E-3           5E+3        10E+3          0.6         300E-9       10E-9
+
+              4E-3           33E-3           0.01         9.99         5.00         165E-6        1E-3
+            3.3E-3      32.9999E-3             10        19.99          0.2           3E-6      100E-9
+            3.3E-3      32.9999E-3             20        44.99          0.1           3E-6      100E-9
+            3.3E-3      32.9999E-3             45         1E+3         0.09           3E-6      100E-9
+            3.3E-3      32.9999E-3           1E+3         5E+3          0.2           3E-6      100E-9
+            3.3E-3      32.9999E-3           5E+3        10E+3          0.6           3E-6      100E-9
+
+             34E-3          330E-3           0.01         9.99         5.00        1.65E-3        1E-3
+             33E-3      329.999E-3             10        19.99          0.2          30E-6        1E-6
+             33E-3      329.999E-3             20        44.99          0.1          30E-6        1E-6
+             33E-3      329.999E-3             45         1E+3         0.09          30E-6        1E-6
+             33E-3      329.999E-3           1E+3         5E+3          0.2          30E-6        1E-6
+             33E-3      329.999E-3           5E+3        10E+3          0.6          30E-6        1E-6
+
+              0.33         2.19999             10        44.99          0.2         300E-6       10E-6
+              0.33         2.19999             45         1E+3          0.1         300E-6       10E-6
+              0.33         2.19999           1E+3         5E+3         0.75         300E-6       10E-6
+
+               2.2              11             45           65         0.06           2E-3      100E-6
+               2.2              11             65          500          0.1           2E-3      100E-6
+               2.2              11            500         1E+3         0.33           2E-3      100E-6
+
+# 5725A Output, Boost On
+Mode: Amps SI BC
+               1.5              11             45         1E+3         0.10         100E-6      100E-6
+               1.5              11           1E+3         5E+3         0.25           5E-3      100E-6
+               1.5              11           5E+3        10E+3         1.00          10E-3      100E-6
+
+# ----------------------------------------------------------------------------
+# AC Current (Sine Wave) Specifications with a 50-turn coil
+
+# Effective Output (A rms)          Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# The Fluke 5500A/COIL should never be used with LCOMP OFF, even though it is
+# a legal mode.
+
+# DO NOT USE: Auxiliary Output, 5500A/COIL, Toroidal UUT, LCOMP OFF
+Mode: Amps SI FT50T
+           1.45E-3             550             10        10E+3          NA             NA          NA
+
+# DO NOT USE: 5725A Output, Boost On, 5500A/COIL, Toroidal UUT, LCOMP OFF
+Mode: Amps SI BC FT50T
+                75             550             45        10E+3          NA             NA          NA
+
+# DO NOT USE: Auxiliary Output, 5500A/COIL, Non-toroidal UUT, LCOMP OFF
+Mode: Amps SI FT50X
+           1.45E-3             550             10        10E+3          NA             NA          NA
+
+# DO NOT USE: 5725A Output, Boost On, 5500A/COIL, Non-toroidal UUT, LCOMP OFF
+Mode: Amps SI BC FT50X
+                75             550             45        10E+3          NA             NA          NA
+
+# Auxiliary Output, generic 50-turn coil, Toroidal UUT, LCOMP OFF
+Mode: Amps SI T50
+           1.45E-3             550             10        10E+3          NA             NA          NA
+
+# 5725A Output, Boost On, generic 50-turn coil, Toroidal UUT, LCOMP OFF
+Mode: Amps SI BC T50
+                75             550             45        10E+3          NA             NA          NA
+
+# ----------------------------------------------------------------------------
+# AC Current (Sine Wave) Specifications with a 30-turn coil
+#
+# Effective Output (A rms)          Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, generic 30-turn coil, Toroidal UUT, LCOMP OFF
+Mode: Amps SI T30
+          870.0E-6       9.8997E-3             10        10E+3          NA             NA       300E-9
+            9.9E-3      98.9997E-3             10        10E+3          NA             NA       300E-9
+           99.0E-3      989.997E-3             10        10E+3          NA             NA         3E-6
+              0.99         9.89997             10        10E+3          NA             NA        30E-6
+               9.9         65.9997             10         5E+3          NA             NA       300E-6
+                66             330             45         1E+3          NA             NA         3E-3
+
+# 5725A Output, Boost On, generic 30-turn coil, Toroidal UUT, LCOMP OFF
+Mode: Amps SI BC T30
+                45             330             45        10E+3          NA             NA         3E-3
+
+# ----------------------------------------------------------------------------
+# AC Current (Sine Wave) Specifications with a 10-turn coil
+#
+# Effective Output (A rms)          Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output, generic 10-turn coil, Toroidal UUT, LCOMP OFF
+Mode: Amps SI T10
+            290E-6       3.2999E-3             10        10E+3          NA             NA       100E-9
+            3.3E-3      32.9999E-3             10        10E+3          NA             NA       100E-9
+             33E-3      329.999E-3             10        10E+3          NA             NA         1E-6
+              0.33         3.29999             10        10E+3          NA             NA        10E-6
+               3.3         21.9999             10         5E+3          NA             NA       100E-6
+                22             110             45         1E+3          NA             NA         1E-3
+
+# 5725A Output, Boost On, generic 10-turn coil, Toroidal UUT, LCOMP OFF
+Mode: Amps SI BC T10
+               1.5             110             45        10E+3          NA             NA         1E-3
+
+# ============================================================================
+# Capacitance Specifications
+#
+# Capacitance (F)                   (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# 2-Wire
+Mode: Farads 2W
+           330E-12       499.9E-12            NA           NA          0.50         10E-12     100E-15
+           500E-12       1.0999E-9            NA           NA          0.50         10E-12     100E-15
+            1.1E-9       3.2999E-9            NA           NA          0.50         10E-12     100E-15
+            3.3E-9       10.999E-9            NA           NA          0.50         10E-12       1E-12
+             11E-9       32.999E-9            NA           NA          0.25        100E-12       1E-12
+             33E-9       109.99E-9            NA           NA          0.25        100E-12      10E-12
+            110E-9       329.99E-9            NA           NA          0.25        300E-12      10E-12
+            330E-9       1.0999E-6            NA           NA          0.25           1E-9     100E-12
+            1.1E-6       3.2999E-6            NA           NA          0.35           3E-9     100E-12
+            3.3E-6       10.999E-6            NA           NA          0.35          10E-9        1E-9
+             11E-6       32.999E-6            NA           NA          0.40          30E-9        1E-9
+             33E-6       109.99E-6            NA           NA          0.50         100E-9       10E-9
+            110E-6       329.99E-6            NA           NA          0.70         300E-9       10E-9
+            330E-6       1.1000E-3            NA           NA          1.00         300E-9      100E-9
+
+# 4-Wire & 2-Wire Comp
+Mode: Farads 4W
+            110E-9       329.99E-9            NA           NA          0.25        300E-12      10E-12
+            330E-9       1.0999E-6            NA           NA          0.25           1E-9     100E-12
+            1.1E-6       3.2999E-6            NA           NA          0.35           3E-9     100E-12
+            3.3E-6       10.999E-6            NA           NA          0.35          10E-9        1E-9
+             11E-6       32.999E-6            NA           NA          0.40          30E-9        1E-9
+             33E-6       109.99E-6            NA           NA          0.50         100E-9       10E-9
+            110E-6       329.99E-6            NA           NA          0.70         300E-9       10E-9
+            330E-6       1.1000E-3            NA           NA          1.00         300E-9      100E-9
+
+# ============================================================================
+# Temperature Calibration Specifications (Thermocouple)
+#
+# Temperature (degC)                (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: TC B
+               600          799.99            NA           NA             0           0.44        0.01
+               800          999.99            NA           NA             0           0.34        0.01
+              1000         1549.99            NA           NA             0           0.30        0.01
+              1550            1820            NA           NA             0           0.33        0.01
+
+Mode: TC C
+                 0          149.99            NA           NA             0           0.30        0.01
+               150             650            NA           NA             0           0.26        0.01
+               650            1000            NA           NA             0           0.31        0.01
+              1000            1800            NA           NA             0           0.50        0.01
+              1800            2316            NA           NA             0           0.84        0.01
+
+Mode: TC E
+              -250         -100.01            NA           NA             0           0.50        0.01
+              -100          -25.01            NA           NA             0           0.16        0.01
+               -25             350            NA           NA             0           0.14        0.01
+               350             650            NA           NA             0           0.16        0.01
+               650            1000            NA           NA             0           0.21        0.01
+
+Mode: TC J
+              -210         -100.01            NA           NA             0           0.27        0.01
+              -100          -30.01            NA           NA             0           0.16        0.01
+               -30             150            NA           NA             0           0.14        0.01
+               150             760            NA           NA             0           0.17        0.01
+               760            1200            NA           NA             0           0.23        0.01
+
+Mode: TC K
+              -200         -100.01            NA           NA             0           0.33        0.01
+              -100          -25.01            NA           NA             0           0.18        0.01
+               -25             120            NA           NA             0           0.16        0.01
+               120            1000            NA           NA             0           0.26        0.01
+              1000            1372            NA           NA             0           0.40        0.01
+
+Mode: TC L
+              -200         -100.01            NA           NA             0           0.37        0.01
+              -100          799.99            NA           NA             0           0.26        0.01
+               800             900            NA           NA             0           0.17        0.01
+
+Mode: TC N
+              -200         -100.01            NA           NA             0           0.40        0.01
+              -100          -25.01            NA           NA             0           0.22        0.01
+               -25          119.99            NA           NA             0           0.19        0.01
+               120             410            NA           NA             0           0.18        0.01
+               410            1300            NA           NA             0           0.27        0.01
+
+Mode: TC R
+                 0          249.99            NA           NA             0           0.57        0.01
+               250          399.99            NA           NA             0           0.35        0.01
+               400            1000            NA           NA             0           0.33        0.01
+              1000            1767            NA           NA             0           0.40        0.01
+
+Mode: TC S
+                 0          249.99            NA           NA             0           0.47        0.01
+               250          999.99            NA           NA             0           0.36        0.01
+              1000            1400            NA           NA             0           0.37        0.01
+              1400            1767            NA           NA             0           0.46        0.01
+
+Mode: TC T
+              -250         -150.01            NA           NA             0           0.63        0.01
+              -150           -0.01            NA           NA             0           0.24        0.01
+                 0          119.99            NA           NA             0           0.16        0.01
+               120             400            NA           NA             0           0.14        0.01
+
+Mode: TC U
+              -200           -0.01            NA           NA             0           0.56        0.01
+                 0             600            NA           NA             0           0.27        0.01
+
+# ----------------------------------------------------------------------------
+# Temperature Calibration Specifications (RTD)
+#
+# Temperature (degC)                (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: RTD Pt 385 100 Ohm
+              -200             -80            NA           NA             0           0.05       0.003
+               -80               0            NA           NA             0           0.05       0.003
+                 0             100            NA           NA             0           0.07       0.003
+               100             300            NA           NA             0           0.09       0.003
+               300             400            NA           NA             0            0.1       0.003
+               400             630            NA           NA             0           0.12       0.003
+               630             800            NA           NA             0           0.23       0.003
+
+Mode: RTD Pt 385 200 Ohm
+              -200             -80            NA           NA             0           0.04       0.003
+               -80               0            NA           NA             0           0.04       0.003
+                 0             100            NA           NA             0           0.04       0.003
+               100             260            NA           NA             0           0.05       0.003
+               260             300            NA           NA             0           0.12       0.003
+               300             400            NA           NA             0           0.13       0.003
+               400             600            NA           NA             0           0.14       0.003
+               600             630            NA           NA             0           0.16       0.003
+
+Mode: RTD Pt 385 500 Ohm
+              -200             -80            NA           NA             0           0.04       0.003
+               -80               0            NA           NA             0           0.05       0.003
+                 0             100            NA           NA             0           0.05       0.003
+               100             260            NA           NA             0           0.06       0.003
+               260             300            NA           NA             0           0.08       0.003
+               300             400            NA           NA             0           0.08       0.003
+               400             600            NA           NA             0           0.09       0.003
+               600             630            NA           NA             0           0.11       0.003
+
+Mode: RTD Pt 385 1 kOhm
+              -200             -80            NA           NA             0           0.03       0.003
+               -80               0            NA           NA             0           0.03       0.003
+                 0             100            NA           NA             0           0.04       0.003
+               100             260            NA           NA             0           0.05       0.003
+               260             300            NA           NA             0           0.06       0.003
+               300             400            NA           NA             0           0.07       0.003
+               400             600            NA           NA             0           0.07       0.003
+               600             630            NA           NA             0           0.23       0.003
+
+Mode: RTD Pt 3916 100 Ohm
+              -200        -190.003            NA           NA             0           0.25       0.003
+              -190             -80            NA           NA             0           0.04       0.003
+               -80               0            NA           NA             0           0.05       0.003
+                 0             100            NA           NA             0           0.06       0.003
+               100             260            NA           NA             0           0.07       0.003
+               260             300            NA           NA             0           0.08       0.003
+               300             400            NA           NA             0           0.09       0.003
+               400             600            NA           NA             0            0.1       0.003
+               600             630            NA           NA             0           0.23       0.003
+
+Mode: RTD Pt 3926 100 Ohm
+              -200             -80            NA           NA             0           0.05       0.003
+               -80               0            NA           NA             0           0.05       0.003
+                 0             100            NA           NA             0           0.07       0.003
+               100             300            NA           NA             0           0.09       0.003
+               300             400            NA           NA             0            0.1       0.003
+               400             630            NA           NA             0           0.12       0.003
+
+Mode: RTD Ni 391 120 Ohm
+               -80               0            NA           NA             0           0.08       0.003
+                 0             100            NA           NA             0           0.08       0.003
+               100             260            NA           NA             0           0.14       0.003
+
+Mode: RTD Cu 10 Ohm
+              -100             260            NA           NA             0           0.30       0.003
+
+# ============================================================================
+# Phase Specifications
+
+Mode: Degrees
+
+# Phase (deg)                       Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+           -180.00          180.00           0.01         9.99          NA              NA        0.01
+           -180.00          180.00             10           65            0           0.15        0.01
+           -180.00          180.00             65          500            0            0.9        0.01
+           -180.00          180.00            500         1E+3            0              2        0.01
+           -180.00          180.00           1E+3         5E+3            0              6        0.01
+           -180.00          180.00           5E+3        10E+3            0             10        0.01
+
+# ============================================================================
+# Frequency Specifications
+#
+# The MOD1 field bounds handle A, Ap, App, V, Vp, Vpp.
+# Decibels (D) are converted to Volts (V).
+
+Mode: Hertz
+
+# Frequency (Hz)                    Output Level (V)              Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+              0.01          119.99          29E-6         1020       0.0025           1E-3        0.01
+               120       1.1999E+3          29E-6         1020       0.0025           1E-3         0.1
+            1.2E+3           10E+3          29E-6         1020       0.0025           1E-3           1
+             10E+3       11.999E+3          29E-6         1020       0.0025          15E-3           1
+             12E+3       119.99E+3          29E-6         1020       0.0025          15E-3          10
+            120E+3       1.1999E+6          29E-6         1020       0.0025          15E-3         100
+            1.2E+6            2E+6          29E-6         1020       0.0025          15E-3        1000
+
+# ============================================================================
+# AC Voltage (Non-Sine Wave) Specifications
+#
+# Output (Vpp)                      Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Normal Output (Triangle & Truncated Sine)
+Mode: Vpp TI TS
+              3E-3           93E-3           0.01         9.99         5.00       465.0E-6        1E-3
+            2.9E-3       92.999E-3             10        44.99         0.25       465.0E-6        1E-6
+            2.9E-3       92.999E-3             45         1E+3         0.25       232.5E-6        1E-6
+            2.9E-3       92.999E-3           1E+3        20E+3         0.50       232.5E-6        1E-6
+            2.9E-3       92.999E-3          20E+3       100E+3         5.00       465.0E-6        1E-6
+
+             94E-3          930E-3           0.01         9.99         5.00       4.650E-3        1E-3
+             93E-3      929.999E-3             10        44.99         0.25       4.650E-3        1E-6
+             93E-3      929.999E-3             45         1E+3         0.25       2.325E-3        1E-6
+             93E-3      929.999E-3           1E+3        20E+3         0.50       2.325E-3        1E-6
+             93E-3      929.999E-3          20E+3       100E+3         5.00       4.650E-3        1E-6
+
+                 1             9.3           0.01         9.99         5.00       46.50E-3      100E-3
+              0.93         9.29999             10        44.99         0.25       46.50E-3       10E-6
+              0.93         9.29999             45         1E+3         0.25       23.25E-3       10E-6
+              0.93         9.29999           1E+3        20E+3         0.50       23.25E-3       10E-6
+              0.93         9.29999          20E+3       100E+3         5.00       46.50E-3       10E-6
+
+                10              93           0.01         9.99         5.00       465.0E-3           1
+               9.3              93             10        44.99         0.25       465.0E-3      100E-6
+               9.3              93             45         1E+3         0.25       232.5E-3      100E-6
+               9.3              93           1E+3        20E+3         0.50       232.5E-3      100E-6
+               9.3              93          20E+3       100E+3         5.00       465.0E-3      100E-6
+
+# Output (Vpp)                      Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output (Triangle & Truncated Sine)
+Mode: Vpp TI TS AX
+             29E-3          930E-3           0.01         9.99         5.00       4.650E-3        1E-3
+             29E-3      929.999E-3             10        44.99         0.25       4.650E-3        1E-6
+             29E-3      929.999E-3             45         1E+3         0.25       2.325E-3        1E-6
+             29E-3      929.999E-3           1E+3        10E+3         5.00       4.650E-3        1E-6
+
+                 1             9.3           0.01         9.99         5.00       46.50E-3      100E-3
+              0.93             9.3             10        44.99         0.25       46.50E-3       10E-6
+              0.93             9.3             45         1E+3         0.25       23.25E-3       10E-6
+              0.93             9.3           1E+3        10E+3         5.00       46.50E-3       10E-6
+
+# Output (Vpp)                      Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Normal Output (Square)
+Mode: Vpp SQ
+            3.0E-3           66E-3           0.01         9.99         5.00         330E-6        1E-3
+            2.9E-3       65.999E-3             10        44.99         0.25         330E-6        1E-6
+            2.9E-3       65.999E-3             45         1E+3         0.25         165E-6        1E-6
+            2.9E-3       65.999E-3           1E+3        20E+3         0.50         165E-6        1E-6
+            2.9E-3       65.999E-3          20E+3       100E+3         5.00         330E-6        1E-6
+
+             67E-3          660E-3           0.01         9.99         5.00        3.30E-3        1E-3
+             66E-3      659.999E-3             10        44.99         0.25        3.30E-3        1E-6
+             66E-3      659.999E-3             45         1E+3         0.25        1.65E-3        1E-6
+             66E-3      659.999E-3           1E+3        20E+3         0.50        1.65E-3        1E-6
+             66E-3      659.999E-3          20E+3       100E+3         5.00        3.30E-3        1E-6
+
+               0.7             6.6           0.01         9.99         5.00        33.0E-3      100E-3
+              0.66         6.59999             10        44.99         0.25        33.0E-3       10E-6
+              0.66         6.59999             45         1E+3         0.25        16.5E-3       10E-6
+              0.66         6.59999           1E+3        20E+3         0.50        16.5E-3       10E-6
+              0.66         6.59999          20E+3       100E+3         5.00        33.0E-3       10E-6
+
+                 7              66           0.01         9.99         5.00         330E-3           1
+               6.6              66             10        44.99         0.25         330E-3      100E-6
+               6.6              66             45         1E+3         0.25         165E-3      100E-6
+               6.6              66           1E+3        20E+3         0.50         165E-3      100E-6
+               6.6              66          20E+3       100E+3         5.00         330E-3      100E-6
+
+# Output (Vpp)                      Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Auxiliary Output (Square)
+Mode: Vpp SQ AX
+             29E-3          660E-3           0.01         9.99         5.00        3.30E-3        1E-3
+             29E-3      659.999E-3             10        44.99         0.25        3.30E-3        1E-6
+             29E-3      659.999E-3             45         1E+3         0.25        1.65E-3        1E-6
+             29E-3      659.999E-3           1E+3        10E+3         5.00        3.30E-3        1E-6
+
+               0.7             6.6           0.01         9.99         5.00        33.0E-3      100E-3
+              0.66             6.6             10        44.99         0.25        33.0E-3       10E-6
+              0.66             6.6             45         1E+3         0.25        16.5E-3       10E-6
+              0.66             6.6           1E+3        10E+3         5.00        33.0E-3       10E-6
+
+# ============================================================================
+# AC Voltage, DC Offset Specifications (Normal Output)
+
+# DC Offset (V)                     AC Output (V rms)             Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Sine Waves
+Mode: Volts Offset SI
+            -50E-3           50E-3           1E-3     3.299E-3          NA             NA          NA
+            -50E-3           50E-3         3.3E-3    32.999E-3          0.1        33.0E-6         NA
+           -500E-3          500E-3          33E-3   329.999E-3          0.1       330.0E-6         NA
+                -5               5           0.33      3.29999          0.1         3.3E-3         NA
+               -50              50            3.3      32.9999          0.1        33.0E-3         NA
+
+# Triangle and Truncated Sine Waves
+Mode: Volts Offset TI TS
+            -50E-3           50E-3         2.9E-3    92.999E-3          0.1        93.0E-6         NA
+           -500E-3          500E-3          93E-3   929.999E-3          0.1       930.0E-6         NA
+                -5               5           0.93      9.29999          0.1         9.3E-3         NA
+               -50              50            9.3           93          0.1        93.0E-3         NA
+
+# Square Waves
+Mode: Volts Offset SQ
+            -50E-3           50E-3         2.9E-3    65.999E-3          0.1        66.0E-6         NA
+           -500E-3          500E-3          66E-3   659.999E-3          0.1       660.0E-6         NA
+                -5               5           0.66      6.59999          0.1         6.6E-3         NA
+               -50              50            6.6           66          0.1        66.0E-3         NA
+
+# Extended bandwidth (0.01 Hz to 10 Hz, and 500 kHz to 2 MHz)
+Mode: Volts Offset ExtBW
+            -50E-3           50E-3            NA           NA             5         500E-6         NA
+           -500E-3          500E-3            NA           NA             5           5E-3         NA
+                -5               5            NA           NA             5          50E-3         NA
+               -50              50            NA           NA             5         500E-3         NA
+
+# ============================================================================
+# AC Voltage, Square Wave Characteristics
+
+Mode: Percent
+
+# Duty Cycle accuracy is +/- (0.8% of period + 140 ns) for frequencies
+# > 10 kHz and +/- (0.8% of period + 2 us) for frequencies <= 10 kHz.  MET/CAL
+# computes system accuracy as a percent of the Nominal value + a floor.  In
+# this case the Nominal value is duty cycle, not period, therefore the
+# procedure writer must use the ACC FSC statement to establish the system
+# accuracy for the test.
+
+# Duty Cycle (%)                    Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+                 1              99           0.01       100E+3          NA             NA         0.02
+
+Mode: Duty
+
+# This mode string is not directly accessed by the 5500 FSC.  The procedure
+# writer must use the "ACCV2" math function.  Example:
+#
+# Retrieve 5500A duty cycle accuracy in seconds relative to nominal period of
+# test frequency.  In this example, 2 ms (500 Hz), 30% duty cycle.
+# 1.001  MATH         Accuracy = ACCV2("Fluke 5500A", "Duty", 2E-3, 30)
+# Convert accuracy of test frequency (in seconds) to % of the nominal period.
+# 1.002  MATH         L[1] = (Accuracy / 2E-3) * 100
+# Specify computed accuracy in percent via the ACC FSC.
+# 1.003  ACC          30.00pct       L1%
+
+# Period (s)                        Duty Cycle (%)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+            100E-6             100              1           99          0.8           2E-6         NA
+             10E-6          100E-6              1           99          0.8         140E-9         NA
+
+# ============================================================================
+# AC Current (Non-Sine Wave) Specifications
+#
+# Output (A p-p)                    Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Triangle & Truncated Sine Wave (Auxiliary Output)
+Mode: App TI TS
+
+            2.9E-3      92.9999E-3           0.01         9.99         5.00      465.00E-6      100E-9
+            2.9E-3      92.9999E-3             10        44.99         0.25      465.00E-6      100E-9
+            2.9E-3      92.9999E-3             45         1E+3         0.25      232.50E-6      100E-9
+            2.9E-3      92.9999E-3           1E+3        10E+3         5.00      465.00E-6      100E-9
+
+             93E-3      929.999E-3           0.01         9.99         5.00        4.65E-3        1E-6
+             93E-3      929.999E-3             10        44.99         0.25        4.65E-3        1E-6
+             93E-3      929.999E-3             45         1E+3         0.25        4.65E-3        1E-6
+             93E-3      929.999E-3           1E+3        10E+3         5.00        9.30E-3        1E-6
+
+              0.93         6.19999             10        44.99          5.0        62.0E-3       10E-6
+              0.93         6.19999             45         1E+3          0.5        31.0E-3       10E-6
+              0.93         6.19999           1E+3         5E+3          5.0        62.0E-3       10E-6
+
+               6.2              31             45          500          2.0       155.0E-3      100E-6
+               6.2              31            500         1E+3          5.0       310.0E-3      100E-6
+
+# This line is a catch-all for areas with no specification.
+             47E-6              31           0.01        10E+3          NA             NA          NA
+
+# 5725A Output, Boost On
+Mode: App TI TS BC
+               6.2              31             45         1E+3          NA             NA       100E-6
+               6.2              31           1E+3         5E+3          NA             NA       100E-6
+               6.2              31           5E+3        10E+3          NA             NA       100E-6
+
+# Output (A p-p)                    Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Square Wave (Auxiliary Output)
+Mode: App SQ
+
+            2.9E-3      65.9999E-3           0.01         9.99         5.00         330E-6        1E-3
+            2.9E-3      65.9999E-3             10        44.99         0.25         330E-6      100E-9
+            2.9E-3      65.9999E-3             45         1E+3         0.25         165E-6      100E-9
+            2.9E-3      65.9999E-3           1E+3        10E+3         5.00         330E-6      100E-9
+
+             66E-3      659.999E-3           0.01         9.99         5.00         3.3E-3       10E-3
+             66E-3      659.999E-3             10        44.99         0.25         3.3E-3        1E-6
+             66E-3      659.999E-3             45         1E+3         0.25         3.3E-3        1E-6
+             66E-3      659.999E-3           1E+3        10E+3         5.00         6.6E-3        1E-6
+
+              0.66         4.39999             10        44.99          5.0          44E-3      100E-3
+              0.66         4.39999             45         1E+3          0.5          22E-3      100E-3
+              0.66         4.39999           1E+3         5E+3          5.0          44E-3      100E-3
+
+               4.4              22             45          500          2.0         110E-3      100E-3
+               4.4              22            500         1E+3          5.0         220E-3      100E-3
+
+# This line is a catch-all for areas with no specification.
+             47E-6              22           0.01        10E+3          NA             NA          NA
+
+# 5725A Output, Boost On
+Mode: App SQ BC
+               4.4              22             45         1E+3          NA             NA       100E-6
+               4.4              22           1E+3         5E+3          NA             NA       100E-6
+               4.4              22           5E+3        10E+3          NA             NA       100E-6
+
+# ============================================================================
+# Oscilloscope Options ( 1 year specifications )
+# ============================================================================
+
+# ============================================================================
+# Voltage Function Specifications
+# Accuracy does not include the input impedance uncertainty of the UUT.
+
+# SC300 Scope Option
+
+# Amplitude (V)                     (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Volts SC L
+              -2.2             2.2            NA           NA          0.25         100E-6         NA
+
+Mode: Volts SC
+               -33              33            NA           NA          0.25         100E-6         NA
+
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Vpp ZQ SC L
+            1.8E-3         4.49E-3             10        10E+3         0.25         200E-6         NA
+            4.5E-3             2.2             10        10E+3         0.25         100E-6         NA
+
+Mode: Vpp ZQ SC
+            1.8E-3         4.49E-3             10        10E+3         0.25         200E-6         NA
+            4.5E-3              55             10        10E+3         0.25         100E-6         NA
+
+Mode: Vpp SM SC
+                95             105             10        99.99          NA             NA          NA
+                95             105            100         1E+3          0.5              0         NA
+                95             105           1E+3        10E+3          NA             NA          NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz ZQ SM SC
+                10           10E+3         1.8E-3           55       0.0025          15E-3         NA
+                10           10E+3             95          105       0.0025          15E-3         NA
+
+# SC600 Scope Option
+
+# Amplitude (V)                     (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Volts S6 L
+            -6.599           6.599            NA           NA          0.25          40E-6         NA
+
+Mode: Volts S6
+              -130             130            NA           NA          0.05          40E-6         NA
+
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Vpp ZQ ZN S6 L
+              1E-3           6.599             10        10E+3         0.25          40E-6         NA
+
+Mode: Vpp ZQ ZN S6
+              1E-3             130             10         1E+3         0.10          40E-6         NA
+              1E-3             130           1E+3        10E+3         0.25          40E-6         NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz ZQ ZN S6
+                10           10E+3           1E-3          130      0.00025              0         NA
+
+# ============================================================================
+# Edge Function Specifications
+
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# SC300 Scope Option
+
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Vpp ED SC
+            4.5E-3            2.75           1000       1.0E+6            2         0.0002         NA
+            4.5E-3            2.75            900       1.1E+6          NA             NA          NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz ED SC
+              1000          1.0E+6         4.5E-3         2.75       0.0025          0.015         NA
+               900          1.1E+6         4.5E-3         2.75          NA             NA          NA
+
+# Rise/Fall Time (s)                (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# The O_CAL NVI FSC returns the calibrator rise time value in MEM1.
+# This 5500A published rise time uncertainty is asymmetrical, and returns NA.
+Mode: Time ED SC
+                 0            1E-3            NA           NA           NA             NA          NA
+
+# SC600 Scope Option
+
+# Not spec'd above 10 MHz.
+Mode: Vpp ED S6
+            4.5E-3            2.75           1000        10E+6            2         200E-6         NA
+            4.5E-3            2.75            900        11E+6          NA             NA          NA
+
+Mode: Vpp ED S6 TD
+                11             100            100       100E+3          NA             NA          NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz ED S6
+              1000           10E+6         4.5E-3         2.75      0.00025              0         NA
+               900           11E+6         4.5E-3         2.75          NA             NA          NA
+
+Mode: Hertz ED S6 TD
+               100          100E+3             11          100      0.00025              0         NA
+
+# Rise/Fall Time (s)                (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# The O_CAL NVI FSC returns the calibrator rise time value in MEM1.
+# The 5500A-SC600 published rise time uncertainty is asymmetrical, and returns NA.
+Mode: Time ED S6
+                 0            1E-3            NA           NA           NA             NA          NA
+                 0            1E-3            NA           NA           NA             NA          NA
+
+Mode: Time ED S6 TD
+                 0            1E-3            NA           NA           NA             NA          NA
+                 0            1E-3            NA           NA           NA             NA          NA
+
+# ============================================================================
+# Leveled Sine Wave Specifications
+# Characteristics into 50 Ohm
+
+# SC300 Scope Option
+
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Vpp LS SC
+             0.005             5.5          50E+3        50E+3          2.0         200E-6         NA
+             0.005             5.5          50E+3       100E+6          3.5         300E-6         NA
+             0.005             5.5         100E+6       250E+6            4         300E-6         NA
+             0.005             3.0         250E+6       300E+6            4         300E-6         NA
+             0.005             3.0         300E+6       350E+6          NA             NA          NA
+
+# Flatness (relative to 50 kHz)
+Mode: Vpp LS SC FLAT
+             0.005             5.5          50E+3       100E+6          1.5         100E-6         NA
+             0.005             5.5         100E+6       250E+6          2.0         100E-6         NA
+             0.005             3.0         250E+6       300E+6          2.0         100E-6         NA
+             0.005             3.0         300E+6       350E+6          NA             NA          NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz LS SC
+             50E+3           50E+3          0.005          5.5      0.00025              0         NA
+             50E+3          100E+6          0.005          5.5      0.00025              0         NA
+            100E+6          250E+6          0.005          5.5      0.00025              0         NA
+            250E+6          300E+6          0.005          3.0      0.00025              0         NA
+            300E+6          350E+6          0.005          3.0      0.00025              0         NA
+
+# SC600 Scope Option
+
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Vpp LS S6
+              5E-3             5.5          50E+3        50E+3          2.0         300E-6         NA
+              5E-3             5.5          50E+3       100E+6          3.5         300E-6         NA
+              5E-3             5.5         100E+6       300E+6          4.0         300E-6         NA
+              5E-3             5.5         300E+6       600E+6          6.0         300E-6         NA
+
+# Flatness (relative to 50 kHz)
+Mode: Vpp LS S6 FLAT
+              5E-3             5.5          50E+3       100E+6          1.5         100E-6         NA
+              5E-3             5.5         100E+6       300E+6          2.0         100E-6         NA
+              5E-3             5.5         300E+6       600E+6          4.0         100E-6         NA
+              5E-3             3.5         600E+6       1.1E+9          5.0         100E-6         NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz LS S6
+             50E+3          600E+6           5E-3          5.5      0.00025              0         NA
+
+# ============================================================================
+# Time Marker Function Specifications
+
+# SC300 Scope Option
+
+# Marker Frequency (Hz)             (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz MK SC
+
+# 1-2-5 cardinal points.
+               0.2             0.2            NA           NA       0.50250              0         NA
+               0.5             0.5            NA           NA       0.20250              0         NA
+                 1               1            NA           NA       0.10250              0         NA
+                 2               2            NA           NA       0.05250              0         NA
+                 5               5            NA           NA       0.02250              0         NA
+                10              10            NA           NA       0.01250              0         NA
+                20              20            NA           NA       0.00750              0         NA
+                50              50            NA           NA       0.00025              0         NA
+               100             100            NA           NA       0.00025              0         NA
+               200             200            NA           NA       0.00025              0         NA
+               500             500            NA           NA       0.00025              0         NA
+              1E+3            1E+3            NA           NA       0.00025              0         NA
+              2E+3            2E+3            NA           NA       0.00025              0         NA
+              5E+3            5E+3            NA           NA       0.00025              0         NA
+             10E+3           10E+3            NA           NA       0.00025              0         NA
+             20E+3           20E+3            NA           NA       0.00025              0         NA
+             50E+3           50E+3            NA           NA       0.00025              0         NA
+            100E+3          100E+3            NA           NA       0.00025              0         NA
+            200E+3          200E+3            NA           NA       0.00025              0         NA
+            500E+3          500E+3            NA           NA       0.00025              0         NA
+              1E+6            1E+6            NA           NA       0.00025              0         NA
+              2E+6            2E+6            NA           NA       0.00025              0         NA
+              5E+6            5E+6            NA           NA       0.00025              0         NA
+             10E+6           10E+6            NA           NA       0.00025              0         NA
+             20E+6           20E+6            NA           NA       0.00025              0         NA
+             50E+6           50E+6            NA           NA       0.00025              0         NA
+            100E+6          100E+6            NA           NA       0.00025              0         NA
+            200E+6          200E+6            NA           NA       0.00025              0         NA
+            500E+6          500E+6            NA           NA       0.00025              0         NA
+
+# non-cardinal points within +/-10% of a 1-2-5 cardinal point.
+              0.18            0.22            NA           NA       0.50750              0         NA
+              0.45            0.55            NA           NA       0.20750              0         NA
+               0.9             1.1            NA           NA       0.10750              0         NA
+               1.8             2.2            NA           NA       0.05750              0         NA
+               4.5             5.5            NA           NA       0.02750              0         NA
+                 9              11            NA           NA       0.01750              0         NA
+                18              22            NA           NA       0.01250              0         NA
+                45              55            NA           NA       0.00525              0         NA
+                90             110            NA           NA       0.00525              0         NA
+               180             220            NA           NA       0.00525              0         NA
+               450             550            NA           NA       0.00525              0         NA
+               900          1.1E+3            NA           NA       0.00525              0         NA
+            1.8E+3          2.2E+3            NA           NA       0.00525              0         NA
+            4.5E+3          5.5E+3            NA           NA       0.00525              0         NA
+            9.0E+3         11.0E+3            NA           NA       0.00525              0         NA
+           18.0E+3         22.0E+3            NA           NA       0.00525              0         NA
+           45.0E+3         55.0E+3            NA           NA       0.00525              0         NA
+           90.0E+3        110.0E+3            NA           NA       0.00525              0         NA
+          180.0E+3        220.0E+3            NA           NA       0.00525              0         NA
+          450.0E+3        550.0E+3            NA           NA       0.00525              0         NA
+          900.0E+3          1.1E+6            NA           NA       0.00525              0         NA
+            1.8E+6          2.2E+6            NA           NA       0.00525              0         NA
+            4.5E+6          5.5E+6            NA           NA       0.00525              0         NA
+            9.0E+6         11.0E+6            NA           NA       0.00525              0         NA
+           18.0E+6         22.0E+6            NA           NA       0.00525              0         NA
+           45.0E+6         55.0E+6            NA           NA       0.00525              0         NA
+           90.0E+6        110.0E+6            NA           NA       0.00525              0         NA
+          180.0E+6        220.0E+6            NA           NA       0.00525              0         NA
+          450.0E+6        550.0E+6            NA           NA       0.00525              0         NA
+
+# non-cardinal points outside of +/-10% of a 1-2-5 cardinal point.
+          0.181818     555.5556E+6            NA           NA           NA             NA          NA
+
+# SC600 Scope Option
+
+# Marker Frequency (Hz)             (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz M1 S6
+
+# Spike Markers: 1-2-5 cardinal points.
+               0.2             0.2            NA           NA       0.50250              0         NA
+               0.5             0.5            NA           NA       0.20250              0         NA
+                 1               1            NA           NA       0.10250              0         NA
+                 2               2            NA           NA       0.05250              0         NA
+                 5               5            NA           NA       0.02250              0         NA
+                10              10            NA           NA       0.01250              0         NA
+                20              20            NA           NA       0.00750              0         NA
+                50              50            NA           NA       0.00025              0         NA
+               100             100            NA           NA       0.00025              0         NA
+               200             200            NA           NA       0.00025              0         NA
+               500             500            NA           NA       0.00025              0         NA
+              1E+3            1E+3            NA           NA       0.00025              0         NA
+              2E+3            2E+3            NA           NA       0.00025              0         NA
+              5E+3            5E+3            NA           NA       0.00025              0         NA
+             10E+3           10E+3            NA           NA       0.00025              0         NA
+             20E+3           20E+3            NA           NA       0.00025              0         NA
+             50E+3           50E+3            NA           NA       0.00025              0         NA
+            100E+3          100E+3            NA           NA       0.00025              0         NA
+            200E+3          200E+3            NA           NA       0.00025              0         NA
+            500E+3          500E+3            NA           NA       0.00025              0         NA
+              1E+6            1E+6            NA           NA       0.00025              0         NA
+              2E+6            2E+6            NA           NA       0.00025              0         NA
+              5E+6            5E+6            NA           NA       0.00025              0         NA
+             10E+6           10E+6            NA           NA       0.00025              0         NA
+             20E+6           20E+6            NA           NA       0.00025              0         NA
+             50E+6           50E+6            NA           NA       0.00025              0         NA
+
+# Spike Markers: non-cardinal points within +/-10% of a 1-2-5 cardinal point.
+              0.18            0.22            NA           NA       0.50750              0         NA
+              0.45            0.55            NA           NA       0.20750              0         NA
+               0.9             1.1            NA           NA       0.10750              0         NA
+               1.8             2.2            NA           NA       0.05750              0         NA
+               4.5             5.5            NA           NA       0.02750              0         NA
+                 9              11            NA           NA       0.01750              0         NA
+                18              22            NA           NA       0.01250              0         NA
+                45              55            NA           NA       0.00525              0         NA
+                90             110            NA           NA       0.00525              0         NA
+               180             220            NA           NA       0.00525              0         NA
+               450             550            NA           NA       0.00525              0         NA
+               900          1.1E+3            NA           NA       0.00525              0         NA
+            1.8E+3          2.2E+3            NA           NA       0.00525              0         NA
+            4.5E+3          5.5E+3            NA           NA       0.00525              0         NA
+            9.0E+3         11.0E+3            NA           NA       0.00525              0         NA
+           18.0E+3         22.0E+3            NA           NA       0.00525              0         NA
+           45.0E+3         55.0E+3            NA           NA       0.00525              0         NA
+           90.0E+3        110.0E+3            NA           NA       0.00525              0         NA
+          180.0E+3        220.0E+3            NA           NA       0.00525              0         NA
+          450.0E+3        550.0E+3            NA           NA       0.00525              0         NA
+          900.0E+3          1.1E+6            NA           NA       0.00525              0         NA
+            1.8E+6          2.2E+6            NA           NA       0.00525              0         NA
+            4.5E+6          5.5E+6            NA           NA       0.00525              0         NA
+            9.0E+6         11.0E+6            NA           NA       0.00525              0         NA
+           18.0E+6         22.0E+6            NA           NA       0.00525              0         NA
+           45.0E+6         55.0E+6            NA           NA       0.00525              0         NA
+
+# Spike Markers: non-cardinal points outside of +/-10% of a 1-2-5 cardinal point.
+              0.18    55.555556E+6            NA           NA           NA             NA          NA
+
+# Marker Frequency (Hz)             (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz M2 S6
+
+# Square Markers: 1-2-5 cardinal points.
+               0.2             0.2            NA           NA       0.50250              0         NA
+               0.5             0.5            NA           NA       0.20250              0         NA
+                 1               1            NA           NA       0.10250              0         NA
+                 2               2            NA           NA       0.05250              0         NA
+                 5               5            NA           NA       0.02250              0         NA
+                10              10            NA           NA       0.01250              0         NA
+                20              20            NA           NA       0.00750              0         NA
+                50              50            NA           NA       0.00025              0         NA
+               100             100            NA           NA       0.00025              0         NA
+               200             200            NA           NA       0.00025              0         NA
+               500             500            NA           NA       0.00025              0         NA
+              1E+3            1E+3            NA           NA       0.00025              0         NA
+              2E+3            2E+3            NA           NA       0.00025              0         NA
+              5E+3            5E+3            NA           NA       0.00025              0         NA
+             10E+3           10E+3            NA           NA       0.00025              0         NA
+             20E+3           20E+3            NA           NA       0.00025              0         NA
+             50E+3           50E+3            NA           NA       0.00025              0         NA
+            100E+3          100E+3            NA           NA       0.00025              0         NA
+            200E+3          200E+3            NA           NA       0.00025              0         NA
+            500E+3          500E+3            NA           NA       0.00025              0         NA
+              1E+6            1E+6            NA           NA       0.00025              0         NA
+              2E+6            2E+6            NA           NA       0.00025              0         NA
+              5E+6            5E+6            NA           NA       0.00025              0         NA
+             10E+6           10E+6            NA           NA       0.00025              0         NA
+             20E+6           20E+6            NA           NA       0.00025              0         NA
+             50E+6           50E+6            NA           NA       0.00025              0         NA
+            100E+6          100E+6            NA           NA       0.00025              0         NA
+
+# Square Markers: non-cardinal points within +/-10% of a 1-2-5 cardinal point.
+              0.18            0.22            NA           NA       0.50750              0         NA
+              0.45            0.55            NA           NA       0.20750              0         NA
+               0.9             1.1            NA           NA       0.10750              0         NA
+               1.8             2.2            NA           NA       0.05750              0         NA
+               4.5             5.5            NA           NA       0.02750              0         NA
+                 9              11            NA           NA       0.01750              0         NA
+                18              22            NA           NA       0.01250              0         NA
+                45              55            NA           NA       0.00525              0         NA
+                90             110            NA           NA       0.00525              0         NA
+               180             220            NA           NA       0.00525              0         NA
+               450             550            NA           NA       0.00525              0         NA
+               900          1.1E+3            NA           NA       0.00525              0         NA
+            1.8E+3          2.2E+3            NA           NA       0.00525              0         NA
+            4.5E+3          5.5E+3            NA           NA       0.00525              0         NA
+            9.0E+3         11.0E+3            NA           NA       0.00525              0         NA
+           18.0E+3         22.0E+3            NA           NA       0.00525              0         NA
+           45.0E+3         55.0E+3            NA           NA       0.00525              0         NA
+           90.0E+3        110.0E+3            NA           NA       0.00525              0         NA
+          180.0E+3        220.0E+3            NA           NA       0.00525              0         NA
+          450.0E+3        550.0E+3            NA           NA       0.00525              0         NA
+          900.0E+3          1.1E+6            NA           NA       0.00525              0         NA
+            1.8E+6          2.2E+6            NA           NA       0.00525              0         NA
+            4.5E+6          5.5E+6            NA           NA       0.00525              0         NA
+            9.0E+6         11.0E+6            NA           NA       0.00525              0         NA
+           18.0E+6         22.0E+6            NA           NA       0.00525              0         NA
+           45.0E+6         55.0E+6            NA           NA       0.00525              0         NA
+           90.0E+6        110.0E+6            NA           NA       0.00525              0         NA
+
+# Square Markers: non-cardinal points outside of +/-10% of a 1-2-5 cardinal point.
+              0.18     133.3334E+6            NA           NA           NA             NA          NA
+
+# Marker Frequency (Hz)             (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz M3 S6
+
+# 20%-pulse Markers: 1-2-5 cardinal points.
+                50              50            NA           NA       0.00025              0         NA
+               100             100            NA           NA       0.00025              0         NA
+               200             200            NA           NA       0.00025              0         NA
+               500             500            NA           NA       0.00025              0         NA
+              1E+3            1E+3            NA           NA       0.00025              0         NA
+              2E+3            2E+3            NA           NA       0.00025              0         NA
+              5E+3            5E+3            NA           NA       0.00025              0         NA
+             10E+3           10E+3            NA           NA       0.00025              0         NA
+             20E+3           20E+3            NA           NA       0.00025              0         NA
+             50E+3           50E+3            NA           NA       0.00025              0         NA
+            100E+3          100E+3            NA           NA       0.00025              0         NA
+            200E+3          200E+3            NA           NA       0.00025              0         NA
+            500E+3          500E+3            NA           NA       0.00025              0         NA
+              1E+6            1E+6            NA           NA       0.00025              0         NA
+              2E+6            2E+6            NA           NA       0.00025              0         NA
+              5E+6            5E+6            NA           NA       0.00025              0         NA
+             10E+6           10E+6            NA           NA       0.00025              0         NA
+
+# 20%-pulse Markers: non-cardinal points within +/-10% of a 1-2-5 cardinal point.
+                45              55            NA           NA       0.00525              0         NA
+                90             110            NA           NA       0.00525              0         NA
+               180             220            NA           NA       0.00525              0         NA
+               450             550            NA           NA       0.00525              0         NA
+               900          1.1E+3            NA           NA       0.00525              0         NA
+            1.8E+3          2.2E+3            NA           NA       0.00525              0         NA
+            4.5E+3          5.5E+3            NA           NA       0.00525              0         NA
+            9.0E+3         11.0E+3            NA           NA       0.00525              0         NA
+           18.0E+3         22.0E+3            NA           NA       0.00525              0         NA
+           45.0E+3         55.0E+3            NA           NA       0.00525              0         NA
+           90.0E+3        110.0E+3            NA           NA       0.00525              0         NA
+          180.0E+3        220.0E+3            NA           NA       0.00525              0         NA
+          450.0E+3        550.0E+3            NA           NA       0.00525              0         NA
+          900.0E+3          1.1E+6            NA           NA       0.00525              0         NA
+            1.8E+6          2.2E+6            NA           NA       0.00525              0         NA
+            4.5E+6          5.5E+6            NA           NA       0.00525              0         NA
+            9.0E+6         11.0E+6            NA           NA       0.00525              0         NA
+
+# 20%-pulse Markers: non-cardinal points outside of +/-10% of a 1-2-5 cardinal point.
+             28.57    13.333334E+6            NA           NA           NA             NA          NA
+
+# Marker Frequency (Hz)             (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz M4 S6
+
+# Sinusoid Markers: 1-2-5 cardinal points.
+            100E+6          100E+6            NA           NA       0.00025              0         NA
+            200E+6          200E+6            NA           NA       0.00025              0         NA
+            500E+6          500E+6            NA           NA       0.00025              0         NA
+              1E+9            1E+9            NA           NA       0.00025              0         NA
+
+# Sinusoid Markers: non-cardinal points within +/-10% of a 1-2-5 cardinal point.
+           90.0E+6        110.0E+6            NA           NA       0.00525              0         NA
+          180.0E+6        220.0E+6            NA           NA       0.00525              0         NA
+          450.0E+6        550.0E+6            NA           NA       0.00525              0         NA
+          900.0E+6          1.1E+9            NA           NA       0.00525              0         NA
+
+# Sinusoid Markers: non-cardinal points outside of +/-10% of a 1-2-5 cardinal point.
+         55.586E+6      555.556E+6            NA           NA           NA             NA          NA
+
+# ============================================================================
+# Wave Generator Specifications
+# Sine, Square, & Triangle Waves
+#
+# SC300 specifications are a subset of the SC600 specifications.  SC300 output
+# ranges will be limited by the MET/CAL Editor compiler, preventing incorrect
+# accuracy file lookups.
+#
+# Amplitude (Vpp)                   Frequency (Hz)                Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# Amplitude into 50 Ohm
+Mode: Vpp WG SC L
+            1.8E-3             2.5             10        10E+3            3         100E-6         NA
+            1.8E-3             2.5             10       500E+3          NA             NA          NA
+
+# Amplitude into 1 MOhm
+Mode: Vpp WG SC
+            1.8E-3              55             10        10E+3            3         100E-6         NA
+            1.8E-3              55          10E+3       500E+3          NA             NA          NA
+
+# Amplitude (V)                     (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+# DC offset into 50 Ohm
+Mode: Volts WG SC L
+                -2               2            NA           NA           NA             NA          NA
+# DC offset into 1 MOhm
+Mode: Volts WG SC
+               -27              27            NA           NA           NA             NA          NA
+
+# Frequency (Hz)                    Amplitude (Vpp)               Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz WG SC
+                10          100E+3         1.8E-3           55       0.0025          15E-3         NA
+            100E+3          500E+3         1.8E-3           55          NA             NA          NA
+
+# ============================================================================
+# Pulse Generator Specifications (SC600)
+
+# Pulse Width (s)                   Amplitude (V)                 Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Time PU S6
+              4E-9          500E-9           0.01          2.5            5           2E-9         NA
+              2E-9            4E-9           0.01          2.5          NA             NA          NA
+
+# Pulse Repetition Frequency (PRF) - 22 ms to 150 ns (45.4545...Hz to 5 MHz)
+
+# PRF (Hz)                          Amplitude (V)                 Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Hertz PU S6
+         45.454545            5E+6           0.01          2.5      0.00025              0         NA
+
+# ============================================================================
+# Trigger Signal Specifications
+
+# Amplitude (%)                     Line Mark                     Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Percent Video S6
+              -150             150              0          627            7              0         NA
+
+# ============================================================================
+# Oscilloscope Measurement Functions
+
+# Input Resistance (Ohm)            (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Ohms ZM
+                40              60            NA           NA           0.1              0         NA
+            500E+3          1.5E+6            NA           NA           0.1              0         NA
+
+# Input Capacitance (F)             (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Farads ZM
+             5E-12          50E-12            NA           NA             5        500E-15         NA
+
+# Overload Source Voltage (V)       Frequency (DC or 1 kHz)       Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Volts OM
+                 5               9            NA           NA           NA             NA          NA
+
+Mode: Vpp ZQ OM
+                 5               9           1E+3         1E+3          NA             NA          NA
+
+# Overload Trip Time (s)            (not used)                    Tol (%)       Floor         Res.
+# --------------------------------  --------------------------  --------------------------------------
+
+Mode: Seconds OM
+                 1              60            NA           NA           NA             NA          NA

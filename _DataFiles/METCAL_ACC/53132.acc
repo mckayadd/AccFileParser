@@ -1,0 +1,146 @@
+Begin Header
+	instrument = Agilent 53132A
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 7359 $
+
+Mode: Timebase
+
+    # Standard
+
+    # Overall accuracy of internal time base is a function of time
+    # ± temperature stability ± aging rate computed for 1 year based
+    # on monthly specification
+ 
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    8.6E-4     0        NA
+
+Mode: Timebase Opt 001
+
+    # Medium Stability Oven
+
+    # Overall accuracy of internal time base is a function of time
+    # ± temperature stability ± aging rate computed for 1 year based
+    # on monthly specification
+ 
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    2.6E-4     0        NA
+
+Mode: Timebase Opt 010
+
+    # High Stability Oven
+
+    # Overall accuracy of internal time base is a function of time
+    # ± temperature stability ± aging rate computed for 1 year based
+    # on monthly specification
+ 
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    0.1825E-4  0        NA
+
+Mode: Timebase Opt 012
+
+    # Ultra High Stability Oven
+
+    # Overall accuracy of internal time base is a function of time
+    # ± temperature stability ± aging rate computed for 1 year
+ 
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    0.0225E-4  0        NA
+
+Mode: Frequency Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	0.1       225e6           20e-3  51    NA         NA       NA
+   
+Mode: Frequency Ch3 030
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	100e6     2.7e9           9e-3   2     NA         NA       NA    
+	2.7e9     3.0e9           19e-3  1     NA         NA       NA    
+     
+Mode: Frequency Ch3 050
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+ 	200e6     5e9             15e-3  1     NA         NA       NA     
+     
+Mode: Frequency Ch3 124
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+ 	200e6     12.4e9          15e-3  1     NA         NA       NA     
+     
+Mode: Frequency Ratio Ch1/2
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	10e-10    10e11           20e-3  51    NA         NA       NA
+
+Mode: Period Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	4.44e-9   10              20e-3  51    NA         NA       NA    
+
+Mode: Time Interval Ch1-2
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	1e-9      10e5            20e-3  51    NA         NA       NA    
+
+Mode: Phase Ch1-2
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	-180      360             0.1    225e6 NA         NA       NA    
+
+Mode: Pulse Width Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	5e-9      10e5            10e-3  100   NA         NA       NA    
+
+Mode: Duty Factor Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	0         1               0.1    225e6 NA         NA       NA    
+
+Mode: Rise/Fall Time Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	5e-9      10e5            20e-3  51    NA         NA       NA    
+
+Mode: Vmin Vmax Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	-51       51              NA     NA    NA         NA       NA    
+	-51       51              100    30e6  NA         NA       NA    
+
+Mode: Vpp Ch1
+
+	# NOMINAL                 MOD1         Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	0        102              100    30e6  NA         NA       NA    
+
+Mode: Trigger Level
+
+	# Trigger Level (V)       Not used     Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	-5.125   5.125            NA     NA    1          15e-3    0.005 
+
+Mode: Temp Stability Std
+
+	# Reference temperature   Not used     Tolerance  Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	25       25               NA     NA    0          5e-6     NA    

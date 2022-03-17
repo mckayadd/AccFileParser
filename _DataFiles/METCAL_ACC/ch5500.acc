@@ -1,0 +1,53 @@
+Begin Header
+	instrument = Clarke-Hess 5500
+	interval   = 365 days
+	confidence = 2.32635 sigma
+End Header
+ 
+	# $Revision: 9490 $
+
+	# Instruction Manual Model 5500 Phase Standard
+
+	# Confidence Interval, 2.32635 sigma (98%), confirmed via
+	# email with Clarke-Hess President, 10 Mar 2009
+
+Mode: Phase 5V,equal
+
+	# Amplitude       Frequency       Not used  Floor Resolution
+	# --------------- --------------- --------- ----- ----------
+
+	5       5         1       1E+3    0         5E-3  NA 
+	5       5         1       6.25E+3 0         5E-3  NA 
+	5       5         6.25E+3 50E+3   0         10E-3 NA 
+	5       5         50E+3   200E+3  0         40E-3 NA 
+
+Mode: Phase
+
+	# Amplitude       Frequency       Not used  Floor Resolution
+	# --------------- --------------- --------- ----- ----------
+
+	50E-3   100       1       1E+3    0         5E-3  NA 
+	50E-3   100       1       6.25E+3 0         10E-3 NA 
+	50E-3   100       6.25E+3 50E+3   0         15E-3 NA 
+	50E-3   100       50E+3   200E+3  0         40E-3 NA 
+
+	100     120       1       1E+3    0         10E-3 NA 
+	100     120       1       6.25E+3 0         20E-3 NA 
+	100     120       6.25E+3 50E+3   0         30E-3 NA 
+	100     120       50E+3   200E+3  0         80E-3 NA 
+
+Mode: Amplitude
+
+	# Amplitude       Frequency       Tolerance Floor Resolution
+	# --------------- --------------- --------- ----- ----------
+
+	50E-3   120       1       50E+3   0.5       5E-3  NA 
+	50E-3   120       50E+3   100E+3  1         25E-3 NA 
+	50E-3   120       100E+3  200E+3  5         50E-3 NA 
+
+Mode: Frequency
+
+	# Frequency       Not used        Tolerance Floor Resolution
+	# --------------- --------------- --------- ----- ----------
+
+	1       200E+3    NA      NA      100E-4    0     NA 

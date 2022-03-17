@@ -1,0 +1,29 @@
+Begin Header
+	instrument = ESI SR104
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+# This file contains accuracy information for
+# the ESI (Tegam) SR104 Standard Resistor
+# 1 year stability specifications, 95% Confidence Interval
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # Resistance           Not Used Tolerance Not Use Not Used
+        # -------------------- -------- --------- ------- ----------
+        9.99000E+3 10.01000E+3 NA   NA  0.41E-4   0       NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # Resistance           Not Used Tolerance Not Use Not Used
+        # -------------------- -------- --------- ------- ----------
+        9.99000E+3 10.01000E+3 NA   NA  0.5E-4    0       NA

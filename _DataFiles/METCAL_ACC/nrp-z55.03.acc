@@ -1,0 +1,126 @@
+Begin Header
+               Instrument = Rohde & Schwarz NRP-Z55.03
+                 Interval = 24 months
+               Confidence = 2 sigma
+End Header
+
+# $Revision: 21918 $
+#
+# Source:
+# R&S® NRP Power Meter Family Specifications,
+# PD 5213.5539.22 | Version 10.00 | May 2014 (sk)
+#
+# This file contains specifications for the equipment and parameters
+# identified within the header above, and are valid under these conditions:
+#
+# Frequency Range (Hz):                         0to     40.0E+9
+# Power Range (W):                       300.0E-9to    100.0E-3
+# Temperature (°C):                            20to          25
+
+# ============================================================================
+# Impedance Matching (SWR)
+#
+# Floor value represents maximum (worst case) specified SWR value for adjacent frequency.
+
+Mode: SWR
+
+# Frequency (Hz)            Not Used                 Tol (%)       SWR     Resolution
+# ------------------------  ---------------------  ------------------------------------
+             0    100.0E+6         NA          NA             0        1.03          NA
+      100.0E+6      2.4E+6         NA          NA             0        1.06          NA
+        2.4E+6     12.4E+9         NA          NA             0        1.13          NA
+       12.4E+9     18.0E+9         NA          NA             0        1.16          NA
+       18.0E+9     26.5E+9         NA          NA             0        1.22          NA
+       26.5E+9     33.0E+9         NA          NA             0        1.28          NA
+       33.0E+9     40.0E+9         NA          NA             0        1.28          NA
+
+
+
+
+# ============================================================================
+# Power Accuracy
+
+# Absolute uncertainty due to zero offset and drift.
+# Within one hour after zeroing, permissible temperature change ±1 °C,
+# following a two-hour warm-up of the power sensor.
+
+Mode: Zero Offset
+
+# Power (W)                 Not Used                 Tol (%)        W      Resolution
+# ------------------------  ---------------------  ------------------------------------
+      300.0E-9    100.0E-3        NA          NA              0     25.0E-9          NA
+
+Mode: Zero Drift
+
+# Power (W)                 Not Used                 Tol (%)        W      Resolution
+# ------------------------  ---------------------  ------------------------------------
+      300.0E-9    100.0E-3        NA          NA              0      8.0E-9          NA
+
+# Measurement noise
+
+Mode: Noise
+
+# Power (W)                 Not Used                 Tol (%)        W      Resolution
+# ------------------------  ---------------------  ------------------------------------
+      300.0E-9    100.0E-3        NA          NA              0     25.0E-9          NA
+
+# Uncertainty for absolute power measurements
+#
+# Expanded uncertainty (k = 2) for absolute power measurements.
+# Specifications include calibration uncertainty, linearity and temperature effect.
+
+Mode: Power
+
+# Frequency (Hz)            Not Used                 Tol (%)        dB     Resolution
+# ------------------------  ---------------------  ------------------------------------
+             0    100.0E+6         NA          NA             0       0.040          NA
+      100.0E+6      2.4E+9         NA          NA             0       0.048          NA
+        2.4E+9      8.0E+9         NA          NA             0       0.054          NA
+        8.0E+9     12.4E+9         NA          NA             0       0.063          NA
+       12.4E+9     18.0E+9         NA          NA             0       0.082          NA
+       18.0E+9     26.5E+9         NA          NA             0       0.086          NA
+       26.5E+9     33.0E+9         NA          NA             0       0.101          NA
+       33.0E+9     40.0E+9         NA          NA             0       0.108          NA
+
+
+
+
+
+# Uncertainty for relative power measurements
+
+Mode: Power Relative
+
+# Frequency (Hz)            Not Used                 Tol (%)        dB     Resolution
+# ------------------------  ---------------------  ------------------------------------
+             0     40.0E+9         NA          NA             0        0.01          NA
+
+Mode: Calibration Uncertainty
+
+# Frequency (Hz)            Not Used                 Tol (%)        dB     Resolution
+# ------------------------  ---------------------  ------------------------------------
+             0    100.0E+6         NA          NA             0       0.040          NA
+      100.0E+6      2.4E+9         NA          NA             0       0.047          NA
+        2.4E+9      8.0E+9         NA          NA             0       0.054          NA
+        8.0E+9     12.4E+9         NA          NA             0       0.063          NA
+       12.4E+9     18.0E+9         NA          NA             0       0.082          NA
+       18.0E+9     26.5E+9         NA          NA             0       0.085          NA
+       26.5E+9     33.0E+9         NA          NA             0       0.101          NA
+       33.0E+9     40.0E+9         NA          NA             0       0.108          NA
+
+
+
+
+
+Mode: Temperature Effect
+
+# Frequency (Hz)            Not Used                 Tol (%)       dB/K    Resolution
+# ------------------------  ---------------------  ------------------------------------
+             0    100.0E+6         NA          NA             0       0.002          NA
+      100.0E+6     40.0E+9         NA          NA             0       0.004          NA
+
+
+Mode: Linearity
+
+# Frequency (Hz)            Not Used                 Tol (%)        dB     Resolution
+# ------------------------  ---------------------  ------------------------------------
+             0     40.0E+9         NA          NA             0       0.007          NA

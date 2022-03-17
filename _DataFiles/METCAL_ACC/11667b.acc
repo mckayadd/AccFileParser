@@ -1,0 +1,48 @@
+Begin Header
+	instrument = Agilent 11667B
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 21954 $
+
+# This file contains accuracy information for
+# the HP/Agilent 11667B Power Splitter 1 year
+# specifications
+
+# 11667B Power Splitter Operating and Service Manual,
+# Part Number 11667-90037, July 2004
+
+# Standard configuration: Precision 3.5 female on all ports
+
+# Floor value represents specified SWR value for adjacent frequency
+# Lookup is via ACCVF function
+
+Mode: Input SWR
+
+# Input SWR
+
+# Maximum Input Power: +27 dBm (0.5 W)
+# Insertion loss: 7 dB
+
+# Frequency (Hz)      Not used  Tolerance Floor  Resolution
+# ------------------- --------- --------- ------- ----------
+0              18E+9   NA    NA  0         1.22      NA
+18E+9        26.5E+9   NA    NA  0         1.29      NA
+
+Mode: Output SWR
+
+# Output SWR
+
+# Frequency (Hz)       Not used  Tolerance Floor  Resolution
+# ------------------- --------- --------- ------- ----------
+0            26.5E+9   NA    NA  0         1.22      NA
+
+Mode: Tracking
+
+# Output Tracking (dB)
+
+# Frequency (Hz)      Not used  Tolerance Floor  Resolution
+# ------------------- --------- --------- ------- ----------
+0              18E+9   NA    NA  0         0.25      NA
+18E+9        26.5E+9   NA    NA  0         0.40      NA

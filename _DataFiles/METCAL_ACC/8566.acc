@@ -1,0 +1,139 @@
+Begin Header
+	instrument = HP 8566B
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3920 $
+
+	# Source: HP 8566B Installation and Verification
+	# Manual, Part No. 08566-90169, September 1993
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: dBm
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-134       +30.0   100     22e+9   NA    NA     NA  
+
+Mode: Decibels
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-164       +164.0  0       0       NA    NA     NA  
+	-164       +164.0  100     22e+9   NA    NA     NA  
+
+Mode: Calibrator
+
+	# Calibrator output accuracy
+	# -10 dBm nominal output level, 100 MHz
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-10.0      -10.0   100e+6  100e+6   0.0   0.3    0.1 
+
+Mode: Scale FI LOG
+
+	# Display Scale Fidelity, Log
+
+	# 20° - 30°C
+
+	# Resolution Bandwidth > 30 Hz
+	# +/- 0.1 dB/dB to a maximum of +/- 0.6 dB, 0 to -70 dB,
+	# +/- 1.0 dB, 0 to -80 dB
+	# +/- 1.5 dB, 0 to -90 dB
+
+	# According to Agilent, these units were only specified
+	# to -90 dB because readings between -90 and -100 (9 to
+	# 10 vertical divisions below the reference line) would
+	# be approaching the noise floor of the instrument's log
+	# amplifier and it was assumed that most users wouldn't
+	# care. However, as far as measurement uncertainty goes,
+	# the log amplifier's 'effective' specification remains 
+	# the same at -100 as it is at -90. The specifications 
+	# below reflect that.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-100         -90   100     22e+9   0.0   1.50   0.1
+	-90          -80   100     22e+9   0.0   1.50   0.1
+	-80          -70   100     22e+9   0.0   1.00   0.1
+	-70            0   100     22e+9   0.0   0.60   0.1
+
+Mode: Scale FI LIN
+
+	# Display Scale Fidelity, Linear
+
+	# Nominal reference level range in Volts
+	# Linear: +/- 3% of reference level
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ------
+	2.2e-6    7.07     30      22e+9   3.0   0.0    0.1e-6
+
+Mode: FREQ RESP dB
+
+	# Frequency Response, Relative
+	# Assumes >= 10 dB input attenuation
+	# Resolution Bandwidth >= 30 Hz
+
+	# To compute uncertainty when measuring over more than
+	# one band, combine frequency response specifications
+	# for bands used.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  -----
+	-95      +30    100        50e+3    0.0   0.60   0.01
+	-112     +30    50e+3     1.0e+6    0.0   0.60   0.01
+	-134     +30    1.0e+6    2.5e+9    0.0   0.60   0.01
+	-132     +30    2.5e+9    5.8e+9    0.0   1.70   0.01
+	-125     +30    5.8e+9   12.5e+9    0.0   1.70   0.01
+	-119     +30    12.5e+9  18.6e+9    0.0   2.20   0.01
+	-114     +30    18.6e+9  22.0e+9    0.0   3.00   0.01
+
+Mode: RBW SW dB
+
+	# Resolution Bandwidth Switching Uncertainty
+
+	# RBW range (-3 dB): 10 Hz to 3 MHz in 1, 3, 10
+	# sequence.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	10            10	  -134    +30	0.0	1.10	 0.1
+	30            30	  -134    +30	0.0	0.40	 0.1
+	100         1e+6	  -134    +30	10 	0.20	 0.1
+	3e+6        3e+6	  -134    +30	20 	0.20	 0.1
+
+Mode: Hertz
+ 
+	# Frequency Reference Accuracy (STD):
+	# Temperature Stability: +/- 7 * 10-9 (0° - 55°C)
+	# Aging rate (per day) : +/- 1 * 10-8
+	# Aging rate (per year): +/- 2.5 * 10-7
+
+	# Frequency Reference Error:
+	# +/- (aging rate/day * number of days since calibration
+	#      + temperature stability)
+
+	# Frequency Readout Accuracy (N = LO Harmonic):
+	# Span >N * 5 MHz: +/- (2% of freq. span + N * 100 kHz
+	# + freq. reference error * center freq.)
+
+	# Span <=N * 5 MHz: +/- (2% of freq. span + freq.
+	# reference error * center freq. + 10 Hz)
+	#
+	# Where:
+	# n = 1 for 100 Hz to 5.8 GHz center freq.
+	# n = 2 for 5.8 GHz to 12.5 GHz center freq.
+	# n = 3 for 12.5 GHz to 18.6 GHz center freq.
+	# n = 4 for > 18.6 GHz center freq.
+
+	# Compute specification for specified RBW (resolution 
+	# bandwidth) and Span and use ACC FSC
+ 
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	100      22.0e+9   -134    +30     NA    NA     NA

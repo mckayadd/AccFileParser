@@ -1,0 +1,51 @@
+Begin Header
+	instrument = Tektronix MCA3027
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+# $Revision: 11736 $
+
+# Operating Temperature: 20 to 26 degC
+
+# ============================================================================
+# Time-base Options
+
+# Standard, Medium Stability (OCXO) Total Uncertainty, due to:
+#   Aging per year:                     < 2 x 10E-7
+#   Temperature Variation (20-26 degC): < 2 x 10E-8
+#   Short-term stability  (t =  1 s):   < 1 x 10E-10
+#   Root Allan Variance   (t = 10 s):   < 1 x 10E-10
+#   Power-on Stability:                 < 1 x 10E-7
+
+Mode: Timebase
+
+    # Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    2.4E-5     0        NA
+
+# High Stability (OCXO) Total Uncertainty, due to:
+#   Aging per year:                     < 5 x 10E-8
+#   Temperature Variation (20-26 degC): < 1 x 10E-9
+#   Short-term stability (t =  1 s):    < 1 x 10E-11
+#   Root Allan Variance  (t = 10 s):    < 1 x 10E-11
+#   Power-on Stability:                 < 1 x 10E-8
+
+Mode: Timebase HS
+
+    # Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    0.6E-5     0        NA
+
+# Ultra High Stability (OCXO) Total Uncertainty, due to:
+#   Aging per year:                     < 1.5 x 10E-8
+#   Temperature Variation (20-26 degC): < 4.0 x 10E-10
+#   Short-term stability (t =  1 s):    < 5.0 x 10E-12
+#   Root Allan Variance  (t = 10 s):    < 5.0 x 10E-12
+#   Power-on Stability:                 < 5.0 x 10E-9
+
+Mode: Timebase US
+
+    # Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    1.8E-6     0        NA

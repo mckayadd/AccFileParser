@@ -1,0 +1,51 @@
+Begin Header
+	instrument = Tektronix FCA3003
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+# $Revision: 11736 $
+
+# Operating Temperature: 20 to 26 degC
+
+# ============================================================================
+# Time-base Options
+
+# Standard (TCXO) Total Uncertainty, due to:
+#   Aging per year:                     < 5 x 10E-6
+#   Temperature Variation (20-26 degC): < 3 x 10E-6
+#   Short-term stability  (t =  1 s):   Not specified
+#   Root Allan Variance   (t = 10 s):   Not specified
+#   Power-on Stability:                 NA
+
+Mode: Timebase
+
+    # Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    7.0E-4     0        NA
+
+# Medium Stability (OCXO) Total Uncertainty, due to:
+#   Aging per year:                     < 2 x 10E-7
+#   Temperature Variation (20-26 degC): < 2 x 10E-8
+#   Short-term stability (t =  1 s):    < 1 x 10E-10
+#   Root Allan Variance  (t = 10 s):    < 1 x 10E-10
+#   Power-on Stability:                 < 1 x 10E-7
+
+Mode: Timebase MS
+
+    # Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    2.4E-5     0        NA
+
+# High Stability (OCXO) Total Uncertainty, due to:
+#   Aging per year:                     < 5 x 10E-8
+#   Temperature Variation (20-26 degC): < 1 x 10E-9
+#   Short-term stability (t =  1 s):    < 1 x 10E-11
+#   Root Allan Variance  (t = 10 s):    < 1 x 10E-11
+#   Power-on Stability:                 < 1 x 10E-8
+
+Mode: Timebase HS
+
+    # Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    0.6E-5     0        NA

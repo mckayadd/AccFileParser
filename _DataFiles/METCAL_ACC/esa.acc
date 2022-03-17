@@ -1,0 +1,311 @@
+
+Begin Header
+                Instrument            =        Agilent ESA
+                Interval              =        365 days
+                Confidence            =        3 sigma
+End Header
+
+# This file contains the ESA 1 year, ± 5°C, 99.76% Confidence Level
+# specifications, per Ken Silk, Agilent Product Support Engineer.
+
+# Values contained herein represent Absolute Specifications, where applicable
+
+# Source(s):
+# Agilent Technologies ESA-E Series Spectrum Analyzers Specifications Guide,
+# Part Number E4401-90490, dated March 2005
+
+# Agilent Technologies ESA-L Series Spectrum Analyzers Specifications Guide,
+# Part Number E4403-90036, dated September 2003
+
+
+#               $Revision: 9490 $
+
+#=============================================
+
+# Frequency Reference Accuracy
+
+Mode: Timebase
+# Standard
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0           1E+12            NA              NA      7.5E-4          0       NA
+
+Mode: Timebase 1D5
+# High Stability Frequence Reference
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0           1E+12            NA              NA      .12E-4          0       NA
+
+
+Mode: FreqCtr
+
+# Frequency Counter Count Accuracy
+# Standard timebase
+# Sum of Timebase Accuracy and floor
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+            100         26.5E+9            NA              NA      7.5E-4          1       NA
+
+
+Mode: FreqCtr 1D5
+
+# Frequency Counter Count Accuracy
+# High Stability Frequence Reference
+# Sum of Frequency Reference Accuracy and floor
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+            100         26.5E+9            NA              NA      .12E-4          1       NA
+
+
+Mode: DeltaFreq
+
+# Delta Count Accuracy
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+            100         26.5E+9            NA              NA           0     141E-3       NA
+
+
+Mode: HorizRes
+
+# Horizontal Resolution is the span divided by the number of sweep points.
+
+# Horizontal Resolution         Not Used                       0.5 x HRes     NA     Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+      12.207E-3   262.376238E+6            NA              NA          50        0.0       NA
+
+
+Mode: FreqSpan E
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0         26.5E+9            NA              NA        0.50          0       NA
+
+Mode: FreqSpan L
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0         26.5E+9            NA              NA        1.00          0       NA
+
+
+Mode: ResBW
+
+# Resolution Bandwidth Accuracy
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (Hz) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              1             300            NA              NA        10.0          2       NA
+           1E+3            3E+3            NA              NA        15.0          2       NA
+           9E+3            9E+3            NA              NA        20.0          2       NA
+          10E+3          100E+3            NA              NA        15.0          2       NA
+         120E+3          120E+3            NA              NA        20.0          2       NA
+         300E+3            3E+6            NA              NA        15.0          2       NA
+           5E+6            5E+6            NA              NA        30.0          2       NA
+
+
+Mode: RBW SW dB
+
+# Resolution Bandwidth Switching Uncertainty
+
+# Frequency (Hz)                Not Used                       Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              1             300            NA              NA           0       0.30       NA
+         1.1E+3            3E+6            NA              NA           0       0.30       NA
+           5E+6            5E+6            NA              NA           0       0.60       NA
+
+
+Mode: Ampl E
+
+# ESA-E series
+# Absolute Accuracy, 50 MHz only!
+# DC Coupled (Option UKB)
+
+# Amplitude Level (dBm)         Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+           -154              30          50E+6           50E+6          0       0.34       NA
+
+Mode: Ampl E 1DS
+
+# ESA-E series only!
+# Absolute Accuracy, 50 MHz only, Option 1DS Preamp On
+# DC Coupled (Option UKB)
+
+# Amplitude Level (dBm)         Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+           -154              25          50E+6           50E+6          0       0.37       NA
+
+Mode: Overall Ampl E
+
+# ESA-E series
+# Overall Amplitude Accuracy
+# DC Coupled (Option UKB)
+
+# Measurement accuracy is the sum of overall amplitude accuracy and absolute frequency response
+
+# Reference Level (dBm)         Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+            -50               0            100         26.5E+9          0       0.54       NA
+              0              55            100         26.5E+9         NA         NA       NA
+
+
+Mode: Ampl L
+
+# ESA-L series
+# Absolute Accuracy, 50 MHz only!
+
+# Amplitude Level (dBm)         Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+           -154              30          50E+6           50E+6          0       0.40       NA
+
+Mode: Overall Ampl L
+
+# ESA-L series
+# Overall Amplitude Accuracy
+
+# Measurement accuracy is the sum of overall amplitude accuracy and absolute frequency response
+
+# Reference Level (dBm)         Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+            -50               0           9E+3         26.5E+9          0       0.60       NA
+              0              55           9E+3         26.5E+9         NA         NA       NA
+
+Mode: FreqResp E DC
+
+# Absolute accuracy at other than 50 MHz is the sum of overall amplitude accuracy and frequency response
+# Modifier for amplitude accuracy measurements, applicable to all ESA-E series analyzers
+
+# ESA-E series models without Option UKB!
+
+# Attenuation (dB)              Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0               5           9E+3            3E+9         NA         NA       NA
+              0               5           3E+9          6.7E+9         NA         NA       NA
+              0               5         6.7E+9         13.2E+9         NA         NA       NA
+              0               5        13.2E+9         26.5E+9         NA         NA       NA
+             10              10         100E+3            3E+9       0.00       0.46       NA
+             10              10           3E+9          6.7E+9       0.00       1.50       NA
+             10              10         6.7E+9         13.2E+9       0.00       2.00       NA
+             10              10        13.2E+9         26.5E+9       0.00       2.00       NA
+             15              65           9E+3            3E+9         NA         NA       NA
+             15              65           3E+9          6.7E+9         NA         NA       NA
+             15              65         6.7E+9         13.2E+9         NA         NA       NA
+             15              65        13.2E+9         26.5E+9         NA         NA       NA
+
+Mode: FreqResp E AC
+
+# Absolute accuracy at other than 50 MHz is the sum of overall amplitude accuracy and frequency response
+# Modifier for amplitude accuracy measurements, applicable to E4404B, E4405B analyzers only!
+
+# E4404B, E4405B models without Option UKB!
+
+# Attenuation (dB)              Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0               5           9E+3            3E+9         NA         NA       NA
+              0               5         100E+3          6.7E+9         NA         NA       NA
+              0               5         3.0E+9         13.2E+9         NA         NA       NA
+              0               5         6.7E+9         26.5E+9         NA         NA       NA
+             10              10           9E+3          100E+3          0         NA       NA
+             10              10           9E+3          3.0E+9          0       0.50       NA
+             10              10         3.0E+9          6.7E+9          0       1.50       NA
+             10              10         6.7E+9         13.2E+9          0       2.00       NA
+             10              10        13.2E+9         26.5E+9          0       2.00       NA
+             15              65         9.0E+3          3.0E+9         NA         NA       NA
+             15              65         3.0E+9          6.7E+9         NA         NA       NA
+             15              65         6.7E+9         13.2E+9         NA         NA       NA
+             15              65        13.2E+9         26.5E+9         NA         NA       NA
+
+
+Mode: FreqResp L
+
+# Absolute accuracy at other than 50 MHz is the sum of overall amplitude accuracy and frequency response
+# Modifier for amplitude accuracy measurements, applicable to all ESA-L series analyzers
+
+# Attenuation (dB)              Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0               5           9E+3            3E+9         NA         NA       NA
+              0               5           3E+9          6.7E+9         NA         NA       NA
+              0               5         6.7E+9         13.2E+9         NA         NA       NA
+              0               5        13.2E+9         26.5E+9         NA         NA       NA
+             10              10           9E+3            3E+9       0.00       0.50       NA
+             10              10           3E+9          6.7E+9       0.00       1.50       NA
+             10              10         6.7E+9         13.2E+9       0.00       2.00       NA
+             10              10        13.2E+9         26.5E+9       0.00       2.00       NA
+             15              65           9E+3            3E+9         NA         NA       NA
+             15              65           3E+9          6.7E+9         NA         NA       NA
+             15              65         6.7E+9         13.2E+9         NA         NA       NA
+             15              65        13.2E+9         26.5E+9         NA         NA       NA
+
+
+Mode: FreqResp E DC UKB
+
+# Absolute accuracy at other than 50 MHz is the sum of overall amplitude accuracy and frequency response
+# Applicable to all ESA-E series analyzers with Option UKB (100 Hz frequency extension), DC coupled
+
+# Attenuation (dB)              Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0               5            100            3E+9         NA         NA       NA
+              0               5           3E+9          6.7E+9         NA         NA       NA
+              0               5         6.7E+9         13.2E+9         NA         NA       NA
+              0               5        13.2E+9         26.5E+9         NA         NA       NA
+             10              10            100            3E+9       0.00       0.50       NA
+             10              10         3.0E+9          6.7E+9       0.00       1.50       NA
+             10              10         6.7E+9         13.2E+9       0.00       2.00       NA
+             10              10        13.2E+9         26.5E+9       0.00       2.00       NA
+             15              65            100            3E+9         NA         NA       NA
+             15              65           3E+9          6.7E+9         NA         NA       NA
+             15              65         6.7E+9         13.2E+9         NA         NA       NA
+             15              65        13.2E+9         26.5E+9         NA         NA       NA
+
+
+Mode: FreqResp E AC UKB
+
+# Absolute accuracy at other than 50 MHz is the sum of overall amplitude accuracy and frequency response
+# Applicable to all ESA-E series analyzers with Option UKB (100 Hz frequency extension), AC coupled
+
+# Attenuation (dB)              Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0               5            100            3E+9         NA         NA       NA
+              0               5           3E+9          6.7E+9         NA         NA       NA
+              0               5         6.7E+9         13.2E+9         NA         NA       NA
+              0               5        13.2E+9         26.5E+9         NA         NA       NA
+             10              10            100           10E+6         NA         NA       NA
+             10              10          10E+6            3E+9        0.0        0.5       NA
+             10              10           3E+9          6.7E+9        0.0        1.5       NA
+             10              10         6.7E+9         13.2E+9        0.0        2.0       NA
+             10              10        13.2E+9         26.5E+9        0.0        2.0       NA
+             15              65            100            3E+9         NA         NA       NA
+             15              65           3E+9          6.7E+9         NA         NA       NA
+             15              65         6.7E+9         13.2E+9         NA         NA       NA
+             15              65        13.2E+9         26.5E+9         NA         NA       NA
+
+
+Mode: FreqResp E DC 1DS
+
+# Modifier for amplitude accuracy measurements, applicable to all ESA-E series analyzers
+# Equipped with Option 1DS preamp
+
+# Input must be DC Coupled when using preamp
+
+# Attenuation (dB)              Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+              0               0            100            1E+6         NA         NA       NA
+              0               0           1E+6            3E+9          0       1.50       NA
+              5              65            100            3E+9         NA         NA       NA
+
+
+# The following contains accuracy information for the ESA Option 226 (Phase Noise Measurement Personality)
+
+Mode: PhaseNoise
+
+# Phase Noise
+
+# Log Plot Measurements only!
+
+# Phase Noise (dBc/Hz)          Frequency (Hz)                 Tolerance  Floor (dB) Resolution
+#------------------------------ -----------------------------  ---------- ---------- ----------
+           -200             200           1E+6            3E+9          0       1.52       NA
+           -200             200           3E+9         26.5E+9         NA         NA       NA

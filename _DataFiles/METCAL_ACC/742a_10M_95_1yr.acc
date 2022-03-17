@@ -1,0 +1,32 @@
+Begin Header
+	instrument = Fluke 742A-10M
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+# This file contains accuracy information for
+# the 742A-10M Resistance Standard
+# 1 year stability specifications, 95% Confidence Interval
+
+# Instruction Manual P/N 601630 September 1988, Rev. 1, 4/89
+# Manual Supplement 2, 12/01
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        9.99000e6  10.01000e6  NA    NA  0.0010    0         NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        9.99000e6  10.01000e6  NA    NA  0.0009    0         NA

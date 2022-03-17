@@ -1,0 +1,24 @@
+Begin Header
+instrument = Agilent 86100A
+interval   = 365 days
+confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+#============================================================
+
+# Source Document:
+#
+#   User's Guide
+#   Agilent 86100A On-line Help
+#   Revision A.04.20
+
+
+#= Time Interval Accuracy ===================================
+
+Mode: Time Int
+
+# Reading (s)      not used         Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 10E-12   10       NA      NA       0.1      8E-12     NA

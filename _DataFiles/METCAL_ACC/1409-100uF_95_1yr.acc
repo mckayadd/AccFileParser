@@ -1,0 +1,28 @@
+Begin Header
+	instrument = IET 1409-100uF
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+# IET 1409-100uF STANDARD CAPACITOR
+# 1 year stability specifications, 95% Confidence Interval
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # NOMINAL             MOD1       Tolerance Floor Resolution
+        # ------------------- ---------- --------- ----- ----------
+        99.9E-6    100.1E-6   NA   NA    0.035     0     NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # NOMINAL             MOD1       Tolerance Floor Resolution
+        # ------------------- ---------- --------- ----- ----------
+        99.9E-6    100.1E-6   NA   NA    0.01      0     NA

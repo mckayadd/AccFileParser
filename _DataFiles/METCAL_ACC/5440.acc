@@ -1,0 +1,51 @@
+Begin Header
+	instrument = Fluke 5440B
+	interval   = 90 days
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Base unit accuracy, with the internal divider used in
+	# DC voltage mode (<= 2.2 volts).
+
+	# From manual P/N 765602 Jan 87.
+
+Mode: Volts
+
+
+	#      Nominal        Mod 1 Tolerance Floor  Resolution
+	# ------------------- ----- -------- ------- ----------
+
+	-0.22        0.22	NA NA  0.0005  500e-9  10e-9 
+	 0.2200001   2.2        NA NA  0.00045 1e-6    100e-9
+	-2.2        -0.2200001  NA NA  0.00045 1e-6    100e-9
+	 2.200001   10.999999   NA NA  0.0002  5e-6    1e-6
+	-10.999999  -2.200001   NA NA  0.0002  5e-6    1e-6
+	 11          22         NA NA  0.0002  8e-6    1e-6
+	-22         -11         NA NA  0.0002  8e-6    1e-6
+	 22.00001    275        NA NA  0.00035 100e-6  10e-6
+	-275        -22.00001   NA NA  0.00035 100e-6  10e-6
+	 275.001     1100       NA NA  0.00035 400e-6  100e-6
+	-1100       -275.001    NA NA  0.00035 400e-6  100e-6
+
+Mode: Volts O
+
+	# Base 5440B accuracy DC Volts with divider override
+	# for values <= 2.2 Volts
+
+	#      Nominal        Mod 1 Tolerance Floor  Resolution
+	# ------------------- ----- -------- ------- ----------
+
+	-2.2       2.2        NA NA  0.0002   5e-6   1e-6
+
+
+Mode: Amps
+
+	# Base 5220A accuracy driven by the 5440B.
+
+	#      Nominal        Mod 1 Tolerance Floor  Resolution
+	# ------------------- ----- -------- ------- ----------
+
+	-20        -0.0001    NA NA  0.025   0.001   1e-6
+	0.0001     20         NA NA  0.025   0.001   1e-6

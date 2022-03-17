@@ -1,0 +1,133 @@
+Begin Header
+	instrument = Fluke PM 6690
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# 20 to 26 degC
+
+Mode: Timebase
+
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    7.0E-4     0        NA
+
+Mode: Timebase PM6690/_5_
+
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    6.0E-6     0        NA
+
+Mode: Timebase PM6690/_6_
+
+    # Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+    #-----------------------  ---------  ---------  -------  ----------
+    0         1E+12           NA   NA    1.7E-6     0        NA
+
+	# Note, for the following modes the MOD1 range is the
+	# X1 Vpp lower limit to the X10 Vpp upper limit:
+	#
+	#   Hertz FA
+	#   Hertz FR
+	#   Seconds PA
+	#   Seconds WA
+	#   Seconds RF
+
+Mode: Hertz FA
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	0.001     300e6      30e-3 100      NA         NA       NA
+   
+Mode: Hertz FC (PM 6690/6xx)
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	100e6     300e6      20e-3  12      NA         NA       NA    
+	300e6     2.5e9      10e-3  12      NA         NA       NA    
+	2.5e9     2.7e9      20e-3  12      NA         NA       NA
+	2.7e9     3.0e9      40e-3  12      NA         NA       NA
+     
+Mode: Hertz FC (PM 6690/7xx)
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+ 	200e6     300e6      40e-3  7       NA         NA       NA     
+ 	300e6     500e6      20e-3  7       NA         NA       NA     
+ 	500e6     3.0e9      10e-3  7       NA         NA       NA     
+ 	3.0e9     4.5e9      20e-3  7       NA         NA       NA     
+ 	4.5e9     6.0e9      40e-3  7       NA         NA       NA     
+ 	6.0e9     8.0e9      80e-3  7       NA         NA       NA     
+     
+Mode: Hertz FC (PM 6690/8xx)
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+ 	200e6     500e6      20e-3  5       NA         NA       NA     
+ 	500e6     14e9       10e-3  5       NA         NA       NA     
+ 	14e9      18e9       10e-3  5       NA         NA       NA     
+ 	18e9      20e9       20e-3  5       NA         NA       NA     
+     
+Mode: Hertz FR
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	1e-9      1e11       30e-3 100      NA         NA       NA
+
+Mode: Seconds PA
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	3.3e-9    1000       30e-3 100      NA         NA       NA    
+
+Mode: Seconds TI
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	0         1e6        30e-3 100      NA         NA       NA    
+
+Mode: Degrees PR
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	-180      360        0.01 160e6     NA         NA       NA     
+
+Mode: Seconds WA
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	1.6e-9    1e6        30e-3 100      NA         NA       NA     
+
+Mode: Duty Factor
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	0.000001  0.999999   0.1 300e6      NA         NA       NA     
+
+Mode: Seconds RF
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	700e-12   1000       30e-3 100      NA         NA       NA     
+
+Mode: Volts MX MN
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	-50      50          NA     NA      1          15e-3    NA     
+
+	-50      50          1      1e+3    1          15e-3    NA     
+	-50      50          1e+3   20e+6   3          15e-3    NA     
+	-50      50          20e+6  100e+6  10         15e-3    NA     
+	-50      50          100e+6 300e+6  30         15e-3    NA     
+
+Mode: Vpp PP
+
+	# NOMINAL            MOD1           Tolerance  Floor    Resolution
+	#------------------  -------------  ---------  -------  ----------
+	0        100         1      1e+3    1          15e-3    NA     
+	0        100         1e+3   20e+6   3          15e-3    NA     
+	0        100         20e+6  100e+6  10         15e-3    NA     
+	0        100         100e+6 300e+6  30         15e-3    NA     

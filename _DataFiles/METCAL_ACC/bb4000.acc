@@ -1,0 +1,18 @@
+Begin Header
+	instrument = Raytek BB4000
+	interval   = 365 days
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Temperature              Not used          Tol.   Floor    Res.
+	# -----------------------  ----------------  -----  -------  --------
+
+Mode: DegC
+
+	  15          300          NA      NA        1      1        1
+
+Mode: DegF
+
+	  59          572          NA      NA        1      1.8      1.8

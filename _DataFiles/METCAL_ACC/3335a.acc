@@ -1,0 +1,242 @@
+Begin Header
+	instrument = HP 3335A
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Source: HP 3335A Synthesizer/Level Generator Operating and
+	# Service Manual, HP Part Number 03335-90003, Print Date:
+	# March 1990, Serial numbers 1640A00286 and greater.
+
+	# These specifications are valid after a warm-up time of
+	# 30 minutes (24 hours for Option 001).
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+	# Models covered:
+
+	# 3335A
+	#  Standard with or without Option 001:
+	#	50 Ohm  : 200 Hz to 80.999999999 MHz, -86.98 to +13.01 dBm
+	#	75 Ohm  : 200 Hz to 80.999999999 MHz, -88.74 to +11.25 dBm
+	#  Option 002/004 with or without Option 001:
+	#	75 Ohm  : 200 Hz to 80.999999999 MHz, -88.74 to +11.25 dBm
+	#	124 Ohm : 10 kHz to 10 MHz, -88.74 to +11.25 dBm
+	#	135 Ohm : 10 kHz to 2 MHz, -88.74 to +11.25 dBm
+	#  Option 003 with or without Option 001:
+	#	75 Ohm  : 200 Hz to 80.999999999 MHz, -88.74 to +11.25 dBm
+	#     150 Ohm : 10 kHz to 2 MHz, -88.74 to +11.25 dBm
+
+	# Options covered:
+
+	# Option 001: High Stability Frequency Reference
+	# Option 002: 75, 124, and 150 Ohm outputs, WECO 477B connector
+	#   on 75 and 124 Ohm outputs, WECO 223A on 150 Ohm output
+	# Option 003: 75 Ohm (unbalanced) and 150 Ohm (balanced) outputs,
+	#   both BNC (75 Ohm, single, 150 Ohm, dual, 20 mm spacing)
+	# Option 004: 75, 124, and 150 Ohm outputs, WECO 560A connector
+	#   on 75 and 124 Ohm outputs, WECO 223A on 150 Ohm output
+
+Mode: Hertz 
+
+	# 1 year specification extrapolated by multiplying manufacturer's
+	# monthly specification by 12
+
+	# Applies to all instruments (including Option 002, 003, and 004)
+	# equipped with standard timebase
+
+	# MOD1 is a union of all available impedance limits
+
+	# Nominal             MOD1               Tol.   Floor   Resolution
+	# -----------------   ----------------  ------  ------  ----------
+	200  80.999999999e6   -88.74   +13.01   1.2e-4   0       1e-3
+
+Mode: Hertz 001
+
+	# Option 001, High stability crystal oven
+	# Specifications apply following 24 hour warm-up
+
+	# Applies to all instruments (including Option 002, 003, and 004)
+	# equipped with Option 001 timebase
+
+	# Nominal is a union of standard and Option 002, 003, and 004
+	# frequency limits
+
+	# MOD1 is a union of all available impedance limits
+
+	# Nominal             MOD1               Tol.   Floor   Resolution
+	# -----------------   ----------------  ------  ------  ----------
+	200  80.999999999e6   -88.74   +13.01    1e-5   0       1e-3
+
+Mode: Decibels
+
+	# Applicable to 50 and 75 Ohm outputs, standard instruments
+
+	# Absolute Level Accuracy (Maximum output, 100 kHz, 10 degC to 35 degC)
+
+	# Nominal is a union of both 50 and 75 Ohm output limits
+
+	# Nominal           MOD1                Tol.   Floor   Resolution
+	# ---------------   ----------------  ------- -------  ----------
+	+11.25    +13.01     100e3    100e3    0       0.05     0.01
+
+Mode: Decibels 75
+
+	# Applies to 75 Ohm output for instruments equipped with Options 002,
+	# 003, and 004, only!
+
+	# Absolute Level Accuracy (includes effects of flatness and attenuator)
+
+	# MOD1 is a union of Option 002, 003, and 004 frequency limits
+
+	# Levels to -88.74 dBm can be selected but accuracies are unspecified
+	# below -70 dBm due to the spurious noise floor of -100 dBm.
+
+	# Nominal           MOD1                  Tol.   Floor  Resolution
+	# ---------------   ------------------  ------- ------- ----------
+	-88.74    -70.01    200  80.999999999e6   NA      NA        NA
+	-70       -48.74    200             1e3   0       0.4       NA
+	-70       -48.74    1e3            25e6   0       0.3       NA
+	-70       -48.74    25e6 80.999999999e6   0       0.7       NA
+	-48.74     -8.74    200             1e3   0       0.3       NA
+	-48.74     -8.74    1e3            25e6   0       0.2       NA
+	-48.74     -8.74    25e6 80.999999999e6   0       0.45      NA
+	-8.74     +11.25    200             1e3   0       0.25      NA
+	-8.74     +11.25    1e3            25e6   0       0.15      NA
+	-8.74     +11.25    25e6 80.999999999e6   0       0.35      NA
+
+Mode: Decibels 124
+
+	# Applies to instruments equipped with Options 002 and 004 (124 Ohms)
+
+	# Absolute Level Accuracy (includes effects of flatness and attenuator)
+
+	# Levels to -88.74 dBm can be selected but accuracies are unspecified
+	# below -70 dBm due to the spurious noise floor of -100 dBm.
+
+	# Nominal           MOD1                Tol.   Floor  Resolution
+	# ---------------   -----------------  ------- ------- ----------
+	-88.74    -70.01    10e3        10e6    NA      NA       NA
+	-70       -48.74    10e3        50e3    0       1.1      NA
+	-70       -48.74    50e3        10e6    0       0.85     NA
+	-48.74     -8.74    10e3        50e3    0       0.65     NA
+	-48.74     -8.74    50e3        10e6    0       0.4      NA
+	-8.74     +11.25    10e3        50e3    0       0.6      NA
+	-8.74     +11.25    50e3        10e6    0       0.35     NA
+
+Mode: Decibels 135
+
+	# Applies to instruments equipped with Options 002 and 004 (135 Ohms)
+
+	# Absolute Level Accuracy (includes effects of flatness and attenuator)
+
+	# Levels to -88.74 dBm can be selected but accuracies are unspecified
+	# below -70 dBm due to the spurious noise floor of -100 dBm.
+
+	# Nominal           MOD1                Tol.   Floor  Resolution
+	# ---------------   -----------------  ------- ------- ----------
+	-88.74    -70.01    10e3         2e6    NA      NA       NA
+	-70       -48.74    10e3         2e6    0       0.85     NA
+	-48.74     -8.74    10e3         2e6    0       0.4      NA
+	-8.74     +11.25    10e3         2e6    0       0.35     NA
+
+Mode: Decibels 150
+
+	# Applies to instruments equipped with Options 003 (150 Ohms)
+
+	# Absolute Level Accuracy (includes effects of flatness and attenuator)
+
+	# Levels to -88.74 dBm can be selected but accuracies are unspecified
+	# below -70 dBm due to the spurious noise floor of -100 dBm.
+
+	# Nominal           MOD1                Tol.   Floor  Resolution
+	# ---------------   -----------------  ------- ------- ----------
+	-88.74    -70.01    10e3         2e6    NA      NA       NA
+	-70       -48.74    10e3         2e6    0       0.85     NA
+	-48.74     -8.74    10e3         2e6    0       0.4      NA
+	-8.74     +11.25    10e3         2e6    0       0.35     NA
+
+Mode: dB Flat
+
+	# Applicable to 50 and 75 Ohm outputs, standard instruments and
+	# to instruments equipped with Options 002, 003, and 004, 75 Ohm
+	# output only!
+
+	# Flatness (Relative to 100 kHz, Full Amplitude)
+
+	# Nominal is a union of both 50 and 75 Ohm output limits
+
+	# Nominal           MOD1                  Tol.   Floor   Resolution
+	# ---------------   -------------------  ------  ------  ----------
+	-88.74    +13.01    200      0.999999e3   0      0.15     NA
+	-88.74    +13.01    1e3            25e6   0      0.07     NA
+	-88.74    +13.01    25e6 80.999999999e6   0      0.15     NA
+
+Mode: dB Flat 124
+
+	# Applies to instruments equipped with Options 002 and 004
+
+	# Flatness (Relative to 100 kHz, Full Amplitude)
+
+	# Nominal           MOD1               Tol.   Floor   Resolution
+	# ---------------   ----------------  ------  ------  ----------
+	-88.74    +11.25    10e3      50e3     0      0.4      NA
+	-88.74    +11.25    50e3      10e6     0      0.15     NA
+
+Mode: dB Flat 135
+
+	# Applies to instruments equipped with Options 002 and 004
+
+	# Flatness (Relative to 100 kHz, Full Amplitude)
+
+	# Nominal           MOD1               Tol.   Floor   Resolution
+	# ---------------   ----------------  ------  ------  ----------
+	-88.74    +11.25    10e3         2e6   0      0.18     NA
+
+Mode: dB Flat 150
+
+	# Applies to instruments equipped with Options 003
+
+	# Flatness (Relative to 100 kHz, Full Amplitude)
+
+	# Nominal           MOD1               Tol.   Floor   Resolution
+	# ---------------   ----------------  ------  ------  ----------
+	-88.74    +11.25    10e3         2e6   0       0.18     NA
+
+Mode: ATTEN dB 50
+
+	# Applicable to 50 Ohm output, standard instruments only!
+	# Attenuator Accuracy: (Relative to Full Output, 100 kHz, in 2 dB
+	# steps)
+
+	# Absolute amplitudes shown in the nominal below correspond to
+	# levels of attenuation used for specific outputs for 50 Ohm
+	# outputs
+
+	# Nominal           MOD1                 Tol.   Floor   Resolution
+	# ---------------   -------------------  -----  ------  ----------
+      -86.98    -46.99    200  80.999999999e6   0      0.09    0.01
+      -46.98    -26.99    200  80.999999999e6   0      0.03    0.01
+      -26.98    +13.01    200  80.999999999e6   0      0.025   0.01
+
+Mode: ATTEN dB 75
+
+	# Applicable to 75 Ohm output, standard instruments only!
+	# Attenuator Accuracy: (Relative to Full Output, 100 kHz, in 2 dB
+	# steps)
+
+	# Absolute amplitudes shown in the nominal below correspond to
+	# levels of attenuation used for specific outputs for 75 Ohm
+	# outputs at applicable frequencies
+
+	# Nominal           MOD1                 Tol.   Floor   Resolution
+	# ---------------   -------------------  -----  ------  ----------
+      -88.74    -68.75    200            25e6   0      0.20    0.01
+      -88.74    -68.75    25e6 80.999999999e6   0      0.50    0.01
+      -68.74    -8.75     200            25e6   0      0.09    0.01
+      -68.74    -8.75     25e6 80.999999999e6   0      0.25    0.01
+      -8.74     +11.25    200            25e6   0      0.04    0.01
+      -8.74     +11.25    25e6 80.999999999e6   0      0.15    0.01

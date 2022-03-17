@@ -1,0 +1,368 @@
+Begin Header
+  Instrument  = Fluke 525B
+  Interval    = 365 days
+  Confidence  = 2.58 sigma
+End Header
+
+# $Revision: 9491 $
+
+# This file contains the 525B 1 year, ± 5°C, 99% Confidence Level specifications.
+
+# Values contained herein represent Absolute Specifications
+
+# Source:
+# Fluke 525B Temperature/Pressure Calibrator Users Manual, October 2007
+
+# DC Voltage Source
+
+# Voltage                    Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+
+# Range Locked
+
+Mode: 100mV SRC
+             0    100.000E-3      NA       NA     0.0030     3.0E-6       1E-6
+
+Mode: 1V SRC
+             0       1.00000      NA       NA     0.0030    10.0E-6      10E-6
+
+Mode: 10V SRC
+             0       10.0000      NA       NA     0.0030   100.0E-6     100E-6
+
+Mode: 100V SRC
+             0       100.000      NA       NA     0.0030     1.0E-3       1E-3
+
+# Autorange
+
+Mode: Volts SRC
+             0    100.000E-3      NA       NA     0.0030     3.0E-6       1E-6
+             0       1.00000      NA       NA     0.0030    10.0E-6      10E-6
+             0       10.0000      NA       NA     0.0030   100.0E-6     100E-6
+             0       100.000      NA       NA     0.0030     1.0E-3       1E-3
+
+Mode: TC mV SRC
+    -10.000E-3     75.000E-3      NA       NA     0.0030     3.0E-6       1E-6
+
+Mode: TC mV MEAS
+    -11.000E-3    -10.001E-3      NA       NA        NA         NA        1E-6
+    -10.000E-3     75.000E-3      NA       NA     0.0030     3.0E-6       1E-6
+     75.000E-3     76.000E-3      NA       NA        NA         NA        1E-6
+
+# mA Source
+
+Mode: Amps SRC
+
+# Current                    Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+             0    100.000E-3      NA       NA     0.0050     1.0E-6       1E-6
+
+# Ohms Source, no autorange
+
+# Resistance                 Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+Mode: 400 Ohm SRC
+         5.000       400.000      NA       NA          0      0.015       1E-3
+
+Mode: 4000 Ohm SRC
+          5.00       4000.00      NA       NA          0        0.3      10E-3
+
+# Ohms Measure, no autorange
+
+# Resistance                 Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+Mode: 400 Ohm MEAS
+         0.000       400.000      NA       NA     0.0020      0.004       1E-3
+
+Mode: 4000 Ohm MEAS
+          0.00       4000.00      NA       NA     0.0020       0.04      10E-3
+
+
+# Thermocouple Output
+
+# Temperature                Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+Mode: TC B SRC
+        600.00        799.99      NA       NA          0       0.46       0.01
+        800.00       1550.00      NA       NA          0       0.40       0.01
+       1550.00       1820.00      NA       NA          0       0.45       0.01
+
+Mode: TC C SRC
+          0.00        149.99      NA       NA          0       0.30       0.01
+        150.00        650.00      NA       NA          0       0.26       0.01
+        650.00       1000.00      NA       NA          0       0.31       0.01
+       1000.00       1800.00      NA       NA          0       0.50       0.01
+       1800.00       2316.00      NA       NA          0       0.84       0.01
+
+Mode: TC E SRC
+       -270.00       -100.01      NA       NA          0       0.50       0.01
+       -100.00        -25.01      NA       NA          0       0.18       0.01
+        -25.00        650.00      NA       NA          0       0.16       0.01
+        650.00       1000.00      NA       NA          0       0.21       0.01
+
+Mode: TC J SRC
+       -210.00       -100.01      NA       NA          0       0.27       0.01
+       -100.00        -30.01      NA       NA          0       0.20       0.01
+        -30.00        760.00      NA       NA          0       0.17       0.01
+        760.00       1200.00      NA       NA          0       0.23       0.01
+
+Mode: TC K SRC
+       -270.00       -100.01      NA       NA          0       0.33       0.01
+       -100.00        -25.01      NA       NA          0       0.22       0.01
+        -25.00        120.00      NA       NA          0       0.16       0.01
+        120.00       1000.00      NA       NA          0       0.26       0.01
+       1000.00       1372.00      NA       NA          0       0.40       0.01
+
+Mode: TC L SRC
+       -200.00       -100.01      NA       NA          0       0.37       0.01
+       -100.00        799.99      NA       NA          0       0.26       0.01
+        800.00        900.00      NA       NA          0       0.17       0.01
+
+Mode: TC N SRC
+       -270.00       -100.01      NA       NA          0       0.40       0.01
+       -100.00        -25.01      NA       NA          0       0.24       0.01
+        -25.00        410.00      NA       NA          0       0.19       0.01
+        410.00       1300.00      NA       NA          0       0.27       0.01
+
+Mode: TC R SRC
+        -50.00        249.99      NA       NA          0       0.58       0.01
+        250.00        399.99      NA       NA          0       0.35       0.01
+        400.00       1000.00      NA       NA          0       0.33       0.01
+       1000.00       1767.00      NA       NA          0       0.40       0.01
+
+Mode: TC S SRC
+        -50.00        249.99      NA       NA          0       0.56       0.01
+        250.00       1000.00      NA       NA          0       0.36       0.01
+       1000.00       1400.00      NA       NA          0       0.37       0.01
+       1400.00       1767.00      NA       NA          0       0.46       0.01
+
+Mode: TC T SRC
+       -270.00       -150.01      NA       NA          0       0.63       0.01
+       -150.00         -0.01      NA       NA          0       0.24       0.01
+          0.00        400.00      NA       NA          0       0.16       0.01
+
+Mode: TC U SRC
+       -200.00         -0.01      NA       NA          0       0.56       0.01
+          0.00        600.00      NA       NA          0       0.27       0.01
+
+Mode: TC XK SRC
+       -200.00       -100.01      NA       NA          0       0.22       0.01
+       -100.00        300.00      NA       NA          0       0.13       0.01
+        300.00        800.00      NA       NA          0       0.20       0.01
+
+Mode: TC BP SRC
+          0.00        199.99      NA       NA          0       0.42       0.01
+        200.00        600.00      NA       NA          0       0.32       0.01
+        600.00        800.00      NA       NA          0       0.40       0.01
+        800.00       1600.00      NA       NA          0       0.46       0.01
+       1600.00       2000.00      NA       NA          0       0.58       0.01
+       2000.00       2500.00      NA       NA          0       0.80       0.01
+
+
+# Thermocouple Measurement
+
+# Temperature                Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+Mode: TC B MEAS
+        600.00        799.99      NA       NA          0       0.46       0.01
+        800.00       1550.00      NA       NA          0       0.40       0.01
+       1550.00       1820.00      NA       NA          0       0.45       0.01
+
+Mode: TC C MEAS
+          0.00        149.99      NA       NA          0       0.30       0.01
+        150.00        650.00      NA       NA          0       0.26       0.01
+        650.00       1000.00      NA       NA          0       0.31       0.01
+       1000.00       1800.00      NA       NA          0       0.50       0.01
+       1800.00       2316.00      NA       NA          0       0.84       0.01
+
+Mode: TC E MEAS
+       -270.00       -100.01      NA       NA          0       0.50       0.01
+       -100.00        -25.01      NA       NA          0       0.18       0.01
+        -25.00        650.00      NA       NA          0       0.16       0.01
+        650.00       1000.00      NA       NA          0       0.21       0.01
+
+Mode: TC J MEAS
+       -210.00       -100.01      NA       NA          0       0.27       0.01
+       -100.00        -30.01      NA       NA          0       0.20       0.01
+        -30.00        760.00      NA       NA          0       0.17       0.01
+        760.00       1200.00      NA       NA          0       0.23       0.01
+
+Mode: TC K MEAS
+       -270.00       -100.01      NA       NA          0       0.33       0.01
+       -100.00        -25.01      NA       NA          0       0.22       0.01
+        -25.00        120.00      NA       NA          0       0.16       0.01
+        120.00       1000.00      NA       NA          0       0.26       0.01
+       1000.00       1372.00      NA       NA          0       0.40       0.01
+
+Mode: TC L MEAS
+       -200.00       -100.01      NA       NA          0       0.37       0.01
+       -100.00        799.99      NA       NA          0       0.26       0.01
+        800.00        900.00      NA       NA          0       0.17       0.01
+
+Mode: TC N MEAS
+       -270.00       -100.01      NA       NA          0       0.40       0.01
+       -100.00        -25.01      NA       NA          0       0.24       0.01
+        -25.00        410.00      NA       NA          0       0.19       0.01
+        410.00       1300.00      NA       NA          0       0.27       0.01
+
+Mode: TC R MEAS
+        -50.00        249.99      NA       NA          0       0.58       0.01
+        250.00        399.99      NA       NA          0       0.35       0.01
+        400.00       1000.00      NA       NA          0       0.33       0.01
+       1000.00       1767.00      NA       NA          0       0.40       0.01
+
+Mode: TC S MEAS
+        -50.00        249.99      NA       NA          0       0.56       0.01
+        250.00       1000.00      NA       NA          0       0.36       0.01
+       1000.00       1400.00      NA       NA          0       0.37       0.01
+       1400.00       1767.00      NA       NA          0       0.46       0.01
+
+Mode: TC T MEAS
+       -270.00       -150.01      NA       NA          0       0.63       0.01
+       -150.00         -0.01      NA       NA          0       0.24       0.01
+          0.00        400.00      NA       NA          0       0.16       0.01
+
+Mode: TC U MEAS
+       -200.00         -0.01      NA       NA          0       0.56       0.01
+          0.00        600.00      NA       NA          0       0.27       0.01
+
+Mode: TC XK MEAS
+       -200.00       -100.01      NA       NA          0       0.22       0.01
+       -100.00        300.00      NA       NA          0       0.13       0.01
+        300.00        800.00      NA       NA          0       0.20       0.01
+
+Mode: TC BP MEAS
+          0.00        199.99      NA       NA          0       0.42       0.01
+        200.00        600.00      NA       NA          0       0.32       0.01
+        600.00        800.00      NA       NA          0       0.40       0.01
+        800.00       1600.00      NA       NA          0       0.46       0.01
+       1600.00       2000.00      NA       NA          0       0.58       0.01
+       2000.00       2500.00      NA       NA          0       0.80       0.01
+
+
+# RTD & Thermistor Output
+
+# Temperature                Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+Mode: RTD Pt 385 100 Ohm SRC
+       -200.00        800.00      NA       NA          0       0.05       0.01
+
+Mode: RTD Pt 3926 100 Ohm SRC
+       -200.00        630.00      NA       NA          0       0.05       0.01
+
+Mode: RTD Pt 3916 100 Ohm SRC
+       -200.00        630.00      NA       NA          0       0.05       0.01
+
+Mode: RTD Pt 385 200 Ohm SRC
+       -200.00        400.00      NA       NA          0       0.40       0.01
+        400.00        630.00      NA       NA          0       0.50       0.01
+
+Mode: RTD Pt 385 500 Ohm SRC
+       -200.00        630.00      NA       NA          0       0.17       0.01
+
+Mode: RTD Pt 385 1 kOhm SRC
+       -200.00        630.00      NA       NA          0       0.09       0.01
+
+Mode: RTD PtNi 385 120 Ohm SRC
+        -80.00        260.00      NA       NA          0       0.02       0.01
+
+Mode: RTD Cu 427 10 Ohm SRC
+       -100.00        260.00      NA       NA          0       0.38       0.01
+
+Mode: YSI400 SRC
+         15.00         50.00      NA       NA          0      0.007       0.01
+
+Mode: RTD USR_DEF1 SRC
+       -260.00        961.78      NA       NA        NA         NA        0.01
+
+Mode: RTD USR_DEF2 SRC
+       -260.00        961.78      NA       NA        NA         NA        0.01
+
+Mode: RTD USR_DEF3 SRC
+       -260.00        961.78      NA       NA        NA         NA        0.01
+
+Mode: RTD USR_DEF4 SRC
+       -260.00        961.78      NA       NA        NA         NA        0.01
+
+Mode: RTD USR_DEF5 SRC
+       -260.00        961.78      NA       NA        NA         NA        0.01
+
+
+# RTD & Thermistor Input
+
+# Temperature                Not Used          Tolerance Floor      Resolution
+#============  ============  ======== ======== ========= ========== ==========
+Mode: RTD Pt 385 100 Ohm MEAS
+      -200.000       -80.000      NA       NA          0      0.013      0.001
+       -80.000       100.000      NA       NA          0      0.020      0.001
+       100.000       300.000      NA       NA          0      0.024      0.001
+       300.000       400.000      NA       NA          0      0.026      0.001
+       400.000       630.000      NA       NA          0      0.033      0.001
+       630.000       800.000      NA       NA          0      0.038      0.001
+
+Mode: RTD Pt 3926 100 Ohm MEAS
+      -200.000       -80.000      NA       NA          0      0.013      0.001
+       -80.000         0.000      NA       NA          0      0.015      0.001
+         0.000       100.000      NA       NA          0      0.017      0.001
+       100.000       300.000      NA       NA          0      0.022      0.001
+       300.000       400.000      NA       NA          0      0.026      0.001
+       400.000       630.000      NA       NA          0      0.032      0.001
+
+Mode: RTD Pt 3916 100 Ohm MEAS
+      -200.000      -190.000      NA       NA          0      0.010      0.001
+      -190.000       -80.000      NA       NA          0      0.013      0.001
+       -80.000         0.000      NA       NA          0      0.015      0.001
+         0.000       100.000      NA       NA          0      0.017      0.001
+       100.000       300.000      NA       NA          0      0.022      0.001
+       300.000       400.000      NA       NA          0      0.026      0.001
+       400.000       600.000      NA       NA          0      0.031      0.001
+       600.000       630.000      NA       NA          0      0.033      0.001
+
+Mode: RTD Pt 385 200 Ohm MEAS
+      -200.000       -80.000      NA       NA          0      0.053      0.001
+       -80.000         0.000      NA       NA          0      0.056      0.001
+         0.000       100.000      NA       NA          0      0.060      0.001
+       100.000       260.000      NA       NA          0      0.060      0.001
+       260.000       300.000      NA       NA          0      0.069      0.001
+       300.000       400.000      NA       NA          0      0.071      0.001
+       400.000       630.000      NA       NA          0      0.088      0.001
+
+Mode: RTD Pt 385 500 Ohm MEAS
+      -200.000         0.000      NA       NA          0      0.025      0.001
+         0.000       100.000      NA       NA          0      0.028      0.001
+       100.000       300.000      NA       NA          0      0.034      0.001
+       300.000       400.000      NA       NA          0      0.038      0.001
+       400.000       630.000      NA       NA          0      0.045      0.001
+
+Mode: RTD Pt 385 1 kOhm MEAS
+      -200.000         0.000      NA       NA          0      0.015      0.001
+         0.000       100.000      NA       NA          0      0.018      0.001
+       100.000       300.000      NA       NA          0      0.024      0.001
+       300.000       400.000      NA       NA          0      0.026      0.001
+       400.000       630.000      NA       NA          0      0.033      0.001
+
+Mode: RTD PtNi 385 120 Ohm MEAS
+       -80.000       260.000      NA       NA          0      0.009      0.001
+
+Mode: RTD Cu 427 10 Ohm MEAS
+      -100.000       260.000      NA       NA          0      0.110      0.001
+
+Mode: YSI400 MEAS
+        15.000        50.000      NA       NA          0      0.007      0.001
+
+Mode: RTD USR_DEF1 MEAS
+      -260.000       961.780      NA       NA        NA         NA       0.001
+
+Mode: RTD USR_DEF2 MEAS
+      -260.000       961.780      NA       NA        NA         NA       0.001
+
+Mode: RTD USR_DEF3 MEAS
+      -260.000       961.780      NA       NA        NA         NA       0.001
+
+Mode: RTD USR_DEF4 MEAS
+      -260.000       961.780      NA       NA        NA         NA       0.001
+
+Mode: RTD USR_DEF5 MEAS
+      -260.000       961.780      NA       NA        NA         NA       0.001
+
+Mode: SPRT MEAS
+       -200.00        660.00      NA       NA          0      0.060       0.01

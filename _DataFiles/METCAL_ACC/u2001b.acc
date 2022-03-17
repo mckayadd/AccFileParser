@@ -1,0 +1,249 @@
+Begin Header
+              Instrument  = Agilent U2001B
+              Interval    = 365 days
+              Confidence  = 2 sigma
+End Header
+
+# $Revision: 10961 $
+#
+# Source: Operating and Service Guide, Agilent U2000 Series USB Power Sensors,
+# Manual Part Number U2000-90405, Fifth Edition, April 29, 2010
+#
+#                           Frequency R    10.0E+6to     6.0E+9Hz
+#                           Power Range     1.0E-6to       25.0W
+#
+# This file contains Specifications for the Equipment and Parameters
+# identified within the Header above, and are valid under these conditions:
+#
+#                           Temperature25 °C (±10 °C)
+#                           Relative Hu15% to 75%
+#                             Warm-up: 30 minutes
+#
+# ============================================================================
+# Maximum SWR
+#
+# Floor value represents maximum (worst case) specified SWR value for adjacent
+# frequency.
+
+Mode: SWR
+
+# Frequency (Hz)            (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+       10.0E+6      2.0E+9           NA         NA            0       1.12         NA
+        2.0E+9      6.0E+9           NA         NA            0       1.17         NA
+
+
+# ============================================================================
+# Power Accuracy
+#
+# The accuracy is essentially a combination of linearity, instrumentation
+# accuracy, and traceability to absolute accuracy at 50 MHz, 0 dBm.  Excludes
+# mismatch uncertainty, cal-factor uncertainty, and power level dependent
+# terms (zero set, drift, and noise).
+#
+# Valid only after zeroing and calibration of the power sensor at ambient
+# environmental conditions, 30 minutes of power-on warm-up, and 1024 averages.
+
+Mode: Power Accuracy Average
+
+# Power (W)                 (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6       25.12           NA         NA         3.50          0         NA
+
+# Normal mode power accuracy for -7 dBm to +1 dBm (U2000/1/2A), +3 dBm to +11
+# dBm (U2000/1/2H), and +23 dBm to +31 dBm (U2000/1B) power level will be
+# dominated by zero set and measurement noise.
+
+Mode: Power Accuracy Normal
+
+# Power (W)                 (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-3       25.12           NA         NA         4.50          0         NA
+
+# ============================================================================
+# Zero Set
+#
+# Precision or floor of the power meter zeroing operation with the sensor
+# connected.
+
+# Averaging only Mode (default), External
+
+Mode: ZeroSet Average Ext
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    316.2E-6           NA         NA            0   800.0E-9         NA
+      158.5E-6     31.6E-3           NA         NA            0     2.0E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0    10.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0     1.0E-3         NA
+      199.5E-3       25.12           NA         NA            0     2.0E-3         NA
+
+# Averaging only Mode (default), Internal
+
+Mode: ZeroSet Average Int
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    316.2E-6           NA         NA            0     1.8E-6         NA
+      158.5E-6     31.6E-3           NA         NA            0     2.0E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0    12.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0     2.0E-3         NA
+      199.5E-3       25.12           NA         NA            0     4.0E-3         NA
+
+# Normal Mode, External
+
+Mode: ZeroSet Normal Ext
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      158.5E-6     31.6E-3           NA         NA            0    43.0E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0   480.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0    27.0E-3         NA
+      199.5E-3       25.12           NA         NA            0    34.0E-3         NA
+
+# Normal Mode, Internal
+
+Mode: ZeroSet Normal Int
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      158.5E-6     31.6E-3           NA         NA            0    47.0E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0   530.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0    30.0E-3         NA
+      199.5E-3       25.12           NA         NA            0    32.0E-3         NA
+
+# ============================================================================
+# Zero Drift
+#
+# Within one hour after zero set, at a constant temperature, after 24-hour
+# warm-up of the power sensor.
+
+# Average only Mode
+
+Mode: ZeroDrift Average
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    316.2E-6           NA         NA            0   200.0E-9         NA
+      158.5E-6     31.6E-3           NA         NA            0   400.0E-9         NA
+       10.0E-3    125.9E-3           NA         NA            0     1.5E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0    50.0E-6         NA
+      199.5E-3       25.12           NA         NA            0   500.0E-6         NA
+
+# Normal Mode
+
+Mode: ZeroDrift Normal
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      158.5E-6     31.6E-3           NA         NA            0    25.0E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0   230.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0    19.0E-3         NA
+      199.5E-3       25.12           NA         NA            0    24.0E-3         NA
+
+# ============================================================================
+# Measurement Noise
+#
+# Specified with power meter number of averages at 16 (Normal Mode) or
+# 32 (x2 Mode), at room temperature, measured over a one minute interval and
+# two standard deviations.
+
+# Average only Mode
+
+Mode: Noise Average
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    316.2E-6           NA         NA            0     1.0E-6         NA
+      158.5E-6     31.6E-3           NA         NA            0     1.5E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0    15.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0   650.0E-6         NA
+      199.5E-3       25.12           NA         NA            0     1.0E-3         NA
+
+# Normal Mode: the number of averages at 1 for Normal speed, gate length of
+# 2.27 ms, measured over one minute interval and two standard deviations.
+
+Mode: Noise Normal
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+      158.5E-6     31.6E-3           NA         NA            0    28.0E-6         NA
+       10.0E-3    125.9E-3           NA         NA            0   300.0E-6         NA
+       79.4E-3    316.2E-3           NA         NA            0    20.0E-3         NA
+      199.5E-3       25.12           NA         NA            0    21.0E-3         NA
+
+# ============================================================================
+# Noise Multiplier
+
+# Normal Speed
+
+Mode: NoiseMultiplier
+
+# Averages                  (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+             1           1           NA         NA            0       2.00         NA
+             2           2           NA         NA            0       1.80         NA
+             4           4           NA         NA            0       1.70         NA
+             8           8           NA         NA            0       1.50         NA
+            16          16           NA         NA            0       1.00         NA
+            32          32           NA         NA            0       0.95         NA
+            64          64           NA         NA            0       0.74         NA
+           128         128           NA         NA            0       0.55         NA
+           256         256           NA         NA            0       0.39         NA
+           512         512           NA         NA            0       0.29         NA
+          1024        1024           NA         NA            0       0.21         NA
+             1        1024           NA         NA           NA         NA         NA
+
+# x2 Speed
+
+Mode: NoiseMultiplier x2
+
+# Averages                  (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+             1           1           NA         NA            0       2.70         NA
+             2           2           NA         NA            0       2.40         NA
+             4           4           NA         NA            0       2.00         NA
+             8           8           NA         NA            0       1.60         NA
+            16          16           NA         NA            0       1.00         NA
+            32          32           NA         NA            0       0.91         NA
+            64          64           NA         NA            0       0.78         NA
+           128         128           NA         NA            0       0.53         NA
+           256         256           NA         NA            0       0.34         NA
+           512         512           NA         NA            0       0.29         NA
+          1024        1024           NA         NA            0       0.20         NA
+             1        1024           NA         NA           NA         NA         NA
+
+# ============================================================================
+# Noise Per Sample
+#
+# Normal Mode: only applicable for gated power working range.  The normal mode
+# measurement noise will depend on the gate length (time-gated period in
+# second) and the number of averages.
+
+Mode: Noise Per Sample
+
+# Power (W)                 (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+     158.49E-6    31.62E-3           NA         NA            0    90.0E-6         NA
+      10.00E-3   125.89E-3           NA         NA            0     1.0E-3         NA
+      79.43E-3   316.23E-3           NA         NA            0    55.0E-3         NA
+     199.53E-3       25.12           NA         NA            0    85.0E-3         NA
+
+# ============================================================================
+# Cal Factor Uncertainty
+#
+# Values represent maximum specified uncertainties from the manufacturer, and
+# apply to both the low and high power paths of the sensor.
+#
+# Per Agilent: Cal factor measurement uncertainty for a test frequency between
+# two (explicitly specified) cal factor frequencies is the worst case uncertainty
+# of the two cal frequency points on either side of the test frequency.
+
+Mode: CF Unc
+
+# Power (W)                 Frequency (Hz)            Tol (%)     Floor   Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6        25.0      50.0E+6    50.0E+6         0.00          0         NA
+        1.0E-6        25.0      10.0E+6     2.0E+9         1.80          0         NA
+        1.0E-6        25.0       2.0E+9     6.0E+9         2.00          0         NA
+

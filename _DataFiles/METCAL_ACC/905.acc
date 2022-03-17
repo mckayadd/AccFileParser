@@ -1,0 +1,84 @@
+Begin Header
+	instrument = Wavetek 905
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 9490 $
+
+	# Note:
+	# LSD displayed is calculated LSD, rounded to the nearest
+	# decade value.
+	# Resolution is 1 LSD.
+	# Accuracy as percent of nominal = crystal accuracy = 5e-6/year.
+	# Floor spec is 1 LSD.
+
+	# Calculated LSD: 500e-12 * FREQ/MEAS.TIME
+
+Mode: Hertz FA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	10        300e6           0.03   70  NA         NA       NA
+   
+Mode: Hertz FC (PM 9621)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	70e6      900e6           10e-3  12  NA         NA       NA    
+	900e6     1.1e9           15e-3  12  NA         NA       NA    
+	1.1e9     1.3e9           40e-3  12  NA         NA       NA
+     
+Mode: Hertz FC (PM 9624)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+ 	100e6     300e6           20e-3  12  NA         NA       NA     
+ 	300e6     2.5e9           10e-3  12  NA         NA       NA     
+ 	2.5e9     2.7e9           20e-3  12  NA         NA       NA     
+     
+Mode: Hertz FC (PM 9625)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+ 	150e6     300e6           20e-3  1   NA         NA       NA     
+ 	300e6     2.5e9           10e-3  1   NA         NA       NA     
+ 	2.5e9     3.7e9           15e-3  1   NA         NA       NA     
+ 	3.7e9     4.2e9           20e-3  1   NA         NA       NA     
+ 	4.2e9     4.5e9           50e-3  1   NA         NA       NA     
+
+Mode: Hertz FC (PM 9638)
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+ 	300e6     500e6           20e-3  7   NA         NA       NA     
+ 	500e6     3.0e9           10e-3  7   NA         NA       NA     
+ 	3.0e9     4.5e9           20e-3  7   NA         NA       NA     
+ 	4.5e9     6.0e9           40e-3  7   NA         NA       NA     
+ 	6.0e9     8.0e9           80e-3  7   NA         NA       NA     
+     
+Mode: Hertz FR
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	10e-7    10e10            0.1  70    NA         NA       NA
+
+Mode: Seconds PA
+
+	# Calculated LSD: 500e-12 * PERIOD/MEAS.TIME
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	6e-9     100e-3           0.03 100   NA         NA       NA    
+
+Mode: Seconds WA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	3e-9     10e-3            100e-3 70  NA         NA       NA     
+
+Mode: Duty Factor
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0        1                0.01 160e6 NA         NA       NA     

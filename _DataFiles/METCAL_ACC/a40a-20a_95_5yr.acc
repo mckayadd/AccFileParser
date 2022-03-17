@@ -1,0 +1,31 @@
+Begin Header
+	instrument = Fluke A40A-20A
+	interval   = 1825 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Usable from 50 to 110% of full-scale when used with
+	# a solid-state detector, e.g., Fluke 5790A or 792A
+
+	# AC-DC difference uncertainty only!
+
+	# Uncertainties based on Fluke Primary Standards Lab
+	# Uncertainty Analysis U A40-1002, Rev. May 7, 2004,
+	# and assume the unit was calibrated by Fluke PSL
+
+Mode: AC-DC
+
+        # NOMINAL                 MOD1            Tolerance Floor   Resolution
+        # ----------------------- --------------- --------- ------- ----------
+
+        -22                  22   NA     NA       NA        NA      NA
+         10                  22   5      9.99     NA        NA      NA
+         10                  22   10     19.999   0.012     0       NA
+         10                  22   20     39.999   0.01      0       NA
+         10                  22   40     1e3      0.0065    0       NA
+         10                  22   1e3    5e3      0.0065    0       NA
+         10                  22   5e3    10e3     0.0065    0       NA
+         10                  22   10e3   20e3     0.01      0       NA
+         10                  22   20e3   50e3     0.014     0       NA

@@ -1,0 +1,32 @@
+Begin Header
+	instrument = HP 8590
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3920 $
+
+	# MET/CAL accuracy file for the HP 8590L, 8591E, 8592L, 8563E, 8564E,
+	# 8565E, and 8696E Spectrum Analyzers.
+
+	# Discussed confidence level with HP on  1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: dBm
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-134  +30          9e3     26.5e9  NA    NA     NA  
+
+Mode: Decibels
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-164  +164         0       0       NA    NA     NA  
+	-164  +164         9e3     26.5e9  NA    NA     NA  
+
+Mode: Hertz
+ 
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	9e3    26.5e9      -134    +30     NA    NA     NA

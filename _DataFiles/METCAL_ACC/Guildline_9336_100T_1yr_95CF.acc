@@ -1,0 +1,41 @@
+  # This file contains 365 day accuracy information for the
+  # Guildline Instruments Limited / Model 9336-100T
+
+  # $Revision: 3789 $
+
+Begin Header
+  instrument      =               Guildline 9336-100T
+  interval        =               365 days
+  confidence      =               2 sigma
+End Header
+
+  # Any special Notes
+                # Reference document was download from Guildline Instruments on 2 Oct 2007
+                # The is for the Guildline 9336-100T Precision High Value Resistance Standards
+
+                # The below specifications only applies to the above reference device
+
+  # Nominal                       Mod 1                   Tolerance   Floor       Resolution
+  # ---------------------------------------------------------------------------------------------
+
+Mode:           Stability
+                # Time Stability.
+
+   99.950000E+12  100.050000E+12  NA          NA            0.100000    0.00E+00    1.00E-09
+
+
+Mode:           UCal
+                # Calibration Uncertainty.
+
+   99.950000E+12  100.050000E+12  NA          NA            0.550000    0.00E+00    1.00E-09
+
+
+Mode:           Temp Coefficient
+                # The below specification is +/- ppm per degrees C
+
+   99.950000E+12  100.050000E+12  NA          NA            0.080000    0.00E+00    1.00E-09
+
+Mode:           V Coefficient
+                # The below specification is +/- ppm per Vdc
+
+   99.950000E+12  100.050000E+12  NA          NA            0.000200    0.00E+00    1.00E-09

@@ -1,0 +1,44 @@
+Begin Header
+	instrument = HP 5071A
+	interval   = 12 months
+	confidence = 2.576 sigma
+End Header
+
+# $Revision: 11385 $
+
+# HP 5071A Primary Frequency Standard Specifications
+#
+# See NIST Technical Note 1337, “Characterization of Clocks and Oscillators,”
+# available from U.S. Government Printing Office, Washington, D.C. 20402-9325
+# for more information on time and frequency domain stability.  Definitions
+# for all terms may be found in the Agilent 5071A Operating and Programming
+# documentation.
+#
+# Conditions - any combination of:
+#   Temperature:			0 to 50 degC
+#	Humidty:				0 to 80% (40 degC maximum)
+#	Magnetic Field:			dc, 55, 60 Hz; 0 to 0.2 millitesla (2 Gauss) peak
+#                           - any orientation
+#	Pressure:				47 kPa (equivalent to an altitude of 6 km)
+#	Shock and Vibration:	100-mm drop
+#
+# Outputs: 2 x programmable (5 MHz or 10 MHz), 1 MHz, 100 kHz
+# Output Amplitude: > 1.0 Vrms into 50 Ohms
+
+Mode: Timebase
+
+# Standard cesium beam tube.
+# Frequency accuracy:  < 1 x 10E-12
+
+	# Frequency (Hz)          Not Used   Tol (%)    Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-10    0        NA
+
+Mode: Timebase Opt001
+
+# High-performance cesium beam tube (Option 001).
+# Frequency accuracy:  < 5 x 10E-13
+
+	# Frequency (Hz)          Not Used   Tol (&)    Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    5.0E-11    0        NA

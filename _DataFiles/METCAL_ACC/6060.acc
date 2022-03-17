@@ -1,0 +1,27 @@
+Begin Header
+	instrument = Fluke 6060B
+	interval   = 12 Months
+	confidence = 2.58 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# The range between 1050MHz and 2100MHz can only be
+	# covered by a model 6062A signal generator.
+	# The amplitude values and accuracies are in dBm.
+
+Mode: Decibels
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-127  -100         10e3     400e3  0     3      0.1
+	-100   13.0103     10e3     400e3  0     2      0.1
+	-127   13.0103     400e3   1050e6  0     1      0.1
+	-127   13.0103     1050e6  2100e6  0     1.5    0.1
+
+Mode: Hertz
+ 
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	10e3     1050e6    -127 13.0103    5e-6  0      10
+	1050e6   2100e6    -127 13.0103    5e-6  0      20

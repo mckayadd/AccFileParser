@@ -1,0 +1,48 @@
+Begin Header
+              instrument  = Fluke 5500A/COIL
+              interval    = 365 days
+              confidence  = 2.58 sigma
+End Header
+
+# $Revision: 11770 $
+
+# Model 5500A/COIL 50-Turn Current Coil
+# Instruction Sheet, PN 600616 August 1995 Rev.6, 12/02
+
+Mode: Toroidal
+
+# Current (Amp-turns)       Frequency (Hz)            Tol (%)     Floor       Res
+# ------------------------  ------------------------  ------------------------------------
+       -9.9999      9.9999           NA          NA            NA          NA          NA
+      -16.4999     16.4999           NA          NA            NA          NA          NA
+      -149.999     149.999           NA          NA            NA          NA          NA
+         -1025        1025           NA          NA            NA          NA          NA
+
+            10     16.4999            45          65          0.28       0.003         NA
+          16.5     149.999            45          65          0.28       0.025         NA
+           150        1025            45          65          0.28       0.090         NA
+
+            10     16.4999            65         440          0.79       0.003         NA
+          16.5     149.999            65         440          0.79       0.027         NA
+           150        1025            65         440          0.79       0.100         NA
+
+             0        1025             0        1E+6           NA          NA          NA
+
+Mode: Non-toroidal
+
+# Current (Amp-turns)       Frequency (Hz)            Tol (%)     Floor       Res
+# ------------------------  ------------------------  ------------------------------------
+       -9.9999      9.9999           NA          NA            NA          NA          NA
+      -16.4999     16.4999           NA          NA           0.50       0.020         NA
+      -149.999     149.999           NA          NA           0.50       0.140         NA
+         -1025        1025           NA          NA           0.50       0.500         NA
+
+            10     16.4999            45          65          0.56       0.030         NA
+          16.5     149.999            45          65          0.56       0.250         NA
+           150        1025            45          65          0.56       0.900         NA
+
+            10     16.4999            65         440          1.00       0.030         NA
+          16.5     149.999            65         440          1.00       0.250         NA
+           150        1025            65         440          1.00       0.900         NA
+
+             0        1025             0        1E+6           NA          NA          NA

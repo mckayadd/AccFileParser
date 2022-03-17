@@ -1,0 +1,41 @@
+  # This file contains 365 day accuracy information for the
+  # Guildline Instruments Limited / Model 9336-10M
+
+  # $Revision: 3789 $
+
+Begin Header
+  instrument      =               Guildline 9336-10M
+  interval        =               365 days
+  confidence      =               2 sigma
+End Header
+
+  # Any special Notes
+                # Reference document was download from Guildline Instruments on 2 Oct 2007
+                # The is for the Guildline 9336-10M Precision High Value Resistance Standards
+
+                # The below specifications only applies to the above reference device
+
+  # Nominal                       Mod 1                   Tolerance   Floor       Resolution
+  # ---------------------------------------------------------------------------------------------
+
+Mode:           Stability
+                # Time Stability.
+
+    9.999975E+06   10.000025E+06  NA          NA            0.001000    0.00E+00    1.00E-09
+
+
+Mode:           UCal
+                # Calibration Uncertainty.
+
+    9.999975E+06   10.000025E+06  NA          NA            0.001500    0.00E+00    1.00E-09
+
+
+Mode:           Temp Coefficient
+                # The below specification is +/- ppm per degrees C
+
+    9.999975E+06   10.000025E+06  NA          NA            0.000500    0.00E+00    1.00E-09
+
+Mode:           V Coefficient
+                # The below specification is +/- ppm per Vdc
+
+    9.999975E+06   10.000025E+06  NA          NA            0.000010    0.00E+00    1.00E-09

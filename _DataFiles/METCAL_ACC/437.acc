@@ -1,0 +1,286 @@
+Begin Header
+	instrument = HP 437B
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Note, the Tolerance includes a noise factor based on
+	# the filter used.  The noise factor is decrease by a
+	# factor of 10, range 2 through 10.
+	# 23degC +/-1degC
+
+	# Discussed confidence level with HP on  1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+	# Power Calibration using 1mW, 50MHz output
+
+Mode: Watts CP
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	 1e-6     1e-6     50e+6   50e+6    0.7      0.0    0.01
+	 1e-3     1e-3     50e+6   50e+6    0.7      0.0    0.01
+
+# Power Zero
+
+Mode: Watts ZR
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	 0        0        100e+3  110e+9   NA       NA     0.01
+
+# 25W Sensors
+# 8481B and 8482B
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	
+Mode: Watts 25W
+	1e-6     25        100e+3  110e+9   NA       NA     NA   
+	
+Mode: Watts 25W F1
+	1e-6     9.999e-3  100e+3  110e+9   6.500    0.0    NA   
+	10e-3    25        100e+3  110e+9   1.100    0.0    NA   
+	
+Mode: Watts 25W F2
+	1e-6     9.999e-3  100e+3  110e+9   2.900    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.740    0.0    NA   
+	
+Mode: Watts 25W F4
+	1e-6     9.999e-3  100e+3  110e+9   2.300    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.680    0.0    NA   
+	
+Mode: Watts 25W F8
+	1e-6     9.999e-3  100e+3  110e+9   1.400    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.590    0.0    NA   
+	
+Mode: Watts 25W F16
+	1e-6     9.999e-3  100e+3  110e+9   1.200    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.570    0.0    NA   
+	
+Mode: Watts 25W F32
+	1e-6     9.999e-3  100e+3  110e+9   1.000    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.550    0.0    NA   
+	
+Mode: Watts 25W F64
+	1e-6     9.999e-3  100e+3  110e+9   0.900    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.540    0.0    NA   
+	
+Mode: Watts 25W F128
+	1e-6     9.999e-3  100e+3  110e+9   0.800    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.530    0.0    NA   
+	
+Mode: Watts 25W F256
+	1e-6     9.999e-3  100e+3  110e+9   0.700    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.520    0.0    NA   
+	
+Mode: Watts 25W F512
+	1e-6     9.999e-3  100e+3  110e+9   0.650    0.0    NA   
+	10e-3    25        100e+3  110e+9   0.515    0.0    NA   
+
+
+# 3W Sensors
+# 8481H and 8482H
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	
+Mode: Watts 3W
+	1e-6     3         100e+3  110e+9   NA       NA     NA   
+	
+Mode: Watts 3W F1
+	1e-6     999.9e-6  100e+3  110e+9   6.500    0.0    NA   
+	1e-3     3         100e+3  110e+9   1.100    0.0    NA   
+	
+Mode: Watts 3W F2
+	1e-6     999.9e-6  100e+3  110e+9   2.900    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.740    0.0    NA   
+	
+Mode: Watts 3W F4
+	1e-6     999.9e-6  100e+3  110e+9   2.300    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.680    0.0    NA   
+	
+Mode: Watts 3W F8
+	1e-6     999.9e-6  100e+3  110e+9   1.400    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.590    0.0    NA   
+	
+Mode: Watts 3W F16
+	1e-6     999.9e-6  100e+3  110e+9   1.200    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.570    0.0    NA   
+	
+Mode: Watts 3W F32
+	1e-6     999.9e-6  100e+3  110e+9   1.000    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.550    0.0    NA   
+	
+Mode: Watts 3W F64
+	1e-6     999.9e-6  100e+3  110e+9   0.900    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.540    0.0    NA   
+	
+Mode: Watts 3W F128
+	1e-6     999.9e-6  100e+3  110e+9   0.800    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.530    0.0    NA   
+	
+Mode: Watts 3W F256
+	1e-6     999.9e-6  100e+3  110e+9   0.700    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.520    0.0    NA   
+	
+Mode: Watts 3W F512
+	1e-6     999.9e-6  100e+3  110e+9   0.650    0.0    NA   
+	1e-3     3         100e+3  110e+9   0.515    0.0    NA   
+
+
+# 100mW Sensors
+# 8481A, 8482A, 8483A, 8485A, R8486A, Q8486A, W8486A, and 8487A
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	
+Mode: Watts 100mW
+	1e-6     100e-3    100e+3  110e+9   NA       NA     NA   
+	
+Mode: Watts 100mW F1
+	1e-6     9.999e-6  100e+3  110e+9   6.500    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   1.100    0.0    NA   
+	
+Mode: Watts 100mW F2
+	1e-6     9.999e-6  100e+3  110e+9   2.900    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.740    0.0    NA   
+	
+Mode: Watts 100mW F4
+	1e-6     9.999e-6  100e+3  110e+9   2.300    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.680    0.0    NA   
+	
+Mode: Watts 100mW F8
+	1e-6     9.999e-6  100e+3  110e+9   1.400    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.590    0.0    NA   
+	
+Mode: Watts 100mW F16
+	1e-6     9.999e-6  100e+3  110e+9   1.200    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.570    0.0    NA   
+	
+Mode: Watts 100mW F32
+	1e-6     9.999e-6  100e+3  110e+9   1.000    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.550    0.0    NA   
+	
+Mode: Watts 100mW F64
+	1e-6     9.999e-6  100e+3  110e+9   0.900    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.540    0.0    NA   
+	
+Mode: Watts 100mW F128
+	1e-6     9.999e-6  100e+3  110e+9   0.800    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.530    0.0    NA   
+	
+Mode: Watts 100mW F256
+	1e-6     9.999e-6  100e+3  110e+9   0.700    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.520    0.0    NA   
+	
+Mode: Watts 100mW F512
+	1e-6     9.999e-6  100e+3  110e+9   0.650    0.0    NA   
+	10e-6    100e-3    100e+3  110e+9   0.515    0.0    NA   
+
+
+# High Sensitivity Sensors
+# 8481D, 8485D, R8486D, Q8486D, and 8487D
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	
+Mode: Watts 10uW
+	100e-12  10e-6     100e+3  110e+9   NA       NA     NA   
+	
+Mode: Watts 10uW F1
+	100e-12  999.9e-12 100e+3  110e+9   6.500    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   1.100    0.0    NA   
+	
+Mode: Watts 10uW F2
+	100e-12  999.9e-12 100e+3  110e+9   2.900    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.740    0.0    NA   
+	
+Mode: Watts 10uW F4
+	100e-12  999.9e-12 100e+3  110e+9   2.300    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.680    0.0    NA   
+	
+Mode: Watts 10uW F8
+	100e-12  999.9e-12 100e+3  110e+9   1.400    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.590    0.0    NA   
+	
+Mode: Watts 10uW F16
+	100e-12  999.9e-12 100e+3  110e+9   1.200    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.570    0.0    NA   
+	
+Mode: Watts 10uW F32
+	100e-12  999.9e-12 100e+3  110e+9   1.000    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.550    0.0    NA   
+	
+Mode: Watts 10uW F64
+	100e-12  999.9e-12 100e+3  110e+9   0.900    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.540    0.0    NA   
+	
+Mode: Watts 10uW F128
+	100e-12  999.9e-12 100e+3  110e+9   0.800    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.530    0.0    NA   
+	
+Mode: Watts 10uW F256
+	100e-12  999.9e-12 100e+3  110e+9   0.700    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.520    0.0    NA   
+	
+Mode: Watts 10uW F512
+	100e-12  999.9e-12 100e+3  110e+9   0.650    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.515    0.0    NA   
+
+# 8484A
+
+	#
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  -----
+	
+Mode: Watts 8484A
+	100e-12  10e-6     100e+3  110e+9   NA       NA     NA   
+	
+Mode: Watts 8484A F1
+	100e-12  999.9e-12 100e+3  110e+9  24.500    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   2.900    0.0    NA   
+	
+Mode: Watts 8484A F2
+	100e-12  999.9e-12 100e+3  110e+9  10.100    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   1.460    0.0    NA   
+	
+Mode: Watts 8484A F4
+	100e-12  999.9e-12 100e+3  110e+9   7.700    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   1.220    0.0    NA   
+	
+Mode: Watts 8484A F8
+	100e-12  999.9e-12 100e+3  110e+9   4.100    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.860    0.0    NA   
+	
+Mode: Watts 8484A F16
+	100e-12  999.9e-12 100e+3  110e+9   3.300    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.780    0.0    NA   
+	
+Mode: Watts 8484A F32
+	100e-12  999.9e-12 100e+3  110e+9   2.500    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.700    0.0    NA   
+	
+Mode: Watts 8484A F64
+	100e-12  999.9e-12 100e+3  110e+9   2.100    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.660    0.0    NA   
+	
+Mode: Watts 8484A F128
+	100e-12  999.9e-12 100e+3  110e+9   1.700    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.620    0.0    NA   
+	
+Mode: Watts 8484A F256
+	100e-12  999.9e-12 100e+3  110e+9   1.300    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.580    0.0    NA   
+	
+Mode: Watts 8484A F512
+	100e-12  999.9e-12 100e+3  110e+9   1.100    0.0    NA   
+	1e-9     10e-6     100e+3  110e+9   0.560    0.0    NA   

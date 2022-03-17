@@ -1,0 +1,32 @@
+Begin Header
+	instrument = Guildline 9230A-15
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+# This file contains accuracy information for
+# the Guildline 9230A-15 DC Current Shunt
+# Guildline factory Calibration Uncertainty,
+# 1 year stability specifications, 95% Confidence Interval
+
+# Guildline 9230A data sheet, Rev. V1.8, 2003.02.11
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        0.400000   0.600000    NA    NA  0.0008    0         NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        0.400000   0.600000    NA    NA  0.001     0         NA

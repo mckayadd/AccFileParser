@@ -1,0 +1,177 @@
+Begin Header
+	instrument = HP 8656A
+	interval   = 12 Months
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Hewlett-Packard 8656A RF Signal Generator.
+
+	# Source: HP 8656A Signal Generator (Including Options 001
+	# and 002) Operating and Service Manual, Part No. 08656-90108,
+	# May 1981
+
+	# Most specifications are valid after a 30 minute warmup time,
+	# except as noted below.
+
+	# The amplitude values and accuracies are in dBm.
+
+	# Specifications for level and flatness apply within an ambient
+	# temperature range of 0 to 55 degC.
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Hertz
+ 
+	# Standard internal time base
+	# Aging rate, 2 ppm per year
+
+	# Overall accuracy of internal time base is a function of time
+	# base calibration +/- aging rate +/- temperature effects
+ 
+	# NOMINAL          MOD1             Tol.      Floor  Res.
+	#----------------  ---------------  --------  -----  ----
+	10e3   99.99999e3   -127     +13     NA        NA     NA
+	100e3       990e6   -127     +13     2e-4      0      10
+
+Mode: Hz TC
+
+	# Temperature Coefficient, 10 ppm per degree C
+ 
+	# NOMINAL          MOD1             Tol.      Floor  Res.
+	#----------------  --------------  ---------  -----  ----
+	10e3   99.99999e3   -127     +13    NA        NA     NA
+	100e3       990e6   -127     +13    1e-3      0      100
+
+Mode: Hertz 001
+ 
+	# Option 001 internal time base
+	# Aging rate, 1 * 10e-9/day
+
+	# Overall accuracy of internal time base is a function of time
+	# base calibration +/- aging rate +/- temperature effects +/-
+	# line effects
+ 
+	# Aging rate specs below are normalized for 365 days.
+
+	# NOMINAL          MOD1              Tol.    Floor  Res.
+	#----------------  --------------  --------  -----  ----
+	10e3   99.99999e3   -127     +13    NA        NA     NA
+	100e3       990e6   -127     +13    3.65e-5   0      100
+
+Mode: Hz Line 001
+
+	# Option 001 internal time base
+	# Change due to +5%, -10% line voltage change
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e3   99.99999e3   -127     +13    NA       NA     NA
+	100e3       990e6   -127     +13    2e-7     0      NA
+
+Mode: Hz TC 001
+
+	# Option 001 internal time base
+	# Temperature Coefficient, 7 * 10e-9 per degree C
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e3   99.99999e3   -127     +13    NA       NA     NA
+	100e3       990e6   -127     +13    7e-7     0      NA
+
+Mode: Decibels
+
+	# Absolute level accuracy Includes allowances for detector 
+	# linearity, temperature, flatness, attenuator accuracy, 
+	# and measurement error
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-127        +13    10e3      100e3   NA      NA     0.1
+	-127        +13    100e3     990e6  0        1.5    0.1
+
+Mode: dB Flat 
+
+      # Level Flatness specified at an output level setting of
+	# 0.0 dBm, from 100 kHz to 990 MHz
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	0           0      100e3     990e6  0        1.0    0.1
+
+Mode: AM 400
+
+      # AM Rate, Internal, 400 Hz
+	# Specifications:
+	#	Carrier Frequency > 400 kHz
+	#	0 to 99%, level <= +7 dBm
+	#	0 to 30%, level <= +10 dBm
+	#	AM Rate Accuracy: +/- 3%
+
+	# NOMINAL          MOD1            Tolerance  Floor  Res.
+	#----------------  --------------  ---------  -----  ----
+	0		 99	  -127     7      3.0	     0     1.0
+	0		 30	   7      10      3.0        0     1.0
+	30           99      7      10      NA         NA    NA
+	0		 99	   10     17      NA         NA    NA
+
+Mode: AM 1000
+
+      # AM Rate, Internal, 1 kHz
+	# Specifications:
+	#	Carrier Frequency > 400 kHz
+	#	0 to 99%, level <= +7 dBm
+	#	0 to 30%, level <= +10 dBm
+	#	AM Rate Accuracy: +/- 3%
+
+	# NOMINAL          MOD1            Tolerance  Floor  Res.
+	#----------------  --------------  ---------  -----  ----
+	0		 99	  -127     7      3.0	     0     1.0
+	0		 30	   7      10      3.0        0     1.0
+	30           99      7      10      NA         NA    NA
+	0		 99	   10     17      NA         NA    NA
+
+Mode: FM 400
+
+      # FM Rate, Internal, 400 Hz
+	# Specifications:
+	#	Maximum FM Peak Deviation, AC (the lesser of)
+	#		0.1 to 123.5 MHz, AC, 99 kHz or 4000 * rate (Hz)
+	#		123.5 to 247 MHz, AC, 50 kHz or 1000 * rate (Hz)
+	#		247 to 494 MHz, AC, 99 kHz or 2000 * rate (Hz)
+	#		494 to 990 MHz, AC, 99 kHz or 4000 * rate (Hz)
+	#	Maximum FM Peak Deviation, DC
+	#		0.1 to 123.5 MHz, DC, 99 kHz
+	#		123.5 to 247 MHz, DC, 50 kHz
+	#		247 to 494 MHz, DC, 99 kHz
+	#		494 to 990 MHz, DC, 99 kHz
+	#	FM Rate Accuracy: +/- 3%
+
+	# NOMINAL          MOD1            Tolerance  Floor  Res.
+	#----------------  --------------  ---------  -----  ----
+	0		 99	  -127    13      3.0	     0     1.0
+	0		 99	  13      17      NA         NA    NA
+
+Mode: FM 1000
+
+      # FM Rate, Internal, 1 kHz
+	# Specifications:
+	#	Maximum FM Peak Deviation, AC (the lesser of)
+	#		0.1 to 123.5 MHz, AC, 99 kHz or 4000 * rate (Hz)
+	#		123.5 to 247 MHz, AC, 50 kHz or 1000 * rate (Hz)
+	#		247 to 494 MHz, AC, 99 kHz or 2000 * rate (Hz)
+	#		494 to 990 MHz, AC, 99 kHz or 4000 * rate (Hz)
+	#	Maximum FM Peak Deviation, DC
+	#		0.1 to 123.5 MHz, DC, 99 kHz
+	#		123.5 to 247 MHz, DC, 50 kHz
+	#		247 to 494 MHz, DC, 99 kHz
+	#		494 to 990 MHz, DC, 99 kHz
+	#	FM Rate Accuracy: +/- 3%
+
+	# NOMINAL          MOD1            Tolerance  Floor  Res.
+	#----------------  --------------  ---------  -----  ----
+	0		 99	  -127    13      3.0	     0     1.0
+	0		 99	  13      17      NA         NA    NA

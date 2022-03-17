@@ -1,0 +1,94 @@
+Begin Header
+	instrument = Wavetek 395
+	interval   = 365 days
+	confidence = 1 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Wavetek 395 Function Generator.
+
+	# These specifications are valid after a warming-up time of
+	# 20 minutes (temperature 25 +/-10 degC) and for a termination
+	# of the signal output with 50 Ohms.
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Hertz SI
+
+	1e-6     20e+6      -5       5        30e-4  0       NA     
+	20e+6    40e+6      -5       5        100e-4 0       NA     
+
+Mode: Hertz SQ
+
+	1e-6     50e+6      -5       5        100e-4 0       NA     
+
+Mode: Hertz TI
+
+	1e-6     100e+3     -5       5        30e-4  0       NA     
+	100e3    10e+6      -5       5        100e-4 0       NA     
+
+Mode: Hertz RP
+
+	1e-6     100e+3     -5       5        30e-4  0       NA     
+	100e+3   2e+6       -5       5        100e-4 0       NA     
+
+Mode: Period PU
+
+	100e-9   10         -5       5        100e-4 0       NA
+
+Mode: Width PU
+
+	10e-9    9.99       -5       5        0.1    5e-9    NA
+
+Mode: Volts
+
+	-5       5          NA       NA       1      20e-3   NA   
+
+Mode: Vp SI
+
+	-5       5          1e-6     40e+6    1      2e-3    NA
+
+Mode: Vp SQ
+
+	-5       5          1e-6     50e+6    1      2e-3    NA
+
+Mode: Vp TI
+
+	-5       5          1e-6     10e+6    1      2e-3    NA
+
+Mode: Vp RP
+
+	-5       5          1e-6     2e+6     1      2e-3    NA
+
+Mode: Vp PU
+
+	-5       5          10e-9    10       1      2e-3    NA
+
+Mode: Vp OI
+
+	-5       5          NA       NA       1      2e-3    NA
+
+# Unspec'd with non-zero DC offset.
+
+Mode: Vp SI Voff
+
+	-5       5          1e-6     40e+6    NA     NA      NA
+
+Mode: Vp SQ Voff
+
+	-5       5          1e-6     50e+6    NA     NA      NA
+
+Mode: Vp TI Voff
+
+	-5       5          1e-6     10e+6    NA     NA      NA
+
+Mode: Vp RP Voff
+
+	-5       5          1e-6     2e+6     NA     NA      NA
+
+Mode: Vp OI Voff
+
+	-5       5          NA       NA       NA     NA      NA

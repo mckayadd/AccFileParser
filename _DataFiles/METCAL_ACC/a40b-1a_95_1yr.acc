@@ -1,0 +1,29 @@
+Begin Header
+               instrument   = Fluke A40B-1A
+               interval     = 365 days
+               confidence   = 2 sigma
+End Header
+
+# $Revision: 21908 $
+#
+# Source:
+# A40B Precision AC Current Shunt Set Instruction Manual
+# July 2008 Rev. 1, 7/09
+#
+# The specifications include 1-year stability,temperature effects over TCal ±1 °C,
+# and measurement uncertainty of the calibrated value.
+
+Mode: Ohms
+# Resistance (Ohms)           Not Used                       Tol (%)     uOhm/Ohm    Resolution
+# --------------------------  --------------------------  ---------------------------------------
+       799.8E-3     800.2E-3            NA           NA               0          9.3          NA
+
+# Per A40B Product Owner, use the 1 kHz specification from DC to ? 1 kHz. 6/23/2014
+Mode: Amps
+# Current (Amps)              Frequency (Hertz)              Tol (%)       uA/A      Resolution
+# --------------------------  --------------------------  ---------------------------------------
+          -1.01         1.01            NA           NA               0           21          NA
+           0.01         1.01           1E-6         1E+3              0           27          NA
+           0.01         1.01          10E+3        10E+3              0           28          NA
+           0.01         1.01          30E+3        30E+3              0           28          NA
+           0.01         1.01         100E+3       100E+3              0           31          NA

@@ -1,0 +1,432 @@
+#
+# CORRECTION FILE FOR THE 5500EP.
+#
+# 5500A/EP Enhancement Package, User Manual PN 602562
+#
+# Generated:
+#
+# $Revision: 1.4 $
+
+Mode: 330mV E
+
+Range: 0 0 NA NA
+
+Range: -10.1e-3 -9.9e-3 NA NA
+
+Range: 9.9e-3 10.1e-3 NA NA
+
+Range: -19.2e-3 -18.8e-3 NA NA
+
+Range: 18.8e-3 19.2e-3 NA NA
+
+Range: -30.3e-3 -29.7e-3 NA NA
+
+Range: 29.7e-3 30.3e-3 NA NA
+
+Range: -50.5e-3 -49.5e-3 NA NA
+
+Range: 49.5e-3 50.5e-3 NA NA
+
+Range: -72.7e-3 -71.8e-3 NA NA
+
+Range: 71.8e-3 72.7e-3 NA NA
+
+Range: -101e-3 -99e-3 NA NA
+
+Range: 99e-3 101e-3 NA NA
+
+Range: -136e-3 -134e-3 NA NA
+
+Range: 134e-3 136e-3 NA NA
+
+Range: -192e-3 -188e-3 NA NA
+
+Range: 188e-3 192e-3 NA NA
+
+Range: -262e-3 -258e-3 NA NA
+
+Range: 258e-3 262e-3 NA NA
+
+Range: -303e-3 -297e-3 NA NA
+
+Range: 297e-3 303e-3 NA NA
+
+Mode: 3.3V E
+
+Range: 0 0 NA NA
+
+Range: -0.515 -0.505 NA NA
+
+Range: 0.505 0.515 NA NA
+
+Range: -1.02 -0.98 NA NA
+
+Range: 0.98 1.02 NA NA
+
+Range: -1.92 -1.88 NA NA
+
+Range: 1.88 1.92 NA NA
+
+Range: -3.03 -2.97 NA NA
+
+Range: 2.97 3.03 NA NA
+
+Mode: 33V E
+
+Range: 0 0 NA NA
+
+Range: -5.05 -4.95 NA NA
+
+Range: 4.95 5.05 NA NA
+
+Range: -10.1 -9.9 NA NA
+
+Range: 9.9 10.1 NA NA
+
+Range: -19.2 -18.8 NA NA
+
+Range: 18.8 19.2 NA NA
+
+Range: -30.3 -29.7 NA NA
+
+Range: 29.7 30.3 NA NA
+
+Mode: 330V E
+
+Range: 0 0 NA NA
+
+Range: -101 -99 NA NA
+
+Range: 99 101 NA NA
+
+Range: -192 -188 NA NA
+
+Range: 188 192 NA NA
+
+Range: -303 -297 NA NA
+
+Range: 297 303 NA NA
+
+Mode: 1100V E
+
+Range: 0 0 NA NA
+
+Range: -505 -495 NA NA
+
+Range: 495 505 NA NA
+
+Range: -1010 -990 NA NA
+
+Range: 990 1010 NA NA
+
+Mode: Volts E
+
+Range: 0 0 NA NA
+
+Range: -10.1e-3 -9.9e-3 NA NA
+
+Range: 9.9e-3 10.1e-3 NA NA
+
+Range: -19.2e-3 -18.8e-3 NA NA
+
+Range: 18.8e-3 19.2e-3 NA NA
+
+Range: -30.3e-3 -29.7e-3 NA NA
+
+Range: 29.7e-3 30.3e-3 NA NA
+
+Range: -50.5e-3 -49.5e-3 NA NA
+
+Range: 49.5e-3 50.5e-3 NA NA
+
+Range: -72.7e-3 -71.8e-3 NA NA
+
+Range: 71.8e-3 72.7e-3 NA NA
+
+Range: -101e-3 -99e-3 NA NA
+
+Range: 99e-3 101e-3 NA NA
+
+Range: -136e-3 -134e-3 NA NA
+
+Range: 134e-3 136e-3 NA NA
+
+Range: -192e-3 -188e-3 NA NA
+
+Range: 188e-3 192e-3 NA NA
+
+Range: -262e-3 -258e-3 NA NA
+
+Range: 258e-3 262e-3 NA NA
+
+Range: -303e-3 -297e-3 NA NA
+
+Range: 297e-3 303e-3 NA NA
+
+Range: -0.515 -0.505 NA NA
+
+Range: 0.505 0.515 NA NA
+
+Range: -1.02 -0.98 NA NA
+
+Range: 0.98 1.02 NA NA
+
+Range: -1.92 -1.88 NA NA
+
+Range: 1.88 1.92 NA NA
+
+Range: -3.03 -2.97 NA NA
+
+Range: 2.97 3.03 NA NA
+
+Range: -5.05 -4.95 NA NA
+
+Range: 4.95 5.05 NA NA
+
+Range: -10.1 -9.9 NA NA
+
+Range: 9.9 10.1 NA NA
+
+Range: -19.2 -18.8 NA NA
+
+Range: 18.8 19.2 NA NA
+
+Range: -30.3 -29.7 NA NA
+
+Range: 29.7 30.3 NA NA
+
+Range: -101 -99 NA NA
+
+Range: 99 101 NA NA
+
+Range: -192 -188 NA NA
+
+Range: 188 192 NA NA
+
+Range: -303 -297 NA NA
+
+Range: 297 303 NA NA
+
+Range: -505 -495 NA NA
+
+Range: 495 505 NA NA
+
+Range: -1010 -990 NA NA
+
+Range: 990 1010 NA NA
+
+Mode: Volts SI E
+
+Range: 0.97e-3 1.30e-3 100 100
+
+Range: 9.9e-3 10.1e-3 200 100e3
+
+Range: 27.7e-3 28.3e-3 20e3 20e3
+
+Range: 99e-3 101e-3 10 100e3
+
+Range: 188e-3 192e-3 1e3 100e3
+
+Range: 277e-3 283e-3 20e3 100e3
+
+Range: 297e-3 303e-3 200 200
+
+Range: 0.99 1.01 10 300e3
+
+Range: 1.45 1.55 20e3 20e3
+
+Range: 1.88 1.92 20 100e3
+
+Range: 2.77 2.83 20 100e3
+
+Range: 2.97 3.03 1e3 1e3
+
+Range: 3.17 3.23 50e3 300e3
+
+Range: 9.9 10.1 10 100e3
+
+Range: 14.5 15.5 100e3 100e3
+
+Range: 18.8 19.2 1e3 100e3
+
+Range: 27.7 28.3 20e3 100e3
+
+Range: 31.7 32.3 50e3 100e3
+
+Range: 99 101 200 20e3
+
+Range: 188 192 1e3 20e3
+
+Range: 277 283 20e3 20e3
+
+Range: 317 323 20e3 20e3
+
+Range: 495 505 1e3 1e3
+
+Range: 693 707 1e3 10e3
+
+Mode: 3.3mA E
+
+Range: -1.01e-3 -0.99e-3 NA NA
+
+Range: 0.99e-3 1.01e-3 NA NA
+
+Mode: 33mA E
+
+Range: -10.1e-3 -9.9e-3 NA NA
+
+Range: 9.9e-3 10.1e-3 NA NA
+
+Mode: 330mA E
+
+Range: -101e-3 -99e-3 NA NA
+
+Range: 99e-3 101e-3 NA NA
+
+Range: -192e-3 -188e-3 NA NA
+
+Range: 188e-3 192e-3 NA NA
+
+Mode: 2.2A E
+
+Range: -0.505 -0.495 NA NA
+
+Range: 0.495 0.505 NA NA
+
+Range: -1.01 -0.99 NA NA
+
+Range: 0.99 1.01 NA NA
+
+Range: -2.02 -1.98 NA NA
+
+Range: 1.98 2.02 NA NA
+
+Mode: 11A E
+
+Range: -2.22 -2.18 NA NA
+
+Range: 2.18 2.22 NA NA
+
+Mode: Amps E
+
+Range: -1.01e-3 -0.99e-3 NA NA
+
+Range: 0.99e-3 1.01e-3 NA NA
+
+Range: -10.1e-3 -9.9e-3 NA NA
+
+Range: 9.9e-3 10.1e-3 NA NA
+
+Range: -101e-3 -99e-3 NA NA
+
+Range: 99e-3 101e-3 NA NA
+
+Range: -192e-3 -188e-3 NA NA
+
+Range: 188e-3 192e-3 NA NA
+
+Range: -0.505 -0.495 NA NA
+
+Range: 0.495 0.505 NA NA
+
+Range: -1.01 -0.99 NA NA
+
+Range: 0.99 1.01 NA NA
+
+Range: -2.02 -1.98 NA NA
+
+Range: 1.98 2.02 NA NA
+
+Range: -2.22 -2.18 NA NA
+
+Range: 2.18 2.22 NA NA
+
+Mode: Amps SI E
+
+Range: 9.9e-3 10.1e-3 45 10e3
+
+Range: 29.7e-3 30.3e-3 5e3 5e3
+
+Range: 99e-3 101e-3 1e3 10e3
+
+Range: 188e-3 192e-3 1e3 10e3
+
+Range: 297e-3 303e-3 1e3 1e3
+
+Range: 0.495 0.505 1e3 1e3
+
+Range: 0.99 1.01 1e3 5e3
+
+Range: 1.88 1.92 1e3 5e3
+
+Range: 1.98 2.02 1e3 5e3
+
+Range: 2.08 2.12 5e3 5e3
+
+Range: 2.18 2.22 1e3 1e3
+
+Mode: Ohms E 4W
+
+Range: 0 0.001 NA NA
+
+Range: 9.9 10.1 NA NA
+
+Range: 18.8 19.2 NA NA
+
+Range: 99 101 NA NA
+
+Range: 188 192 NA NA
+
+Range: 0.99e3 1.01e3 NA NA
+
+Range: 1.88e3 1.92e3 NA NA
+
+Range: 9.9e3 10.1e3 NA NA
+
+Range: 18.8e3 19.2e3 NA NA
+
+Range: 99e3 101e3 NA NA
+
+Range: 188e3 192e3 NA NA
+
+Range: 0.99e6 1.01e6 NA NA
+
+Range: 1.88e6 1.92e6 NA NA
+
+Range: 9.9e6 10.1e6 NA NA
+
+Range: 18.8e6 19.2e6 NA NA
+
+Range: 99e6 101e6 NA NA
+
+Mode: Ohms E 2W
+
+Range: 9.9 10.1 NA NA
+
+Range: 18.8 19.2 NA NA
+
+Range: 99 101 NA NA
+
+Range: 188 192 NA NA
+
+Range: 0.99e3 1.01e3 NA NA
+
+Range: 1.88e3 1.92e3 NA NA
+
+Range: 9.9e3 10.1e3 NA NA
+
+Range: 18.8e3 19.2e3 NA NA
+
+Range: 99e3 101e3 NA NA
+
+Range: 188e3 192e3 NA NA
+
+Range: 0.99e6 1.01e6 NA NA
+
+Range: 1.88e6 1.92e6 NA NA
+
+Range: 9.9e6 10.1e6 NA NA
+
+Range: 18.8e6 19.2e6 NA NA
+
+Range: 99e6 101e6 NA NA

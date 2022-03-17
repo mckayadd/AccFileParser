@@ -1,0 +1,469 @@
+Begin Header
+                           Instrument =Fluke 96040A
+                             Interval =365 days
+                           Confidence =2.58 sigma
+End Header
+
+# $Revision: 22360 $
+#
+# Source:
+# Fluke 96000 Series Single Source Specifications, Rev. B, June 9, 2014
+#
+# All specifications apply to a 1-year calibration interval at an
+# ambient temperature of Tcal +/- 5 degC.
+
+# =======================================================================
+# Frequency Reference Input/Output Specifications
+#
+# Frequency accuracy is the combination of the specified frequency reference (internal or external):
+# Internal frequency reference (default) MET/CAL automatically combines the Timebase specification with the floor.
+# External frequency reference (ExtRefFreq), when specified, combines the Timebase specification of that reference with the floor.
+#
+# Nominal range reflects the evaluation quantity of the reference device using the timebase,
+# not the actual output frequency of the timebase.
+
+Mode: Timebase
+
+# Frequency (Hz)                       Not Used                                Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                1E-3             1E+12                NA                NA           5E-6            0          NA
+
+# =======================================================================
+# Leveled Sine Specifications at Leveling Head Output
+
+Mode: Freq Sine
+
+# Frequency (Hz)                       Not Used                                Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                1E-3          4.024E+9                NA                NA              0         5E-6          NA
+
+# Floor value represents maximum (worst case) specified VSWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+# VSWR >= 2 GHz is calculated as: <= 1.0 + 0.05 * Frequency (GHz)
+
+Mode: VSWR 50
+
+# Frequency (Hz)                       Not Used                                Tol (%)       VSWR      Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                1E-3            100E+6                NA                NA              0         1.05          NA
+              100E+6              2E+9                NA                NA              0          1.1          NA
+                2E+9          4.024E+9                NA                NA         5.0E-9            1          NA
+
+Mode: VSWR 75
+
+# Frequency (Hz)                       Not Used                                Tol (%)       VSWR      Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                1E-3            100E+6                NA                NA              0          1.1          NA
+              100E+6              1E+9                NA                NA              0          1.2          NA
+                1E+9          4.024E+9                NA                NA              0          1.3          NA
+
+# Attenuation (Relative to +16 dBm output), 50 Ohms
+
+Mode: Atten dB 50
+
+# Attenuation (dB)                     Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                   0               116               1E-3             9.999           NA            NA          NA
+
+                   0                55                 10             20E+3             0         0.02          NA
+                  55                64                 10             20E+3             0         0.03          NA
+                  64                74                 10             20E+3           NA            NA          NA
+                  74               100                 10             20E+3           NA            NA          NA
+                 100               116                 10             20E+3           NA            NA          NA
+
+                   0                55       20.000001E+3            100E+3             0         0.02          NA
+                  55                64       20.000001E+3            100E+3             0         0.03          NA
+                  64                74       20.000001E+3            100E+3             0         0.05          NA
+                  74                96       20.000001E+3            100E+3             0         0.07          NA
+                  96               116       20.000001E+3            100E+3           NA            NA          NA
+
+                   0                55      100.000001E+3            128E+6             0         0.02          NA
+                  55                64      100.000001E+3            128E+6             0         0.03          NA
+                  64                74      100.000001E+3            128E+6             0         0.05          NA
+                  74               100      100.000001E+3            128E+6             0         0.07          NA
+                 100               116      100.000001E+3            128E+6           NA            NA          NA
+
+                   0               116    128.00000001E+6          4.024E+9           NA            NA          NA
+
+# Attenuation (Relative to +10 dBm output), 75 Ohms
+
+Mode: Atten dB 75
+
+# Level (dB)                           Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                   0               110               1E-3             9.999           NA            NA          NA
+
+                   0                33                 10             20E+3             0        0.035          NA
+                  33                64                 10             20E+3             0         0.05          NA
+                  64               100                 10             20E+3           NA            NA          NA
+                 100               110                 10             20E+3           NA            NA          NA
+
+                   0                33       20.000001E+3            100E+3             0        0.035          NA
+                  33                64       20.000001E+3            100E+3             0        0.050          NA
+                  64                96       20.000001E+3            100E+3             0        0.150          NA
+                  96               110       20.000001E+3            100E+3           NA            NA          NA
+
+                   0                33      100.000001E+3            128E+6             0        0.035          NA
+                  33                64      100.000001E+3            128E+6             0        0.050          NA
+                  64               100      100.000001E+3            128E+6             0        0.150          NA
+                 100               110      100.000001E+3            128E+6             0           NA          NA
+
+                   0               110    128.00000001E+6          4.024E+9           NA            NA          NA
+
+# Attenuation (Relative to any level between +16 dBm and -100 dBm), 50 Ohms
+
+Mode: Atten dB 50 Abs
+
+# Output Level (dBm)                   Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                -100                16               1E-3             9.999            NA           NA          NA
+
+                 -39                16                 10            128E+6             0         0.02          NA
+                 -48               -39                 10            128E+6             0         0.03          NA
+                 -58               -48                 10            128E+6             0         0.05          NA
+                 -84               -58                 10            128E+6             0         0.07          NA
+                -100               -84                 10            128E+6             0         0.15          NA
+
+                -100                16    128.00000001E+6          4.024E+9           NA            NA          NA
+
+# Attenuation (Relative to any level between +10 dBm and -100 dBm), 75 Ohms
+
+Mode: Atten dB 75 Abs
+
+# Output Level (dBm)                   Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                -100                10               1E-3             9.999           NA            NA          NA
+
+                 -23                10                 10            128E+6             0        0.035          NA
+                 -54               -23                 10            128E+6             0         0.05          NA
+                 -90               -54                 10            128E+6             0         0.15          NA
+                -100               -90                 10            128E+6             0          0.3          NA
+
+                -100                10    128.00000001E+6          4.024E+9           NA            NA          NA
+
+# Absolute Accuracy, 50 Ohms, Broadband
+
+Mode: Level 50
+
+# Level (dBm)                          Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                -130                24               1E-3             9.999           NA            NA          NA
+
+              20.001                24                 10             20E+3             0         0.03          NA
+              20.001                24       20.000001E+3            100E+3             0         0.03          NA
+              20.001                24      100.000001E+3    9.999999999E+6             0         0.05          NA
+              20.001                24              10E+6            128E+6             0         0.05          NA
+              20.001                24    128.00000001E+6            300E+6           NA           NA           NA
+              20.001                24    300.00000001E+6            1.4E+9           NA           NA           NA
+              20.001                24    1.4000000001E+9              3E+9           NA           NA           NA
+              20.001                24    3.0000000001E+9          4.024E+9           NA           NA           NA
+
+              14.001                20                 10             20E+3             0         0.03          NA
+              14.001                20       20.000001E+3            100E+3             0         0.03          NA
+              14.001                20      100.000001E+3    9.999999999E+6             0         0.05          NA
+              14.001                20              10E+6            128E+6             0         0.05          NA
+              14.001                20    128.00000001E+6            300E+6             0         0.07          NA
+              14.001                20    300.00000001E+6            1.4E+9             0         0.20          NA
+              14.001                20    1.4000000001E+9              3E+9           NA            NA          NA
+              14.001                20    3.0000000001E+9          4.024E+9           NA            NA          NA
+
+                 -17                14                 10             20E+3             0         0.03          NA
+                 -17                14       20.000001E+3            100E+3             0         0.03          NA
+                 -17                14      100.000001E+3    9.999999999E+6             0         0.05          NA
+                 -17                14              10E+6            128E+6             0         0.05          NA
+                 -17                14    128.00000001E+6            300E+6             0         0.07          NA
+                 -17                14    300.00000001E+6            1.4E+9             0         0.20          NA
+                 -17                14    1.4000000001E+9              3E+9             0         0.30          NA
+                 -17                14    3.0000000001E+9          4.024E+9             0         0.30          NA
+
+                 -48           -17.001                 10             20E+3             0         0.03          NA
+                 -48           -17.001       20.000001E+3            100E+3             0         0.03          NA
+                 -48           -17.001      100.000001E+3    9.999999999E+6             0         0.05          NA
+                 -48           -17.001              10E+6            128E+6             0         0.05          NA
+                 -48           -17.001    128.00000001E+6            300E+6             0         0.07          NA
+                 -48           -17.001    300.00000001E+6            1.4E+9             0         0.20          NA
+                 -48           -17.001    1.4000000001E+9              3E+9             0         0.30          NA
+                 -48           -17.001    3.0000000001E+9          4.024E+9             0         0.50          NA
+
+             -73.999           -48.001                 10             20E+3           NA            NA          NA
+             -73.999           -48.001       20.000001E+3      99.999999E+3           NA            NA          NA
+             -73.999           -48.001             100E+3    9.999999999E+6             0         0.20          NA
+             -73.999           -48.001              10E+6            128E+6             0         0.10          NA
+             -73.999           -48.001    128.00000001E+6            300E+6             0         0.10          NA
+             -73.999           -48.001    300.00000001E+6            1.4E+9             0         0.40          NA
+             -73.999           -48.001    1.4000000001E+9              3E+9             0         0.50          NA
+             -73.999           -48.001    3.0000000001E+9          4.024E+9             0         0.50          NA
+
+             -83.999               -74                 10             20E+3           NA            NA          NA
+             -83.999               -74       20.000001E+3      99.999999E+3           NA            NA          NA
+             -83.999               -74             100E+3    9.999999999E+6             0         0.50          NA
+             -83.999               -74              10E+6            128E+6             0         0.10          NA
+             -83.999               -74    128.00000001E+6            300E+6             0         0.30          NA
+             -83.999               -74    300.00000001E+6            1.4E+9             0         0.50          NA
+             -83.999               -74    1.4000000001E+9              3E+9             0         1.00          NA
+             -83.999               -74    3.0000000001E+9          4.024E+9             0         1.00          NA
+
+             -93.999               -84                 10             20E+3           NA            NA          NA
+             -93.999               -84       20.000001E+3      99.999999E+3           NA            NA          NA
+             -93.999               -84             100E+3    9.999999999E+6             0         0.50          NA
+             -93.999               -84              10E+6            128E+6             0         0.30          NA
+             -93.999               -84    128.00000001E+6            300E+6             0         0.50          NA
+             -93.999               -84    300.00000001E+6            1.4E+9             0         1.00          NA
+             -93.999               -84    1.4000000001E+9              3E+9             0         1.00          NA
+             -93.999               -84    3.0000000001E+9          4.024E+9             0           NA          NA
+
+                -130               -94                 10             20E+3           NA            NA          NA
+                -130               -94       20.000001E+3            100E+3           NA            NA          NA
+                -130               -94      100.000001E+3    9.999999999E+6             0           NA          NA
+                -130               -94              10E+6            128E+6             0         0.70          NA
+                -130               -94    128.00000001E+6            300E+6             0         1.50          NA
+                -130               -94    300.00000001E+6            1.4E+9             0         1.50          NA
+                -130               -94    1.4000000001E+9              3E+9             0         1.50          NA
+                -130               -94    3.0000000001E+9          4.024E+9           NA            NA          NA
+
+# Absolute Accuracy, 75 Ohms, Broadband
+
+Mode: Level 75
+
+# Level (dBm)                          Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                -120                18               1E-3             9.999           NA            NA          NA
+
+              14.001                18                 10             20E+3             0         0.06          NA
+              14.001                18       20.000001E+3      99.999999E+3             0         0.06          NA
+              14.001                18             100E+3    9.999999999E+6             0         0.06          NA
+              14.001                18              10E+6            125E+6             0         0.06          NA
+              14.001                18    125.00000001E+6            300E+6           NA            NA          NA
+              14.001                18    300.00000001E+6            1.4E+9           NA            NA          NA
+              14.001                18    1.4000000001E+9              2E+9           NA            NA          NA
+              14.001                18    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+               8.001                14                 10             20E+3             0         0.06          NA
+               8.001                14       20.000001E+3      99.999999E+3             0         0.06          NA
+               8.001                14             100E+3    9.999999999E+6             0         0.06          NA
+               8.001                14              10E+6            125E+6             0         0.06          NA
+               8.001                14    125.00000001E+6            300E+6             0         0.15          NA
+               8.001                14    300.00000001E+6            1.4E+9             0         0.25          NA
+               8.001                14    1.4000000001E+9              2E+9           NA            NA          NA
+               8.001                14    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+                 -23                 8                 10             20E+3             0         0.06          NA
+                 -23                 8       20.000001E+3      99.999999E+3             0         0.06          NA
+                 -23                 8             100E+3    9.999999999E+6             0         0.06          NA
+                 -23                 8              10E+6            125E+6             0         0.06          NA
+                 -23                 8    125.00000001E+6            300E+6             0         0.15          NA
+                 -23                 8    300.00000001E+6            1.4E+9             0         0.25          NA
+                 -23                 8    1.4000000001E+9              2E+9             0         0.30          NA
+                 -23                 8    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+                 -54           -23.001                 10             20E+3             0         0.15          NA
+                 -54           -23.001       20.000001E+3      99.999999E+3             0         0.15          NA
+                 -54           -23.001             100E+3    9.999999999E+6             0         0.15          NA
+                 -54           -23.001              10E+6            125E+6             0         0.15          NA
+                 -54           -23.001    125.00000001E+6            300E+6             0         0.15          NA
+                 -54           -23.001    300.00000001E+6            1.4E+9             0         0.50          NA
+                 -54           -23.001    1.4000000001E+9              2E+9             0         0.50          NA
+                 -54           -23.001    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+             -79.999           -54.001                 10             20E+3           NA            NA          NA
+             -79.999           -54.001       20.000001E+3      99.999999E+3           NA            NA          NA
+             -79.999           -54.001             100E+3    9.999999999E+6             0         0.20          NA
+             -79.999           -54.001              10E+6            125E+6             0         0.20          NA
+             -79.999           -54.001    125.00000001E+6            300E+6             0         0.20          NA
+             -79.999           -54.001    300.00000001E+6            1.4E+9             0         0.50          NA
+             -79.999           -54.001    1.4000000001E+9              2E+9             0         0.50          NA
+             -79.999           -54.001    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+             -89.999               -80                 10             20E+3           NA            NA          NA
+             -89.999               -80       20.000001E+3      99.999999E+3           NA            NA          NA
+             -89.999               -80             100E+3    9.999999999E+6             0         0.70          NA
+             -89.999               -80              10E+6            125E+6             0         0.70          NA
+             -89.999               -80    125.00000001E+6            300E+6             0         0.70          NA
+             -89.999               -80    300.00000001E+6            1.4E+9             0         1.00          NA
+             -89.999               -80    1.4000000001E+9              2E+9             0         1.00          NA
+             -89.999               -80    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+             -99.999               -90                 10             20E+3           NA            NA          NA
+             -99.999               -90       20.000001E+3      99.999999E+3           NA            NA          NA
+             -99.999               -90             100E+3    9.999999999E+6             0         0.70          NA
+             -99.999               -90              10E+6            125E+6             0         0.70          NA
+             -99.999               -90    125.00000001E+6            300E+6             0         0.70          NA
+             -99.999               -90    300.00000001E+6            1.4E+9             0         1.00          NA
+             -99.999               -90    1.4000000001E+9              2E+9             0         1.00          NA
+             -99.999               -90    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+                -120              -100                 10             20E+3           NA            NA          NA
+                -120              -100       20.000001E+3      99.999999E+3           NA            NA          NA
+                -120              -100             100E+3    9.999999999E+6             0           NA          NA
+                -120              -100              10E+6            125E+6             0         1.50          NA
+                -120              -100    125.00000001E+6            300E+6             0         1.50          NA
+                -120              -100    300.00000001E+6            1.4E+9             0         1.50          NA
+                -120              -100    1.4000000001E+9              2E+9             0         1.50          NA
+                -120              -100    2.0000000001E+9          4.024E+9           NA            NA          NA
+
+Mode: Residual FM
+
+# Carrier Frequency (Hz)               Bandwidth (Hz)                          Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                1E-3          4.024E+9                  1            100E+6           NA           NA           NA
+
+Mode: Phase Noise
+
+# Offset from Carrier (Hz)             Carrier Frequency (Hz)                  Tol (%)     (dBc/Hz)    Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                   1            100E+6               1E-3          4.024E+9           NA           NA           NA
+
+# ============================================================================
+# Modulation Specifications
+
+# Represents modulation frequency accuracy only when an internal modulation source is used.
+# If an external modulation source is used, the procedure writer must determine the modulation frequency accuracy.
+
+Mode: ModFreq
+
+# Mod Freq (Hz)                        Not Used                                Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                   1             999.9                NA                NA              0        10E-3        10E-3
+                1E+3         9.9999E+3                NA                NA              0       100E-3       100E-3
+               10E+3         99.999E+3                NA                NA              0            1            1
+              100E+3            300E+3                NA                NA              0           10           10
+
+# Internal frequency reference (default) MET/CAL automatically combines the Timebase specification with the floor
+# External frequency reference (ExtRefFreq), when specified, combines the Timebase specification of that reference with the floor
+
+Mode: CarFreq AM
+
+# Frequency (Hz)                       Not Used                                Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+               50E+3          4.024E+9                NA                NA              0         5E-6          NA
+
+Mode: AM Sine
+
+# AM Depth (%)                         Not Used                               % setting    Floor (%)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                 0.1               5.0                NA                NA             NA           NA          NA
+                 5.1              99.0                NA                NA            3.0          0.1          NA
+
+Mode: AM Tri
+
+# AM Depth (%)                         Not Used                               % setting    Floor (%)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                 0.1              99.0                NA                NA             NA           NA          NA
+
+Mode: AM Ext
+
+# AM Depth (%)                         Not Used                               % setting    Floor (%)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                 0.1               5.0                NA                NA             NA           NA          NA
+                 5.1              99.0                NA                NA            3.0          0.1          NA
+
+# Internal frequency reference (default) MET/CAL automatically combines the Timebase specification with the floor
+# External frequency reference (ExtRefFreq), when specified, combines the Timebase specification of that reference with the floor
+
+Mode: CarFreq FM
+
+# Frequency (Hz)                       Not Used                                Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                9E+6          4.024E+9                NA                NA           4E-6       240E-6          NA
+
+Mode: FM Sine
+
+# FM Deviation (Hz)                    Not Used                               % setting   Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                10.0             999.9                NA                NA            3.0       240E-3          0.1
+           1.0000E+3         9.9999E+3                NA                NA            3.0       240E-3          0.1
+           10.000E+3         99.999E+3                NA                NA            3.0       240E-3            1
+           100.00E+3         999.99E+3                NA                NA            3.0       240E-3           10
+           1.0000E+6         4.8000E+6                NA                NA            3.0       240E-3          100
+
+Mode: FM Ext
+
+# FM Deviation (Hz)                    Not Used                               % setting   Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                  10            4.8E+6                NA                NA            3.0       240E-3          NA
+
+Mode: CarFreq PM
+
+# Frequency (Hz)                       Not Used                                Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                9E+6          4.024E+9                NA                NA           4E-6       240E-6          NA
+
+Mode: PM Sine
+
+# PM Deviation (radians)               Not Used                               % setting   Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+              0.0001            9.9999                NA                NA            3.0       240E-3       100E-6
+              10.000            99.999                NA                NA            3.0       240E-3         1E-3
+              100.00            999.99                NA                NA            3.0       240E-3        10E-3
+              1000.0            1000.0                NA                NA            3.0       240E-3       100E-3
+
+Mode: PM Ext
+
+# FM Deviation (Hz)                    Not Used                               % setting   Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                  10            4.8E+6                NA                NA            3.0       240E-3          NA
+
+# ============================================================================
+# Frequency Sweep Specifications
+
+# Swept Level Accuracy, 50 and 75 Ohms (Not Specified)
+
+Mode: Sweep
+
+# Level (dBm)                          Frequency (Hz)                          Tol (%)    Floor (dB)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                -130                24               1E-3          4.024E+9           NA            NA          NA
+
+# ============================================================================
+# Frequency Counter Specifications
+
+# Number of digits depends on gate time selected and display auto-ranging points,
+# arranged in decades at 1 099 999 9(99 9) / 1 1000 000 (000).
+
+Mode: Freq Ctr Int
+
+# Frequency (Hz)                       Gate Time (s)                           Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                  10      899.99999E+3                0.2               0.2            NA           NA           NA
+              900E+3      1.0999999E+6                0.2               0.2          5E-6        50E-3       100E-3
+                1E+6      10.999999E+6                0.2               0.2          5E-6       500E-3            1
+               11E+6       50.10000E+6                0.2               0.2          5E-6            5           10
+
+                  10     899.999999E+3                  2                 2            NA           NA           NA
+              900E+3     1.09999999E+6                  2                 2          5E-6         5E-3        10E-3
+                1E+6     10.9999999E+6                  2                 2          5E-6        50E-3       100E-3
+               11E+6      50.100000E+6                  2                 2          5E-6       500E-3            1
+
+                  10    899.9999999E+3                 20                20            NA           NA           NA
+              900E+3    1.099999999E+6                 20                20          5E-6       500E-6         1E-3
+                1E+6    10.99999999E+6                 20                20          5E-6         5E-3        10E-3
+               11E+6     50.1000000E+6                 20                20          5E-6        50E-3       100E-3
+
+                  10   899.99999999E+3                 80                80            NA           NA           NA
+              900E+3   1.0999999999E+6                 80                80          5E-6       125E-6       100E-6
+                1E+6   10.999999999E+6                 80                80          5E-6      1.25E-3         1E-3
+               11E+6    50.10000000E+6                 80                80          5E-6      12.5E-3        10E-3
+
+Mode: Freq Ctr Ext
+
+# Frequency (Hz)                       Gate Time (s)                           Tol (%)    Floor (Hz)   Resolution
+# ------------------------------------ ------------------------------------ ---------------------------------------
+                  10      899.99999E+3                0.2               0.2            NA           NA           NA
+              900E+3      1.0999999E+6                0.2               0.2             0        50E-3      100E-03
+                1E+6      10.999999E+6                0.2               0.2             0       500E-3            1
+               11E+6       50.10000E+6                0.2               0.2             0            5           10
+
+                  10     899.999999E+3                  2                 2            NA           NA           NA
+              900E+3     1.09999999E+6                  2                 2             0         5E-3       10E-03
+                1E+6     10.9999999E+6                  2                 2             0        50E-3      100E-03
+               11E+6      50.100000E+6                  2                 2             0       500E-3            1
+
+                  10    899.9999999E+3                 20                20            NA           NA           NA
+              900E+3    1.099999999E+6                 20                20             0       500E-6        1E-03
+                1E+6    10.99999999E+6                 20                20             0         5E-3       10E-03
+               11E+6     50.1000000E+6                 20                20             0        50E-3      100E-03
+
+                  10   899.99999999E+3                 80                80            NA           NA           NA
+              900E+3   1.0999999999E+6                 80                80             0       125E-6      100E-06
+                1E+6   10.999999999E+6                 80                80             0      1.25E-3        1E-03
+               11E+6    50.10000000E+6                 80                80             0      12.5E-3       10E-03

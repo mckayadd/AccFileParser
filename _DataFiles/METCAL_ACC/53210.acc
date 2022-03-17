@@ -1,0 +1,83 @@
+Begin Header
+	instrument = Agilent 53210A
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 9594 $
+
+    # Overall accuracy of internal time base is a function of time
+    # ± temperature stability ± aging rate.
+ 
+Mode: Timebase
+
+    # Standard TCXO
+
+    # Frequency               (Not Used)   Tol. (%)   Floor    Resolution
+    #-----------------------  ---------    ---------  -------  ----------
+    0         15E+9           NA   NA      2.50E-4    0        NA
+
+Mode: Timebase Opt 010
+
+    # Ultra-High Stability OCXO
+
+    # Frequency               (Not Used)   Tol. (%)   Floor    Resolution
+    #-----------------------  ---------    ---------  -------  ----------
+    0         15E+9           NA   NA      5.55E-6    0        NA
+
+Mode: Frequency Ch1
+
+	# Frequency               Level        Tol. (%)   Floor    Resolution
+    #-----------------------  -----------  ---------  -------  ----------
+	1E-3      350E+6          10E-3  350   NA         NA       NA
+   
+Mode: Frequency Ch2 106
+
+	# Frequency               Level        Tol. (%)   Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	100E+6    6E+9            10E-3  5     NA         NA       NA    
+     
+Mode: Frequency Ch2 115
+
+	# Frequency               Voltage      Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	300E+6    3E+9            20E-3  2     NA         NA       NA    
+	  3E+9   11E+9            10E-3  2     NA         NA       NA    
+	 11E+9   15E+9            20E-3  2     NA         NA       NA    
+     
+Mode: Frequency Ratio Ch2/1
+
+	# Ratio                   Level        Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	10E-15    10E+15          10E-3  350   NA         NA       NA
+
+Mode: Period Ch1
+
+	# Period                  Level        Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	2.8E-9    1E+3            10E-3  350   NA         NA       NA    
+
+Mode: Period Ch2 106
+
+	# Period                  Level        Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	166E-12   10E-9           10E-3  350   NA         NA       NA    
+
+Mode: Period Ch2 115
+
+	# Period                  Level        Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	66E-12    3.3E-9          10E-3  350   NA         NA       NA    
+
+Mode: Vmin Vmax Ch1
+
+	# Voltage                 Frequency    Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	-51       51              NA     NA    NA         NA       NA    
+	-51       51              10E-3 350E+6 NA         NA       NA    
+
+Mode: Vpp Ch1
+
+	# Voltage                 Frequency    Tol (%)    Floor    Resolution
+	#-----------------------  -----------  ---------  -------  ----------
+	0        102              10E-3 350E+6 NA         NA       NA    

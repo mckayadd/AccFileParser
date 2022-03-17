@@ -1,0 +1,49 @@
+Begin Header
+	instrument = MIL 4310AF
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+        # $Revision: 3789 $
+
+# This file contains accuracy information for the
+# Measurements International, Ltd.,
+# 4310AF Temperature Stabilized Resistance Standard,
+# 1 year specifications, 95% Confidence Interval
+
+# Information per Measurements International Model 4310AF Technical Manual
+# 4310AF.TM Rev. 8, 04/12/03
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # Resistance            Not Used  Tol (%) Not Used Not Used
+        # --------------------- --------- ------- -------- --------
+        99.9000E-3  100.1000E-3 NA   NA   10E-4   0        NA
+        0.999000    1.001000    NA   NA   5E-4    0        NA
+        9.99000     10.01000    NA   NA   2E-4    0        NA
+        99.9000     100.1000    NA   NA   2E-4    0        NA
+        0.999000E+3 1.001000E+3 NA   NA   2E-4    0        NA
+        9.99000E+3  10.01000E+3 NA   NA   2E-4    0        NA
+        99.9000E+3  100.1000E+3 NA   NA   2E-4    0        NA
+        0.999000E+6 1.001000E+6 NA   NA   2E-4    0        NA
+        9.99000E+6  10.01000E+6 NA   NA   15E-4   0        NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # Resistance            Not Used  Tol (%) Not Used Not Used
+        # --------------------- --------- ------- -------- --------
+        99.9000E-3  100.1000E-3 NA   NA   3E-4    0        NA
+        0.999000    1.001000    NA   NA   2E-4    0        NA
+        9.99000     10.01000    NA   NA   2E-4    0        NA
+        99.9000     100.1000    NA   NA   2E-4    0        NA
+        0.999000E+3 1.001000E+3 NA   NA   2E-4    0        NA
+        9.99000E+3  10.01000E+3 NA   NA   2E-4    0        NA
+        99.9000E+3  100.1000E+3 NA   NA   2E-4    0        NA
+        0.999000E+6 1.001000E+6 NA   NA   5E-4    0        NA
+        9.99000E+6  10.01000E+6 NA   NA   10E-4   0        NA

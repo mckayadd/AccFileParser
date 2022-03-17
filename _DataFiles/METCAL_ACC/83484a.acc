@@ -1,0 +1,124 @@
+Begin Header
+instrument = Agilent 83484A
+interval   = 365 days
+confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+#============================================================
+
+# Source Document:
+#
+#   User's Guide
+#   Agilent 83483A,4A,4B
+#   and 54751A,2A,2B
+#   Plug-In Modules
+#   P/N: 83483A-90010
+#   PRINTED: April 2000
+
+
+#= DC Accuracy - Single Marker ==============================
+
+Mode: DC Acc FullScale
+
+# Fullscale (V)    Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 8E-3     800E-3   26.5E+9 26.5E+9  0.4      0.0       NA
+ 8E-3     800E-3   50.0E+9 50.0E+9  0.4      0.0       NA
+
+
+Mode: DC Acc Reading
+
+# Reading - 
+# Offset (V)       Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+-400E-3   400E-3   26.5E+9 26.5E+9  1.5      2E-3      NA
+-400E-3   400E-3   50.0E+9 50.0E+9  3.0      2E-3      NA
+
+
+Mode: DC Acc DeltaTemp
+
+# DeltaT (s)       Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+-400E-3   400E-3   26.5E+9 26.5E+9  2.0      2E-3      NA
+-400E-3   400E-3   50.0E+9 50.0E+9  2.0      2E-3      NA
+
+
+Mode: DC Acc DeltaTime
+
+# DeltaT (s)       Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+-400E-3   400E-3   26.5E+9 26.5E+9  0.4      2E-3      NA
+-400E-3   400E-3   50.0E+9 50.0E+9  0.4      2E-3      NA
+
+
+#= DC Difference - Two Marker Accuracy on Same Channel ======
+
+Mode: DC Diff FullScale
+
+# Fullscale (V)    Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 8E-3     800E-3   26.5E+9 26.5E+9  0.8      0.0       NA
+ 8E-3     800E-3   50.0E+9 50.0E+9  0.8      0.0       NA
+
+
+Mode: DC Diff Reading
+
+# Reading (V)      Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+-400E-3   400E-3   26.5E+9 26.5E+9  1.5      0.0       NA
+-400E-3   400E-3   50.0E+9 50.0E+9  3.0      0.0       NA
+
+
+Mode: DC Diff DeltaTemp
+
+# DeltaT (s)       Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+-400E-3   400E-3   26.5E+9 26.5E+9  2.0      2E-3      NA
+-400E-3   400E-3   50.0E+9 50.0E+9  2.0      2E-3      NA
+
+
+Mode: DC Diff DeltaTime
+
+# DeltaT (s)       Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+-400E-3   400E-3   26.5E+9 26.5E+9  0.4      2E-3      NA
+-400E-3   400E-3   50.0E+9 50.0E+9  0.4      2E-3      NA
+
+
+#= Transition Time (10%-90%) characteristic =================
+
+Mode: Trans Time 10%-90%
+
+# Fullscale (V)    Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 8E-3     800E-3   26.5E+9 26.5E+9  0.0      13.2E-12  NA
+ 8E-3     800E-3   50.0E+9 50.0E+9  0.0      7.0E-12   NA
+
+
+#= RMS Noise ================================================
+
+Mode: Noise Typical
+
+# Fullscale (V)    Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 8E-3     800E-3   26.5E+9 26.5E+9  0.0      0.46E-3   NA
+ 8E-3     800E-3   50.0E+9 50.0E+9  0.0      0.92E-3   NA
+
+
+Mode: Noise Max
+
+# Fullscale (V)    Bandwidth (Hz)   Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 8E-3     800E-3   26.5E+9 26.5E+9  0.0      0.75E-3   NA
+ 8E-3     800E-3   50.0E+9 50.0E+9  0.0      1.50E-3   NA
+
+
+#= Input Reflection/Return Loss =============================
+
+Mode: Return Loss
+
+# Reading (V)      not used         Tol (%)  Floor     Res.
+#----------------  ---------------  -------  --------  -----
+ 8E-3     800E-3   NA      NA       5.0      0.0       NA

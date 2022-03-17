@@ -1,0 +1,77 @@
+Begin Header
+	instrument = Tektronix CG5001
+	interval   = 6 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Not sure what the cal interval is. It is 6 months for the
+	# 5011. So assume it is 6 months for the 5001.
+
+Mode: Volts
+
+	# Accuracy the same for all voltage ranges
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	0.0901     219.8      NA   NA     0.25    1e-6     0.1%
+	36.4e-6    87.92e-3   10   10e3   0.25    1e-6     0.1%
+	90.1e-3    10.99      10   100e3  0.25    1e-6     0.1%
+	10.812     219.8      10   10e3   0.25    1e-6     0.1%
+
+
+Mode: Amps
+
+	# Current accuracy specification.
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	0.901e-3 0.1099     NA   NA     0.25     2e-6    0.1%
+	0.901e-3 0.1099     10   1e6    0.25     2e-6    0.1%
+
+
+Mode: Volts E
+
+	# Specification of the EDGE mode
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	 18.02e-3    1.099    10   1e6    3       0        0.1%
+	-1.099     -18.02e-3  10   1e6    3       0        0.1%
+	 1.0812    109.9      10   100e3  3       0        0.1%
+
+
+Mode: Volts FE
+
+	# Specification of the FAST EDGE mode
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+	 1.001      1.199    100  100e3  5       0        0.1%
+	-1.199     -1.001    100  100e3  5       0        0.1%
+
+
+Mode: Seconds
+
+	# Specification is the same for MARKER and SLEWED EDGE
+	# modes.
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	.3604e-9   5.495     NA   NA     0.01    0        0.1%
+
+
+Mode: Volts CO
+
+	# Specification of the COMPARATOR HEAD.
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	0.0901     109.9    NA   NA     NA      NA       0.1%
+	36.04e-6   109.9    10   1e6    NA      NA       0.1%

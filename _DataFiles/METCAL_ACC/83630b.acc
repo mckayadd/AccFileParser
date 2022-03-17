@@ -1,0 +1,122 @@
+Begin Header
+	instrument = Agilent 83630B
+	interval   = 12 Months
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# Source: Agilent Technologies 8360 B-Series Swept Signal 
+	# Generator (Including Options 001, 002, 004, 006, and 008)
+	# User's Guide, Part No. 08360-90127, May 2001.
+
+	# These specifications are valid after a warmup time of 30
+	# minutes (reference temperature 23 degC).
+	#
+	# Reference time base is kept at operating temperature with
+	# the instrument connected to AC power. Instruments disconnected
+	# from AC power for more than 24 hours require 30 days to 
+	# achieve time base specification. Instruments disconnected from 
+	# AC power for less than 24 hours require 24 hours to achieve 
+	# time base aging specification.
+
+Mode: Decibels
+
+	# Output Power (internally leveled)
+
+	# Specifications apply in CW, step, list, manual sweep,
+	# and ramp sweep modes of operation.
+
+      # Standard instrument minimum settable power is -20 dBm.
+
+	# With attenuator (Option 001): Minimum settable output
+	# power is -110 dBm. Maximum leveled output power is
+	# reduced by 1.5 dB to 20 GHz, 2.0 dB above 20 GHz.
+
+	# Table represents the concatenation of both standard
+	# and Option 001 instruments.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-110   -60         10e6       2e9  0     1.4    0.02
+	-110   -60         2e9       20e9  0     1.5    0.02
+	-110   -60         20e9    26.5e9  0     1.7    0.02
+	-60    -10         10e6       2e9  0     0.9    0.02
+	-60    -10         2e9       20e9  0     1.0    0.02
+	-60    -10         20e9    26.5e9  0     1.2    0.02
+	-10    +10         10e6       2e9  0     0.6    0.02
+	-10    +10         2e9       20e9  0     0.7    0.02
+	-10    +10         20e9    26.5e9  0     0.9    0.02
+	+10    +13         10e6       2e9  0     1.2    0.02
+	+10    +13         2e9       20e9  0     1.3    0.02
+	+10    +20         20e9    26.5e9  NA    NA     NA
+
+Mode: dB Flat 
+
+      # Flatness (internally leveled)
+
+	# Specifications apply in CW, step, list, manual sweep,
+	# and ramp sweep modes of operation.
+
+      # Standard instrument minimum settable power is -20 dBm.
+
+	# With attenuator (Option 001): Minimum settable output
+	# power is -110 dBm. Maximum leveled output power is
+	# reduced by 1.5 dB to 20 GHz, 2.0 dB above 20 GHz.
+
+	# Table represents the concatenation of both standard
+	# and Option 001 instruments.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-110   -60         10e6       2e9  0     1.1    0.02
+	-110   -60         2e9       20e9  0     1.2    0.02
+	-110   -60         20e9    26.5e9  0     1.4    0.02
+	-60    -10         10e6       2e9  0     0.7    0.02
+	-60    -10         2e9       20e9  0     0.8    0.02
+	-60    -10         20e9    26.5e9  0     1.0    0.02
+	-10    +10         10e6       2e9  0     0.5    0.02
+	-10    +10         2e9       20e9  0     0.6    0.02
+	-10    +10         20e9    26.5e9  0     0.8    0.02
+	+10    +13         10e6       2e9  0     0.9    0.02
+	+10    +13         2e9       20e9  0     1.0    0.02
+	+10    +20         20e9    26.5e9  NA    NA     NA
+
+Mode: Hertz
+
+	# Aging rate, per year
+
+	# Resolution
+	# Standard: 1 kHz
+	# Option 008: 1 Hz
+
+	# Reference time base is kept at operating temperature with
+	# the instrument connected to AC power. Instruments disconnected
+	# from AC power for more than 24 hours require 30 days to 
+	# achieve time base specification. Instruments disconnected from 
+	# AC power for less than 24 hours require 24 hours to achieve 
+	# time base aging specification.
+
+	# Overall accuracy of internal time base is a function of time
+	# base calibration +/- aging rate +/- temperature effects +/-
+	# line effects
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e6     26.5e9    -110     +18     1e-5     0      1 
+
+Mode: Hz Line
+
+	# Change due to 10% line voltage change (typical)
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e6     26.5e9    -110     +18     5e-8     0     1 
+
+Mode: Hz TC
+
+	# Temperature Coefficient, per degree C (typical)
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e6     26.5e9    -110     +18     1e-8     0     1 

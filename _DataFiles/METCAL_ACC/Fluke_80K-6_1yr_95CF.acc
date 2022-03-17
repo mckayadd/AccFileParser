@@ -1,0 +1,30 @@
+  # This file contains 365 day accuracy information for the
+  # Manufacturer / Model
+
+  # $Revision: 3789 $
+
+Begin Header
+  instrument     =             Fluke 80K-6
+  interval       =             365 days
+  confidence     =             2 sigma
+End Header
+
+  # Any special Notes
+               # Reference document was PN 613224, April 1981, Rev.6, 11/01
+
+
+  # DC and AC Voltage
+
+  # Any notes for Voltage
+
+               # The below specifications only apply when used with a Voltmeter (ac or dc) having an input
+               # impedance of 10Mohm +/- 10% and 0.25% or better accuracy
+
+
+
+  # Nominal                    Mod 1                   Tolerance   Floor       Resolution
+  # ------------------------------------------------------------------------------------------
+
+Mode:          Volts
+   000.0000E+00    6.0000E+03  NA          NA            1.000000    0.00E+00    1.00E-03
+    000.000E+00   6.00000E+03   000.0E+00  500.00E+00    2.000000    0.00E+00    1.00E-03

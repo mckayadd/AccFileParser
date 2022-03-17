@@ -1,0 +1,36 @@
+Begin Header
+	Instrument = Fluke 5320A-LOAD
+	Interval   = 365 days
+	Confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+	# 23 +/-2 degC
+
+Mode: Ohms 2W
+
+	# Resistance                Current         Tolerance Floor   Res.
+	# ------------------------- --------------- --------- ------- -----
+# 10 kOhm +/-10 %
+	9E+3          11E+3         0      100E-3   0.5       0       NA
+
+# 25 kOhm +/-10 %
+	22.5E+3       27.5E+3       0      40E-3    0.5       0       NA
+
+# 50 kOhm +/-10 %
+	45E+3         55E+3         0      40E-3    0.5       0       NA
+
+# 100 kOhm +/-10 %
+	90E+3         110E+3        0      40E-3    0.5       0       NA
+
+# 250 kOhm +/-10 %
+	225E+3        275E+3        0      10E-3    0.5       0       NA
+
+# 500 kOhm +/-10 %
+	450E+3        550E+3        0      10E-3    0.5       0       NA
+
+# 1 MOhm +/-10 %
+	0.9E+6        1.1E+6        0      4E-3     0.5       0       NA
+
+# 5 MOhm +/-10 %
+	4.5E+6        5.5E+6        0      1E-3     0.5       0       NA

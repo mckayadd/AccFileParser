@@ -1,0 +1,33 @@
+Begin Header
+	instrument = MIL 9331S/1G
+	interval   = 180 days
+	confidence = 2 sigma
+End Header
+
+        # $Revision: 3789 $
+
+# This file contains accuracy information for the
+# Measurements International, Ltd., 9331S/1G 1 GOhm 
+# Standard Air Resistor, 6 month specifications, 
+# 95% Confidence Interval
+
+# Information per Measurements International Model 9331S
+# data sheet, Rev. 0/99/08.
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        0.999000e9 1.001000e9  NA    NA  0.0030    0         NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        0.999000e9 1.001000e9  NA    NA  0.0015    0         NA

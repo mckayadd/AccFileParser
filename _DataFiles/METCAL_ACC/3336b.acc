@@ -1,0 +1,253 @@
+Begin Header
+	instrument = HP 3336B
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Source: HP Model 3336A/B/C Synthesizer/Level Generator
+	# Operating and Service Manual, HP Part Number 03336-90000,
+	# Printed: October 1979, Serial numbers 1931A00101 and
+	# greater
+
+	# These specifications are valid after a warm-up time of
+	# 30 minutes (24 hours, minimum, for Option 004).
+
+	# Amplitude accuracy is the sum of Absolute Accuracy and,
+	# as needed, Flatness and Attenuator Accuracy
+
+	# Models covered:
+
+	# 3336B
+	#  75 Ohm  : 10 Hz to 20.999999999 MHz, -72.99 to +7.00 dBm
+	#  124 Ohm : 10 kHz to 10.999999999 MHz, -78.23 to +1.76 dBm
+	#  135 Ohm : 10 kHz to 2.099999999 MHz, -78.23 to +1.76 dBm
+	#  600 Ohm : 200 Hz to 109.999999 kHz, -72.99 to +7.00 dBm
+
+	# Options covered:
+
+	# Option 004, High Stability Frequency Reference
+	# Option 005, High Accuracy Attenuator
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Hertz 
+
+	# 1 year specifications
+
+	# Applies to all units equipped with standard timebase
+
+	# Nominal is the union of all available frequency limits
+
+	# MOD1 is the union of all available output limits
+
+	# Nominal             MOD1               Tol.   Floor   Resolution
+	# -----------------   ----------------  ------  ------  ----------
+	10   20.999999999e6   -78.23    +7.00    5e-4    0       1e-3
+
+Mode: Hertz 004
+
+	# Option 004, High Stability Frequency Reference
+	# Specifications apply following 24 hour warm-up
+
+	# 1 year specification extrapolated by multiplying manufacturer's
+	# monthly specification by 12
+
+	# Applies to all units equipped with Option 004 timebase
+
+	# Nominal is the union of all available frequency limits
+
+	# MOD1 is the union of all available output limits
+
+	# Nominal             MOD1               Tol.   Floor   Resolution
+	# -----------------   ----------------  ------  ------  ----------
+	10   20.999999999e6   -78.23    +7.00   1.2e-4    0       1e-3
+
+Mode: Decibels 75
+
+	# Applicable to 3336B 75 Ohm and 600 Ohm outputs
+
+	# Absolute Accuracy
+	# 10 kHz, top 9.99 dB of amplitude range, 20 degC to 30 degC
+
+	# Nominal           MOD1               Tol.   Floor   Resolution
+	# ---------------  ----------------  ------- -------  ----------
+	-2.99      +7.00    10e3      10e3    0       0.05     0.01
+
+Mode: Decibels 124
+
+	# Applicable to 3336B 124 and 135 Ohm outputs
+
+	# Absolute Accuracy
+	# 50 kHz, top 9.99 dB of amplitude range, 20 degC to 30 degC
+
+	# Nominal          MOD1                Tol.   Floor   Resolution
+	# ---------------  ----------------  ------- -------  ----------
+	-8.23      +1.76    50e3      50e3    0       0.05     0.01
+
+Mode: dB Flat
+
+	# Applicable to 3336B 75 Ohm output, all standard instruments
+
+	# Flatness
+	# Referenced to amplitude at 10 kHz
+
+	# Nominal          MOD1                  Tol.   Floor   Resolution
+	# ---------------  -------------------  ------  ------  ----------
+	-72.99     +7.00   10   20.999999999e6   0       0.1     NA
+
+Mode: dB Flat 005
+
+	# Applicable to 75 Ohm output, all units equipped with Option 005
+
+	# Flatness
+	# Referenced to amplitude at 10 kHz
+
+	# Nominal          MOD1                  Tol.   Floor   Resolution
+	# ---------------  -------------------  ------  ------  ----------
+	-72.99     +7.00   10   20.999999999e6   0       0.07    NA
+
+Mode: dB Flat 124
+
+	# Applicable to 3336B 124 Ohm output only
+
+	# Flatness
+	# Referenced to amplitude at 50 kHz
+
+	# Nominal          MOD1                  Tol.   Floor   Resolution
+	# ---------------  -------------------  ------  ------  ----------
+	-78.23     +1.76   10e3           50e3   0       0.15     NA
+	-78.23     +1.76   50e3 10.999999999e6   0       0.1      NA
+
+Mode: dB Flat 135
+
+	# Applicable to 3336B 135 Ohm output
+
+	# Flatness
+	# Referenced to amplitude at 50 kHz
+
+	# Nominal          MOD1                  Tol.   Floor   Resolution
+	# ---------------  -------------------  ------  ------  ----------
+	-78.23     +1.76   10e3  2.099999999e6   0       0.12     NA
+
+Mode: dB Flat 600
+
+	# Applicable to 3336B 600 Ohm outputs
+
+	# Flatness
+	# Referenced to amplitude at 10 kHz
+
+	# Nominal          MOD1               Tol.   Floor   Resolution
+	# ---------------  ----------------  ------  ------  ----------
+	-72.99     +7.00   200 109.999999e3   0       0.25     NA
+
+Mode: ATTEN dB 75
+
+	# Attenuator Accuracy, standard attenuator
+
+	# Applicable to 3336B 75 Ohm and 600 Ohm outputs
+
+	# Nominal refers to specified absolute amplitude level at 75 and
+	# 600 Ohms
+
+	# MOD1 is the union of all available frequency limits
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -72.99       -33   10              1e6   0      0.2     0.01
+      -72.99       -33   1e6            10e6   0      0.25    0.01
+      -72.99       -33   10e6 20.999999999e6   0      0.3     0.01
+      -32.99       -13   10              1e6   0      0.15    0.01
+      -32.99       -13   1e6            10e6   0      0.2     0.01
+      -32.99       -13   10e6 20.999999999e6   0      0.25    0.01
+      -12.99        -3   10              1e6   0      0.1     0.01
+      -12.99        -3   1e6            10e6   0      0.15    0.01
+      -12.99        -3   10e6 20.999999999e6   0      0.2     0.01
+
+Mode: ATTEN dB 75 005
+
+	# Attenuator Accuracy, Option 005 High Accuracy Attenuator
+
+	# Applicable to 3336B 75 Ohm and 600 Ohm outputs
+
+	# Nominal refers to specified absolute amplitude level at 75 and
+	# 600 Ohms
+
+	# MOD1 is the union of all available frequency limits
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -72.99       -33   10   20.999999999e6   0      0.035   0.01
+      -32.99       -13   10   20.999999999e6   0      0.06    0.01
+      -12.99        -3   10   20.999999999e6   0      0.1     0.01
+
+Mode: ATTEN dB 124
+
+	# Attenuator Accuracy, standard attenuator
+
+	# Applicable to 3336B 124 and 135 Ohm outputs
+
+	# Nominal refers to specified absolute amplitude level at 124
+	# and 135 Ohms
+
+	# MOD1 is the union of all available frequency limits
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -78.23    -38.24   10e3            1e6   0      0.2     0.01
+      -78.23    -38.24   1e6  10.999999999e6   0      0.25    0.01
+      -38.23    -18.24   10e3            1e6   0      0.15    0.01
+      -38.23    -18.24   1e6  20.999999999e6   0      0.2     0.01
+      -18.23     -8.24   10e3            1e6   0      0.1     0.01
+      -18.23     -8.24   1e6  20.999999999e6   0      0.15    0.01
+
+Mode: ATTEN dB 124 005
+
+	# Attenuator Accuracy, Option 005 High Accuracy Attenuator
+
+	# Applicable to 3336B 124 and 135 Ohm outputs
+
+	# Nominal refers to specified absolute amplitude level at 124
+	# and 135 Ohms
+
+	# MOD1 is the union of all available frequency limits
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -78.23    -38.24   10e3 10.999999999e6   0      0.035   0.01
+      -38.23    -18.24   10e3 10.999999999e6   0      0.06    0.01
+      -18.23     -8.24   10e3 10.999999999e6   0      0.1     0.01
+
+Mode: Phase Offset
+
+	# Relative to arbitrary starting phase or assigned zero phase
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -719.9     719.9     NA           NA     0      0.2     0.1
+
+Mode: Sweep
+
+	# Sweep Flatness
+
+	# Normal Leveling, 0.5 s sweep time
+
+	# Nominal is the union of all available output impedance limits
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -78.23     +7.00     50          1e6     0      0.15    NA
+
+Mode: Sweep FS
+
+	# Sweep Flatness
+
+	# Fast Leveling, 0.03 s sweep time
+
+	# Nominal is the union of all available output impedance limits
+
+	# Nominal          MOD1                 Tol.   Floor   Resolution
+	# ---------------  -------------------  -----  ------  ----------
+      -78.23     +7.00     10e3       20e6     0      0.15    NA

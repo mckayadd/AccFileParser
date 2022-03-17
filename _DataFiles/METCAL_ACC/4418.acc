@@ -1,0 +1,2077 @@
+Begin Header
+               instrument   = Agilent E4418B
+               interval     = 365 days
+               confidence   = 2 sigma
+End Header
+
+# $Revision: 11681 $
+#
+# This file contains accuracy information for the
+# Agilent E4418B Power Meter.
+#
+# Source(s):
+# Agilent E4418B/E4419B EPM Series Power Meters, E-Series and 8480 Series Power Sensors Data Sheet, PN: 5965-6382E, 11/02/2009
+
+# ============================================================================
+# Instrumentation Accuracy
+
+# Power (dBm)                 Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: InstrAcc Abs Log
+            -70           44            NA           NA             0.0         0.02         0.01
+
+Mode: InstrAcc Rel Log
+            -70           44            NA           NA             0.0         0.04         0.01
+
+# Power (W)                   Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: InstrAcc Abs Lin
+      100.0E-12           25            NA           NA             0.5          0.0         0.01
+
+Mode: InstrAcc Rel Lin
+      100.0E-12           25            NA           NA             1.0          0.0         0.01
+
+# ============================================================================
+# Noise Multiplier
+#
+# Averaging over 1 to 1024 readings is available for reducing noise.
+# Use the Noise Multiplier for the appropriate mode and number of averages
+# to determine the total measurement noise value.
+
+# Sensor dependent; refer to power sensor accuracy files for their
+# measurement noise contribution.
+#
+# Number of Averages          Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: NoiseMultiplier
+              1            1            NA           NA             0.0         5.50         0.01
+              2            2            NA           NA             0.0         3.89         0.01
+              4            4            NA           NA             0.0         2.75         0.01
+              8            8            NA           NA             0.0         1.94         0.01
+             16           16            NA           NA             0.0         1.00         0.01
+             32           32            NA           NA             0.0         0.85         0.01
+             64           64            NA           NA             0.0         0.61         0.01
+            128          128            NA           NA             0.0         0.49         0.01
+            256          256            NA           NA             0.0         0.34         0.01
+            512          512            NA           NA             0.0         0.24         0.01
+           1024         1024            NA           NA             0.0         0.17         0.01
+              0         1024            NA           NA             NA           NA          0.01
+
+Mode: NoiseMultiplier x2
+              1            1            NA           NA             0.0         6.50         0.01
+              2            2            NA           NA             0.0         4.60         0.01
+              4            4            NA           NA             0.0         3.25         0.01
+              8            8            NA           NA             0.0         2.30         0.01
+             16           16            NA           NA             0.0         1.63         0.01
+             32           32            NA           NA             0.0         1.00         0.01
+             64           64            NA           NA             0.0         0.72         0.01
+            128          128            NA           NA             0.0         0.57         0.01
+            256          256            NA           NA             0.0         0.41         0.01
+            512          512            NA           NA             0.0         0.29         0.01
+           1024         1024            NA           NA             0.0         0.20         0.01
+              0         1024            NA           NA             NA           NA          0.01
+
+# ============================================================================
+# Power Reference Output
+
+Mode: PwrRef Unc
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+         1.0E-6       1.0E-6        50.0E+6      50.0E+6            0.5          0.0         0.01
+         1.0E-3       1.0E-3        50.0E+6      50.0E+6            0.5          0.0         0.01
+
+Mode: PwrRef SWR
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+         1.0E-6       1.0E-6        50.0E+6      50.0E+6            0.0         1.06         0.01
+         1.0E-3       1.0E-3        50.0E+6      50.0E+6            0.0         1.06         0.01
+
+Mode: PwrRef SWR Opt003
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+         1.0E-6       1.0E-6        50.0E+6      50.0E+6            0.0         1.08         0.01
+         1.0E-3       1.0E-3        50.0E+6      50.0E+6            0.0         1.08         0.01
+
+# ============================================================================
+# =====                  LEGACY FSC ACCURACY INFORMATION                 =====
+# ============================================================================
+
+# This section applies only to the legacy 4418/M4418 and 4419/M4419 FSCs.
+
+# Note: the Tolerance includes a noise factor based on the filter used.  The
+# noise factor is decreased by a factor of 10, range 2 through 10.
+
+# ============================================================================
+# Power Zero
+
+Mode: Watts ZR
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+              0            0         9.0E+3     110.0E+9            NA           NA          0.01
+
+# ============================================================================
+# Power Calibration using 1 mW, 50 MHz POWER REF
+
+Mode: Watts CP
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+         1.0E-6       1.0E-6        50.0E+6      50.0E+6            0.7          0.0         0.01
+         1.0E-3       1.0E-3        50.0E+6      50.0E+6            0.7          0.0         0.01
+
+# ============================================================================
+# POW REF (Power Reference) SWR
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+# Frequency (Hz)              Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: SWR E4419A PowRef
+        50.0E+6      50.0E+6            NA           NA               0         1.05          NA
+
+Mode: SWR E4419B PowRef
+        50.0E+6      50.0E+6            NA           NA               0         1.06          NA
+
+# Option 003 degrades the POW REF output SWR due to its movement from the
+# front to rear panel.
+
+Mode: SWR E4419B Opt003 PowRef
+        50.0E+6      50.0E+6            NA           NA               0         1.08          NA
+
+# ============================================================================
+# Power Difference (A-B & B-A)
+
+# Absolute (dBm is converted to watts)
+
+Mode: Watts Difference
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+            -25           25         9.0E+3     110.0E+9            NA           NA          0.01
+
+# Relative (dB is converted to percent)
+
+Mode: Percent Difference
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+      -26.0E+12     26.0E+12         9.0E+3     110.0E+9            NA           NA          0.01
+
+# ============================================================================
+# Power Ratio (A/B & B/A)
+
+# Absolute and Relative (dB is converted to percent)
+
+Mode: Percent Ratio
+
+# Percent Ratio               Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+      -26.0E+12     26.0E+12         9.0E+3     110.0E+9            NA           NA           NA
+
+# ============================================================================
+# E-Series Power Sensors
+#
+# ----------------------------------------------------------------------------
+# E4412A and E4413A CW Power Sensors
+#
+# Source: Operating and Service Guide, Agilent E4412A and E4413A Power
+# Sensors, Part Number E4412-90013, May 29, 2009
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          3.0%Sensor Linearity,                  100E-9to10E-3        W
+#          4.5%Sensor Linearity,                   10E-3to100E-3       W
+#
+#        70E-12W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts E441XA F0
+      100.0E-12     100.0E-3        10.0E+6      26.5E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts E441XA F1
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041    385.0E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528    385.0E-12          NA
+
+Mode: Watts E441XA F2
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041    272.3E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528    272.3E-12          NA
+
+Mode: Watts E441XA F4
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041    192.5E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528    192.5E-12          NA
+
+Mode: Watts E441XA F8
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041    135.8E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528    135.8E-12          NA
+
+Mode: Watts E441XA F16
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     70.0E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     70.0E-12          NA
+
+Mode: Watts E441XA F32
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     59.5E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     59.5E-12          NA
+
+Mode: Watts E441XA F64
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     42.7E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     42.7E-12          NA
+
+Mode: Watts E441XA F128
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     34.3E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     34.3E-12          NA
+
+Mode: Watts E441XA F256
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     23.8E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     23.8E-12          NA
+
+Mode: Watts E441XA F512
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     16.8E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     16.8E-12          NA
+
+Mode: Watts E441XA F1024
+       100.0E-9      10.0E-3        10.0E+6      26.5E+9          3.041     11.9E-12          NA
+        10.0E-3     100.0E-3        10.0E+6      26.5E+9          4.528     11.9E-12          NA
+
+#          1.0%Meter Instrumentation Accuracy
+#
+#          3.0%Sensor Linearity,                  100E-9to10E-3        W
+#          4.5%Sensor Linearity,                   10E-3to100E-3       W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+#
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent E441XA F0
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent E441XA F1
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F2
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F4
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F8
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F16
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F32
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F64
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F128
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F256
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F512
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+Mode: Percent E441XA F1024
+      -26.0E+12     26.0E+12        10.0E+6      26.5E+9          4.610          0.0          NA
+
+# Power Sensor SWR: E4412/3/A
+#
+# E4412/3/A were formally known as ECP-E18A and ECP-E26A, respectively.
+#
+# Applicable for all serial prefixes EXCEPT US3848 and below.
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+# Frequency (Hz)              Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: SWR E4412A
+        10.0E+6   29.9990E+6            NA           NA             0.0         1.22          NA
+        30.0E+6       2.0E+9            NA           NA             0.0         1.15          NA
+         2.0E+9       6.0E+9            NA           NA             0.0         1.17          NA
+         6.0E+9      11.0E+9            NA           NA             0.0         1.20          NA
+        11.0E+9      18.0E+9            NA           NA             0.0         1.27          NA
+
+Mode: SWR E4413A
+        50.0E+6   99.9990E+6            NA           NA             0.0         1.21          NA
+       100.0E+6   7.99900E+9            NA           NA             0.0         1.19          NA
+         8.0E+9      18.0E+9            NA           NA             0.0         1.21          NA
+        18.0E+9      26.5E+9            NA           NA             0.0         1.26          NA
+
+# ----------------------------------------------------------------------------
+# E9300A, E9301A, and E9304A Average Power Sensors
+#
+# Operating and Service Guide, Agilent E-Series E9300 Power Sensors,
+# Manual Part Number E9300-90016, Sixth Edition, April 19, 2011
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          3.0%Sensor Linearity,                    1E-9to    99.999E-6W
+#          2.5%Sensor Linearity,                  100E-6to    999.99E-6W
+#          2.0%Sensor Linearity,                    1E-3to       100E-3W
+#
+#       700E-12W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts E930XA F0
+         1.0E-9     100.0E-3         9.0E+3      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts E930XA F1
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041     3.850E-9          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     2.750E-6          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     2.750E-6          NA
+
+Mode: Watts E930XA F2
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041     2.723E-9          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     1.945E-6          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     1.945E-6          NA
+
+Mode: Watts E930XA F4
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041     1.925E-9          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     1.375E-6          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     1.375E-6          NA
+
+Mode: Watts E930XA F8
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041     1.358E-9          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     970.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     970.0E-9          NA
+
+Mode: Watts E930XA F16
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    700.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     500.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     500.0E-9          NA
+
+Mode: Watts E930XA F32
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    595.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     425.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     425.0E-9          NA
+
+Mode: Watts E930XA F64
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    427.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     305.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     305.0E-9          NA
+
+Mode: Watts E930XA F128
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    343.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     245.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     245.0E-9          NA
+
+Mode: Watts E930XA F256
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    238.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     170.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     170.0E-9          NA
+
+Mode: Watts E930XA F512
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    168.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550     120.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062     120.0E-9          NA
+
+Mode: Watts E930XA F1024
+         1.0E-9    99.999E-6         9.0E+3      18.0E+9          3.041    119.0E-12          NA
+       100.0E-6    999.99E-6         9.0E+3      18.0E+9          2.550      85.0E-9          NA
+         1.0E-3     100.0E-3         9.0E+3      18.0E+9          2.062      85.0E-9          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          3.0%Sensor Linearity,                    1E-9to       100E-6W
+#          2.5%Sensor Linearity,                  100E-6to         1E-3W
+#          2.0%Sensor Linearity,                    1E-3to       100E-3W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+#
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent E930XA F0
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent E930XA F1
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F2
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F4
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F8
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F16
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F32
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F64
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F128
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F256
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F512
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+Mode: Percent E930XA F1024
+      -26.0E+12     26.0E+12         9.0E+3      18.0E+9          3.162          0.0          NA
+
+# Power Sensor SWR: E9300/1/4/A
+
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+# Frequency (Hz)              Not Used                       Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: SWR E9300A
+        10.0E+6   29.9990E+6            NA           NA             0.0         1.15          NA
+        30.0E+6   2.00000E+9            NA           NA             0.0         1.13          NA
+         2.0E+9      14.0E+9            NA           NA             0.0         1.19          NA
+        14.0E+9      16.0E+9            NA           NA             0.0         1.22          NA
+        16.0E+9      18.0E+9            NA           NA             0.0         1.26          NA
+
+Mode: SWR E9301A
+        10.0E+6  29.99900E+6            NA           NA             0.0         1.15          NA
+        30.0E+6   2.00000E+9            NA           NA             0.0         1.13          NA
+         2.0E+9    6.0000E+9            NA           NA             0.0         1.19          NA
+
+Mode: SWR E9304A
+         9.0E+3       2.0E+9            NA           NA             0.0         1.13          NA
+         2.0E+9       6.0E+9            NA           NA             0.0         1.19          NA
+
+Mode: SWR E9304A OptH18
+         9.0E+3       2.0E+9            NA           NA             0.0         1.13          NA
+         2.0E+9      14.0E+9            NA           NA             0.0         1.19          NA
+        14.0E+9      16.0E+9            NA           NA             0.0         1.22          NA
+        16.0E+9      18.0E+9            NA           NA             0.0         1.26          NA
+
+Mode: SWR E9304A OptH19
+         9.0E+3       8.0E+9            NA           NA             0.0         1.15          NA
+         8.0E+9      12.4E+9            NA           NA             0.0         1.25          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.28          NA
+
+# ----------------------------------------------------------------------------
+# E9300B and E9301B Average Power Sensors
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          3.5%Sensor Linearity,                    1E-6to    99.999E-3W
+#          3.0%Sensor Linearity,                  100E-3to    999.99E-3W
+#          2.5%Sensor Linearity,                       1to  25.11886432W
+#
+#        700E-9W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts E930XB F0
+         1.0E-6           25        10.0E+6      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts E930XB F1
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     3.850E-6          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     2.750E-3          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     2.750E-3          NA
+
+Mode: Watts E930XB F2
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     2.723E-6          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     1.945E-3          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     1.945E-3          NA
+
+Mode: Watts E930XB F4
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     1.925E-6          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     1.375E-3          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     1.375E-3          NA
+
+Mode: Watts E930XB F8
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     1.358E-6          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     970.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     970.0E-6          NA
+
+Mode: Watts E930XB F16
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     700.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     500.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     500.0E-6          NA
+
+Mode: Watts E930XB F32
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     595.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     425.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     425.0E-6          NA
+
+Mode: Watts E930XB F64
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     427.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     305.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     305.0E-6          NA
+
+Mode: Watts E930XB F128
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     343.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     245.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     245.0E-6          NA
+
+Mode: Watts E930XB F256
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     238.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     170.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     170.0E-6          NA
+
+Mode: Watts E930XB F512
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     168.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041     120.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550     120.0E-6          NA
+
+Mode: Watts E930XB F1024
+         1.0E-6    99.999E-3        10.0E+6      18.0E+9          3.536     119.0E-9          NA
+       100.0E-3    999.99E-3        10.0E+6      18.0E+9          3.041      85.0E-6          NA
+              1  25.11886432        10.0E+6      18.0E+9          2.550      85.0E-6          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          3.5%Sensor Linearity,                    1E-6to       100E-3W
+#          3.0%Sensor Linearity,                  100E-3to      0.99999W
+#          2.5%Sensor Linearity,                       1to  25.11886432W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent E930XB F0
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent E930XB F1
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F2
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F4
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F8
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F16
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F32
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F64
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F128
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F256
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F512
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+Mode: Percent E930XB F1024
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          3.640          0.0          NA
+
+# Power Sensor SWR: E9300/1/B
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR E9300B
+        10.0E+6       2.0E+9            NA           NA             0.0         1.12          NA
+         2.0E+9      12.4E+9            NA           NA             0.0         1.17          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.24          NA
+
+Mode: SWR E9301B
+        10.0E+6       6.0E+9            NA           NA             0.0         1.12          NA
+
+# ----------------------------------------------------------------------------
+# E9300H and E9301H Average Power Sensors
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          4.0%Sensor Linearity,                   10E-6to    999.99E-6W
+#          3.5%Sensor Linearity,                    1E-3to    9.9999E-3W
+#          3.0%Sensor Linearity,                   10E-3to            1W
+#
+#          7E-9W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts E930XH F0
+        10.0E-9            1        10.0E+6      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts E930XH F1
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031    38.500E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536    27.500E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041    27.500E-6          NA
+
+Mode: Watts E930XH F2
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031    27.230E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536    19.450E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041    19.450E-6          NA
+
+Mode: Watts E930XH F4
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031    19.250E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536    13.750E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041    13.750E-6          NA
+
+Mode: Watts E930XH F8
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031    13.580E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     9.700E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     9.700E-6          NA
+
+Mode: Watts E930XH F16
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     7.000E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     5.000E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     5.000E-6          NA
+
+Mode: Watts E930XH F32
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     5.950E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     4.250E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     4.250E-6          NA
+
+Mode: Watts E930XH F64
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     4.270E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     3.050E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     3.050E-6          NA
+
+Mode: Watts E930XH F128
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     3.430E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     2.450E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     2.450E-6          NA
+
+Mode: Watts E930XH F256
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     2.380E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     1.700E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     1.700E-6          NA
+
+Mode: Watts E930XH F512
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     1.680E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     1.200E-6          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     1.200E-6          NA
+
+Mode: Watts E930XH F1024
+        10.0E-6    999.99E-6        10.0E+6      18.0E+9          4.031     1.190E-9          NA
+         1.0E-3    9.9999E-3        10.0E+6      18.0E+9          3.536     850.0E-9          NA
+        10.0E-3            1        10.0E+6      18.0E+9          3.041     850.0E-9          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          4.0%Sensor Linearity,                   10E-6to         1E-3W
+#          3.5%Sensor Linearity,                    1E-3to        10E-3W
+#          3.0%Sensor Linearity,                   10E-3to            1W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent E930XH F0
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent E930XH F1
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F2
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F4
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F8
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F16
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F32
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F64
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F128
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F256
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F512
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+Mode: Percent E930XH F1024
+      -26.0E+12     26.0E+12        10.0E+6      18.0E+9          4.123          0.0          NA
+
+# Power Sensor SWR: E9300/1/H
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR E9300H
+        10.0E+6       8.0E+9            NA           NA             0.0         1.15          NA
+         8.0E+9      12.4E+9            NA           NA             0.0         1.25          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.28          NA
+
+Mode: SWR E9301H
+        10.0E+6       6.0E+9            NA           NA             0.0         1.15          NA
+
+# ============================================================================
+# 8480 Series Power Sensors
+#
+# Source: Operating and Service Manual, 8480 Series Coaxial Power Sensors,
+# Manufacturing Part Number 08481-90173, December 2010
+#
+# ----------------------------------------------------------------------------
+# 25W Sensors: 8481B and 8482B
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-3to        3.162W
+#          4.0%Sensor Linearity,                   3.162to           25W
+#
+#        110E-3W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts 25W F0
+         1.0E-3           25       100.0E+3     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts 25W F1
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500     605.0E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031     605.0E-3          NA
+
+Mode: Watts 25W F2
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500     427.9E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031     427.9E-3          NA
+
+Mode: Watts 25W F4
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500     302.5E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031     302.5E-3          NA
+
+Mode: Watts 25W F8
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500     213.4E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031     213.4E-3          NA
+
+Mode: Watts 25W F16
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500     110.0E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031     110.0E-3          NA
+
+Mode: Watts 25W F32
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500      93.5E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031      93.5E-3          NA
+
+Mode: Watts 25W F64
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500      67.1E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031      67.1E-3          NA
+
+Mode: Watts 25W F128
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500      53.9E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031      53.9E-3          NA
+
+Mode: Watts 25W F256
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500      37.4E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031      37.4E-3          NA
+
+Mode: Watts 25W F512
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500      26.4E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031      26.4E-3          NA
+
+Mode: Watts 25W F1024
+         1.0E-3      3.16227       100.0E+3      18.0E+9          0.500      18.7E-3          NA
+        3.16227           25       100.0E+3      18.0E+9          4.031      18.7E-3          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-3to        3.162W
+#          4.0%Sensor Linearity,                   3.162to           25W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+#
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent 25W F0
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent 25W F1
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F2
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F4
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F8
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F16
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F32
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F64
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F128
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F256
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F512
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+Mode: Percent 25W F1024
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          4.123          0.0          NA
+
+# Power Sensor SWR: 8481/2/B
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR 8481B
+        10.0E+6   1.99999E+9            NA           NA             0.0         1.10          NA
+         2.0E+9      12.4E+9            NA           NA             0.0         1.18          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.28          NA
+
+Mode: SWR 8482B
+       100.0E+3   1.99999E+9            NA           NA             0.0         1.10          NA
+         2.0E+9       4.2E+9            NA           NA             0.0         1.18          NA
+
+# ----------------------------------------------------------------------------
+# 3W Sensors: 8481H and 8482H
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                100.0E-6to     316.2E-3W
+#          5.0%Sensor Linearity,                316.2E-3to            3W
+#
+#         10E-3W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts 3W F0
+         1.0E-6            3       100.0E+3     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts 3W F1
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     55.00E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     55.00E-3          NA
+
+Mode: Watts 3W F2
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     38.90E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     38.90E-3          NA
+
+Mode: Watts 3W F4
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     27.50E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     27.50E-3          NA
+
+Mode: Watts 3W F8
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     19.40E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     19.40E-3          NA
+
+Mode: Watts 3W F16
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     10.00E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     10.00E-3          NA
+
+Mode: Watts 3W F32
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     8.500E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     8.500E-3          NA
+
+Mode: Watts 3W F64
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     6.100E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     6.100E-3          NA
+
+Mode: Watts 3W F128
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     4.900E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     4.900E-3          NA
+
+Mode: Watts 3W F256
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     3.400E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     3.400E-3          NA
+
+Mode: Watts 3W F512
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     2.400E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     2.400E-3          NA
+
+Mode: Watts 3W F1024
+       100.0E-6     316.2E-3       100.0E+3      18.0E+9          0.500     1.700E-3          NA
+       316.2E-3            3       100.0E+3      18.0E+9          5.025     1.700E-3          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                100.0E-6to     316.2E-3W
+#          5.0%Sensor Linearity,                316.2E-3to            3W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+#
+# No average, trigger delay off, no spec.
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+Mode: Percent 3W F0
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent 3W F1
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F2
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F4
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F8
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F16
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F32
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F64
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F128
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F256
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F512
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+Mode: Percent 3W F1024
+      -26.0E+12     26.0E+12       100.0E+3      18.0E+9          5.099          0.0          NA
+
+# Power Sensor SWR: 8481/2/H
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR 8481H
+        10.0E+6       8.0E+9            NA           NA             0.0         1.20          NA
+         8.0E+9      12.4E+9            NA           NA             0.0         1.25          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.30          NA
+
+Mode: SWR 8482H
+       100.0E+3       4.2E+9            NA           NA             0.0         1.20          NA
+
+# ----------------------------------------------------------------------------
+# 100 mW Sensors: 8481A, 8482A, 8483A, 8485A, R8486A, Q8486A, W8486A, and 8487A
+# (not V8486A and W8486A!)
+
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-6to        10E-3W
+#          3.0%Sensor Linearity,                   10E-3to       100E-3W
+#
+#        110E-9W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts 100mW F0
+         1.0E-6     100.0E-3       100.0E+3     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts 100mW F1
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500     605.0E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041     605.0E-9          NA
+
+Mode: Watts 100mW F2
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500     427.9E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041     427.9E-9          NA
+
+Mode: Watts 100mW F4
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500     302.5E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041     302.5E-9          NA
+
+Mode: Watts 100mW F8
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500     213.4E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041     213.4E-9          NA
+
+Mode: Watts 100mW F16
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500     110.0E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041     110.0E-9          NA
+
+Mode: Watts 100mW F32
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500      93.5E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041      93.5E-9          NA
+
+Mode: Watts 100mW F64
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500      67.1E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041      67.1E-9          NA
+
+Mode: Watts 100mW F128
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500      53.9E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041      53.9E-9          NA
+
+Mode: Watts 100mW F256
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500      37.4E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041      37.4E-9          NA
+
+Mode: Watts 100mW F512
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500      26.4E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041      26.4E-9          NA
+
+Mode: Watts 100mW F1024
+         1.0E-6      10.0E-3       100.0E+3     110.0E+9          0.500      18.7E-9          NA
+        10.0E-3     100.0E-3       100.0E+3     110.0E+9          3.041      18.7E-9          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-6to        10E-3W
+#          3.0%Sensor Linearity,                   10E-3to       100E-3W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent 100mW F0
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent 100mW F1
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F2
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F4
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F8
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F16
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F32
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F64
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F128
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F256
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F512
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+Mode: Percent 100mW F1024
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          3.162          0.0          NA
+
+# Power Sensor SWR: 8481/2/3/5/A
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR 8481A
+        10.0E+6   29.9999E+6            NA           NA             0.0         1.40          NA
+        30.0E+6   49.9999E+6            NA           NA             0.0         1.18          NA
+        50.0E+6       2.0E+9            NA           NA             0.0         1.10          NA
+         2.0E+9      12.4E+9            NA           NA             0.0         1.18          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.28          NA
+
+Mode: SWR 8482A
+       100.0E+3   299.999E+3            NA           NA             0.0         1.60          NA
+       300.0E+3   999.999E+3            NA           NA             0.0         1.20          NA
+         1.0E+6       2.0E+9            NA           NA             0.0         1.10          NA
+         2.0E+9       4.2E+9            NA           NA             0.0         1.30          NA
+
+Mode: SWR 8483A
+       100.0E+3   599.999E+3            NA           NA             0.0         1.80          NA
+       600.0E+3       2.0E+9            NA           NA             0.0         1.18          NA
+
+Mode: SWR 8485A
+        50.0E+6   99.9999E+6            NA           NA             0.0         1.15          NA
+       100.0E+6       2.0E+9            NA           NA             0.0         1.10          NA
+         2.0E+9      12.4E+9            NA           NA             0.0         1.15          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.20          NA
+        18.0E+9      26.5E+9            NA           NA             0.0         1.25          NA
+        26.5E+9      33.0E+9            NA           NA             0.0         1.40          NA
+
+Mode: SWR 8487A
+        50.0E+6   99.9999E+6            NA           NA             0.0         1.15          NA
+       100.0E+6       2.0E+9            NA           NA             0.0         1.10          NA
+         2.0E+9      12.4E+9            NA           NA             0.0         1.15          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.20          NA
+        18.0E+9      26.5E+9            NA           NA             0.0         1.25          NA
+        26.5E+9      40.0E+9            NA           NA             0.0         1.30          NA
+        40.0E+9      50.0E+9            NA           NA             0.0         1.50          NA
+
+Mode: SWR R8486A
+        50.0E+6      50.0E+6            NA           NA             0.0         1.15          NA
+        26.5E+9      40.0E+9            NA           NA             0.0         1.40          NA
+
+Mode: SWR Q8486A
+        50.0E+6      50.0E+6            NA           NA             0.0         1.15          NA
+        26.5E+9      40.0E+9            NA           NA             0.0         1.50          NA
+
+# ----------------------------------------------------------------------------
+# 100 mW Sensors: V8486A
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-6to        10E-3W
+#          2.0%Sensor Linearity,                   10E-3to       100E-3W
+#
+#        450E-9W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts V8486A F0
+         1.0E-6     100.0E-3        50.0E+9      75.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts V8486A F1
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     2.475E-6          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     2.475E-6          NA
+
+Mode: Watts V8486A F2
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     1.751E-6          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     1.751E-6          NA
+
+Mode: Watts V8486A F4
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     1.238E-6          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     1.238E-6          NA
+
+Mode: Watts V8486A F8
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     873.0E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     873.0E-9          NA
+
+Mode: Watts V8486A F16
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     450.0E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     450.0E-9          NA
+
+Mode: Watts V8486A F32
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     382.5E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     382.5E-9          NA
+
+Mode: Watts V8486A F64
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     274.5E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     274.5E-9          NA
+
+Mode: Watts V8486A F128
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     220.5E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     220.5E-9          NA
+
+Mode: Watts V8486A F256
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     153.0E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     153.0E-9          NA
+
+Mode: Watts V8486A F512
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500     108.0E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062     108.0E-9          NA
+
+Mode: Watts V8486A F1024
+         1.0E-6      10.0E-3        50.0E+9      75.0E+9          0.500      76.5E-9          NA
+        10.0E-3     100.0E-3        50.0E+9      75.0E+9          2.062      76.5E-9          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-6to        10E-3W
+#          2.0%Sensor Linearity,                   10E-3to       100E-3W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent V8486A F0
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent V8486A F1
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F2
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F4
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F8
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F16
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F32
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F64
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F128
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F256
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F512
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+Mode: Percent V8486A F1024
+      -26.0E+12     26.0E+12        50.0E+9      75.0E+9          2.236          0.0          NA
+
+# Power Sensor SWR: V8486A
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR V8486A
+        50.0E+6      50.0E+6            NA           NA             0.0         1.15          NA
+        50.0E+9      75.0E+9            NA           NA             0.0         1.06          NA
+
+# ----------------------------------------------------------------------------
+# 100 mW Sensors: W8486A
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-6to        10E-3W
+#          3.0%Sensor Linearity,                   10E-3to       100E-3W
+#
+#        450E-9W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+#
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts W8486A F0
+         1.0E-6     100.0E-3        75.0E+9     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts W8486A F1
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     2.475E-6          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     2.475E-6          NA
+
+Mode: Watts W8486A F2
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     1.751E-6          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     1.751E-6          NA
+
+Mode: Watts W8486A F4
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     1.238E-6          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     1.238E-6          NA
+
+Mode: Watts W8486A F8
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     873.0E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     873.0E-9          NA
+
+Mode: Watts W8486A F16
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     450.0E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     450.0E-9          NA
+
+Mode: Watts W8486A F32
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     382.5E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     382.5E-9          NA
+
+Mode: Watts W8486A F64
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     274.5E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     274.5E-9          NA
+
+Mode: Watts W8486A F128
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     220.5E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     220.5E-9          NA
+
+Mode: Watts W8486A F256
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     153.0E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     153.0E-9          NA
+
+Mode: Watts W8486A F512
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500     108.0E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041     108.0E-9          NA
+
+Mode: Watts W8486A F1024
+         1.0E-6      10.0E-3        75.0E+9     110.0E+9          0.500      76.5E-9          NA
+        10.0E-3     100.0E-3        75.0E+9     110.0E+9          3.041      76.5E-9          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                    1E-6to        10E-3W
+#          3.0%Sensor Linearity,                   10E-3to       100E-3W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent W8486A F0
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent W8486A F1
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F2
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F4
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F8
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F16
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F32
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F64
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F128
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F256
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F512
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+Mode: Percent W8486A F1024
+      -26.0E+12     26.0E+12        75.0E+9     110.0E+9          3.162          0.0          NA
+
+# Power Sensor SWR: W8486A
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR W8486A
+        50.0E+6      50.0E+6            NA           NA             0.0         1.15          NA
+        75.0E+9     110.0E+9            NA           NA             0.0         1.08          NA
+
+# ----------------------------------------------------------------------------
+# High Sensitivity Sensors, 10 µW: 8481D, 8484A
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                 100E-12to         1E-6W
+#          1.0%Sensor Linearity,                    1E-6to        10E-6W
+#
+#        45E-12W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts 8481D 8484A F0
+      100.0E-12      10.0E-6        10.0E+6      18.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts 8481D 8484A F1
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    247.5E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    247.5E-12          NA
+
+Mode: Watts 8481D 8484A F2
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    175.1E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    175.1E-12          NA
+
+Mode: Watts 8481D 8484A F4
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    123.8E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    123.8E-12          NA
+
+Mode: Watts 8481D 8484A F8
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    87.30E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    87.30E-12          NA
+
+Mode: Watts 8481D 8484A F16
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    45.00E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    45.00E-12          NA
+
+Mode: Watts 8481D 8484A F32
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    38.25E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    38.25E-12          NA
+
+Mode: Watts 8481D 8484A F64
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    27.45E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    27.45E-12          NA
+
+Mode: Watts 8481D 8484A F128
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    22.05E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    22.05E-12          NA
+
+Mode: Watts 8481D 8484A F256
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    15.30E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    15.30E-12          NA
+
+Mode: Watts 8481D 8484A F512
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500    10.80E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118    10.80E-12          NA
+
+Mode: Watts 8481D 8484A F1024
+      100.0E-12       1.0E-6        10.0E+6      18.0E+9          0.500     7.65E-12          NA
+         1.0E-6      10.0E-6        10.0E+6      18.0E+9          1.118     7.65E-12          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                 100E-12to         1E-6W
+#          1.0%Sensor Linearity,                    1E-6to        10E-6W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent 8481D 8484A F0
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent 8481D 8484A F1
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F2
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F4
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F8
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F16
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F32
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F64
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F128
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F256
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F512
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+Mode: Percent 8481D 8484A F1024
+      -26.0E+12     26.0E+12       100.0E+3     110.0E+9          1.414          0.0          NA
+
+# Power Sensor SWR: 8481D and 8484A
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR 8481D 8484A
+        10.0E+6   29.9999E+6            NA           NA             0.0         1.40          NA
+        30.0E+6       4.0E+9            NA           NA             0.0         1.15          NA
+         4.0E+9      10.0E+9            NA           NA             0.0         1.20          NA
+        10.0E+9      15.0E+9            NA           NA             0.0         1.30          NA
+        15.0E+9      18.0E+9            NA           NA             0.0         1.35          NA
+
+# ----------------------------------------------------------------------------
+# High Sensitivity Sensors, 10 µW: 8485D, 8487D
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                 100E-12to         1E-6W
+#          2.0%Sensor Linearity,                    1E-6to        10E-6W
+#
+#        45E-12W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts 8485D 8487D F0
+      100.0E-12      10.0E-6        50.0E+6      50.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts 8485D 8487D F1
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500   247.50E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062   247.50E-12          NA
+
+Mode: Watts 8485D 8487D F2
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500   175.05E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062   175.05E-12          NA
+
+Mode: Watts 8485D 8487D F4
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500   123.75E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062   123.75E-12          NA
+
+Mode: Watts 8485D 8487D F8
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    87.30E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    87.30E-12          NA
+
+Mode: Watts 8485D 8487D F16
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    45.00E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    45.00E-12          NA
+
+Mode: Watts 8485D 8487D F32
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    38.25E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    38.25E-12          NA
+
+Mode: Watts 8485D 8487D F64
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    27.45E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    27.45E-12          NA
+
+Mode: Watts 8485D 8487D F128
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    22.05E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    22.05E-12          NA
+
+Mode: Watts 8485D 8487D F256
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    15.30E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    15.30E-12          NA
+
+Mode: Watts 8485D 8487D F512
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500    10.80E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062    10.80E-12          NA
+
+Mode: Watts 8485D 8487D F1024
+      100.0E-12       1.0E-6        50.0E+6      50.0E+9          0.500     7.65E-12          NA
+         1.0E-6      10.0E-6        50.0E+6      50.0E+9          2.062     7.65E-12          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                 100E-12to         1E-6W
+#          2.0%Sensor Linearity,                    1E-6to        10E-6W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent 8485D 8487D F0
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent 8485D 8487D F1
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F2
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F4
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F8
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F16
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F32
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F64
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F128
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F256
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F512
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+Mode: Percent 8485D 8487D F1024
+      -26.0E+12     26.0E+12        50.0E+6      50.0E+9          2.236          0.0          NA
+
+# Power Sensor SWR: 8485D and 8487D
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR 8485D
+        50.0E+6   99.9999E+6            NA           NA             0.0         1.19          NA
+       100.0E+6       4.0E+9            NA           NA             0.0         1.15          NA
+         4.0E+9      12.0E+9            NA           NA             0.0         1.19          NA
+        12.0E+9      18.0E+9            NA           NA             0.0         1.25          NA
+        18.0E+9      26.5E+9            NA           NA             0.0         1.29          NA
+        26.5E+9      33.0E+9            NA           NA             0.0         1.35          NA
+
+Mode: SWR 8487D
+        50.0E+6   99.9999E+6            NA           NA             0.0         1.15          NA
+       100.0E+6       2.0E+9            NA           NA             0.0         1.10          NA
+         2.0E+9      12.4E+9            NA           NA             0.0         1.15          NA
+        12.4E+9      18.0E+9            NA           NA             0.0         1.20          NA
+        18.0E+9      26.5E+9            NA           NA             0.0         1.25          NA
+        26.5E+9      40.0E+9            NA           NA             0.0         1.30          NA
+
+# ----------------------------------------------------------------------------
+# High Sensitivity Sensors, 10 µW: R8486D, Q8486D
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+# Absolute Power Linear (W)
+# Absolute Power Log (dBm) is converted to watts for lookup.
+#
+#          0.5%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                 100E-12to         1E-6W
+#          1.0%Sensor Linearity,                    1E-6to        10E-6W
+#
+#        65E-12W Measurement Noise
+#
+# Number of Averages          Multiplier
+# -------------               -------------
+#             1                   5.50
+#             2                   3.89
+#             4                   2.75
+#             8                   1.94
+#            16                   1.00
+#            32                   0.85
+#            64                   0.61
+#           128                   0.49
+#           256                   0.34
+#           512                   0.24
+#          1024                   0.17
+
+# Power (W)                   Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Watts R8486D Q8486D F0
+      100.0E-12      10.0E-6        26.5E+6      50.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Sensor Linearity)
+#      Floor = Sensor Measurement Noise * Meter Noise Multiplier (Normal only)
+
+Mode: Watts R8486D Q8486D F1
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500   357.50E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118   357.50E-12          NA
+
+Mode: Watts R8486D Q8486D F2
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500   252.85E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118   252.85E-12          NA
+
+Mode: Watts R8486D Q8486D F4
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500   178.75E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118   178.75E-12          NA
+
+Mode: Watts R8486D Q8486D F8
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500   126.10E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118   126.10E-12          NA
+
+Mode: Watts R8486D Q8486D F16
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    65.00E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    65.00E-12          NA
+
+Mode: Watts R8486D Q8486D F32
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    55.25E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    55.25E-12          NA
+
+Mode: Watts R8486D Q8486D F64
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    39.65E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    39.65E-12          NA
+
+Mode: Watts R8486D Q8486D F128
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    31.85E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    31.85E-12          NA
+
+Mode: Watts R8486D Q8486D F256
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    22.10E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    22.10E-12          NA
+
+Mode: Watts R8486D Q8486D F512
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    15.60E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    15.60E-12          NA
+
+Mode: Watts R8486D Q8486D F1024
+      100.0E-12       1.0E-6        26.5E+6      50.0E+9          0.500    11.05E-12          NA
+         1.0E-6      10.0E-6        26.5E+6      50.0E+9          1.118    11.05E-12          NA
+
+# Relative Power Percent (Linear)
+# Relative Power dB (Log) is converted to percent for lookup
+#
+#          1.0%Meter Instrumentation Accuracy
+#
+#          0.0%Sensor Linearity,                 100E-12to         1E-6W
+#          1.0%Sensor Linearity,                    1E-6to        10E-6W
+#
+#           0.0W Measurement Noise (canceled by relative measurement)
+
+# Percent Difference          Frequency (Hz)                 Tol (%)       Floor     Resolution
+# --------------------------  --------------------------  ---------------------------------------
+
+# No average, trigger delay off, no spec.
+
+Mode: Percent R8486D Q8486D F0
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9            NA           NA           NA
+
+#  Tolerance = RSS(Meter Instrumentation Accuracy, Worst Case Sensor Linearity)
+
+Mode: Percent R8486D Q8486D F1
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F2
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F4
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F8
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F16
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F32
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F64
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F128
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F256
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F512
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+Mode: Percent R8486D Q8486D F1024
+      -26.0E+12     26.0E+12        26.5E+6      50.0E+9          1.414          0.0          NA
+
+# Power Sensor SWR: R8486D and Q8486D
+#
+# Floor value represents specified SWR value for adjacent frequency.
+# Lookup is via ACCVF function.
+
+Mode: SWR R8486D
+        50.0E+6      50.0E+6            NA           NA             0.0         1.40          NA
+        26.5E+9      40.0E+9            NA           NA             0.0         1.40          NA
+
+Mode: SWR Q8486D
+        50.0E+6      50.0E+6            NA           NA             0.0         1.40          NA
+        26.5E+9      40.0E+9            NA           NA             0.0         1.40          NA

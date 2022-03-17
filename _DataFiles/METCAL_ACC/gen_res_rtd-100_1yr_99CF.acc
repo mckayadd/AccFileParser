@@ -1,0 +1,15 @@
+Begin Header
+	instrument = General Resistance RTD-100
+	interval   = 365 days
+	confidence = 2.58 sigma
+End Header
+
+# $Revision: 9490 $
+
+# General Resistance RTD Simulators Data Sheet
+
+Mode: Ohms
+
+# Resistance       Not used  Tolerance Floor Resolution
+# ---------------- --------- --------- ----- ----------
+  10.000  1111.110 NA   NA   0.01      0     0.001

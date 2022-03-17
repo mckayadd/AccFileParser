@@ -1,0 +1,106 @@
+Begin Header
+	instrument = Clarke-Hess 8100
+	interval   = 365 days
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 9490 $
+
+	# This file contains accuracy information for the 8100.
+    # Source: INSTRUCTION MANUAL, MODEL 8100 TRANSCONDUCTANCE AMPLIFIER
+
+Mode: 2mA  
+
+	# Current         Frequency    Tol      Floor   Resolution
+	# --------------- ------------ -------- ------- ----------
+# 0 % - 100 % of Full Scale
+	0        2E-3     NA    NA     0.02     0.4E-6  NA
+	0        2E-3     10    10E+3  0.05     1.0E-6  NA
+	0        2E-3     10E+3 20E+3  0.10     2.0E-6  NA
+	0        2E-3     20E+3 50E+3  0.15     3.0E-6  NA
+	0        2E-3     50E+3 100E+3 0.30     6.0E-6  NA
+# 100 % - 200 % of Full Scale
+	2E-3     4E-3     NA    NA     0.04     0       NA
+	2E-3     4E-3     10    10E+3  0.10     0       NA
+	2E-3     4E-3     10E+3 20E+3  0.20     0       NA
+	2E-3     4E-3     20E+3 50E+3  0.30     0       NA
+	2E-3     4E-3     50E+3 100E+3 0.60     0       NA
+
+Mode: 20mA  
+
+	# Current         Frequency    Tol      Floor   Resolution
+	# --------------- ------------ -------- ------- ----------
+# 0 % - 100 % of Full Scale
+	0        20E-3    NA    NA     0.02     4E-6    NA
+	0        20E-3    10    10E+3  0.05     10E-6   NA
+	0        20E-3    10E+3 20E+3  0.10     20E-6   NA
+	0        20E-3    20E+3 50E+3  0.15     30E-6   NA
+	0        20E-3    50E+3 100E+3 0.30     60E-6   NA
+# 100 % - 200 % of Full Scale
+	20E-3    40E-3    NA    NA     0.04     0       NA
+	20E-3    40E-3    10    10E+3  0.10     0       NA
+	20E-3    40E-3    10E+3 20E+3  0.20     0       NA
+	20E-3    40E-3    20E+3 50E+3  0.30     0       NA
+	20E-3    40E-3    50E+3 100E+3 0.60     0       NA
+
+Mode: 0.2A  
+
+	# Current         Frequency    Tol      Floor   Resolution
+	# --------------- ------------ -------- ------- ----------
+# 0 % - 100 % of Full Scale
+	0        0.2      NA    NA     0.02     40E-6   NA
+	0        0.2      10    10E+3  0.05     100E-6  NA
+	0        0.2      10E+3 20E+3  0.10     200E-6  NA
+	0        0.2      20E+3 50E+3  0.15     300E-6  NA
+	0        0.2      50E+3 100E+3 0.30     600E-6  NA
+# 100 % - 200 % of Full Scale
+	0.2      0.4      NA    NA     0.04     0       NA
+	0.2      0.4      10    10E+3  0.10     0       NA
+	0.2      0.4      10E+3 20E+3  0.20     0       NA
+	0.2      0.4      20E+3 50E+3  0.30     0       NA
+	0.2      0.4      50E+3 100E+3 0.60     0       NA
+
+Mode: 2A  
+
+	# Current         Frequency    Tol      Floor   Resolution
+	# --------------- ------------ -------- ------- ----------
+# 0 % - 100 % of Full Scale
+	0        2        NA    NA     0.02     0.4E-3  NA
+	0        2        10    10E+3  0.05     1.0E-3  NA
+	0        2        10E+3 20E+3  0.10     2.0E-3  NA
+	0        2        20E+3 50E+3  0.15     3.0E-3  NA
+	0        2        50E+3 100E+3 0.30     6.0E-3  NA
+# 100 % - 200 % of Full Scale
+	2        4        NA    NA     0.04     0       NA
+	2        4        10    10E+3  0.10     0       NA
+	2        4        10E+3 20E+3  0.20     0       NA
+	2        4        20E+3 50E+3  0.30     0       NA
+	2        4        50E+3 100E+3 0.60     0       NA
+
+Mode: 20A  
+
+	# Current         Frequency    Tol      Floor   Resolution
+	# --------------- ------------ -------- ------- ----------
+# 0 % - 100 % of Full Scale
+	0        20       NA    NA     0.02     0.004   NA
+	0        20       10    10E+3  0.05     0.010   NA
+	0        20       10E+3 20E+3  0.10     0.020   NA
+	0        20       20E+3 50E+3  0.15     0.030   NA
+	0        20       50E+3 100E+3 0.30     0.060   NA
+# 100 % - 200 % of Full Scale
+	20       40       NA    NA     0.04     0       NA
+	20       40       10    10E+3  0.10     0       NA
+	20       40       10E+3 20E+3  0.20     0       NA
+	20       40       20E+3 50E+3  0.30     0       NA
+	20       40       50E+3 100E+3 0.60     0       NA
+
+Mode: 100A  
+
+	# Current         Frequency    Tol      Floor   Resolution
+	# --------------- ------------ -------- ------- ----------
+# 0 % - 100 % of Full Scale
+	0        100      NA    NA     0.02     0.02    NA
+	0        100      10    10E+3  0.05     0.05    NA
+	0        100      10E+3 20E+3  0.10     0.10    NA
+	0        100      20E+3 50E+3  0.15     0.15    NA
+	0        100      50E+3 100E+3 0.30     0.30    NA

@@ -1,0 +1,66 @@
+Begin Header
+	instrument = HP 6060B
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Discussed confidence level with HP on  1999-06-22
+	# They gave 2 sigma as the value to use. 
+	
+Mode: Volts CC
+
+	# Voltage readback accuracy, Constant Current Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	75	0	61.2	0.05	45e-3	0
+
+Mode: Volts CR
+
+	# Voltage readback accuracy, Constant Resistance Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	75	0.033	10000	0.05	45e-3	0
+
+Mode: Amps CV
+
+	# Current readback accuracy, Constant Voltage Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	61.2	0	60	0.05	65e-3	0
+
+Mode: Amps CR
+
+	# Current readback accuracy, Constant Resistance Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	61.2	0.033	10000	0.05	65e-3	0
+
+Mode: Watts CC
+
+	# Power readback accuracy, Constant Current Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	300	0	60	0.2	4	0
+
+Mode: Watts CV
+
+	# Power readback accuracy, Constant Voltage Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	300	0	60	0.2	4	0
+
+Mode: Watts CR
+
+	# Power readback accuracy, Constant Resistance Mode
+
+	# NOMINAL	MOD1		Tol.	Floor  	Res.
+	#-------------	--------------	------	------	----
+	0	300	0.033	10000	0.2	4	0

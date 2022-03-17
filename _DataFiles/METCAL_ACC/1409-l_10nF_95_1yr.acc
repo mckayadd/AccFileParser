@@ -1,0 +1,28 @@
+Begin Header
+	instrument = GenRad 1409-L
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+# GenRad (formerly General Radio), now IET 1409-L (10 nF) STANDARD CAPACITOR
+# 1 year stability specifications, 95% Confidence Interval
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # NOMINAL             MOD1       Tolerance Floor Resolution
+        # ------------------- ---------- --------- ----- ----------
+        9.99E-9    10.01E-9   NA   NA    0.01      0           NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # NOMINAL             MOD1       Tolerance Floor Resolution
+        # ------------------- ---------- --------- ----- ----------
+        9.99E-9    10.01E-9   NA   NA    0.01      0     NA

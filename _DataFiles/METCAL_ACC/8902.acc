@@ -1,0 +1,529 @@
+Begin Header
+	instrument = HP 8902A
+	interval   = 90-365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Percent AM MF_1
+
+	# (50Hz <= mod-freq <= 50kHz)
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.00      4.99          150e+3   9.99e+6  3.0        0.01     0.01
+	0.00      4.99          10e+6    1300e+6  3.0        0.01     0.01
+
+	5.00      39.99         150e+3   9.99e+6  2.0        0.01     0.01
+	5.00      39.99         10e+6    1300e+6  1.0        0.01     0.01
+
+	40.0      99.0          150e+3   9.99e+6  2.0        0.1      0.1
+	40.0      99.0          10e+6    1300e+6  1.0        0.1      0.1
+
+	# 8902S
+
+	5.00      39.99         1.3e+9   26.5e+9  1.5        0.01     0.01
+
+	40.0      99.0          1.3e+9   26.5e+9  1.5        0.1      0.1
+
+Mode: Percent AM MF_2
+
+	# (20Hz <= mod-freq < 50Hz) or (50kHz < mod-freq <= 100kHz)
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.00      39.99         150e+3   9.99e+6  3.0        0.01     0.01
+	0.00      39.99         10e+6    1300e+6  3.0        0.01     0.01
+
+	40.0      99.0          150e+3   9.99e+6  3.0        0.1      0.1
+	40.0      99.0          10e+6    1300e+6  3.0        0.1      0.1
+
+	# 8902S
+
+	0.00      39.99         1.3e+9   26.5e+9  3.0        0.01     0.01
+
+	40.0      99.0          1.3e+9   26.5e+9  3.0        0.1      0.1
+
+Mode: Percent AM MF_1 RMS
+
+	# (50Hz <= mod-freq <= 50kHz)
+	# +/-3% reading added for RMS detector
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.00      4.99          150e+3   9.99e+6  6.0        0.01     0.01
+	0.00      4.99          10e+6    1300e+6  6.0        0.01     0.01
+
+	5.00      39.99         150e+3   9.99e+6  5.0        0.01     0.01
+	5.00      39.99         10e+6    1300e+6  4.0        0.01     0.01
+
+	40.0      99.0          150e+3   9.99e+6  5.0        0.1      0.1
+	40.0      99.0          10e+6    1300e+6  4.0        0.1      0.1
+
+	# 8902S
+
+	5.00      39.99         1.3e+9   26.5e+9  1.5        0.01     0.01
+
+	40.0      99.0          1.3e+9   26.5e+9  1.5        0.1      0.1
+
+Mode: Percent AM MF_2 RMS
+
+	# (20Hz <= mod-freq < 50Hz) or (50kHz < mod-freq <= 100kHz)
+	# +/-3% reading added for RMS detector
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.00      39.99         150e+3   9.99e+6  6.0        0.01     0.01
+	0.00      39.99         10e+6    1300e+6  6.0        0.01     0.01
+
+	40.0      99.0          150e+3   9.99e+6  6.0        0.1      0.1
+	40.0      99.0          10e+6    1300e+6  6.0        0.1      0.1
+
+	# 8902S
+
+	0.00      39.99         1.3e+9   26.5e+9  3.0        0.01     0.01
+
+	40.0      99.0          1.3e+9   26.5e+9  1.5        0.1      0.1
+
+Mode: Percent AM Residual H1 L1 
+
+	# Stated Spec: 
+	#   <0.01%
+	# 50 Hz to 3 kHz BW => M8901: MOD2 = "H1" (50 Hz), MOD3 = "L1" (3 kHz)
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.00      99.0          150E+3   1300E+6  0.0        0.01     NA
+
+Mode: Percent AM Residual
+
+	# Unspec'd
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.00      99.0          150E+3   1300E+6  NA         NA       NA
+
+Mode: Hertz FM MF_1
+
+	# (50Hz <= mod-freq <= 100kHz)
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.000e+3  3.999e+3      150e+3   249e+3   NA         NA       0.001e+3
+	0.000e+3  3.999e+3      250e+3   9.99e+6  2.0        0.001e+3 0.001e+3
+	0.000e+3  3.999e+3      10e+6    1300e+6  1.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      150e+3   249e+3   NA         NA       0.01e+3
+	4.00e+3   39.99e+3      250e+3   9.99e+6  2.0        0.01e+3  0.01e+3
+	4.00e+3   39.99e+3      10e+6    1300e+6  1.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      150e+3   249e+3   NA         NA       0.1e+3
+	40.0e+3   400.0e+3      250e+3   9.99e+6  2.0        0.1e+3   0.1e+3
+	40.0e+3   400.0e+3      10e+6    1300e+6  1.0        0.1e+3   0.1e+3
+
+	# 8902S
+
+	0.000e+3  3.999e+3      1.3e+9   26.5e+9  1.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      1.3e+9   26.5e+9  1.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      1.3e+9   26.5e+9  1.0        0.1e+3   0.1e+3
+
+Mode: Hertz FM MF_2
+
+	# (20Hz <= mod-freq < 50Hz) or (100kHz < mod-freq <= 200kHz)
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.000e+3  3.999e+3      150e+3   249e+3   NA         NA       0.001e+3
+	0.000e+3  3.999e+3      250e+3   9.99e+6  2.0        0.001e+3 0.001e+3
+	0.000e+3  3.999e+3      10e+6    1300e+6  5.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      150e+3   249e+3   NA         NA       0.01e+3
+	4.00e+3   39.99e+3      250e+3   9.99e+6  2.0        0.01e+3  0.01e+3
+	4.00e+3   39.99e+3      10e+6    1300e+6  5.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      150e+3   249e+3   NA         NA       0.1e+3
+	40.0e+3   400.0e+3      250e+3   9.99e+6  2.0        0.1e+3   0.1e+3
+	40.0e+3   400.0e+3      10e+6    1300e+6  5.0        0.1e+3   0.1e+3
+
+	# 8902S
+
+	0.000e+3  3.999e+3      1.3e+9   26.5e+9  5.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      1.3e+9   26.5e+9  5.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      1.3e+9   26.5e+9  5.0        0.1e+3   0.1e+3
+
+Mode: Hertz FM MF_1 RMS
+
+	# (50Hz <= mod-freq <= 100kHz)
+	# +/-3% reading added for RMS detector
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.000e+3  3.999e+3      150e+3   249e+3   NA         NA       0.001e+3
+	0.000e+3  3.999e+3      250e+3   9.99e+6  5.0        0.001e+3 0.001e+3
+	0.000e+3  3.999e+3      10e+6    1300e+6  4.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      150e+3   249e+3   NA         NA       0.01e+3
+	4.00e+3   39.99e+3      250e+3   9.99e+6  5.0        0.01e+3  0.01e+3
+	4.00e+3   39.99e+3      10e+6    1300e+6  4.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      150e+3   249e+3   NA         NA       0.1e+3
+	40.0e+3   400.0e+3      250e+3   9.99e+6  5.0        0.1e+3   0.1e+3
+	40.0e+3   400.0e+3      10e+6    1300e+6  4.0        0.1e+3   0.1e+3
+
+	# 8902S
+
+	0.000e+3  3.999e+3      1.3e+9   26.5e+9  4.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      1.3e+9   26.5e+9  4.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      1.3e+9   26.5e+9  4.0        0.1e+3   0.1e+3
+
+
+Mode: Hertz FM MF_2 RMS
+
+	# (20Hz <= mod-freq < 50Hz) or (100kHz < mod-freq <= 200kHz)
+	# +/-3% reading added for RMS detector
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.000e+3  3.999e+3      150e+3   249e+3   NA         NA       0.001e+3
+	0.000e+3  3.999e+3      250e+3   9.99e+6  5.0        0.001e+3 0.001e+3
+	0.000e+3  3.999e+3      10e+6    1300e+6  8.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      150e+3   249e+3   NA         NA       0.01e+3
+	4.00e+3   39.99e+3      250e+3   9.99e+6  5.0        0.01e+3  0.01e+3
+	4.00e+3   39.99e+3      10e+6    1300e+6  8.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      150e+3   249e+3   NA         NA       0.1e+3
+	40.0e+3   400.0e+3      250e+3   9.99e+6  5.0        0.1e+3   0.1e+3
+	40.0e+3   400.0e+3      10e+6    1300e+6  8.0        0.1e+3   0.1e+3
+
+	# 8902S
+
+	0.000e+3  3.999e+3      1.3e+9   26.5e+9  8.0        0.001e+3 0.001e+3
+
+	4.00e+3   39.99e+3      1.3e+9   26.5e+9  8.0        0.01e+3  0.01e+3
+
+	40.0e+3   400.0e+3      1.3e+9   26.5e+9  8.0        0.1e+3   0.1e+3
+
+Mode: Hertz FM Residual H1 L1
+
+	# Stated Spec: 
+	#   <8 Hz rms at 1300 MHz decreasing linearly with frequency to
+	#   <1 Hz rms for 100 MHz and below.
+	# 50 Hz to 3 kHz BW => M8901: MOD2 = "H1" (50 Hz), MOD3 = "L1" (3 kHz)
+
+	# NOMINAL               MOD1              Tolerance         Floor    Res
+	#---------------------  ----------------  ----------------  -------  ---
+	0.000E+3  400.0E+3      0.0      1300E+6  5.83333333333E-7  0.4167   NA
+
+Mode: Hertz FM Residual
+
+	# Unspec'd
+
+	# NOMINAL               MOD1              Tolerance         Floor    Res
+	#---------------------  ----------------  ----------------  -------  ---
+	0.000E+3  400.0E+3      0.0      1300E+6  NA                NA       NA
+
+Mode: Radians PM MF_1
+
+	# (200Hz <= mod-freq <= 1kHz)
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.000     3.999         150e+3   9.99e+6  4.0        0.001    0.001
+	0.000     3.999         10e+6    1300e+6  3.0        0.001    0.001
+
+	4.00      39.99         150e+3   9.99e+6  4.0        0.01     0.01
+	4.00      39.99         10e+6    1300e+6  3.0        0.01     0.01
+
+	40.0      400.0         150e+3   9.99e+6  4.0        0.1      0.1
+	40.0      400.0         10e+6    1300e+6  3.0        0.1      0.1
+
+	# 8902S
+
+	0.000     3.999         1.3e+9   26.5e+9  3.0        0.001    0.001
+
+	4.00      39.99         1.3e+9   26.5e+9  3.0        0.01     0.01
+
+	40.0      400.0         1.3e+9   26.5e+9  3.0        0.1      0.1
+
+Mode: Radians PM MF_2
+
+	# (1kHz < mod-freq <= 20kHz), Accuracy floor is +/-1 digit however
+	# since resolution is linearly dependent upon modulation frequency
+	# there is no way to represent the floor here for mod-freq > 1kHz.
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0         400           150e+3   9.99e+6  NA         NA       NA
+	0         400           10e+6    1300e+6  NA         NA       NA
+
+	# 8902S
+
+	0         400           1.3e+9   26.5e+9  NA         NA       NA
+
+Mode: Radians PM MF_1 RMS
+
+	# (200Hz <= mod-freq <= 1kHz)
+	# +/-3% added for RMS detector
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.000     3.999         150e+3   9.99e+6  7.0        0.001    0.001
+	0.000     3.999         10e+6    1300e+6  6.0        0.001    0.001
+
+	4.00      39.99         150e+3   9.99e+6  7.0        0.01     0.01
+	4.00      39.99         10e+6    1300e+6  6.0        0.01     0.01
+
+	40.0      400.0         150e+3   9.99e+6  7.0        0.1      0.1
+	40.0      400.0         10e+6    1300e+6  6.0        0.1      0.1
+
+	# 8902S
+
+	0.000     3.999         1.3e+9   26.5e+9  6.0        0.001    0.001
+
+	4.00      39.99         1.3e+9   26.5e+9  6.0        0.01     0.01
+
+	40.0      400.0         1.3e+9   26.5e+9  6.0        0.1      0.1
+
+Mode: Radians PM MF_2 RMS
+
+	# (1kHz < mod-freq <= 10kHz), Accuracy floor is +/-1 digit however
+	# since resolution is linearly dependent upon modulation frequency
+	# there is no way to represent the floor here for mod-freq > 1kHz.
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0         400           150e+3   9.99e+6  NA         NA       NA
+	0         400           10e+6    1300e+6  NA         NA       NA
+
+	# 8902S
+
+	0         400           1.3e+9   26.5e+9  NA         NA       NA
+
+Mode: Hertz FA
+
+	# Standard Timebase
+
+	# Internal Reference Accuracy = aging rate +            < 1 ppm/mo
+	#                               temperature effects +   < 0.2 ppm/degC
+	#                               line voltage effects    < 1 ppm
+
+	# The published specifications are:
+	# +/-(3 lsd + Internal Reference Accuracy), Fc < 100 MHz
+	# +/-(3 lsd or 30 Hz, whichever is larger + Internal Reference Accuracy),
+	# fc >= 100 MHz
+
+	# The limits below assume automatic resolution selection. The resolution
+	# may change when using the following supported Special Functions:
+	# 	7.0SP - Automatic selection
+	# 	7.1SP - 10 Hz resolution
+	# 	7.2SP - 100 Hz resolution
+	# 	7.3SP - 1 kHz resolution
+	# 	7.4SP - 0.1 Hz resolution fc <= 10.1 MHz;
+	#		  1 Hz resolution 10.1 MHz > fc < 1300 MHz
+
+	# MOD1 range is union of allowed decibel and voltage ranges.
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	150e+3    999.99999e+6  -25      30       2.2e-4     30       10
+	1000e+6   1300e+6       -25      30       2.2e-4     300      100
+
+    # 8902S
+
+	# The limits below assume automatic resolution selection. The resolution
+	# may change when using the following supported Special Functions:
+	# 	7.0SP - Automatic selection
+	# 	7.1SP - 10 Hz resolution (100 Hz, external LO > 20 GHz)
+	# 	7.2SP - 100 Hz resolution
+	# 	7.3SP - 1 kHz resolution
+
+	1300e+6   26.5e+9       -25      30       NA         NA       100
+
+Mode: Hertz FA 002
+
+	# Option 002 Timebase
+
+	# Internal Reference Accuracy = aging rate +            < 0.001 ppm/day
+	#                               temperature effects +   < 0.0002 ppm/degC
+	#                               line voltage effects    < 0.0006 ppm
+
+	# The published specifications are:
+	# +/-(3 lsd + Internal Reference Accuracy), Fc < 100 MHz
+	# +/-(3 lsd or 30 Hz, whichever is larger + Internal Reference Accuracy),
+	# fc >= 100 MHz
+
+	# The limits below assume automatic resolution selection. The resolution
+	# may change when using the following supported Special Functions:
+	# 	7.0SP - Automatic selection
+	# 	7.1SP - 10 Hz resolution
+	# 	7.2SP - 100 Hz resolution
+	# 	7.3SP - 1 kHz resolution
+	# 	7.4SP - 0.1 Hz resolution fc <= 10.1 MHz;
+	#		  1 Hz resolution 10.1 MHz > fc < 1300 MHz
+
+	# MOD1 range is union of allowed decibel and voltage ranges.
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	150e+3    999.99999e+6  -25      30       1.8e-7     30       10
+	1000e+6   1300e+6       -25      30       1.8e-7     300      100
+
+    # 8902S
+
+	# The limits below assume automatic resolution selection. The resolution
+	# may change when using the following supported Special Functions:
+	# 	7.0SP - Automatic selection
+	# 	7.1SP - 10 Hz resolution (100 Hz, external LO > 20 GHz)
+	# 	7.2SP - 100 Hz resolution
+	# 	7.3SP - 1 kHz resolution
+
+	1300e+6   26.5e+9       -25      30       NA         NA       100
+
+Mode: Watts RF
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	10e-6     1             100e+3   2.6e+9   NA         NA       NA
+
+	# 8902S
+
+	10e-6     1             2.6e+9   26.5e+9  NA         NA       NA
+
+Mode: Decibels RF
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	-20.00    30.00         100e+3   2.6e+9   NA         NA       0.01
+
+	# 8902S
+
+	-20.00    30.00         2.6e+9   26.5e+9  NA         NA       0.01
+
+Mode: Watts TL
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	-127      1e-3          2.5e+6   1300e+6  NA         NA       NA
+
+	# 8902S
+
+	-127      1e-3          1.3e+9   26.5e+9  NA         NA       NA
+
+Mode: Decibels TL
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	-127      0             2.5e+6   1300e+6  NA         NA       NA
+
+	# 8902S
+
+	-127      0             1.3e+9   26.5e+9  NA         NA       NA
+
+Mode: Hertz AF
+
+	# Accuracy (external signals):
+	# Frequency > 1 kHz, Level >= 100 mVrms:
+	# +/- (3 lsd + Internal Reference Accuracy)
+
+	# Frequency <= 1 kHz, Level >= 100 mVrms:
+	# +/- (0.02 Hz + Internal Reference Accuracy)
+
+	# Internal Reference Accuracy is NOT included in the values below!
+
+	# MOD1 range is union of allowed decibel and voltage ranges.
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	20         99.9999       -40      3        0          20e-3    100e-6
+	100        999.999       -40      3        0          20e-3    1e-3
+	1e+3       3.00000e+3    -40      3        0          30e-3    10e-3
+	3e+3       9.99999e+3    -40      3        0          30e-3    10e-3
+	10e+3      99.9999e+3    -40      3        0          300e-3   100e-3
+	100e+3     250.000e+3    -40      3        0          3        1
+	250.001e+3 600.000e+3    -40      3        NA         NA       1
+
+Mode: Volts AL
+
+	# Audio RMS Level
+
+	# Voltage Range: 100 mV to 3 V
+	# Accuracy: 4% of reading
+
+	# Measurement Rate: 2 readings/sec
+	# Audio Input Impedance: 100 kOhm
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	100e-3      299.9e-3     50       40e+3    4.0        0        100e-6
+	300e-3           3       50       40e+3    4.0        0        1e-3
+	3                4       50       40e+3    NA         NA       1e-3
+
+Mode: Decibels AL
+
+	# Voltage Range: -20 to 9.55 dBV
+	# Accuracy: 4% of reading
+
+	# Computed decibel value within 0.00066 dB
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	-20.00          9.55     50       40e+3    0.0        0.34     0.01
+	9.55           12.04     50       40e+3    NA         NA       0.01
+
+Mode: Percent AD
+
+	# Accuracy: +/- 1 dB of reading
+	# Computed percent value within 0.0002%
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0.01      100.00        380      420      12.202     0.0      0.00
+	0.01      100.00        950      1050     12.202     0.0      0.00
+
+Mode: Decibels AD
+
+	# Accuracy: +/- 1 dB of reading
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	-80.00    0.00          380      420      0.0        1.0      0.00
+	-80.00    0.00          950      1050     0.0        1.0      0.00
+
+Mode: Percent CAL
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	100.00    100.00        NA       NA       0.1        0.0      0.00
+
+Mode: Watts CAL
+
+	# 1 year specifications
+	# Limits reflect rss specifications
+	# Worst case specifications: +/- 1.2%
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	1e-3      1e-3          50e+6    50e+6    0.9        0.0      NA
+
+Mode: Watts ZERO
+
+	# 1 year specifications
+	# +/- 0.07% of full scale on lowest (100 uW) range
+
+	# NOMINAL               MOD1              Tolerance  Floor    Resolution
+	#---------------------  ----------------  ---------  -------  ----------
+	0         0             100e+3   2.6e+9   0          70e-9    NA
+
+	# 8902S
+
+	0         0             2.6e+9   26.5e+9  0          70e-9    NA

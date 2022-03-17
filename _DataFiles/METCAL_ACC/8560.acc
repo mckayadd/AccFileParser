@@ -1,0 +1,343 @@
+Begin Header
+	instrument = HP 8560
+	interval   = 90-730 days
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3920 $
+
+	# MET/CAL accuracy file for the HP 8560, 8561, 8562, 8563, 
+	# 8564, and 8565 Spectrum Analyzers.
+
+	# Due to the fact that the above analyzers are similar,
+	# with the exception that they have different frequency
+	# limits, the specifications shown below may represent
+	# the union of these models, in some cases.
+
+	# Frequency range by model:
+
+	# 8560A/B  : 50 Hz to 2.9 GHz
+	# 8560E/EC : 30 Hz to 2.9 GHz
+	# 8561A    : 1 kHz to 6.5 GHz
+	# 8561B    : 50 Hz to 6.5 GHz
+	# 8561E/EC : 30 Hz to 6.5 GHz
+	# 8562A/B  : 1 kHz to 22 GHz (1 kHz to 26.5 GHz, Option 026) (1989 units only)
+	# 8562A/B  : 9 kHz to 22 GHz (9 kHz to 26.5 GHz, Option 026)
+	# 8562E/EC : 30 Hz to 13.2 GHz
+	# 8563A    : 9 kHz to 22 GHz (9 kHz to 26.5 GHz, Option 026)
+	# 8563E/EC : 9 kHz to 26.5 GHz (30 Hz to 26.5 GHz, Option 006)
+	# 8564E/EC : 9 kHz to 40 GHz (30 Hz to 40 GHz, Option 006)
+	# 8565E/EC : 9 kHz to 50 GHz (30 Hz to 50 GHz, Option 006)
+
+	# A and B suffixed models typically have a 1 year calibration interval
+	# E and EC suffixed models typically have a 2 year calibration interval
+
+	# Discussed confidence level with HP on 1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: dBm
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-134       +30     30      50e+9   NA    NA     NA  
+
+Mode: Decibels
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-164       +164    0       0       NA    NA     NA  
+	-164       +164    30      50e+9   NA    NA     NA  
+
+Mode: Calibrator
+
+	# Calibrator output accuracy
+	# -10 dBm nominal output level, 300 MHz
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-10          -10   300e+6 300e+6   0.0   0.3    0.1 
+
+Mode: Scale FI LOG A
+
+	# Display Scale Fidelity
+
+	# Applicable models:
+	# 8560A/B 
+	# 8561A/B
+	# 8562A/B
+	# 8563A   
+
+	# Resolution Bandwidth > 100 Hz
+	# +/- 0.4 dB/dB to a maximum of +/- 1.5 dB, 0 to -90 dB
+
+	# According to Agilent, these units were only specified
+	# to -90 dB because readings between -90 and -100 (9 to
+	# 10 vertical divisions below the reference line) would
+	# be approaching the noise floor of the instrument's log
+	# amplifier and it was assumed that most users wouldn't
+	# care. However, as far as measurement uncertainty goes,
+	# the log amplifier's 'effective' specification remains 
+	# the same over the entire screen. The specifications 
+	# below reflect that.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-100       -90     30    26.5e+9   0.0   1.50   0.01 
+	-90          0     30    26.5e+9   0.0   1.50   0.01
+
+Mode: Scale FI LOG E
+
+	# Display Scale Fidelity
+
+	# Applicable models:
+	# 8560E/EC
+	# 8561E/EC
+	# 8562E/EC
+	# 8563E/EC
+	# 8564E/EC
+	# 8565E/EC
+
+	# Resolution Bandwidth >= 300 Hz
+	# +/- 0.1 dB/dB to a maximum of +/- 0.85 dB, 0 to -90 dB
+
+	# Resolution Bandwidth <= 100 Hz
+	# +/- 0.2 dB/2dB to a maximum of +/- 0.85 dB, 0 to -90 dB
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-100       -90     30      50e+9   0.0   1.50   0.01 
+	-90          0     30      50e+9   0.0   0.85   0.01
+
+Mode: Scale FI LOG 300 E
+
+	# Applicable to E and EC suffixed models only!
+
+	# Resolution Bandwidth >= 300 Hz
+	# Maximum of +/- 2.5 dB, 0 to -100 dB
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-100         0     30      50e+9   0.0   2.50   0.01
+
+Mode: Scale FI LOG 100 E
+
+	# Applicable to E and EC suffixed models only!
+
+	# Resolution Bandwidth <= 100 Hz
+	# Maximum of +/- 1.5 dB, 0 to -100 dB
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-100         0     30      50e+9   0.0   1.50   0.01
+
+Mode: Scale FI LIN
+
+	# Nominal reference level range in Volts
+	# Linear: +/- 3% of reference level
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ------
+	2.2e-6    7.07     30      50e+9   3.0   0.0    0.1e-6
+
+Mode: FREQ RESP dB 8560A
+
+	# 8560A/B, 8561A/B, 8562A, 8563A Relative Frequency  
+	#  Response
+	# 8560A/B, 8561A/B, DC Coupled
+
+	# Assumes >= 10 dB input attenuation
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-151     +30    50        2.9e+9    0.0   1.00  0.01
+
+	# The following apply to 8561A/B, 8562A, 8563A only!
+
+	-151     +30    2.9e+9    6.5e+9    0.0   1.00  0.01
+
+	# The following apply to 8562A, 8563A only!
+
+	-151     +30    6.5e+9     13e+9    0.0   2.00  0.01
+	-151     +30    13.0e+9  19.7e+9    0.0   3.00  0.01
+	-151     +30    19.7e+9  22.0e+9    0.0   3.00  0.01
+
+	# The following apply to 8562A and 8563A Opt 026 only!
+
+	-151     +30    22.0e+9  26.5e+9    0.0   3.00  0.01
+
+Mode: FREQ RESP dB 8562B
+
+	# 8562B Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-151     +30    1e+3      6.5e+9    0.0   1.00  0.01
+	-151     +30    6.5e+9   19.7e+9    0.0   1.50  0.01
+	-151     +30    19.7e+9  22.0e+9    0.0   2.00  0.01
+
+Mode: FREQ RESP dB 8560E
+
+	# 8560E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# DC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-145     +30    30        100e+6    0.0   1.00  0.01
+	-145     +30    100e+6    2.0e+9    0.0   0.70  0.01
+	-145     +30    2.0e+9    2.9e+9    0.0   1.00  0.01
+
+Mode: FREQ RESP dB 8560E AC
+
+	# 8560E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# AC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-145     +30    100e+3    2.9e+9    0.0   1.40  0.01
+
+Mode: FREQ RESP dB 8561E
+
+	# 8561E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# DC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-145     +30    30        2.9e+9    0.0   1.00  0.01
+	-145     +30    2.9e+9    6.5e+9    0.0   1.50  0.01
+
+Mode: FREQ RESP dB 8561E AC
+
+	# 8561E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# AC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-145     +30    100e+3    2.9e+9    0.0   1.10  0.01
+	-145     +30    2.9e+9    6.5e+9    0.0   2.00  0.01
+
+Mode: FREQ RESP dB 8562E
+
+	# 8562E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# DC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-148     +30    30        100e+6    0.0   1.25  0.01
+	-148     +30    100e+6    2.3e+9    0.0   0.90  0.01
+	-148     +30    2.3e+9    2.9e+9    0.0   1.25  0.01
+	-148     +30    2.9e+9   6.46e+9    0.0   1.50  0.01
+	-148     +30    6.46e+9  13.2e+9    0.0   2.20  0.01
+
+Mode: FREQ RESP dB 8562E AC
+
+	# 8562E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# AC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-148     +30    100e+3    2.9e+9    0.0   1.25  0.01
+	-148     +30    2.9e+9   6.46e+9    0.0   2.00  0.01
+	-148     +30    6.46e+9  13.2e+9    0.0   2.20  0.01
+
+Mode: FREQ RESP dB 8563E
+
+	# 8563E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# DC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-148     +30    30        100e+6    0.0   1.25  0.01
+	-148     +30    100e+6    2.0e+9    0.0   1.00  0.01
+	-148     +30    2.0e+9    2.9e+9    0.0   1.25  0.01
+	-148     +30    2.9e+9   6.46e+9    0.0   1.50  0.01
+	-148     +30    6.46e+9  13.2e+9    0.0   2.20  0.01
+	-148     +30    13.2e+9  22.0e+9    0.0   2.50  0.01
+	-148     +30    22.0e+9  26.5e+9    0.0   3.30  0.01
+
+Mode: FREQ RESP dB 8564E
+
+	# 8564E/EC, 8565E/EC Relative Frequency Response
+
+	# Assumes >= 10 dB input attenuation
+	# DC Coupled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-147     +30    30        100e+6    0.0   1.00  0.01
+	-147     +30    100e+6    2.0e+9    0.0   0.90  0.01
+	-147     +30    2.0e+9    2.9e+9    0.0   1.00  0.01
+	-147     +30    2.9e+9   6.46e+9    0.0   1.70  0.01
+	-147     +30    6.46e+9  13.2e+9    0.0   2.60  0.01
+	-147     +30    13.2e+9  22.0e+9    0.0   2.50  0.01
+	-147     +30    22.0e+9  26.8e+9    0.0   3.30  0.01
+	-147     +30    26.8e+9 31.15e+9    0.0   3.10  0.01
+	-147     +30    31.15e+9 40.0e+9    0.0   2.60  0.01
+
+	# The following apply to 8565E/EC only!
+
+	-147     +30    40.0e+9  50.0e+9    0.0   3.20  0.01
+
+Mode: Band SW dB
+
+	# RF Band Switching Uncertainty
+
+	# Additional uncertainty added to Relative Frequency
+	# Response for measurements between any two internal
+	# mixing bands
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-151     +30    30         50e+9    0.0   1.00  0.01
+
+Mode: RBW SW dB
+
+	# Resolution Bandwidth Switching Uncertainty
+
+	# RBW range (-3 dB): 1 Hz to 1 MHz in 1, 3, 10
+	# sequence and 2 MHz
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#------------  ------------------  ----  -----  ----
+	-151     +30    30         50e+9    0.0   0.50  0.01
+
+Mode: Hertz
+
+	# Frequency Reference Accuracy (STD):
+	# Temperature Stability: +/- 1 * 10-8
+	# Aging rate (per year): +/- 1 * 10-7
+	# Setability: +/- 1 * 10-8 (+/- 2.2 * 10-8 for 8562E/EC)
+
+	# Frequency Reference Accuracy (Option 103):
+	# Temperature Stability: +/- 1 * 10-6
+	# Aging rate (per year): +/- 2 * 10-6
+	# Setability: +/- 1 * 10-6
+
+	# Frequency Readout Accuracy (N = LO Harmonic):
+	# Span > 2 MHz * N: +/- (freq. readout * freq. reference
+	# accuracy + 5% * span + 15% * RBW + 10 Hz)
+
+	# Span <= 2 MHz * N: +/- (freq. readout * freq. reference
+	# accuracy + 1% * span + 15% * RBW + 10 Hz)
+
+	# Compute specification for specified RBW (resolution 
+	# bandwidth) and Span and use ACC FSC
+ 
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	30     50e+9       -134    +30     NA    NA     NA

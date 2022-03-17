@@ -1,0 +1,35 @@
+Begin Header
+	instrument = Fluke 732B
+	interval   = 30 days
+	confidence = 2.576 sigma
+End Header
+
+# $Revision: 3789 $
+
+# This file contains accuracy information for
+# the 732B DC Standard, 99% Confidence Interval
+# 90 day stability specifications
+
+# Instruction Manual P/N 869321 March 1992, Rev. 3, 11/97
+# Manual Supplement 1, 3/99
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        9.90000    10.10000    NA    NA  NA        NA        NA
+
+Mode: 10V Stability
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        9.90000    10.10000    NA    NA  0.00003   0         NA
+
+Mode: 1.018V Stability
+
+        #      Nominal          Mod 1   Tolerance Floor  Resolution
+        # ------------------- --------- --------- ------- ----------
+        0.98000    1.020000    NA    NA  0.00008   0         NA

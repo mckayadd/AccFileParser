@@ -1,0 +1,184 @@
+Begin Header
+	instrument = HP 8648
+	interval   = 730 days
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Hewlett-Packard 8648A, 8648B, 8648C, and 8648D
+	# RF Signal Generators.
+
+	# The amplitude values and accuracies are in dBm.
+
+	# Discussed confidence level with HP on  1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Hertz
+ 
+	# Standard
+	# Change "3e-4" to "0.15e-4" if option 1E5 is installed.
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	9e3      4000e6    -136   +20       3e-4     0      10
+
+Mode: Decibels
+
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-136    -127.1     9e3     99.99e3  0        3.0    0.1
+	-136    -127.1     100e3   2500e6   0        3.0    0.1
+	-136    -127.1     2500e6  3200e6   NA       NA     0.1
+	-136    -127.1     3200e6  4000e6   NA       NA     0.1
+
+	-127    -100.1     9e3     99.99e3  0        3.0    0.1
+	-127    -100.1     100e3   2500e6   0        1.0    0.1
+	-127    -100.1     2500e6  3200e6   0        3.0    0.1
+	-127    -100.1     3200e6  4000e6   0        3.0    0.1
+
+	-100     13        9e3     99.99e3  0        1.0    0.1
+	-100     13        100e3   2500e6   0        1.0    0.1
+	-100     13        2500e6  3200e6   0        1.5    0.1
+	-100     13        3200e6  4000e6   0        2.0    0.1
+
+	 13      20        9e3     99.99e3  0        1.5    0.1
+	 13      20        100e3   2500e6   0        1.5    0.1
+	 13      20        2500e6  3200e6   0        2.0    0.1
+	 13      20        3200e6  4000e6   0        2.5    0.1
+
+Mode: Decibels CH1
+
+	# Signal is routed through the 5800A or 5820A Ch 1 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+ 
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-136    -127.1     9e3     99.99e3  NA       NA     0.1
+	-136    -127.1     100e3   2500e6   NA       NA     0.1
+	-136    -127.1     2500e6  3200e6   NA       NA     0.1
+	-136    -127.1     3200e6  4000e6   NA       NA     0.1
+
+	-127    -100.1     9e3     99.99e3  NA       NA     0.1
+	-127    -100.1     100e3   2500e6   NA       NA     0.1
+	-127    -100.1     2500e6  3200e6   NA       NA     0.1
+	-127    -100.1     3200e6  4000e6   NA       NA     0.1
+
+	-100     13        9e3     99.99e3  NA       NA     0.1
+	-100     13        100e3   2500e6   NA       NA     0.1
+	-100     13        2500e6  3200e6   NA       NA     0.1
+	-100     13        3200e6  4000e6   NA       NA     0.1
+
+	 13      20        9e3     99.99e3  NA       NA     0.1
+	 13      20        100e3   2500e6   NA       NA     0.1
+	 13      20        2500e6  3200e6   NA       NA     0.1
+	 13      20        3200e6  4000e6   NA       NA     0.1
+
+Mode: Decibels CH2
+
+	# Signal is routed through the 5800A or 5820A Ch 2 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+ 
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-136    -127.1     9e3     99.99e3  NA       NA     0.1
+	-136    -127.1     100e3   2500e6   NA       NA     0.1
+	-136    -127.1     2500e6  3200e6   NA       NA     0.1
+	-136    -127.1     3200e6  4000e6   NA       NA     0.1
+
+	-127    -100.1     9e3     99.99e3  NA       NA     0.1
+	-127    -100.1     100e3   2500e6   NA       NA     0.1
+	-127    -100.1     2500e6  3200e6   NA       NA     0.1
+	-127    -100.1     3200e6  4000e6   NA       NA     0.1
+
+	-100     13        9e3     99.99e3  NA       NA     0.1
+	-100     13        100e3   2500e6   NA       NA     0.1
+	-100     13        2500e6  3200e6   NA       NA     0.1
+	-100     13        3200e6  4000e6   NA       NA     0.1
+
+	 13      20        9e3     99.99e3  NA       NA     0.1
+	 13      20        100e3   2500e6   NA       NA     0.1
+	 13      20        2500e6  3200e6   NA       NA     0.1
+	 13      20        3200e6  4000e6   NA       NA     0.1
+
+Mode: Decibels CH3
+
+	# Signal is routed through the 5800A or 5820A Ch 3 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+ 
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-136    -127.1     9e3     99.99e3  NA       NA     0.1
+	-136    -127.1     100e3   2500e6   NA       NA     0.1
+	-136    -127.1     2500e6  3200e6   NA       NA     0.1
+	-136    -127.1     3200e6  4000e6   NA       NA     0.1
+
+	-127    -100.1     9e3     99.99e3  NA       NA     0.1
+	-127    -100.1     100e3   2500e6   NA       NA     0.1
+	-127    -100.1     2500e6  3200e6   NA       NA     0.1
+	-127    -100.1     3200e6  4000e6   NA       NA     0.1
+
+	-100     13        9e3     99.99e3  NA       NA     0.1
+	-100     13        100e3   2500e6   NA       NA     0.1
+	-100     13        2500e6  3200e6   NA       NA     0.1
+	-100     13        3200e6  4000e6   NA       NA     0.1
+
+	 13      20        9e3     99.99e3  NA       NA     0.1
+	 13      20        100e3   2500e6   NA       NA     0.1
+	 13      20        2500e6  3200e6   NA       NA     0.1
+	 13      20        3200e6  4000e6   NA       NA     0.1
+
+Mode: Decibels CH4
+
+	# Signal is routed through the 5800A or 5820A Ch 4 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+ 
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-136    -127.1     9e3     99.99e3  NA       NA     0.1
+	-136    -127.1     100e3   2500e6   NA       NA     0.1
+	-136    -127.1     2500e6  3200e6   NA       NA     0.1
+	-136    -127.1     3200e6  4000e6   NA       NA     0.1
+
+	-127    -100.1     9e3     99.99e3  NA       NA     0.1
+	-127    -100.1     100e3   2500e6   NA       NA     0.1
+	-127    -100.1     2500e6  3200e6   NA       NA     0.1
+	-127    -100.1     3200e6  4000e6   NA       NA     0.1
+
+	-100     13        9e3     99.99e3  NA       NA     0.1
+	-100     13        100e3   2500e6   NA       NA     0.1
+	-100     13        2500e6  3200e6   NA       NA     0.1
+	-100     13        3200e6  4000e6   NA       NA     0.1
+
+	 13      20        9e3     99.99e3  NA       NA     0.1
+	 13      20        100e3   2500e6   NA       NA     0.1
+	 13      20        2500e6  3200e6   NA       NA     0.1
+	 13      20        3200e6  4000e6   NA       NA     0.1
+
+Mode: Decibels CH5
+
+	# Signal is routed through the 5800A or 5820A Ch 5 via the AUX IN port.
+	# The amplitude must be characterized using a power meter.
+ 
+	# NOMINAL          MOD1             Tol.     Floor  Res.
+	#----------------  ---------------  -------  -----  ----
+	-136    -127.1     9e3     99.99e3  NA       NA     0.1
+	-136    -127.1     100e3   2500e6   NA       NA     0.1
+	-136    -127.1     2500e6  3200e6   NA       NA     0.1
+	-136    -127.1     3200e6  4000e6   NA       NA     0.1
+
+	-127    -100.1     9e3     99.99e3  NA       NA     0.1
+	-127    -100.1     100e3   2500e6   NA       NA     0.1
+	-127    -100.1     2500e6  3200e6   NA       NA     0.1
+	-127    -100.1     3200e6  4000e6   NA       NA     0.1
+
+	-100     13        9e3     99.99e3  NA       NA     0.1
+	-100     13        100e3   2500e6   NA       NA     0.1
+	-100     13        2500e6  3200e6   NA       NA     0.1
+	-100     13        3200e6  4000e6   NA       NA     0.1
+
+	 13      20        9e3     99.99e3  NA       NA     0.1
+	 13      20        100e3   2500e6   NA       NA     0.1
+	 13      20        2500e6  3200e6   NA       NA     0.1
+	 13      20        3200e6  4000e6   NA       NA     0.1

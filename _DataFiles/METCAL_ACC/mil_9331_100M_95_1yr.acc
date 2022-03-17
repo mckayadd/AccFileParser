@@ -1,0 +1,33 @@
+Begin Header
+	instrument = MIL 9331/100M
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+        # $Revision: 3789 $
+
+# This file contains accuracy information for the
+# Measurements International, Ltd., 9331/100M 100 MOhm 
+# Standard Air Resistor, 1 year specifications, 
+# 95% Confidence Interval
+
+# Information per Measurements International Model 9331/100M
+# data sheet, Form MI 67, Rev. 1, Dated 01-11-15 (QAP 19, App. “O”)
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # Resistance          Not Used  Tol (%) Not Used Not Used
+        # ------------------- --------- ------- -------- --------
+        99.9000e6  100.1000e6 NA   NA   10E-4   0        NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # Resistance          Not Used  Tol (%) Not Used Not Used
+        # ------------------- --------- ------- -------- --------
+        99.9000e6  100.1000e6 NA   NA   25E-4   0        NA

@@ -1,0 +1,26 @@
+Begin Header
+	instrument = SRS FS700
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 9490 $
+
+	# Source: SRS (Stanford Research Systems) FS700 LORAN-C Frequency
+	#	Standard Manual, Revision 2.5, 10/2001
+
+	# Outputs:	(rear), 4 x 10 MHz
+	#		(front), 0.01 Hz to 10 MHz in a 1-2.5-5 sequence
+	# Amplitude: (rear) 1 Vpp sine into 50 Ohms
+	#		 (front) TTL level
+	# Frequency Stability (long-term): 1 x 10E-12 (same as LORAN-C 
+		transmitter cesium clock)
+	# Frequency Stability (short-term): 1 x 10E-10 (standard);
+		1 x 10E-11 (low phase noise option)
+
+Mode: Timebase
+	# Long-term stability
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-10     0        NA

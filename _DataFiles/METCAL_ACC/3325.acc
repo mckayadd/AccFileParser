@@ -1,0 +1,238 @@
+Begin Header
+	instrument = HP 3325B
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Hewlett-Packard 3325A and 3325B Function Generators.
+
+	# These specifications are valid after a warming-up time of
+	# 30 minutes (reference temperature 23 degC) and for a
+	# termination of the signal output with 50 Ohms.
+
+	# When the output is not terminated with 50 Ohms, the actual
+	# output voltage is 2x the programmed voltage.
+
+	# Frequency accuracy
+	# Mod1 values are the union of the voltage and decibel range.
+
+
+	# Discussed confidence level with HP on  1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+##### Frequency #####
+
+Mode: Hertz
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+	1e-6    21e6        -56.02   40       5e-4   0       NA     
+
+##### Amplitude #####
+
+	#
+	# 50 Ohm terminated
+	#
+
+Mode: Volts L
+
+	# +/-0.02mV to +/-20mV depending upon output
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+	 -5      5          NA       NA       0.3996 0.02e-3 NA   
+
+	# Sine Wave
+
+Mode: dBm SI L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+    -56.02   23.99      1e-6     999.9e-6 NA     NA      NA
+	-56.02   13.51      1e-3     100e3    0      0.2     NA   
+	-56.02   13.51      100e3    10e6     0      0.6     NA   
+	-56.02  -16.03      10e6     20e6     0      0.9     NA   
+	-16.02   13.51      10e6     20e6     0      0.6     NA   
+     13.51   23.99      1e-3     100e3    0      0.1     NA
+     13.51   23.99      100e3    20e6     0      0.4     NA
+
+	# Square Wave
+
+Mode: Vpp SQ L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     1e-3   10          1e-6     999.9e-6 NA     NA      NA
+     1e-3   2.999       1e-3     100e3    2.2    0       NA
+     1e-3   2.999       100e3    11e6     13.6   0       NA
+     3      10          1e-3     100e3    1.0    0       NA
+     3      10          100e3    11e6     11.1   0       NA
+
+	# Triangle Wave
+
+Mode: Vpp TI L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     1e-3   10          1e-6     999.9e-6 NA     NA      NA
+     1e-3   2.999       1e-3     2e3      2.7    0       NA
+     1e-3   2.999       2e3      11e3     6.2    0       NA
+     3      10          1e-3     2e3      1.5    0       NA
+     3      10          2e3      11e3     5.0    0       NA
+
+	# Positive and Negative Ramps
+
+Mode: Vpp RP L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     1e-3   10          1e-6     999.9e-6 NA     NA      NA
+     1e-3   2.999       1e-3     500      2.7    0       NA
+     1e-3   2.999       500      11e3     11.2   0       NA
+     3      10          1e-3     500      1.5    0       NA
+     3      10          500      11e3     10.0   0       NA
+
+	#
+	# with DC Offset
+	#
+
+	# Sine Wave
+
+Mode: dBm +DC SI L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+    -56.02   23.99      1e-6     999.9e-6 NA     NA      NA
+	-56.02   13.51      1e-3     100e3    0      0.4     NA   
+	-56.02   13.51      100e3    10e6     0      0.8     NA   
+	-56.02  -16.03      10e6     20e6     0      1.1     NA   
+	-16.02   13.51      10e6     20e6     0      0.8     NA   
+     13.51   23.99      1e-3     100e3    0      0.3     NA
+     13.51   23.99      100e3    20e6     0      0.6     NA
+
+	# Square Wave
+
+Mode: Vpp +DC SQ L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     1e-3   10          1e-6     999.9e-6 NA     NA      NA
+     1e-3   2.999       1e-3     100e3    4.2    0       NA
+     1e-3   2.999       100e3    11e6     15.6   0       NA
+     3      10          1e-3     100e3    3.0    0       NA
+     3      10          100e3    11e6     13.1   0       NA
+
+	# Triangle Wave
+
+Mode: Vpp +DC TI L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     1e-3   10          1e-6     999.9e-6 NA     NA      NA
+     1e-3   2.999       1e-3     2e3      4.7    0       NA
+     1e-3   2.999       2e3      11e3     8.2    0       NA
+     3      10          1e-3     2e3      3.5    0       NA
+     3      10          2e3      11e3     7.0    0       NA
+
+	# Positive and Negative Ramps
+
+Mode: Vpp +DC RP L
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     1e-3   10          1e-6     999.9e-6 NA     NA      NA
+     1e-3   2.999       1e-3     500      4.7    0       NA
+     1e-3   2.999       500      11e3     13.2   0       NA
+     3      10          1e-3     500      3.5    0       NA
+     3      10          500      11e3     12.0   0       NA
+
+	#
+	# Unterminated, High Voltage only (Option 002)
+	#
+	# AC Amplitude only spec'd at 1kHz
+	#
+
+Mode: Volts HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+	 -20     20         NA       NA       1      25e-3   NA   
+
+	# Sine Wave
+
+Mode: Vpp SI HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     1e6      NA     NA      NA
+
+	# Square Wave
+
+Mode: Vpp SQ HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     1e6      NA     NA      NA
+
+	# Triangle Wave
+
+Mode: Vpp TI HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     11e3     NA     NA      NA
+
+	# Positive and Negative Ramps
+
+Mode: Vpp RP HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     11e3     NA     NA      NA
+
+	#
+	# with DC Offset
+	#
+
+	# Sine Wave
+
+Mode: Vpp +DC SI HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     1e6      NA     NA      NA
+
+	# Square Wave
+
+Mode: Vpp +DC SQ HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     1e6      NA     NA      NA
+
+	# Triangle Wave
+
+Mode: Vpp +DC TI HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     11e3     NA     NA      NA
+
+	# Positive and Negative Ramps
+
+Mode: Vpp +DC RP HV
+
+	# Nominal           Mod 1             Tol.   Floor   Resolution
+	# ---------------   ----------------  ----   ------  ----------
+     4e-3    40         2e3      2e3      2      0       NA
+     4e-3    40         1e-6     11e3     NA     NA      NA

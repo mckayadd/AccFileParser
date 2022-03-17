@@ -1,0 +1,459 @@
+Begin Header
+	instrument = Agilent 33250A
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Source Document:
+	#
+	# Agilent 33250A 80 MHz Function/Arbitrary Waveform Generator
+	# User's Guide
+	# Publication Number 33250-90001, April 2000
+	# Chapter 8, Specifications
+
+	# These specifications are valid after a warming-up time of
+	# 30 minutes (reference temperature 23 degC) and for a
+	# termination of the signal output with 50 Ohms.
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Frequency #####
+
+	# MOD1 limits are union of Vpp, Vrms and dBm limits.
+
+	# Stability: +/-0.3 ppm
+	# Aging:     +/-1.0 ppm
+
+	# Tolerance is RSS of stability and aging in percent.
+	
+	# Nominal           MOD1                 Tol(%)   Floor   Resolution
+	# ---------------   -------------------- -------- ------  ----------
+
+Mode: Hertz
+
+	1e-6     125e+6     -56.02    23.97      1.044e-4 0       NA     
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### DC Volts #####
+
+	# Accuracy (same as offset): 1% of setting + 2 mV + 0.5% of amplitude
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------- ------ ------  ----------
+
+Mode: Volts L
+
+	# 50 Ohm terminated
+
+	 -5      5          NA     NA            1.5    2e-3    NA   
+
+Mode: Volts
+
+	# Open-circuit
+
+	 -10     10         NA     NA            1.5    4e-3    NA   
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Sine Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%, < 10 MHz
+	#                               +/-2%, 10 MHz to 50 MHz
+	#                               +/-5%, 50 MHz to 80 MHz
+
+	# Vrms and dBm are converted to Vpp for lookup.
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------- ------ ------  ----------
+
+Mode: Vpp SI L
+
+	# 50 Ohm terminated
+
+	# Below 10 mVpp is unspec'd.
+
+    1e-3     9.9e-3     1e-6   80e+6         NA     NA      NA
+
+	# 1 kHz
+
+    10e-3    10         1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    10         1e-6   9.9999999e+6  1.414  1e-3    NA
+    10e-3    10         10e+6  50e+6         2.236  1e-3    NA
+    10e-3    10         50e+6  80e+6         5.099  1e-3    NA
+
+Mode: Vpp SI 
+
+	# Open-circuit
+
+	# Below 20 mVpp is unspec'd.
+
+    2e-3     19.9e-3    1e-6   80e+6         NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    20         1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    20         1e-6   9.9999999e+6  1.414  2e-3    NA
+    20e-3    20         10e+6  50e+6         2.236  2e-3    NA
+    20e-3    20         50e+6  80e+6         5.099  2e-3    NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Square Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%, < 10 MHz
+	#                               +/-2%, 10 MHz to 50 MHz
+	#                               +/-5%, 50 MHz to 80 MHz
+
+	# Vrms is converted to Vpp for lookup.
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------- ------ ------  ----------
+
+Mode: Vpp SQ L
+
+	# 50 Ohm terminated
+
+	# Below 10mVpp is unspec'd.
+
+    1e-3     9.9e-3     1e-6   80e+6         NA     NA      NA
+
+	# 1 kHz
+
+    10e-3    10         1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    10         1e-6   9.9999999e+6  1.414  1e-3    NA
+    10e-3    10         10e+6  50e+6         2.236  1e-3    NA
+    10e-3    10         50e+6  80e+6         5.099  1e-3    NA
+
+Mode: Vpp SQ
+
+	# Open-circuit
+
+	# Below 20mVpp is unspec'd.
+
+    2e-3     19.9e-3    1e-6   80e+6         NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    20         1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    20         1e-6   9.9999999e+6  1.414  2e-3    NA
+    20e-3    20         10e+6  50e+6         2.236  2e-3    NA
+    20e-3    20         50e+6  80e+6         5.099  2e-3    NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Ramp Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%
+
+	# Vrms is converted to Vpp for lookup.
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------- ------ ------  ----------
+
+Mode: Vpp RP L
+
+	# 50 Ohm terminated
+
+	# Below 10mVpp is unspec'd.
+
+    1e-3     9.9e-3     1e-6   1e+6          NA     NA      NA
+
+	# 1 kHz
+
+    10e-3    10         1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    10         1e-6   1e+6          1.414  1e-3    NA
+
+Mode: Vpp RP
+
+	# Open-circuit
+
+	# Below 20 mVpp is unspec'd.
+
+    2e-3     19.9e-3    1e-6   1e+6          NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    20         1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    20         1e-6   1e+6          1.414  2e-3    NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Pulse Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%, < 10 MHz
+	#                               +/-2%, 10 MHz to 50 MHz
+
+	# Vrms is converted to Vpp for lookup.
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------- ------ ------  ----------
+
+Mode: Vpp PU L
+
+	# 50 Ohm terminated
+
+	# Below 10 mVpp is unspec'd.
+
+    1e-3     9.9e-3     500e-6 50e+6         NA     NA      NA
+
+	# 1kHz
+
+    10e-3    10         1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    10         500e-6 9.9999999e+6  1.414  1e-3    NA
+    10e-3    10         10e+6  50e+6         2.236  1e-3    NA
+
+Mode: Vpp PU
+
+	# Open-circuit
+
+	# Below 20 mVpp is unspec'd.
+
+    2e-3     19.9e-3    500e-6 50e+6         NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    20         1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    20         500e-6 9.9999999e+6  1.414  2e-3    NA
+    20e-3    20         10e+6  50e+6         2.236  2e-3    NA
+
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Exponential Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%, < 10 MHz
+	#                               +/-2%, 10 MHz to 25 MHz
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------  ------ ------  ----------
+
+Mode: Vpp EXP L
+
+	# 50 Ohm terminated
+
+	# Below 10mVpp is unspec'd.
+
+    1e-3     9.9e-3     1e-6   25e+6         NA     NA      NA
+
+	# 1 kHz
+
+    10e-3    10         1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    10         1e-6   9.9999999e+6  1.414  1e-3    NA
+    10e-3    10         10e+6  25e+6         2.236  1e-3    NA
+
+Mode: Vpp EXP 
+
+	# Open-circuit
+
+	# Below 20 mVpp is unspec'd.
+
+    2e-3     19.9e-3    1e-6   25e+6         NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    20         1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    20         1e-6   9.9999999e+6  1.414  2e-3    NA
+    20e-3    20         10e+6  25e+6         2.236  2e-3    NA
+
+Mode: Volts EXP L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    300.0e-6 2.367      1e-6   25e+6         NA     NA      NA
+
+Mode: Volts EXP
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    600.0e-6 4.734      1e-6   25e+6         NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Sync Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%, < 10 MHz
+	#                               +/-2%, 10 MHz to 25 MHz
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------  ------ ------  ----------
+
+Mode: Vpp SY L
+
+	# 50 Ohm terminated
+
+	# Below 10 mVpp is unspec'd.
+
+    1e-3     9.9e-3     1e-6   25e+6         NA     NA      NA
+
+	# 1 kHz
+
+    10e-3    6.086      1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    6.086      1e-6   9.9999999e+6  1.414  1e-3    NA
+    10e-3    6.086      10e+6  25e+6         2.236  1e-3    NA
+
+Mode: Vpp SY 
+
+	# Open-circuit
+
+	# Below 20 mVpp is unspec'd.
+
+    2e-3     19.9e-3    1e-6   25e+6         NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    12.17      1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    12.17      1e-6   9.9999999e+6  1.414  2e-3    NA
+    20e-3    12.17      10e+6  25e+6         2.236  2e-3    NA
+
+Mode: Volts SY L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    100e-6   778.8e-3   1e-6     25e+9    NA     NA      NA
+
+Mode: Volts SY
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    200e-6   1.557      1e-6     25e+9    NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Cardiac Wave #####
+
+	# Accuracy (at 1 kHz, > 10 mVpp): +/-1% of setting +/-1 mVpp
+	# Flatness (relative to 1 kHz):  +/-1%, < 10 MHz
+	#                               +/-2%, 10 MHz to 25 MHz
+
+	# Nominal           MOD1                 Tol(%) Floor   Resolution
+	# ---------------   -------------------  ------ ------  ----------
+
+Mode: Vpp CD L
+
+	# 50 Ohm terminated
+
+	# Below 10 mVpp is unspec'd.
+
+    1e-3     9.9e-3     1e-6   25e+6         NA     NA      NA
+
+	# 1 kHz
+
+    10e-3    10         1e+3   1e+3          1.0    1e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    10e-3    10         1e-6   9.9999999e+6  1.414  1e-3    NA
+    10e-3    10         10e+6  25e+6         2.236  1e-3    NA
+
+Mode: Vpp CD 
+
+	# Open-circuit
+
+	# Below 20 mVpp is unspec'd.
+
+    2e-3     19.9e-3    1e-6   25e+6         NA     NA      NA
+
+	# 1 kHz
+
+    20e-3    20         1e+3   1e+3          1.0    2e-3    NA
+
+	# Tolerance is RSS of absolute accuracy at 1 kHz and flatness.
+	
+    20e-3    20         1e-6   9.9999999e+6  1.414  2e-3    NA
+    20e-3    20         10e+6  25e+6         2.236  2e-3    NA
+
+Mode: Volts CD L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    100e-6   659.2e-3   1e-6     25e+9    NA     NA      NA
+
+Mode: Volts CD
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    200e-6   1.318      1e-6     25e+9    NA     NA      NA
+
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+##### Noise #####
+
+	# Nominal           MOD1              Tol(%) Floor   Resolution
+	# ---------------   ----------------  ------ ------  ----------
+
+Mode: Vpp OI L
+
+	# 50 Ohm terminated
+
+    1e-3     10         NA       NA       NA     NA      NA
+
+Mode: Vpp OI 
+
+	# Open-circuit
+
+    2e-3     20         NA       NA       NA     NA      NA
+
+Mode: Volts OI L
+
+	# Vrms (no conversion to Vpp supplied)
+	# 50 Ohm terminated
+
+    200e-6   1.901      NA       NA       NA     NA      NA
+
+Mode: Volts OI
+
+	# Vrms (no conversion to Vpp supplied)
+	# Open-circuit
+
+    400e-6   3.802      NA       NA       NA     NA      NA

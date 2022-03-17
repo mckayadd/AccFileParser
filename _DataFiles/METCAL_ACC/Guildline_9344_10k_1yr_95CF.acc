@@ -1,0 +1,51 @@
+  # This file contains 365 day accuracy information for the
+  # Guildline Instruments Limited / Model 9344/10k
+
+  # $Revision: 9490 $
+
+Begin Header
+  instrument      =               Guildline 9344/10k
+  interval        =               365 days
+  confidence      =               2 sigma
+End Header
+
+  # Any special Notes
+                # Reference document was downloaded from Guildline Instruments on 10 Sep 2008
+                # The is for the Guildline 9344/10k Decade Resistance Standard
+
+                # The below specifications only applies to the above reference device
+
+  # Nominal                       Mod 1                   Tolerance   Floor       Resolution
+  # ---------------------------------------------------------------------------------------------
+
+Mode:           UCal
+                # Calibration Uncertainty.
+
+               1              10  NA          NA            0.010000    0.00E+00    1.00E+00
+              11             110  NA          NA            0.010000    0.00E+00    1.00E+01
+             111            1110  NA          NA            0.010000    0.00E+00    1.00E+02
+            1111           11110  NA          NA            0.010000    0.00E+00    1.00E+03
+
+Mode:           Stability
+                # Time Stability.
+
+               1              10  NA          NA            0.002000    0.00E+00    1.00E+00
+              11             110  NA          NA            0.001000    0.00E+00    1.00E+01
+             111            1110  NA          NA            0.001000    0.00E+00    1.00E+02
+            1111           11110  NA          NA            0.001000    0.00E+00    1.00E+03
+            
+Mode:           Temp Coefficient
+                # The below specification is +/- ppm per degrees C
+
+               1              10  NA          NA            0.000500    0.00E+00    1.00E+00
+              11             110  NA          NA            0.000500    0.00E+00    1.00E+01
+             111            1110  NA          NA            0.000500    0.00E+00    1.00E+02
+            1111           11110  NA          NA            0.000500    0.00E+00    1.00E+03
+
+Mode:           Power Coefficient
+                # The below specification is +/- ppm per mW
+
+               1              10  NA          NA            0.000020    0.00E+00    1.00E+00
+              11             110  NA          NA            0.000020    0.00E+00    1.00E+01
+             111            1110  NA          NA            0.000020    0.00E+00    1.00E+02
+            1111           11110  NA          NA            0.000020    0.00E+00    1.00E+03

@@ -1,0 +1,100 @@
+Begin Header
+	instrument = Philips PM 6666
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# True Mod 1 field limits are not reflected in this table.
+	# The Mod1 field is checked against actual limits by the
+	# MET/CAL procedure editor.
+
+	# Note:
+	# LSD displayed is calculated LSD, rounded to the nearest
+	# decade value.
+	# Resolution can be 1 LSD or 2 LSDs, depending on equation.
+	# Accuracy as percent of nominal = crystal accuracy = 5e-6/year.
+	# Floor spec is 1 or 2 LSD.
+
+	# Calculated LSD: 2.5e-7 * Frequency/measuring time
+	# Resolution: 2LSD if: LSD*measuring time/Frequency < 1e-7
+
+Mode: Hertz FA
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  -------   ---------  -------  ----------
+	0.1      120e6       0   350   NA         NA       NA
+    
+Mode: Hertz FC
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  --------  ---------  -------  ----------
+	70e6      900e6      10e-3 12  NA         NA       NA
+	900e6     1.1e9      15e-3 12  NA         NA       NA
+	1.1e9     1.3e9      40e-3 12  NA         NA       NA
+
+Mode: Hertz FR
+
+	# The resolution is a function of the measurement time
+	# and Frequency B: LSD = 25/(MEAS.TIME * FREQ B). 
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  -------   ---------  -------  ----------
+	0         1e-7       0   350   NA         NA       NA
+	1e-7      2e9        0   350   NA         NA       NA
+
+Mode: Seconds PA
+
+	# LSD displayed: SINGLE: 100ns if PERIOD < 100s.
+	#                AVERAGE: 2.5e-7*PERIOD/MEAS.TIME	
+	# Calculated LSD: 2.5e-7 * FREQ/MEAS.TIME
+	# Resolution: 2LSD if: LSD*MEAS.TIME/PERIOD < 1e-7
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  -------   ---------  -------  ----------
+	8e-9      2e+8       0   350   NA         NA       NA
+
+Mode: Seconds TI
+
+	# Resolution depends on the pulse repetition rate, which
+	# is not known when the time-interval measurement is made.
+	# LSD = 100ns / sqrt(N)
+	# Therefore the floor accuracy is set equal to the 
+	# timing-difference A-B channel specification.
+	# The resolution is assumed for a pulse repetition rate of
+	# one (1), which is conservative.
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  -------   ---------  -------  ----------
+	100e-9    2e+8       0   350   NA         NA       NA
+
+Mode: Volts MX MN
+
+	# Inaccuracy DC and 100Hz to 12MHz
+	#   Input signals within +/-5V:
+	#     30mV +/- 1% of reading +/- 3% Vpp
+	#   Input signals outside +/-5V:
+	#     300mV +/- 3% of reading +/- 3% Vpp
+	#
+	# Inaccuracy 12MHz to 50MHz
+	#   Input signals within +/-5V:
+	#     30mV +/- 10% of reading +/- 10% Vpp
+	#   Input signals outside +/-5V:
+	#     300mV +/- 10% of reading +/- 10% Vpp
+	#
+	# The peak-to-peak voltage (Vpp) of the input signal is not
+	# entered in the FSC fields.  Therefore no entries are made
+	# for accuracy.
+
+	# DC Voltage
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  -------   ---------  -------  ----------
+	-51       51         NA  NA    NA         NA       NA 
+
+	# AC Min & Max
+
+	# NOMINAL            MOD1      Tolerance  Floor    Resolution
+	#------------------  -------   ---------  -------  ----------
+	-51       51         100 50e6  NA         NA       NA

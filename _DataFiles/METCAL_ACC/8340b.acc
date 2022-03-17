@@ -1,0 +1,232 @@
+Begin Header
+	instrument = HP 8340B
+	interval   = 12 Months
+	confidence = 2 sigma
+End Header
+	
+	# $Revision: 3789 $
+
+	# Source: HP 8340B Synthesized Sweeper (Including Options
+	# 001, 004, 005, 006, and 007), HP 8341B Synthesized Sweeper
+	# (Including Options 003, 004) Manual, Part No. 08340-90243,
+	# August 1986
+
+	# These specifications are valid after a warmup time of 30
+	# minutes (reference temperature 23 degC).
+	#
+	# The frequency reference specifications are for a unit that
+	# has been connected to AC mains (unit in ON or STANDBY) for
+	# 7 to 30 days continuously. If disconnected from AC power
+	# less than 24 hours following previous established stability,
+	# specified aging rate performance is achieved following a
+	# 72 hour warm up.
+
+Mode: Decibels
+
+      # Standard instrument
+	# Internally leveled, AM off.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-110   -100        10e6    26.5e9  NA    NA     NA  
+	-100   -80         10e6  2.2999e9  0     2.1    0.05
+	-100   -80         2.3e9 19.999e9  0     2.9    0.05
+	-100   -80         20e9    26.5e9  0     3.4    0.05
+	-79.95 -50         10e6  2.2999e9  0     1.8    0.05
+	-79.95 -50         2.3e9 19.999e9  0     2.6    0.05
+	-79.95 -50         20e9    26.5e9  0     3.1    0.05
+	-49.95 -20         10e6  2.2999e9  0     1.5    0.05
+	-49.95 -20         2.3e9 19.999e9  0     2.3    0.05
+	-49.95 -20         20e9    26.5e9  0     2.8    0.05
+	-19.95 -10         10e6  2.2999e9  0     1.2    0.05
+	-19.95 -10         2.3e9 19.999e9  0     2.0    0.05
+	-19.95 -10         20e9    26.5e9  0     2.5    0.05
+	-9.95  +10         10e6  2.2999e9  0     0.9    0.05
+	-9.95  +10         2.3e9 19.999e9  0     1.5    0.05
+	-9.95  +10         20e9    26.5e9  0     2.0    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.8    0.05
+	+10    +18         20e9    26.5e9  0     2.3    0.05
+
+Mode: Decibels 001
+
+	# Option 001, Front Panel Output w/o Attenuator
+	# Internally leveled, AM off.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-20    -10         10e6  2.2999e9  0     1.7    0.05
+	-20    -10         2.3e9 19.999e9  0     2.1    0.05
+	-20    -10         20e9    26.5e9  0     2.5    0.05
+	-10    +10         10e6  2.2999e9  0     0.9    0.05
+	-10    +10         2.3e9 19.999e9  0     1.3    0.05
+	-10    +10         20e9    26.5e9  0     1.7    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.6    0.05
+	+10    +18         20e9    26.5e9  0     2.0    0.05
+
+Mode: Decibels 004
+
+	# Option 004, Rear Panel Output w/Attenuator
+	# Internally leveled, AM off.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-110   -100        10e6    26.5e9  NA    NA     NA  
+	-100   -82         10e6  2.2999e9  0     2.2    0.05
+	-100   -82         2.3e9 19.999e9  0     3.1    0.05
+	-100   -82         20e9    26.5e9  0     3.6    0.05
+	-81.95 -52         10e6  2.2999e9  0     1.9    0.05
+	-81.95 -52         2.3e9 19.999e9  0     2.8    0.05
+	-81.95 -52         20e9    26.5e9  0     3.3    0.05
+	-51.95 -22         10e6  2.2999e9  0     1.6    0.05
+	-51.95 -22         2.3e9 19.999e9  0     2.5    0.05
+	-51.95 -22         20e9    26.5e9  0     3.0    0.05
+	-21.95 -12         10e6  2.2999e9  0     1.3    0.05
+	-21.95 -12         2.3e9 19.999e9  0     2.2    0.05
+	-21.95 -12         20e9    26.5e9  0     2.7    0.05
+	-11.95 +10         10e6  2.2999e9  0     1.0    0.05
+	-11.95 +10         2.3e9 19.999e9  0     1.7    0.05
+	-11.95 +10         20e9    26.5e9  0     2.2    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     2.0    0.05
+	+10    +18         20e9    26.5e9  0     2.5    0.05
+
+Mode: Decibels 005
+
+	# Option 005, Rear Panel Output w/o Attenuator
+	# Internally leveled, AM off.
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-20    -10         10e6  2.2999e9  0     1.8    0.05
+	-20    -10         2.3e9 19.999e9  0     2.3    0.05
+	-20    -10         20e9    26.5e9  0     2.7    0.05
+	-10    +10         10e6  2.2999e9  0     1.0    0.05
+	-10    +10         2.3e9 19.999e9  0     1.5    0.05
+	-10    +10         20e9    26.5e9  0     1.9    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.8    0.05
+	+10    +18         20e9    26.5e9  0     2.2    0.05
+
+Mode: dB Flat 
+
+      # Flatness, internally leveled
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-110   -100        10e6    26.5e9  NA    NA     NA  
+	-100   -80         10e6  2.2999e9  0     1.7    0.05
+	-100   -80         2.3e9 19.999e9  0     2.5    0.05
+	-100   -80         20e9    26.5e9  0     3.0    0.05
+	-79.95 -50         10e6  2.2999e9  0     1.4    0.05
+	-79.95 -50         2.3e9 19.999e9  0     2.2    0.05
+	-79.95 -50         20e9    26.5e9  0     2.7    0.05
+	-49.95 -20         10e6  2.2999e9  0     1.2    0.05
+	-49.95 -20         2.3e9 19.999e9  0     1.9    0.05
+	-49.95 -20         20e9    26.5e9  0     2.4    0.05
+	-19.95 -10         10e6  2.2999e9  0     0.9    0.05
+	-19.95 -10         2.3e9 19.999e9  0     1.6    0.05
+	-19.95 -10         20e9    26.5e9  0     2.1    0.05
+	-9.95  +10         10e6  2.2999e9  0     0.6    0.05
+	-9.95  +10         2.3e9 19.999e9  0     1.1    0.05
+	-9.95  +10         20e9    26.5e9  0     1.6    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.2    0.05
+	+10    +18         20e9    26.5e9  0     1.7    0.05
+
+Mode: dB Flat 001
+
+      # Flatness, internally leveled
+	# Option 001, Front Panel Output w/o Attenuator
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-20    -10         10e6  2.2999e9  0     0.8    0.05
+	-20    -10         2.3e9 19.999e9  0     1.5    0.05
+	-20    -10         20e9    26.5e9  0     1.9    0.05
+	-10    +10         10e6  2.2999e9  0     0.6    0.05
+	-10    +10         2.3e9 19.999e9  0     0.9    0.05
+	-10    +10         20e9    26.5e9  0     1.3    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.0    0.05
+	+10    +18         20e9    26.5e9  0     1.4    0.05
+
+Mode: dB Flat 004
+
+      # Flatness, internally leveled
+	# Option 004, Rear Panel Output w/Attenuator
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-110   -100        10e6    26.5e9  NA    NA     NA  
+	-100   -82         10e6  2.2999e9  0     1.8    0.05
+	-100   -82         2.3e9 19.999e9  0     2.7    0.05
+	-100   -82         20e9    26.5e9  0     3.2    0.05
+	-81.95 -52         10e6  2.2999e9  0     1.5    0.05
+	-81.95 -52         2.3e9 19.999e9  0     2.4    0.05
+	-81.95 -52         20e9    26.5e9  0     2.9    0.05
+	-51.95 -22         10e6  2.2999e9  0     1.3    0.05
+	-51.95 -22         2.3e9 19.999e9  0     2.1    0.05
+	-51.95 -22         20e9    26.5e9  0     2.6    0.05
+	-21.95 -12         10e6  2.2999e9  0     1.0    0.05
+	-21.95 -12         2.3e9 19.999e9  0     1.8    0.05
+	-21.95 -12         20e9    26.5e9  0     2.3    0.05
+	-11.95 +10         10e6  2.2999e9  0     0.7    0.05
+	-11.95 +10         2.3e9 19.999e9  0     1.3    0.05
+	-11.95 +10         20e9    26.5e9  0     1.8    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.4    0.05
+	+10    +18         20e9    26.5e9  0     1.9    0.05
+
+Mode: dB Flat 005
+
+      # Flatness, internally leveled
+	# Option 005, Rear Panel Output w/o Attenuator
+
+	# NOMINAL          MOD1            Tol.  Floor  Res.
+	#----------------  --------------  ----  -----  ----
+	-20    -10         10e6  2.2999e9  0     0.9    0.05
+	-20    -10         2.3e9 19.999e9  0     1.7    0.05
+	-20    -10         20e9    26.5e9  0     2.1    0.05
+	-10    +10         10e6  2.2999e9  0     0.7    0.05
+	-10    +10         2.3e9 19.999e9  0     1.1    0.05
+	-10    +10         20e9    26.5e9  0     1.5    0.05
+	+10    +18         10e6  2.2999e9  NA    NA     NA
+	+10    +18         2.3e9 19.999e9  0     1.2    0.05
+	+10    +18         20e9    26.5e9  0     1.6    0.05
+
+Mode: Hertz
+
+	# Aging rate, per year
+
+	# The frequency reference specifications are for a unit that
+	# has been connected to AC mains (unit in ON or STANDBY) for
+	# 7 to 30 days continuously. If disconnected from AC power
+	# less than 24 hours following previous established stability,
+	# specified aging rate performance is achieved following a
+	# 72 hour warm up.
+
+	# Overall accuracy of internal time base is a function of time
+	# base calibration +/- aging rate +/- temperature effects +/-
+	# line effects
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e6     26.5e9    -110     +18     2.5e-5  0      1 
+
+Mode: Hz Line
+
+	# Change due to 10% line voltage change (typical)
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e6     26.5e9    -110     +18     1e-9     0     1 
+
+Mode: Hz TC
+
+	# Temperature Coefficient, per degree C
+ 
+	# NOMINAL          MOD1              Tol.   Floor  Res.
+	#----------------  --------------  -------  -----  ----
+	10e6     26.5e9    -110     +18     1e-8     0     1 

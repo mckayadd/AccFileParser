@@ -1,0 +1,17 @@
+Begin Header
+	instrument = Wavetek 910R
+	interval   = 12 months
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Wavetek (Fluke) 910R Stable (Rubidium) Frequency Reference
+	# Amplitude: Sine >0.6 Vrms in 50 Ohms
+	# Frequency Accuracy (assumes unit is locked to GPS): <1 x 10E-12
+
+Mode: Timebase
+
+	# Evaluation Quantity     Not Used   Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         1E+12           NA   NA    1.0E-10     0        NA

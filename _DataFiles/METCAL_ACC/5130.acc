@@ -1,0 +1,145 @@
+Begin Header
+	instrument = Fluke 5130A
+	interval   = 6 months
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the 5130A.
+	# This file applies to the 5130 FSC for DC and AC
+	# voltage and current only.
+
+	# 5100B manual, P/N 858290 Rev. 1 July 89
+
+Mode: Volts
+
+	# Accuracy, no enhancement, no divider override.
+	# This is the base unit accuracy, with the internal
+	# divider used in DC and the external divider used in
+	# AC.
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	-.0199999  .0199999 NA  NA   0.004   5.2e-6     0.1e-6
+	 .02       .199999  NA  NA   0.004   7e-6       1e-6
+	-.199999  -.02      NA  NA   0.004   7e-6       1e-6
+	 .2        1.99999  NA  NA   0.004   25e-6      10e-6
+	-1.99999  -.2       NA  NA   0.004   25e-6      10e-6
+	 2         19.9999  NA  NA   0.004   205e-6     100e-6
+	-19.9999  -2        NA  NA   0.004   205e-6     100e-6
+	 20        199.999  NA  NA   0.004   2e-3       1e-3
+	-199.999  -20       NA  NA   0.004   2e-3       1e-3
+	 200       1100     NA  NA   0.004   11e-3      10e-3
+	-1100     -200      NA  NA   0.004   11e-3      10e-3
+
+	# Base 5130A accuracy AC Volts with external divider 
+	# for low values < 20 milliVolts.
+
+	0.9000e-6 19.9999e-6   50   50e3  NA     NA       0.1e-6
+	20.000e-6 199.999e-6   50   50e3  NA     NA       0.1e-6
+	0.2000e-3 19.9999e-3   50   10e3  0.08   1e-6     0.1e-6
+	0.2000e-3 19.9999e-3   20e3 50e3  0.12   1e-6     0.1e-6
+
+	20.000e-3 199.999e-3   50   10e3  0.035  60e-6    1e-6
+	0.20000   1.99999      50   10e3  0.035  150e-6   10e-6
+	2.0000    19.9999      50   10e3  0.035  1.05e-3  100e-6
+	20.000    199.999      50   10e3  0.035  10e-3    1e-3
+	200.00    1100.00      50   1e3   0.035  55e-3    10e-3
+
+	20.000e-3 199.999e-3   20e3 50e3  0.06   66e-6    1e-6
+	0.20000   1.99999      20e3 50e3  0.06   210e-6   10e-6
+	2.0000    19.9999      20e3 50e3  0.06   1.65e-3  100e-6
+	20.000    110.000      20e3 20e3  0.06   16e-3    1e-3
+
+Mode: Volts O
+
+	# Divider Override specification, no accuracy
+	# enhancement. In DC the internal divider is disabled,
+	# in AC the external divider is disabled and so in that
+	# case the range is the lowest 1mV to 20mV range (the
+	# one with 50 Ohms output impedance).
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	-1.99999   1.99999      NA  NA     0.004  205e-6   100e-6
+	 2         19.9999      NA  NA     0.004  205e-6   100e-6
+	-19.9999  -2            NA  NA     0.004  205e-6   100e-6
+	 20        199.999      NA  NA     0.004  2e-3     1e-3
+	-199.999  -20           NA  NA     0.004  2e-3     1e-3
+	 200       1100         NA  NA     0.004  11e-3    10e-3
+	-1100     -200          NA  NA     0.004  11e-3    10e-3
+
+	 0.9000e-3 19.9999e-3   50   10e3  0.035  6e-6     0.1e-6
+	 0.9000e-3 19.9999e-3   20e3 50e3  0.06   6.6e-6   0.1e-6
+
+	 20.000e-3 199.999e-3   50   10e3  0.035  60e-6    1e-6
+	 0.20000   1.99999      50   10e3  0.035  150e-6   10e-6
+	 2.0000    19.9999      50   10e3  0.035  1.05e-3  100e-6
+	 20.000    199.999      50   10e3  0.035  10e-3    1e-3
+	 200.00    1100.00      50   1e3   0.035  55e-3    10e-3
+
+	 20.000e-3 199.999e-3   20e3 50e3  0.06   66e-6    1e-6
+	 0.20000   1.99999      20e3 50e3  0.06   210e-6   10e-6
+	 2.0000    19.9999      20e3 50e3  0.06   1.65e-3  100e-6
+	 20.000    110.000      20e3 20e3  0.06   16e-3    1e-3
+
+Mode: Amps
+
+	# Current accuracy specification.
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	 9e-6        199.999e-6 NA  NA   0.015  14e-9    1e-9
+	-199.999e-6 -9e-6       NA  NA   0.015  14e-9    1e-9
+	 200e-6      1.99999e-3 NA  NA   0.015  50e-9    10e-9
+	-1.99999e-3 -200e-6     NA  NA   0.015  50e-9    10e-9
+	 2e-3        .0199999   NA  NA   0.015  410e-9   100e-9
+	-.0199999   -2e-3       NA  NA   0.015  410e-9   100e-9
+	 .02         .199999    NA  NA   0.015  4.01e-6  1e-6
+	-.199999    -.02        NA  NA   0.015  4.01e-6  1e-6
+	 .2          1.99999    NA  NA   0.015  40.01e-6 10e-6
+	-1.99999    -.2         NA  NA   0.015  40.01e-6 10e-6
+	  9e-6      199.999e-6  50  1e3  0.05   30e-9    1e-9
+	  9e-6      199.999e-6  2e3 5e3  NA     NA       1e-9
+	 200e-6     1.99999e-3  50  1e3  0.05   120e-9   10e-9
+	 200e-6     1.99999e-3  2e3 5e3  NA     NA       10e-9
+	 2e-3       .0199999    50  1e3  0.05   1.02e-6  0.1e-6
+	 2e-3       .0199999    2e3 5e3  NA     NA       0.1e-6
+	 .02        .199999     50  1e3  0.05   10.02e-6 1e-6
+	 .02        .199999     2e3 5e3  NA     NA       1e-6
+	 .2         1.99999     50  1e3  0.05   100.02e-6 10e-6
+	 .2         1.99999     2e3 5e3  NA     NA        10e-6
+
+# ------------------------------------------------------------------------------
+
+	# This section of the file contains accuracy information for the RESF
+	# resistance values.
+	# These are the specifications of the resistance
+	# functions of the 5130A.
+
+Mode: Ohms 2W
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	  1      10e3     NA  NA     NA        NA     NA
+	  100e3  100e3	  NA  NA     0.003     0      NA
+	  1e6    1e6      NA  NA     0.01      0      NA
+	  10e6   10.1e6   NA  NA     0.03      0      NA
+
+Mode: Ohms 4W
+
+	#      Nominal       Mod 1  Tolerance Floor  Resolution
+	# --------------- --------- -------- ------- ----------
+
+	  1      1        NA  NA     0.015     0      NA
+	  10     10       NA  NA     0.01      0      NA
+	  100    1e5      NA  NA     0.003     0      NA
+	  1e6    1e6      NA  NA     0.01      0      NA
+	  10e6   10e6     NA  NA     0.03      0      NA
+
+# ------------------------------------------------------------------------------

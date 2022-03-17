@@ -1,0 +1,32 @@
+  # This file contains 365 day accuracy information for the
+  # Manufacturer / Model
+
+  # $Revision: 3789 $
+
+Begin Header
+  instrument     =             Fluke 80K-15
+  interval       =             365 days
+  confidence     =             2 sigma
+End Header
+
+  # Any special Notes
+               # Reference document was PN 690385, May 1988
+               # additionally referenced Product Support Group for AC to apply to 45 to 65 Hz
+               # The is for the Fluke 80K-15 Electonic Air Cleaner Probe
+
+  # DC and AC Voltage
+
+  # Any notes for Voltage
+
+               # The below specifications only apply when used with a Voltmeter (ac or dc) having an input
+               # impedance of 10Mohm +/- 1%
+               # and only applies to a temperature range of 20degC to 30degC
+               # Does NOT include the Voltmeter accuracy specifications
+
+  # Nominal                    Mod 1                   Tolerance   Floor       Resolution
+  # ------------------------------------------------------------------------------------------
+
+Mode:          Volts
+   -15.0000E+03   -1.0000E+03  NA          NA            2.000000    0.00E+00    1.00E-03
+      1.000E+03  15.00000E+03  NA          NA            2.000000    0.00E+00    1.00E-03
+      1.000E+03  10.00000E+03    45.0E+00   65.00E+00    5.000000    0.00E+00    1.00E-03

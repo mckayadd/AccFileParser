@@ -1,0 +1,16 @@
+Begin Header
+	instrument = Fluke 2635T
+	interval   = 90 day
+	confidence = 2.58 sigma
+End Header
+
+	# $Revision: 3789 $
+
+Mode: degC
+
+	# NOMINAL               MOD1         Tol.  Floor   Res.
+	#---------------------  -----------  ----  ------  ------
+	-196       -0.01        NA     NA    0     0.05    0.02 
+	 0          99.99       NA     NA    0     0.08    0.02 
+	 100        299.99      NA     NA    0     0.10    0.02 
+	 300        400         NA     NA    0     0.13    0.02 

@@ -1,0 +1,74 @@
+Begin Header
+	instrument = HP 5335A
+	interval   = 90 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# MET/CAL accuracy file for the Hewlett-Packard 5335A Universal Counter.
+
+	# Discussed confidence level with HP on  1999-06-22
+	# They gave 2 sigma as the value to use. 
+
+Mode: Hertz FA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0         200e6           0.06 100   NA         NA       NA
+   
+Mode: Hertz FC
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	150e6    1.3e9            -27  35    NA         NA       NA
+     
+Mode: Hertz FR
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	10e-9    10e15            0.06 100   NA         NA       NA
+
+Mode: Seconds PA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	10e-9    1e7              0.06 100   NA         NA       NA
+
+Mode: Seconds TI
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	0        1e7              0.06 100   NA         NA       NA    
+
+Mode: Degrees PR
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	-180     360              0.01 160e6 NA         NA       NA     
+
+Mode: Seconds WA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	5e-9     1e7              120e-3 140 NA         NA       NA     
+
+Mode: Percent DA
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	1        99               0.01 160e6 NA         NA       NA     
+
+Mode: Seconds RF
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	20e-9    10e-3            60e-3 70   NA         NA       NA     
+
+Mode: Volts
+
+	# NOMINAL                 MOD1       Tolerance  Floor    Resolution
+	#-----------------------  ---------  ---------  -------  ----------
+	-10      10               NA   NA    0.045      0.002    NA     
+	-100     100              NA   NA    0.045      0.02     NA     
+	-1000    1000             NA   NA    0.060      0.2      NA     

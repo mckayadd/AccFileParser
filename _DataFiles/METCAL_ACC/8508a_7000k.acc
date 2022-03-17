@@ -1,0 +1,51 @@
+Begin Header
+	instrument = Fluke 8508A-7000K
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# This file contains accuracy information for the
+	# Fluke 8508A-7000K 1 GOhm RESISTANCE STANDARD,
+	# Fluke 8508A-7000K 4W SHORT,
+	# 95% Confidence Interval
+
+	# Information per Fluke internal documents
+
+# ======================================================================
+
+# 8508A-7000K 1 GOhm RESISTANCE STANDARD
+
+Mode: UCal
+
+	# Calibration Uncertainty.
+	#
+
+	# Nominal              MOD1       Tolerance  Floor    Resolution
+	# -------------------  ---------  ---------  -------  ----------
+	0.999000e9 1.001000e9  NA    NA   0.011      0        NA
+
+Mode: Stability
+
+	# Time Stability.
+
+	# Nominal              MOD1       Tolerance  Floor    Resolution
+	# -------------------  ---------  ---------  -------  ----------
+	0.999000e9 1.001000e9  NA    NA   0.004      0        NA
+
+# ======================================================================
+
+# 8508A-7000K 4W SHORT
+
+Mode: Ohms Short
+
+	# Nominal              MOD1       Tolerance  Floor    Resolution
+	# -------------------  ---------  ---------  -------  ----------
+	0          0           NA    NA   0          250E-9   NA
+
+Mode: Volts Short
+
+	# Nominal              MOD1       Tolerance  Floor    Resolution
+	# -------------------  ---------  ---------  -------  ----------
+	0          0           NA    NA   0          250E-9   NA

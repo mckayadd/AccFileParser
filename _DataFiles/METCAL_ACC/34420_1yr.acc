@@ -1,0 +1,327 @@
+Begin Header
+	instrument = HP 34420A
+	interval   = 365 days
+	confidence = 3 sigma
+End Header
+
+	# $Revision: 3789 $
+
+Mode: Volts
+
+	# MOD3 = FE or blank (NPLC = 100), MOD3 = E (NPLC = 200)
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- -------
+	-1.1999999e-3 1.1999999e-3  NA    NA    0.0050  20e-9  100e-12
+	-11.999999e-3 11.999999e-3  NA    NA    0.0050  30e-9    1e-9  
+	-119.99999e-3 119.99999e-3  NA    NA    0.0040  400e-9  10e-9
+	-1.1999999    1.1999999     NA    NA    0.0035  4e-6    100e-9
+	-11.999999    11.999999     NA    NA    0.0030  40e-6   1e-6  
+	-119.99999    119.99999     NA    NA    0.0035  500e-6  10e-6
+
+Mode: Volts F
+
+	# MOD3 = F (NPLC = 10), unspec'd
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- -------
+	-119.9999     119.9999      NA    NA    NA      NA      NA    
+
+Mode: Volts Ratio
+
+	# unspec'd input voltage are not known.
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	-11999999     11999999      NA    NA    NA      NA       NA     
+
+Mode: Volts Diff
+
+	# unspec'd input voltage are not known.
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	-119.99999    119.99999     NA    NA    NA      NA       NA
+
+Mode: Ohms 2W
+
+	# MOD3 = FE or blank (NPLC = 100), MOD3 = E (NPLC = 200)
+	# w/o Null, 0.2 Ohm floor adder
+
+	# NOMINAL                   MOD1        Tol.    Floor      Res.
+	# ------------------------- ----------- ------- ---------- ------
+	0.0000000     1.1999999     NA    NA    0.0070  200.002e-3 100e-9
+	1.200000      11.999999     NA    NA    0.0060  200.02e-3  1e-6
+	12.00000      119.99999     NA    NA    0.0060  200.2e-3   10e-6
+	0.1200000e3   1.1999999e3   NA    NA    0.0060  202e-3     100e-6
+	1.200000e3    11.999999e3   NA    NA    0.0060  220e-3     1e-3
+	12.00000e3    119.99999e3   NA    NA    0.0060  600e-3     10e-3
+	0.1200000e6   1.1999999e6   NA    NA    0.0070  4.2        100e-3
+
+Mode: Ohms 2W F
+
+	# MOD3 = F (NPLC = 10), unspec'd
+
+	# NOMINAL                   MOD1        Tol.    Floor      Res.
+	# ------------------------- ----------- ------- ---------- ------
+	0.0000000     1.1999999e6   NA    NA    NA      NA         NA
+
+Mode: Ohms 4W
+
+	# MOD3 = FE or blank (NPLC = 100), MOD3 = E (NPLC = 200)
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.0000000     1.1999999     NA    NA    0.0070  2e-6     100e-9
+	1.200000      11.999999     NA    NA    0.0060  20e-6    1e-6
+	12.00000      119.99999     NA    NA    0.0060  200e-6   10e-6
+	0.1200000e3   1.1999999e3   NA    NA    0.0060  2e-3     100e-6
+	1.200000e3    11.999999e3   NA    NA    0.0060  20e-3    1e-3
+	12.00000e3    119.99999e3   NA    NA    0.0060  400e-3   10e-3
+	0.1200000e6   1.1999999e6   NA    NA    0.0070  4        100e-3
+
+Mode: Ohms 4W F
+
+	# MOD3 = F (NPLC = 10), unspec'd
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.0000000     1.1999999e6   NA    NA    NA      NA       NA
+
+Mode: Ohms 4W Low_Pwr
+
+	# MOD3 = FE or blank (NPLC = 100), MOD3 = E (NPLC = 200)
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.0000000     1.1999999     NA    NA    0.0070  2e-6     100e-9
+	1.200000      11.999999     NA    NA    0.0060  20e-6    1e-6
+	12.00000      119.99999     NA    NA    0.0060  200e-6   10e-6
+	0.1200000e3   1.1999999e3   NA    NA    0.0060  2e-3     100e-6
+	1.200000e3    11.999999e3   NA    NA    0.0060  40e-3    1e-3
+	12.00000e3    119.99999e3   NA    NA    0.0060  1.5      10e-3
+	0.1200000e6   1.1999999e6   NA    NA    0.0070  4        100e-3
+
+Mode: Ohms 4W Low_Pwr F
+
+	# MOD3 = F (NPLC = 10), unspec'd
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.0000000     1.1999999e6   NA    NA    NA      NA       NA
+
+Mode: Ohms 4W V_Lmt
+
+	# MOD3 = FE or blank (NPLC = 100), MOD3 = E (NPLC = 200)
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.000000      11.999999     NA    NA    0.0070  20e-6    1e-6
+	12.00000      119.99999     NA    NA    0.0070  200e-6   10e-6
+
+Mode: Ohms 4W V_Lmt F
+
+	# MOD3 = F (NPLC = 10), unspec'd
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.000000      119.99999     NA    NA    NA      NA       NA
+
+##### For temperature measurement procedure writer must use #####
+##### ACC FSC to specify 34420A accuracy + sensor error.    #####
+
+Mode: Pt385_100_Ohm
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      800.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt385_100_Ohm F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      800.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt385_200_Ohm
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt385_200_Ohm F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt385_500_Ohm
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt385_500_Ohm F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt385_1_kOhm
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+
+Mode: Pt385_1_kOhm F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+
+Mode: Pt3916_100_Ohm
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+ 
+Mode: Pt3916_100_Ohm F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      630.000      NA     NA        NA     NA      0.001
+ 
+Mode: SPRT
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      661.000      NA     NA        0.0    0.013   0.001
+ 
+Mode: PRT
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.000      660.000      NA     NA        0.0    0.024   0.001
+ 
+Mode: TC_B
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	350           1820         NA     NA        NA     NA      1
+
+Mode: TC_B F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	350           1820         NA     NA        NA     NA      1
+ 
+Mode: TC_E
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        1000.0       NA     NA        NA     NA      0.1
+ 
+Mode: TC_E F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        1000.0       NA     NA        NA     NA      0.1
+ 
+Mode: TC_J
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        760.0        NA     NA        NA     NA      0.1
+ 
+Mode: TC_J F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        760.0        NA     NA        NA     NA      0.1
+
+Mode: TC_K
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        1372.0       NA     NA        NA     NA      0.1 
+
+Mode: TC_K F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        1372.0       NA     NA        NA     NA      0.1 
+
+Mode: TC_N
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        1300.0       NA     NA        NA     NA      0.1
+
+Mode: TC_N F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        1300.0       NA     NA        NA     NA      0.1
+
+Mode: TC_R
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	0             1768         NA     NA        NA     NA      1
+
+Mode: TC_R F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	0             1768         NA     NA        NA     NA      1
+ 
+Mode: TC_S
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	0             1768         NA     NA        NA     NA      1
+ 
+Mode: TC_S F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	0             1768         NA     NA        NA     NA      1
+
+Mode: TC_T
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        400.0        NA     NA        NA     NA      0.1
+
+Mode: TC_T F
+
+	# NOMINAL                  MOD1             Tol.   Floor   Res.
+	# -----------------------  ---------------  -----  ------  -----
+
+	-200.0        400.0        NA     NA        NA     NA      0.1

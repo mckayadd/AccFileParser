@@ -1,0 +1,133 @@
+Begin Header
+              Instrument  = HP 8483A
+              Interval    = 365 days
+              Confidence  = 2 sigma
+End Header
+
+# $Revision: 10961 $
+#
+# This file contains Specifications for the Equipment and Parameters
+# identified within the Header above.
+#
+# Source: Operating and Service Manual, 8480 Series Coaxial Power Sensors,
+# Manufacturing Part Number 08481-90173, December 2010
+#
+#                           Frequency R   100.0E-3to     2.0E+9Hz
+#                           Power Range     1.0E-6to   100.0E-3W
+#
+# Specifications are valid with EPM and EPM-P Series of Power Meters and are
+# in conjunction with and/or in addition to those of the power meter utilized.
+#
+# ============================================================================
+# Cal Factor Uncertainty
+#
+# Values represent maximum specified uncertainties from the manufacturer.
+#
+# Per Agilent: Cal factor measurement uncertainty for a test frequency between
+# two (explicitly specified) cal factor frequencies is the worst case uncertainty
+# of the two cal frequency points on either side of the test frequency.
+
+Mode: CF Unc
+
+# Power (W)                 Frequency (Hz)            Tol (%)     Floor   Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    100.0E-3     50.00E+6   50.00E+6         0.00          0         NA
+        1.0E-6    100.0E-3    100.00E+3   9.999E+6         1.59          0         NA
+        1.0E-6    100.0E-3     10.00E+6   30.00E+6         1.39          0         NA
+        1.0E-6    100.0E-3     30.00E+6  500.00E+6         1.41          0         NA
+        1.0E-6    100.0E-3    500.00E+6    1.20E+9         1.41          0         NA
+        1.0E-6    100.0E-3      1.20E+9    4.20E+9         1.46          0         NA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ============================================================================
+# Maximum SWR
+#
+# Floor value represents maximum (worst case) specified SWR value for adjacent
+# frequency.
+
+Mode: SWR
+
+# Frequency (Hz)            (Not Used)                Tol (%)      SWR    Resolution
+# ------------------------  ----------------------  ---------------------------------
+      100.0E+3    600.0E+3           NA         NA            0       1.80         NA
+      600.0E+3      2.0E+9           NA         NA            0       1.18         NA
+
+
+
+
+
+
+# ============================================================================
+# Power Linearity Adder
+#
+# Additional error due to non-linearity of the sensor relative to input power
+# level after zero and calibration at ambient environmental conditions.
+
+
+
+Mode: PwrLin
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6     10.0E-3           NA         NA         0.00          0         NA
+       10.0E-3    100.0E-3           NA         NA         3.00          0         NA
+
+# ============================================================================
+# Zero Set
+#
+# Precision or floor of the power meter zeroing operation with the sensor
+# connected.
+
+Mode: ZeroSet
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    100.0E-3           NA         NA            0    50.0E-9         NA
+
+# ============================================================================
+# Zero Drift
+#
+# Long-term (typically an hour) stability for a constant input power at a
+# constant temperature following a defined warm-up time.
+
+Mode: ZeroDrift
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    100.0E-3           NA         NA            0    10.0E-9         NA
+
+# ============================================================================
+# Measurement Noise
+#
+# Short-term (typically less than a minute) stability for a constant input
+# power at a constant temperature following a defined warm-up time.
+#
+# Specified with power meter number of averages at 16 (Normal Mode) or
+# 32 (x2 Mode), at room temperature, measured over a one minute interval and
+# two standard deviations.
+
+Mode: Noise
+
+# Power Level (W)           (Not Used)                Tol (%)   Floor (W) Resolution
+# ------------------------  ----------------------  ---------------------------------
+        1.0E-6    100.0E-3           NA         NA            0   110.0E-9         NA

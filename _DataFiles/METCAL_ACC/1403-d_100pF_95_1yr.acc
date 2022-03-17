@@ -1,0 +1,28 @@
+Begin Header
+	instrument = GenRad 1403-D
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+# GenRad (formerly General Radio) 1403-D (100 pF) STANDARD CAPACITOR
+# 1 year stability specifications, 95% Confidence Interval
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # NOMINAL             MOD1       Tolerance Floor    Resolution
+        # ------------------- ---------- --------- -------- ----------
+        99.9E-12   100.1E-12  NA   NA    0.02      0.01E-12  NA
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # NOMINAL             MOD1       Tolerance Floor Resolution
+        # ------------------- ---------- --------- ----- ----------
+        99.9E-12   100.1E-12  NA   NA    0.05      0     NA

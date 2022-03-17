@@ -1,0 +1,25 @@
+Begin Header
+	instrument = Hart 5126
+	interval   = 365 days
+	confidence = 2 sigma
+End Header
+
+# $Revision: 3789 $
+
+Mode: UCal
+
+        # Calibration Uncertainty.
+        #
+
+        # Nominal             Mod 1     Tolerance Floor   Resolution
+        # ------------------- --------- --------- ------- ----------
+          20         1121     NA   NA   0.02      0       0.01
+
+Mode: Stability
+
+        # Time Stability.
+        #
+
+        # Nominal             Mod 1     Tolerance Floor   Resolution
+        # ------------------- --------- --------- ------- ----------
+          20         1121     NA   NA   35E-4     0       0.01

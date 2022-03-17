@@ -1,0 +1,192 @@
+Begin Header
+	instrument = Agilent 34410A
+	interval   = 90 days
+	confidence = 3 sigma
+End Header
+
+	# $Revision: 3789 $
+
+	# Source: Agilent 34410A/11A Service Guide, Third Edition,
+	# April 2006.
+
+	# All specifications assume a 1 hour warm-up has elapsed
+
+Mode: Volts
+
+	# DC Volts function
+	# 100 NPLC integration setting
+
+	# For each additional volt over +/- 500 VDC add 0.02 mV of
+	# error. Adder must be computed externally and added to
+	# accuracy. Total spec must be related via ACC FSC.
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- ------
+	-119.9999e-3  119.9999e-3   NA    NA    0.0040  3.5e-6  0.1e-6
+	-1.199999     1.199999      NA    NA    0.0030  7e-6    1e-6 
+	-11.99999     11.99999      NA    NA    0.0020  50e-6   10e-6  
+	-119.9999     119.9999      NA    NA    0.0035  600e-6  100e-6
+	-1000.000     1000.000      NA    NA    0.0035  10e-3   1e-3 
+
+	# AC Volts function
+	# Slow AC Filter, sinewave
+
+	# Add 0.7 mV of error for each additional volt over 300 VAC. 
+	# Adder must be computed externally and added to accuracy.
+	# Total spec must be related via ACC FSC.
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- ------
+	0.3000e-3     1.0000e-3     3     300e3 NA      NA      0.1e-6
+
+	1.0001e-3     119.9999e-3   3     4.999 0.50    60e-6   0.1e-6
+	1.0001e-3     119.9999e-3   5     9.999 0.10    60e-6   0.1e-6
+	1.0001e-3     119.9999e-3   10    999.9 0.05    60e-6   0.1e-6
+	1.0001e-3     119.9999e-3   1e3   20e3  0.05    30e-6   0.1e-6
+	1.0001e-3     119.9999e-3   20e3  50e3  0.09    50e-6   0.1e-6
+	1.0001e-3     119.9999e-3   50e3  100e3 0.30    80e-6   0.1e-6
+	1.0001e-3     119.9999e-3   100e3 300e3 1.20    500e-6  0.1e-6
+
+	0.120000      1.199999      3     4.999 0.50    330e-6  1e-6
+	0.120000      1.199999      5     9.999 0.10    330e-6  1e-6
+	0.120000      1.199999      10    999.9 0.05    330e-6  1e-6
+	0.120000      1.199999      1e3   20e3  0.05    300e-6  1e-6
+	0.120000      1.199999      20e3  50e3  0.09    500e-6  1e-6
+	0.120000      1.199999      50e3  100e3 0.30    800e-6  1e-6
+	0.120000      1.199999      100e3 300e3 1.20    5e-3    1e-6
+
+	1.20000       11.99999      3     4.999 0.50    3.03e-3 10e-6
+	1.20000       11.99999      5     9.999 0.10    3.03e-3 10e-6
+	1.20000       11.99999      10    999.9 0.05    3.03e-3 10e-6
+	1.20000       11.99999      1e3   20e3  0.05    3e-3    10e-6
+	1.20000       11.99999      20e3  50e3  0.09    5e-3    10e-6
+	1.20000       11.99999      50e3  100e3 0.30    8e-3    10e-6
+	1.20000       11.99999      100e3 300e3 1.20    50e-3   10e-6
+
+	12.0000       119.9999      3     4.999 0.50    30e-3   100e-6
+	12.0000       119.9999      5     9.999 0.10    30e-3   100e-6
+	12.0000       119.9999      10    20e3  0.05    30e-3   100e-6
+	12.0000       119.9999      20e3  50e3  0.09    50e-3   100e-6
+	12.0000       119.9999      50e3  100e3 0.30    80e-3   100e-6
+	12.0000       119.9999      100e3 300e3 1.20    500e-3  100e-6
+	
+	120.000       750.000       3     4.999 0.50    225e-3  1e-3
+	120.000       750.000       5     9.999 0.10    225e-3  1e-3
+	120.000       750.000       10    20e3  0.05    225e-3  1e-3
+	120.000       750.000       20e3  50e3  0.09    375e-3  1e-3
+	120.000       750.000       50e3  100e3 0.30    600e-3  1e-3
+	120.000       750.000       100e3 300e3 1.20    3.75    1e-3
+
+Mode: Amps
+
+	# DC Current function
+	# 100 NPLC integration setting
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- ------
+	-119.9999e-6  119.9999e-6   NA    NA    0.04    25e-9   100e-12
+	-1.199999e-3  1.199999e-3   NA    NA    0.03    60e-9   1e-9
+	-11.99999e-3  11.99999e-3   NA    NA    0.03    2e-6    10e-9
+	-119.9999e-3  119.9999e-3   NA    NA    0.03    5e-6    100e-9
+	-1.199999     1.199999      NA    NA    0.08    10e-6   1e-6
+	-3.00000      3.00000       NA    NA    0.12    20e-6   10e-6
+
+	# AC Current function
+	# Slow AC Filter, sinewave
+
+	# 3 A range includes adder of 0.05% of reading + 0.05% of range
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- ------
+	100e-12       10e-6         3     10e3  NA      NA      100e-12
+	10.0001e-6    119.9999e-6   3     5e3   0.10    40e-9   100e-12
+	10.0001e-6    119.9999e-6   5e3   10e3  NA      NA      100e-12
+
+	120e-6        1.199999e-3   3     5e3   0.10    400e-9  1e-9
+	120e-6        1.199999e-3   5e3   10e3  NA      NA      1e-9
+
+	1.2e-3        11.99999e-3   3     5e3   0.10    4e-6    10e-9
+	1.2e-3        11.99999e-3   5e3   10e3  NA      NA      10e-9
+
+	12e-3         119.9999e-3   3     5e3   0.10    40e-6   100e-9
+	12e-3         119.9999e-3   5e3   10e3  NA      NA      100e-9
+
+	120e-3        1.199999      3     5e3   0.10    400e-6  1e-6
+	120e-3        1.199999      5e3   10e3  NA      NA      1e-6
+
+	1.20000       3.00000       3     5e3   0.15    1.8e-3  10e-6
+	1.20000       3.00000       5e3   10e3  NA      NA      10e-6
+
+Mode: Ohms 2W
+
+	# Resistance function (2 wire)
+	# 100 NPLC integration setting
+	# Without Math Null!
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.0000        119.9999      NA    NA    0.008   204e-3   100e-6
+	0.120000e3    1.199999e3    NA    NA    0.007   210e-3   1e-3
+	1.20000e3     11.99999e3    NA    NA    0.007   300e-3   10e-3
+	12.0000e3     119.9999e3    NA    NA    0.007   1.2      100e-3
+	0.120000e6    1.199999e6    NA    NA    0.010   10.2     1
+	1.20000e6     11.99999e6    NA    NA    0.030   100.2    10
+	12.0000e6     119.9999e6    NA    NA    0.600   10000.2  100
+	120.000e6     1199.999e6    NA    NA    6.000   10000.2  1000
+
+Mode: Ohms 4W
+
+	# Resistance function (4 wire)
+	# 100 NPLC integration setting
+
+	# NOMINAL                   MOD1        Tol.    Floor    Res.
+	# ------------------------- ----------- ------- -------- ------
+	0.0000        119.9999      NA    NA    0.008   4e-3     100e-6
+	0.120000e3    1.199999e3    NA    NA    0.007   10e-3    1e-3
+	1.20000e3     11.99999e3    NA    NA    0.007   100e-3   10e-3
+	12.0000e3     119.9999e3    NA    NA    0.007   1        100e-3
+	0.120000e6    1.199999e6    NA    NA    0.010   10       1
+	1.20000e6     11.99999e6    NA    NA    0.030   100      10
+	12.0000e6     119.9999e6    NA    NA    0.600   1000     100
+	120.000e6     1199.999e6    NA    NA    6.000   10000    1000
+
+Mode: Hertz
+
+	# Frequency function
+	# 1 second aperture
+
+	# For AC input voltages 10% to 120% of range except where noted.
+	# 750 V range limited to 750 Vrms. 100 mV range specifications
+	# are for full scale or greater inputs. For inputs from 10 mV to
+	# 100 mV, multiply total % of reading by 10.
+
+	# NOMINAL                   MOD1                Tol.    Floor    Res.
+	# ------------------------- ------------------  ------- -------- ------
+	3.000000      4.999999      10e-3  99.9999e-3   0.7     0        NA
+	5.000000      9.999999      10e-3  99.9999e-3   0.4     0        NA
+	10.00000      39.99999      10e-3  99.9999e-3   0.2     0        NA
+	40.00000      300.0000e3    10e-3  99.9999e-3   0.06    0        NA
+
+	3.000000      4.999999      100e-3      750     0.07    0        NA
+	5.000000      9.999999      100e-3      750     0.04    0        NA
+	10.00000      39.99999      100e-3      750     0.02    0        NA
+	40.00000      300.0000e3    100e-3      750     0.006   0        NA
+
+Mode: Farads
+
+	# 1 year specifications
+
+	# Assumes Math Null was performed
+
+	# Additional errors may occur for non-film capacitors.
+
+	# Specifications are for 1% to 120% of range on the 1 nF range and
+	# 10% to 120% of range on all other ranges.
+
+	# NOMINAL                   MOD1        Tol.    Floor   Res.
+	# ------------------------- ----------- ------- ------- ------
+	10e-12        1.199999e-9   NA    NA    0.50    5e-12   1e-15
+	1.2e-9        11.99999e-9   NA    NA    0.40    10e-12  10e-15
+	12e-9         119.9999e-9   NA    NA    0.40    100e-12 100e-15
+	120e-9        1.199999e-6   NA    NA    0.40    1e-9    1e-12
+	1.2e-6        11.99999e-6   NA    NA    0.40    10e-9   10e-12
