@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using AccFileParserLibrary;
+using SOA_DataAccessLib;
 
 namespace AccFileParserUI
 {
@@ -102,6 +103,15 @@ namespace AccFileParserUI
             }
             else
                 loadForm(evaluateForm);
+
+            if (soAUncertaintyForm != null)
+            {
+                evaluateForm.soaUncFunction = soAUncertaintyForm.getSelectedFunction();
+                if (evaluateForm.soaUncFunction != null)
+                {
+                    evaluateForm.loadSoAUncFuncGroupBox();
+                }
+            }
         }
 
         private void manageButtons(Button clickedButton)
