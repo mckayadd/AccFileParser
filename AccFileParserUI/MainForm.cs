@@ -121,10 +121,14 @@ namespace AccFileParserUI
                 if (b == clickedButton)
                 {
                     b.Enabled = false;
+                    b.BackColor = System.Drawing.SystemColors.MenuHighlight;
                     continue;
                 }
                 if (b.Enabled == false)
+                {
+                    b.BackColor = System.Drawing.SystemColors.HotTrack;
                     b.Enabled = true;
+                }
             }
         }
 

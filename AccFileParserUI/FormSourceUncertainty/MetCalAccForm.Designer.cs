@@ -272,7 +272,7 @@ namespace AccFileParserUI
             this.fileContentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fileContentRichTextBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.fileContentRichTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.fileContentRichTextBox.Location = new System.Drawing.Point(198, 68);
             this.fileContentRichTextBox.Name = "fileContentRichTextBox";
             this.fileContentRichTextBox.Size = new System.Drawing.Size(740, 160);

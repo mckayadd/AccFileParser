@@ -56,9 +56,9 @@ namespace AccFileParserUI
             this.buttonPtbDcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPtbDcc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonPtbDcc.ForeColor = System.Drawing.Color.White;
-            this.buttonPtbDcc.Location = new System.Drawing.Point(128, 3);
+            this.buttonPtbDcc.Location = new System.Drawing.Point(122, 3);
             this.buttonPtbDcc.Name = "buttonPtbDcc";
-            this.buttonPtbDcc.Size = new System.Drawing.Size(130, 30);
+            this.buttonPtbDcc.Size = new System.Drawing.Size(75, 30);
             this.buttonPtbDcc.TabIndex = 4;
             this.buttonPtbDcc.Text = "PTB DCC";
             this.buttonPtbDcc.UseVisualStyleBackColor = false;
@@ -74,7 +74,7 @@ namespace AccFileParserUI
             this.buttonMetCalAcc.ForeColor = System.Drawing.Color.White;
             this.buttonMetCalAcc.Location = new System.Drawing.Point(3, 3);
             this.buttonMetCalAcc.Name = "buttonMetCalAcc";
-            this.buttonMetCalAcc.Size = new System.Drawing.Size(130, 30);
+            this.buttonMetCalAcc.Size = new System.Drawing.Size(110, 30);
             this.buttonMetCalAcc.TabIndex = 3;
             this.buttonMetCalAcc.Text = "MET/CAL ACC";
             this.buttonMetCalAcc.UseVisualStyleBackColor = false;
