@@ -35,6 +35,7 @@ namespace AccFileParserUI
             this.buttonSourceUncertainty = new System.Windows.Forms.Button();
             this.buttonSelectTaxon = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.buttonMetrologyNetUnc = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@ namespace AccFileParserUI
             // 
             this.panelTop.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTop.Controls.Add(this.buttonMetrologyNetUnc);
             this.panelTop.Controls.Add(this.buttonEvaluate);
             this.panelTop.Controls.Add(this.buttonSoAUncertainty);
             this.panelTop.Controls.Add(this.buttonSourceUncertainty);
@@ -60,7 +62,7 @@ namespace AccFileParserUI
             this.buttonEvaluate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEvaluate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonEvaluate.ForeColor = System.Drawing.Color.White;
-            this.buttonEvaluate.Location = new System.Drawing.Point(408, 3);
+            this.buttonEvaluate.Location = new System.Drawing.Point(488, 3);
             this.buttonEvaluate.Name = "buttonEvaluate";
             this.buttonEvaluate.Size = new System.Drawing.Size(86, 40);
             this.buttonEvaluate.TabIndex = 4;
@@ -76,7 +78,7 @@ namespace AccFileParserUI
             this.buttonSoAUncertainty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSoAUncertainty.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSoAUncertainty.ForeColor = System.Drawing.Color.White;
-            this.buttonSoAUncertainty.Location = new System.Drawing.Point(270, 2);
+            this.buttonSoAUncertainty.Location = new System.Drawing.Point(152, 3);
             this.buttonSoAUncertainty.Name = "buttonSoAUncertainty";
             this.buttonSoAUncertainty.Size = new System.Drawing.Size(132, 40);
             this.buttonSoAUncertainty.TabIndex = 3;
@@ -92,7 +94,7 @@ namespace AccFileParserUI
             this.buttonSourceUncertainty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSourceUncertainty.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSourceUncertainty.ForeColor = System.Drawing.Color.White;
-            this.buttonSourceUncertainty.Location = new System.Drawing.Point(121, 3);
+            this.buttonSourceUncertainty.Location = new System.Drawing.Point(3, 3);
             this.buttonSourceUncertainty.Name = "buttonSourceUncertainty";
             this.buttonSourceUncertainty.Size = new System.Drawing.Size(143, 40);
             this.buttonSourceUncertainty.TabIndex = 2;
@@ -108,12 +110,13 @@ namespace AccFileParserUI
             this.buttonSelectTaxon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelectTaxon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSelectTaxon.ForeColor = System.Drawing.Color.White;
-            this.buttonSelectTaxon.Location = new System.Drawing.Point(10, 3);
+            this.buttonSelectTaxon.Location = new System.Drawing.Point(831, 3);
             this.buttonSelectTaxon.Name = "buttonSelectTaxon";
             this.buttonSelectTaxon.Size = new System.Drawing.Size(105, 40);
             this.buttonSelectTaxon.TabIndex = 1;
             this.buttonSelectTaxon.Text = "Select Taxon";
             this.buttonSelectTaxon.UseVisualStyleBackColor = false;
+            this.buttonSelectTaxon.Visible = false;
             this.buttonSelectTaxon.Click += new System.EventHandler(this.buttonSelectTaxon_Click);
             // 
             // panelMain
@@ -124,7 +127,24 @@ namespace AccFileParserUI
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(950, 650);
             this.panelMain.TabIndex = 2;
+            this.panelMain.Click += new System.EventHandler(this.buttonMetrolgoyButtonUncertainty_Click);
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
+            // buttonMetrologyNetUnc
+            // 
+            this.buttonMetrologyNetUnc.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonMetrologyNetUnc.FlatAppearance.BorderSize = 0;
+            this.buttonMetrologyNetUnc.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonMetrologyNetUnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMetrologyNetUnc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonMetrologyNetUnc.ForeColor = System.Drawing.Color.White;
+            this.buttonMetrologyNetUnc.Location = new System.Drawing.Point(290, 2);
+            this.buttonMetrologyNetUnc.Name = "buttonMetrologyNetUnc";
+            this.buttonMetrologyNetUnc.Size = new System.Drawing.Size(192, 40);
+            this.buttonMetrologyNetUnc.TabIndex = 5;
+            this.buttonMetrologyNetUnc.Text = "Metrology.Net Uncertainty";
+            this.buttonMetrologyNetUnc.UseVisualStyleBackColor = false;
+            this.buttonMetrologyNetUnc.Click += new System.EventHandler(this.buttonMetrolgoyButtonUncertainty_Click);
             // 
             // MainForm
             // 
@@ -148,5 +168,6 @@ namespace AccFileParserUI
         private System.Windows.Forms.Button buttonEvaluate;
         private System.Windows.Forms.Button buttonSoAUncertainty;
         private System.Windows.Forms.Button buttonSourceUncertainty;
+        private System.Windows.Forms.Button buttonMetrologyNetUnc;
     }
 }

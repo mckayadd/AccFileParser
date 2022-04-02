@@ -365,6 +365,24 @@ namespace AccFileParserUI
             return function;
         }
 
+        public List<SoAUncFunction> GetSoaFunctions()
+        {
+            List<SoAUncFunction> functions = new List<SoAUncFunction>();
+            if (soa == null) return null;
+            if (ranges.Count == 0) return null;
+            var template = soa.CapabilityScope.Activities[0].GetTemplateByTemplateTechnique(techniqueName.Text);
+            if (template == null) return null;
+            foreach (var range in ranges)
+            {
+                SoAUncFunction function = new();
+                function.Range = range;
+                function.Template = template;
+                function.Uncertainty = template.getCMCUncertaintyTechniqueName(techniqueName.Text)[0];
+                functions.Add(function);
+            }
+            return functions;
+        }
+
         #endregion
 
         #region Helper Classes

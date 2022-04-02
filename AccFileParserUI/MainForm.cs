@@ -18,11 +18,13 @@ namespace AccFileParserUI
         SelectTaxonForm selectTaxonForm;
         SourceUncForm sourceUncForm;
         SoAUncertaintyForm soAUncertaintyForm;
+        MetrologyNetUncertaintyForm metrologyNetUncForm;
         EvaluateForm evaluateForm;
 
         bool isFirstClickButtonSelectTaxon = true;
         bool isFirstClickButtonSourceUncertainty = true;
         bool isFirstClickButtonSoAUncertainty = true;
+        bool isFirstClickButtonMetrologyNetUncertainty = true;
         bool isFirstClickButtonEvaluate = true;
 
         public MainForm()
@@ -106,12 +108,25 @@ namespace AccFileParserUI
 
             if (soAUncertaintyForm != null)
             {
-                evaluateForm.soaUncFunction = soAUncertaintyForm.getSelectedFunction();
-                if (evaluateForm.soaUncFunction != null)
+                evaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
+                if (evaluateForm.rangeUncFunctions != null && evaluateForm.rangeUncFunctions.Count > 0)
                 {
-                    evaluateForm.loadSoAUncFuncGroupBox();
+                    evaluateForm.loadStartStopStep();
                 }
             }
+        }
+
+        private void buttonMetrolgoyButtonUncertainty_Click(object sender, EventArgs e)
+        {
+            manageButtons(buttonMetrologyNetUnc);
+            if (isFirstClickButtonMetrologyNetUncertainty)
+            {
+                isFirstClickButtonMetrologyNetUncertainty = false;
+                metrologyNetUncForm = new MetrologyNetUncertaintyForm();
+                loadForm(metrologyNetUncForm);
+            }
+            else
+                loadForm(metrologyNetUncForm);
         }
 
         private void manageButtons(Button clickedButton)

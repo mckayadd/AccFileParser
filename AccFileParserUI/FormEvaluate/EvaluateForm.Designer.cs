@@ -30,22 +30,16 @@ namespace AccFileParserUI
         private void InitializeComponent()
         {
             this.evaluateButton = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.soaUncEvalGroupBox = new System.Windows.Forms.GroupBox();
-            this.inputsLabel = new System.Windows.Forms.Label();
-            this.constantsLabel = new System.Windows.Forms.Label();
-            this.constants = new System.Windows.Forms.TextBox();
-            this.functionOutput = new System.Windows.Forms.Label();
-            this.inputPanel = new System.Windows.Forms.Panel();
-            this.range = new System.Windows.Forms.Label();
-            this.expression = new System.Windows.Forms.Label();
-            this.function = new System.Windows.Forms.Label();
-            this.soaUncEvalGroupBox.SuspendLayout();
+            this.inputsPanel = new System.Windows.Forms.Panel();
+            this.labelResults = new System.Windows.Forms.Label();
+            this.dividerLabel = new System.Windows.Forms.Label();
+            this.resultsDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // evaluateButton
             // 
-            this.evaluateButton.Location = new System.Drawing.Point(61, 65);
+            this.evaluateButton.Location = new System.Drawing.Point(12, 311);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.Size = new System.Drawing.Size(75, 23);
             this.evaluateButton.TabIndex = 0;
@@ -53,133 +47,71 @@ namespace AccFileParserUI
             this.evaluateButton.UseVisualStyleBackColor = true;
             this.evaluateButton.Click += new System.EventHandler(this.buttonEvaluate_Click);
             // 
-            // richTextBox1
+            // inputsPanel
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(61, 94);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(265, 169);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.inputsPanel.Location = new System.Drawing.Point(12, 12);
+            this.inputsPanel.Name = "inputsPanel";
+            this.inputsPanel.Size = new System.Drawing.Size(926, 291);
+            this.inputsPanel.TabIndex = 1;
             // 
-            // soaUncEvalGroupBox
+            // labelResults
             // 
-            this.soaUncEvalGroupBox.Controls.Add(this.inputsLabel);
-            this.soaUncEvalGroupBox.Controls.Add(this.constantsLabel);
-            this.soaUncEvalGroupBox.Controls.Add(this.constants);
-            this.soaUncEvalGroupBox.Controls.Add(this.functionOutput);
-            this.soaUncEvalGroupBox.Controls.Add(this.inputPanel);
-            this.soaUncEvalGroupBox.Controls.Add(this.range);
-            this.soaUncEvalGroupBox.Controls.Add(this.expression);
-            this.soaUncEvalGroupBox.Controls.Add(this.function);
-            this.soaUncEvalGroupBox.Location = new System.Drawing.Point(354, 94);
-            this.soaUncEvalGroupBox.Name = "soaUncEvalGroupBox";
-            this.soaUncEvalGroupBox.Size = new System.Drawing.Size(352, 404);
-            this.soaUncEvalGroupBox.TabIndex = 2;
-            this.soaUncEvalGroupBox.TabStop = false;
-            this.soaUncEvalGroupBox.Text = "SoA Uncertainty Function";
+            this.labelResults.AutoSize = true;
+            this.labelResults.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelResults.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelResults.Location = new System.Drawing.Point(12, 346);
+            this.labelResults.Name = "labelResults";
+            this.labelResults.Size = new System.Drawing.Size(51, 17);
+            this.labelResults.TabIndex = 22;
+            this.labelResults.Text = "Results";
             // 
-            // inputsLabel
+            // dividerLabel
             // 
-            this.inputsLabel.AutoSize = true;
-            this.inputsLabel.Location = new System.Drawing.Point(6, 224);
-            this.inputsLabel.Name = "inputsLabel";
-            this.inputsLabel.Size = new System.Drawing.Size(48, 15);
-            this.inputsLabel.TabIndex = 7;
-            this.inputsLabel.Text = "Input(s)";
+            this.dividerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dividerLabel.Location = new System.Drawing.Point(12, 306);
+            this.dividerLabel.Name = "dividerLabel";
+            this.dividerLabel.Size = new System.Drawing.Size(926, 2);
+            this.dividerLabel.TabIndex = 23;
             // 
-            // constantsLabel
+            // resultsDataGrid
             // 
-            this.constantsLabel.AutoSize = true;
-            this.constantsLabel.Location = new System.Drawing.Point(6, 119);
-            this.constantsLabel.Name = "constantsLabel";
-            this.constantsLabel.Size = new System.Drawing.Size(63, 15);
-            this.constantsLabel.TabIndex = 6;
-            this.constantsLabel.Text = "Constants:";
-            // 
-            // constants
-            // 
-            this.constants.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.constants.Location = new System.Drawing.Point(6, 137);
-            this.constants.Multiline = true;
-            this.constants.Name = "constants";
-            this.constants.ReadOnly = true;
-            this.constants.Size = new System.Drawing.Size(335, 75);
-            this.constants.TabIndex = 5;
-            // 
-            // functionOutput
-            // 
-            this.functionOutput.AutoSize = true;
-            this.functionOutput.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.functionOutput.Location = new System.Drawing.Point(6, 371);
-            this.functionOutput.Name = "functionOutput";
-            this.functionOutput.Size = new System.Drawing.Size(94, 15);
-            this.functionOutput.TabIndex = 4;
-            this.functionOutput.Text = "functionOutput";
-            // 
-            // inputPanel
-            // 
-            this.inputPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.inputPanel.Location = new System.Drawing.Point(6, 242);
-            this.inputPanel.Name = "inputPanel";
-            this.inputPanel.Size = new System.Drawing.Size(340, 115);
-            this.inputPanel.TabIndex = 3;
-            // 
-            // range
-            // 
-            this.range.AutoSize = true;
-            this.range.Location = new System.Drawing.Point(6, 71);
-            this.range.Name = "range";
-            this.range.Size = new System.Drawing.Size(37, 15);
-            this.range.TabIndex = 2;
-            this.range.Text = "range";
-            // 
-            // expression
-            // 
-            this.expression.AutoSize = true;
-            this.expression.Location = new System.Drawing.Point(6, 45);
-            this.expression.Name = "expression";
-            this.expression.Size = new System.Drawing.Size(63, 15);
-            this.expression.TabIndex = 1;
-            this.expression.Text = "expression";
-            // 
-            // function
-            // 
-            this.function.AutoSize = true;
-            this.function.Location = new System.Drawing.Point(6, 19);
-            this.function.Name = "function";
-            this.function.Size = new System.Drawing.Size(52, 15);
-            this.function.TabIndex = 0;
-            this.function.Text = "function";
+            this.resultsDataGrid.AllowUserToAddRows = false;
+            this.resultsDataGrid.AllowUserToDeleteRows = false;
+            this.resultsDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.resultsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultsDataGrid.Location = new System.Drawing.Point(12, 366);
+            this.resultsDataGrid.Name = "resultsDataGrid";
+            this.resultsDataGrid.ReadOnly = true;
+            this.resultsDataGrid.RowHeadersVisible = false;
+            this.resultsDataGrid.RowTemplate.Height = 25;
+            this.resultsDataGrid.Size = new System.Drawing.Size(926, 272);
+            this.resultsDataGrid.TabIndex = 24;
             // 
             // EvaluateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.soaUncEvalGroupBox);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.resultsDataGrid);
+            this.Controls.Add(this.dividerLabel);
+            this.Controls.Add(this.labelResults);
+            this.Controls.Add(this.inputsPanel);
             this.Controls.Add(this.evaluateButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EvaluateForm";
             this.Text = "EvaluateForm";
-            this.soaUncEvalGroupBox.ResumeLayout(false);
-            this.soaUncEvalGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button evaluateButton;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.GroupBox soaUncEvalGroupBox;
-        private System.Windows.Forms.Label function;
-        private System.Windows.Forms.Label range;
-        private System.Windows.Forms.Label expression;
-        private System.Windows.Forms.Panel inputPanel;
-        private System.Windows.Forms.Label functionOutput;
-        private System.Windows.Forms.Label inputsLabel;
-        private System.Windows.Forms.Label constantsLabel;
-        private System.Windows.Forms.TextBox constants;
+        private System.Windows.Forms.Panel inputsPanel;
+        private System.Windows.Forms.Label labelResults;
+        private System.Windows.Forms.Label dividerLabel;
+        private System.Windows.Forms.DataGridView resultsDataGrid;
     }
 }
