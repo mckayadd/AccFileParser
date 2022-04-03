@@ -234,12 +234,12 @@ namespace AccFileParserUI
                         if (nominalRangeLimit.lowerLimit.doubleValueFlag && nominalRangeLimit.upperLimit.doubleValueFlag) // is it possible to set only one limit?
                             nominalFlag = nominalRangeLimit.isInLimit(nominal);
                         else
-                            nominalFlag = true;
+                            nominalFlag = false;
 
                         if (mod1RangeLimit.lowerLimit.doubleValueFlag && mod1RangeLimit.upperLimit.doubleValueFlag)
                             mod1Flag = mod1RangeLimit.isInLimit(mod1);
                         else
-                            mod1Flag = true;
+                            mod1Flag = false;
 
                         if (nominalFlag && mod1Flag)
                             filteredRanges.Add(item);

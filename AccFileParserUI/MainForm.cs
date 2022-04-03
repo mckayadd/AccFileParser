@@ -32,7 +32,7 @@ namespace AccFileParserUI
             InitializeComponent();
             parser = new Parser();
             menuButtons = new List<Button>();
-            menuButtons.Add(buttonSelectTaxon);
+            menuButtons.Add(buttonMetrologyNetUnc);
             menuButtons.Add(buttonSourceUncertainty);
             menuButtons.Add(buttonSoAUncertainty);
             menuButtons.Add(buttonEvaluate);
