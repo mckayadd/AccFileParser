@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Metrology.NET_Public\Source\SoA\SoA_DataAccessLib\SoA_DataAccessLib.csproj" />
     <ProjectReference Include="..\AccFileParserLibrary\AccFileParserLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SoA_DataAccessLib">
+      <HintPath>..\References\SoA_DataAccessLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

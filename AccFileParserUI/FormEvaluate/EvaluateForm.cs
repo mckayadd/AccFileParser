@@ -29,6 +29,7 @@ namespace AccFileParserUI
             clearContents();
         }
 
+        // TODO: Add conditional to evaluate the Source Unc and add it to the respective column
         private void buttonEvaluate_Click(object sender, EventArgs e)
         {
             List<SoAUncFunction> inRange = new List<SoAUncFunction>();
