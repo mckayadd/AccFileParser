@@ -21,6 +21,16 @@ namespace AccFileParserUI
         private const string soaUncColName = "soaUnc";
         private const string soaUncColValue = "SoA Unc";
 
+        private const string soaUncRangeColName = "soaRange";
+        private const string soaUncRangeColValue = "SoA Range";
+
+        private const string sourceUncRangeColName = "sourceRange";
+        private const string SourceUncRangeColValue = "Source Range";
+
+        private const string evaluateColName = "evaluate";
+        private const string evaluateColValue = "Evaluate";
+
+
         public EvaluateForm(Parser aParser)
         {
             InitializeComponent();
@@ -49,8 +59,6 @@ namespace AccFileParserUI
                 var functionName = rangeUncFunctions[0].Uncertainty.function_name;
                 var vars = rangeUncFunctions[0].Template.getCMCFunctionVariables(functionName);
                 var count = 0;
-
-               
 
                 foreach (string variable in vars)
                 {
@@ -118,6 +126,16 @@ namespace AccFileParserUI
                             if (current >= (double)rangeUncFunction.Range.Start.Value &&
                                 current <= (double)rangeUncFunction.Range.End.Value)
                             {
+                                foreach (RangeAcc item in parser.selectedFunction.rangeList)
+                                {
+                                    RangeLimit nominalRangeLimit = item.nominal;
+
+                                    if (nominalRangeLimit.lowerLimit.doubleValueFlag && nominalRangeLimit.upperLimit.doubleValueFlag
+                                        && item.mod1.lowerLimit.strValueFlag) // focusing on DC only
+                                        if (nominalRangeLimit.isInLimit(current))
+                                        {
+                                            Tuple<double, RangeAcc> t = Tuple.Create(current, item);
+
                                 rangeUncFunction.Template.setCMCFunctionSymbol(functionName, variable, current);
                                 try
                                 {
@@ -153,14 +171,34 @@ namespace AccFileParserUI
                                 {
                                     resultsDataGrid[soaUncColName, row].Value = result;
                                 }
-                                row++;
+                                                                            RangeAcc rangeAcc = t.Item2;
+                                            double sourceUncertainty;
+                                            double tolerance = rangeAcc.tolerance.doubleValue;
+                                            double floor = rangeAcc.floor.doubleValue;
+                                            sourceUncertainty = current * (tolerance / 100) + floor; // uncertainty calculation
+                                            String[] newRow = rangeAcc.returnRange();
+
+                                            resultsDataGrid[sourceUncRangeColName, row].Value = newRow[0] + " to " + newRow[1];
+                                            resultsDataGrid[ sourceUncColName , row].Value = sourceUncertainty.ToString("E2");
+
+                                            if (sourceUncertainty < double.Parse(result))
+                                            {
+                                                resultsDataGrid[evaluateColName , row].Value = "error";
+
+                                            }
+
+                                            row++;
+
+                                        }
+                                }
+
                             }
                         }
                     }
                 }
             }
 
-            populateDataGrid(startG, stopG, stepG);
+         //   populateDataGrid(startG, stopG, stepG);
 
         }
 
@@ -260,9 +298,14 @@ namespace AccFileParserUI
                     count++;
                     resultsDataGrid.Columns.Add(varialbe, varialbe);
                 }
-                resultsDataGrid.Columns.Add("range", "Range");
-                resultsDataGrid.Columns.Add(sourceUncColName, sourceUncColValue);
+                resultsDataGrid.Columns.Add("range", "SoA Range");
                 resultsDataGrid.Columns.Add(soaUncColName, soaUncColValue);
+
+                resultsDataGrid.Columns.Add(sourceUncRangeColName , SourceUncRangeColValue);
+                resultsDataGrid.Columns.Add(sourceUncColName, sourceUncColValue);
+
+                resultsDataGrid.Columns.Add(evaluateColName , evaluateColValue );
+
             }
         }
 

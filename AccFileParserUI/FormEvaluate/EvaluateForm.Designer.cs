@@ -41,13 +41,14 @@ namespace AccFileParserUI
             this.sourceRange = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceUncertainty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.evaluate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSourceUnc)).BeginInit();
             this.SuspendLayout();
             // 
             // evaluateButton
             // 
-            this.evaluateButton.Location = new System.Drawing.Point(12, 311);
+            this.evaluateButton.Location = new System.Drawing.Point(12, 150);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.Size = new System.Drawing.Size(75, 23);
             this.evaluateButton.TabIndex = 0;
@@ -57,6 +58,7 @@ namespace AccFileParserUI
             // 
             // inputsPanel
             // 
+            this.inputsPanel.Controls.Add(this.dataGridViewSourceUnc);
             this.inputsPanel.Location = new System.Drawing.Point(12, 12);
             this.inputsPanel.Name = "inputsPanel";
             this.inputsPanel.Size = new System.Drawing.Size(926, 123);
@@ -67,7 +69,7 @@ namespace AccFileParserUI
             this.labelResults.AutoSize = true;
             this.labelResults.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelResults.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.labelResults.Location = new System.Drawing.Point(12, 346);
+            this.labelResults.Location = new System.Drawing.Point(12, 179);
             this.labelResults.Name = "labelResults";
             this.labelResults.Size = new System.Drawing.Size(51, 17);
             this.labelResults.TabIndex = 22;
@@ -76,7 +78,7 @@ namespace AccFileParserUI
             // dividerLabel
             // 
             this.dividerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dividerLabel.Location = new System.Drawing.Point(12, 306);
+            this.dividerLabel.Location = new System.Drawing.Point(12, 145);
             this.dividerLabel.Name = "dividerLabel";
             this.dividerLabel.Size = new System.Drawing.Size(926, 2);
             this.dividerLabel.TabIndex = 23;
@@ -87,12 +89,12 @@ namespace AccFileParserUI
             this.resultsDataGrid.AllowUserToDeleteRows = false;
             this.resultsDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
             this.resultsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultsDataGrid.Location = new System.Drawing.Point(12, 366);
+            this.resultsDataGrid.Location = new System.Drawing.Point(12, 199);
             this.resultsDataGrid.Name = "resultsDataGrid";
             this.resultsDataGrid.ReadOnly = true;
             this.resultsDataGrid.RowHeadersVisible = false;
             this.resultsDataGrid.RowTemplate.Height = 25;
-            this.resultsDataGrid.Size = new System.Drawing.Size(926, 272);
+            this.resultsDataGrid.Size = new System.Drawing.Size(926, 439);
             this.resultsDataGrid.TabIndex = 24;
             // 
             // dataGridViewSourceUnc
@@ -105,11 +107,12 @@ namespace AccFileParserUI
             this.sourceRange,
             this.sourceUncertainty,
             this.evaluate});
-            this.dataGridViewSourceUnc.Location = new System.Drawing.Point(12, 141);
+            this.dataGridViewSourceUnc.Location = new System.Drawing.Point(3, 67);
             this.dataGridViewSourceUnc.Name = "dataGridViewSourceUnc";
             this.dataGridViewSourceUnc.RowTemplate.Height = 25;
-            this.dataGridViewSourceUnc.Size = new System.Drawing.Size(926, 150);
+            this.dataGridViewSourceUnc.Size = new System.Drawing.Size(920, 53);
             this.dataGridViewSourceUnc.TabIndex = 25;
+            this.dataGridViewSourceUnc.Visible = false;
             // 
             // voltage
             // 
@@ -152,7 +155,6 @@ namespace AccFileParserUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.dataGridViewSourceUnc);
             this.Controls.Add(this.resultsDataGrid);
             this.Controls.Add(this.dividerLabel);
             this.Controls.Add(this.labelResults);
@@ -161,6 +163,7 @@ namespace AccFileParserUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EvaluateForm";
             this.Text = "EvaluateForm";
+            this.inputsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSourceUnc)).EndInit();
             this.ResumeLayout(false);
