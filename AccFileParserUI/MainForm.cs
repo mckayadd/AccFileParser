@@ -102,18 +102,28 @@ namespace AccFileParserUI
                 isFirstClickButtonEvaluate = false;
                 evaluateForm = new EvaluateForm(parser);
                 loadForm(evaluateForm);
+
+                if (soAUncertaintyForm != null)
+                {
+                    evaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
+                    if (evaluateForm.rangeUncFunctions != null && evaluateForm.rangeUncFunctions.Count > 0)
+                    {
+                        evaluateForm.loadStartStopStep();
+                    }
+                }
+
             }
             else
                 loadForm(evaluateForm);
 
-            if (soAUncertaintyForm != null)
-            {
-                evaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
-                if (evaluateForm.rangeUncFunctions != null && evaluateForm.rangeUncFunctions.Count > 0)
-                {
-                    evaluateForm.loadStartStopStep();
-                }
-            }
+            //if (soAUncertaintyForm != null)
+            //{
+            //    evaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
+            //    if (evaluateForm.rangeUncFunctions != null && evaluateForm.rangeUncFunctions.Count > 0)
+            //    {
+            //        evaluateForm.loadStartStopStep();
+            //    }
+            //}
         }
 
         private void buttonMetrolgoyButtonUncertainty_Click(object sender, EventArgs e)

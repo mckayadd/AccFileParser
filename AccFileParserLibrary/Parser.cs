@@ -10,6 +10,7 @@ namespace AccFileParserLibrary
     {
         private string fileContent { get; set; }
         public ReferenceStandard refStd;
+        public Function selectedFunction;
 
         // flags - indicating the region currently being read
         private bool readingValues = false;

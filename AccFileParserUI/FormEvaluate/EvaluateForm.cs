@@ -14,7 +14,7 @@ namespace AccFileParserUI
     {
         Parser parser;
         public List<SoAUncFunction> rangeUncFunctions { get; set; }
-
+        public List<Tuple<double, RangeAcc>> filteredRanges;
         // Column constants
         private const string sourceUncColName = "sourcUnc";
         private const string sourceUncColValue = "Source Unc";
@@ -26,6 +26,7 @@ namespace AccFileParserUI
             InitializeComponent();
             parser = aParser;
             List<SoAUncFunction> rangeUncFunctions = new List<SoAUncFunction>();
+            filteredRanges =  new List<Tuple<double, RangeAcc>>();
             clearContents();
         }
 
@@ -34,6 +35,13 @@ namespace AccFileParserUI
         {
             List<SoAUncFunction> inRange = new List<SoAUncFunction>();
             Dictionary<string, List<double>> startStopStep = new Dictionary<string, List<double>>();
+
+            #region mckaya
+            double startG = 0.0;
+            double stopG = 0.0;
+            double stepG = 0.0;
+            #endregion
+
             resultsDataGrid.Rows.Clear();
             if (rangeUncFunctions.Count > 0)
             {
@@ -41,6 +49,9 @@ namespace AccFileParserUI
                 var functionName = rangeUncFunctions[0].Uncertainty.function_name;
                 var vars = rangeUncFunctions[0].Template.getCMCFunctionVariables(functionName);
                 var count = 0;
+
+               
+
                 foreach (string variable in vars)
                 {
                     startStopStep.Add(variable, new List<double>());
@@ -94,6 +105,13 @@ namespace AccFileParserUI
                         double start = startStopStep[variable][0];
                         double stop = startStopStep[variable][1];
                         double step = startStopStep[variable][2];
+
+                        #region mckaya
+                        startG = start;
+                        stopG = stop;
+                        stepG = step;
+                        #endregion
+
                         if (current == 0) current = start; 
                         for (; current < stop; current += step)
                         {
@@ -141,7 +159,50 @@ namespace AccFileParserUI
                     }
                 }
             }
+
+            populateDataGrid(startG, stopG, stepG);
+
         }
+
+        public void populateDataGrid(double start, double stop, double step)
+        {
+            //MessageBox.Show(start.ToString() + " " + stop.ToString() + " " + step.ToString());
+            List<Double> steps = new List<double>();
+            for(double i = start; i <= stop; i += step)
+            {
+                steps.Add(i);
+            }
+
+            foreach(Double volt in steps) 
+            {
+                foreach (RangeAcc item in parser.selectedFunction.rangeList)
+                {
+                    RangeLimit nominalRangeLimit = item.nominal;
+
+                    if (nominalRangeLimit.lowerLimit.doubleValueFlag && nominalRangeLimit.upperLimit.doubleValueFlag 
+                        && item.mod1.lowerLimit.strValueFlag ) // focusing on DC only
+                        if (nominalRangeLimit.isInLimit(volt))
+                        {
+                            Tuple<double, RangeAcc> t = Tuple.Create(volt, item);
+                            filteredRanges.Add(t); 
+                        }
+                }
+            }
+
+            //dataGridViewSourceUnc.Rows.Clear();
+            foreach (var t in filteredRanges)
+            {
+                double v = t.Item1;
+                RangeAcc rangeAcc = t.Item2;
+                double sourceUncertainty;
+                double tolerance = rangeAcc.tolerance.doubleValue;
+                double floor = rangeAcc.floor.doubleValue;
+                sourceUncertainty = v * (tolerance / 100) + floor; // uncertainty calculation
+                String[] newRow = rangeAcc.returnRange();
+                dataGridViewSourceUnc.Rows.Add(v.ToString(), "", "", newRow[0] + " to " + newRow[1], sourceUncertainty.ToString(), "");
+            }
+        }
+
 
         private void clearContents()
         {

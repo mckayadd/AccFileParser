@@ -116,6 +116,9 @@ namespace AccFileParserUI
             {
                 selectedModeLabel.Text = selectedMode;
                 f = parser.refStd.modeDictionary[selectedMode]; // Generates exception at runtime when user changes the file
+                
+                parser.selectedFunction = f; // to be used in the evaluate form
+                
                 textBoxNominal.Text = "";
                 textBoxMod1.Text = "";
                 dataGridViewFilteredRanges.Rows.Clear();

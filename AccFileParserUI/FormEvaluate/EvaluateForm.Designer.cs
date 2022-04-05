@@ -34,7 +34,15 @@ namespace AccFileParserUI
             this.labelResults = new System.Windows.Forms.Label();
             this.dividerLabel = new System.Windows.Forms.Label();
             this.resultsDataGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSourceUnc = new System.Windows.Forms.DataGridView();
+            this.voltage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soaRange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soaUncertainty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sourceRange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sourceUncertainty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.evaluate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSourceUnc)).BeginInit();
             this.SuspendLayout();
             // 
             // evaluateButton
@@ -51,7 +59,7 @@ namespace AccFileParserUI
             // 
             this.inputsPanel.Location = new System.Drawing.Point(12, 12);
             this.inputsPanel.Name = "inputsPanel";
-            this.inputsPanel.Size = new System.Drawing.Size(926, 291);
+            this.inputsPanel.Size = new System.Drawing.Size(926, 123);
             this.inputsPanel.TabIndex = 1;
             // 
             // labelResults
@@ -87,11 +95,64 @@ namespace AccFileParserUI
             this.resultsDataGrid.Size = new System.Drawing.Size(926, 272);
             this.resultsDataGrid.TabIndex = 24;
             // 
+            // dataGridViewSourceUnc
+            // 
+            this.dataGridViewSourceUnc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSourceUnc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.voltage,
+            this.soaRange,
+            this.soaUncertainty,
+            this.sourceRange,
+            this.sourceUncertainty,
+            this.evaluate});
+            this.dataGridViewSourceUnc.Location = new System.Drawing.Point(12, 141);
+            this.dataGridViewSourceUnc.Name = "dataGridViewSourceUnc";
+            this.dataGridViewSourceUnc.RowTemplate.Height = 25;
+            this.dataGridViewSourceUnc.Size = new System.Drawing.Size(926, 150);
+            this.dataGridViewSourceUnc.TabIndex = 25;
+            // 
+            // voltage
+            // 
+            this.voltage.HeaderText = "Voltage";
+            this.voltage.Name = "voltage";
+            this.voltage.Width = 120;
+            // 
+            // soaRange
+            // 
+            this.soaRange.HeaderText = "SoA Range";
+            this.soaRange.Name = "soaRange";
+            this.soaRange.Width = 120;
+            // 
+            // soaUncertainty
+            // 
+            this.soaUncertainty.HeaderText = "SoA Uncertainty";
+            this.soaUncertainty.Name = "soaUncertainty";
+            this.soaUncertainty.Width = 120;
+            // 
+            // sourceRange
+            // 
+            this.sourceRange.HeaderText = "Source Range";
+            this.sourceRange.Name = "sourceRange";
+            this.sourceRange.Width = 120;
+            // 
+            // sourceUncertainty
+            // 
+            this.sourceUncertainty.HeaderText = "Source Uncertainty";
+            this.sourceUncertainty.Name = "sourceUncertainty";
+            this.sourceUncertainty.Width = 140;
+            // 
+            // evaluate
+            // 
+            this.evaluate.HeaderText = "Evaluate";
+            this.evaluate.Name = "evaluate";
+            this.evaluate.Width = 120;
+            // 
             // EvaluateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.dataGridViewSourceUnc);
             this.Controls.Add(this.resultsDataGrid);
             this.Controls.Add(this.dividerLabel);
             this.Controls.Add(this.labelResults);
@@ -101,6 +162,7 @@ namespace AccFileParserUI
             this.Name = "EvaluateForm";
             this.Text = "EvaluateForm";
             ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSourceUnc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +175,12 @@ namespace AccFileParserUI
         private System.Windows.Forms.Label labelResults;
         private System.Windows.Forms.Label dividerLabel;
         private System.Windows.Forms.DataGridView resultsDataGrid;
+        private System.Windows.Forms.DataGridView dataGridViewSourceUnc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn voltage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soaRange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soaUncertainty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sourceRange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sourceUncertainty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn evaluate;
     }
 }
