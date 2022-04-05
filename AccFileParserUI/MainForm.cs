@@ -20,6 +20,7 @@ namespace AccFileParserUI
         SoAUncertaintyForm soAUncertaintyForm;
         MetrologyNetUncertaintyForm metrologyNetUncForm;
         EvaluateForm evaluateForm;
+        SoaEvaluateForm soaEvaluateForm;
 
         bool isFirstClickButtonSelectTaxon = true;
         bool isFirstClickButtonSourceUncertainty = true;
@@ -101,29 +102,26 @@ namespace AccFileParserUI
             {
                 isFirstClickButtonEvaluate = false;
                 evaluateForm = new EvaluateForm(parser);
+                // load the soaEval form now
+                soaEvaluateForm = new SoaEvaluateForm(parser);
+                evaluateForm.soaEvalForm = soaEvaluateForm;
                 loadForm(evaluateForm);
-
-                if (soAUncertaintyForm != null)
-                {
-                    evaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
-                    if (evaluateForm.rangeUncFunctions != null && evaluateForm.rangeUncFunctions.Count > 0)
-                    {
-                        evaluateForm.loadStartStopStep();
-                    }
-                }
-
             }
             else
                 loadForm(evaluateForm);
 
-            //if (soAUncertaintyForm != null)
-            //{
-            //    evaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
-            //    if (evaluateForm.rangeUncFunctions != null && evaluateForm.rangeUncFunctions.Count > 0)
-            //    {
-            //        evaluateForm.loadStartStopStep();
-            //    }
-            //}
+            // Load only controls when we have ranges to work with and only reload if the technique has changed
+            if (soAUncertaintyForm != null)
+            {
+                soaEvaluateForm.rangeUncFunctions = soAUncertaintyForm.GetSoaFunctions();
+
+                if (soaEvaluateForm.rangeUncFunctions != null && soaEvaluateForm.rangeUncFunctions.Count > 0
+                    && soAUncertaintyForm.getSelectedTechnique() != soaEvaluateForm.currentTechnique)
+                {
+                    soaEvaluateForm.currentTechnique = soAUncertaintyForm.getSelectedTechnique();
+                    soaEvaluateForm.loadStartStopStep();
+                }
+            }
         }
 
         private void buttonMetrolgoyButtonUncertainty_Click(object sender, EventArgs e)

@@ -29,161 +29,85 @@ namespace AccFileParserUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.evaluateButton = new System.Windows.Forms.Button();
-            this.inputsPanel = new System.Windows.Forms.Panel();
-            this.labelResults = new System.Windows.Forms.Label();
-            this.dividerLabel = new System.Windows.Forms.Label();
-            this.resultsDataGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewSourceUnc = new System.Windows.Forms.DataGridView();
-            this.voltage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soaRange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soaUncertainty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sourceRange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sourceUncertainty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.evaluate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inputsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSourceUnc)).BeginInit();
+            this.panelTopSUF = new System.Windows.Forms.Panel();
+            this.buttonMetrologyNetEvaluate = new System.Windows.Forms.Button();
+            this.buttonSoAEvaluate = new System.Windows.Forms.Button();
+            this.panelMainEval = new System.Windows.Forms.Panel();
+            this.panelTopSUF.SuspendLayout();
             this.SuspendLayout();
             // 
-            // evaluateButton
+            // panelTopSUF
             // 
-            this.evaluateButton.Location = new System.Drawing.Point(12, 150);
-            this.evaluateButton.Name = "evaluateButton";
-            this.evaluateButton.Size = new System.Drawing.Size(75, 23);
-            this.evaluateButton.TabIndex = 0;
-            this.evaluateButton.Text = "Evaluate";
-            this.evaluateButton.UseVisualStyleBackColor = true;
-            this.evaluateButton.Click += new System.EventHandler(this.buttonEvaluate_Click);
+            this.panelTopSUF.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelTopSUF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTopSUF.Controls.Add(this.buttonMetrologyNetEvaluate);
+            this.panelTopSUF.Controls.Add(this.buttonSoAEvaluate);
+            this.panelTopSUF.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTopSUF.Location = new System.Drawing.Point(0, 0);
+            this.panelTopSUF.Name = "panelTopSUF";
+            this.panelTopSUF.Size = new System.Drawing.Size(950, 40);
+            this.panelTopSUF.TabIndex = 1;
             // 
-            // inputsPanel
+            // buttonMetrologyNetEvaluate
             // 
-            this.inputsPanel.Controls.Add(this.dataGridViewSourceUnc);
-            this.inputsPanel.Location = new System.Drawing.Point(12, 12);
-            this.inputsPanel.Name = "inputsPanel";
-            this.inputsPanel.Size = new System.Drawing.Size(926, 123);
-            this.inputsPanel.TabIndex = 1;
+            this.buttonMetrologyNetEvaluate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonMetrologyNetEvaluate.FlatAppearance.BorderSize = 0;
+            this.buttonMetrologyNetEvaluate.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonMetrologyNetEvaluate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMetrologyNetEvaluate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonMetrologyNetEvaluate.ForeColor = System.Drawing.Color.White;
+            this.buttonMetrologyNetEvaluate.Location = new System.Drawing.Point(122, 3);
+            this.buttonMetrologyNetEvaluate.Name = "buttonMetrologyNetEvaluate";
+            this.buttonMetrologyNetEvaluate.Size = new System.Drawing.Size(153, 30);
+            this.buttonMetrologyNetEvaluate.TabIndex = 4;
+            this.buttonMetrologyNetEvaluate.Text = "Metrology.Net Evaluate";
+            this.buttonMetrologyNetEvaluate.UseVisualStyleBackColor = false;
+            this.buttonMetrologyNetEvaluate.Click += new System.EventHandler(this.buttonMetrologyNetEvaluate_Click);
             // 
-            // labelResults
+            // buttonSoAEvaluate
             // 
-            this.labelResults.AutoSize = true;
-            this.labelResults.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelResults.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.labelResults.Location = new System.Drawing.Point(12, 179);
-            this.labelResults.Name = "labelResults";
-            this.labelResults.Size = new System.Drawing.Size(51, 17);
-            this.labelResults.TabIndex = 22;
-            this.labelResults.Text = "Results";
+            this.buttonSoAEvaluate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonSoAEvaluate.FlatAppearance.BorderSize = 0;
+            this.buttonSoAEvaluate.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonSoAEvaluate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSoAEvaluate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSoAEvaluate.ForeColor = System.Drawing.Color.White;
+            this.buttonSoAEvaluate.Location = new System.Drawing.Point(3, 3);
+            this.buttonSoAEvaluate.Name = "buttonSoAEvaluate";
+            this.buttonSoAEvaluate.Size = new System.Drawing.Size(110, 30);
+            this.buttonSoAEvaluate.TabIndex = 3;
+            this.buttonSoAEvaluate.Text = "SoA Evaluate";
+            this.buttonSoAEvaluate.UseVisualStyleBackColor = false;
+            this.buttonSoAEvaluate.Click += new System.EventHandler(this.buttonSoAEvaluate_Click);
             // 
-            // dividerLabel
+            // panelMainEval
             // 
-            this.dividerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dividerLabel.Location = new System.Drawing.Point(12, 145);
-            this.dividerLabel.Name = "dividerLabel";
-            this.dividerLabel.Size = new System.Drawing.Size(926, 2);
-            this.dividerLabel.TabIndex = 23;
-            // 
-            // resultsDataGrid
-            // 
-            this.resultsDataGrid.AllowUserToAddRows = false;
-            this.resultsDataGrid.AllowUserToDeleteRows = false;
-            this.resultsDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.resultsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultsDataGrid.Location = new System.Drawing.Point(12, 199);
-            this.resultsDataGrid.Name = "resultsDataGrid";
-            this.resultsDataGrid.ReadOnly = true;
-            this.resultsDataGrid.RowHeadersVisible = false;
-            this.resultsDataGrid.RowTemplate.Height = 25;
-            this.resultsDataGrid.Size = new System.Drawing.Size(926, 439);
-            this.resultsDataGrid.TabIndex = 24;
-            // 
-            // dataGridViewSourceUnc
-            // 
-            this.dataGridViewSourceUnc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSourceUnc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.voltage,
-            this.soaRange,
-            this.soaUncertainty,
-            this.sourceRange,
-            this.sourceUncertainty,
-            this.evaluate});
-            this.dataGridViewSourceUnc.Location = new System.Drawing.Point(3, 67);
-            this.dataGridViewSourceUnc.Name = "dataGridViewSourceUnc";
-            this.dataGridViewSourceUnc.RowTemplate.Height = 25;
-            this.dataGridViewSourceUnc.Size = new System.Drawing.Size(920, 53);
-            this.dataGridViewSourceUnc.TabIndex = 25;
-            this.dataGridViewSourceUnc.Visible = false;
-            // 
-            // voltage
-            // 
-            this.voltage.HeaderText = "Voltage";
-            this.voltage.Name = "voltage";
-            this.voltage.Width = 120;
-            // 
-            // soaRange
-            // 
-            this.soaRange.HeaderText = "SoA Range";
-            this.soaRange.Name = "soaRange";
-            this.soaRange.Width = 120;
-            // 
-            // soaUncertainty
-            // 
-            this.soaUncertainty.HeaderText = "SoA Uncertainty";
-            this.soaUncertainty.Name = "soaUncertainty";
-            this.soaUncertainty.Width = 120;
-            // 
-            // sourceRange
-            // 
-            this.sourceRange.HeaderText = "Source Range";
-            this.sourceRange.Name = "sourceRange";
-            this.sourceRange.Width = 120;
-            // 
-            // sourceUncertainty
-            // 
-            this.sourceUncertainty.HeaderText = "Source Uncertainty";
-            this.sourceUncertainty.Name = "sourceUncertainty";
-            this.sourceUncertainty.Width = 140;
-            // 
-            // evaluate
-            // 
-            this.evaluate.HeaderText = "Evaluate";
-            this.evaluate.Name = "evaluate";
-            this.evaluate.Width = 120;
+            this.panelMainEval.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainEval.Location = new System.Drawing.Point(0, 40);
+            this.panelMainEval.Name = "panelMainEval";
+            this.panelMainEval.Size = new System.Drawing.Size(950, 610);
+            this.panelMainEval.TabIndex = 2;
             // 
             // EvaluateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 650);
-            this.Controls.Add(this.resultsDataGrid);
-            this.Controls.Add(this.dividerLabel);
-            this.Controls.Add(this.labelResults);
-            this.Controls.Add(this.inputsPanel);
-            this.Controls.Add(this.evaluateButton);
+            this.Controls.Add(this.panelMainEval);
+            this.Controls.Add(this.panelTopSUF);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EvaluateForm";
             this.Text = "EvaluateForm";
-            this.inputsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSourceUnc)).EndInit();
+            this.panelTopSUF.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button evaluateButton;
-        private System.Windows.Forms.Panel inputsPanel;
-        private System.Windows.Forms.Label labelResults;
-        private System.Windows.Forms.Label dividerLabel;
-        private System.Windows.Forms.DataGridView resultsDataGrid;
-        private System.Windows.Forms.DataGridView dataGridViewSourceUnc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn voltage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soaRange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soaUncertainty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sourceRange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sourceUncertainty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn evaluate;
+        private System.Windows.Forms.Panel panelTopSUF;
+        private System.Windows.Forms.Button buttonMetrologyNetEvaluate;
+        private System.Windows.Forms.Button buttonSoAEvaluate;
+        private System.Windows.Forms.Panel panelMainEval;
     }
 }

@@ -383,6 +383,11 @@ namespace AccFileParserUI
             return functions;
         }
 
+        public string getSelectedTechnique()
+        {
+            return techniqueName.Text;
+        }
+
         #endregion
 
         #region Helper Classes
