@@ -73,7 +73,7 @@ namespace AccFileParserUI
 
             // Create a parser object with the file content
             clearPreviousContent();
-            parser.loadFileContent(fileContent);
+            parser.loadFileContent(fileContent); // exception reading hp files
             // Disable button after reading the file
             // openAccFileButton.Enabled = false;
 
@@ -152,12 +152,13 @@ namespace AccFileParserUI
                 while (true)
                 {
                     pos = content.IndexOf(selectedMode, startIndex);
+                    int p = pos; // to keep the initial value for the below if
                     string subStr = string.Empty;
                     while (content[pos] != '\n')
                     {
                         subStr += content[pos++];
                     }
-                    if (subStr.Trim() == selectedMode)
+                    if (subStr.Trim() == selectedMode && content[p-1] == ' ')
                     {
                         fileContentRichTextBox.SelectionStart = pos;
                         fileContentRichTextBox.ScrollToCaret();
