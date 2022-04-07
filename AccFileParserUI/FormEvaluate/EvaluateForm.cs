@@ -71,5 +71,10 @@ namespace AccFileParserUI
         {
 
         }
+
+        private void buttonPtbDcc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

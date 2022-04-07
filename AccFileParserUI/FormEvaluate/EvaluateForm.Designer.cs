@@ -30,6 +30,7 @@ namespace AccFileParserUI
         private void InitializeComponent()
         {
             this.panelTopSUF = new System.Windows.Forms.Panel();
+            this.buttonPtbDcc = new System.Windows.Forms.Button();
             this.buttonMetrologyNetEvaluate = new System.Windows.Forms.Button();
             this.buttonSoAEvaluate = new System.Windows.Forms.Button();
             this.panelMainEval = new System.Windows.Forms.Panel();
@@ -40,6 +41,7 @@ namespace AccFileParserUI
             // 
             this.panelTopSUF.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelTopSUF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTopSUF.Controls.Add(this.buttonPtbDcc);
             this.panelTopSUF.Controls.Add(this.buttonMetrologyNetEvaluate);
             this.panelTopSUF.Controls.Add(this.buttonSoAEvaluate);
             this.panelTopSUF.Dock = System.Windows.Forms.DockStyle.Top;
@@ -47,6 +49,22 @@ namespace AccFileParserUI
             this.panelTopSUF.Name = "panelTopSUF";
             this.panelTopSUF.Size = new System.Drawing.Size(950, 40);
             this.panelTopSUF.TabIndex = 1;
+            // 
+            // buttonPtbDcc
+            // 
+            this.buttonPtbDcc.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonPtbDcc.FlatAppearance.BorderSize = 0;
+            this.buttonPtbDcc.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonPtbDcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPtbDcc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPtbDcc.ForeColor = System.Drawing.Color.White;
+            this.buttonPtbDcc.Location = new System.Drawing.Point(299, 2);
+            this.buttonPtbDcc.Name = "buttonPtbDcc";
+            this.buttonPtbDcc.Size = new System.Drawing.Size(122, 30);
+            this.buttonPtbDcc.TabIndex = 5;
+            this.buttonPtbDcc.Text = "PTB DCC Evaluate";
+            this.buttonPtbDcc.UseVisualStyleBackColor = false;
+            this.buttonPtbDcc.Click += new System.EventHandler(this.buttonPtbDcc_Click);
             // 
             // buttonMetrologyNetEvaluate
             // 
@@ -56,7 +74,7 @@ namespace AccFileParserUI
             this.buttonMetrologyNetEvaluate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMetrologyNetEvaluate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonMetrologyNetEvaluate.ForeColor = System.Drawing.Color.White;
-            this.buttonMetrologyNetEvaluate.Location = new System.Drawing.Point(122, 3);
+            this.buttonMetrologyNetEvaluate.Location = new System.Drawing.Point(140, 3);
             this.buttonMetrologyNetEvaluate.Name = "buttonMetrologyNetEvaluate";
             this.buttonMetrologyNetEvaluate.Size = new System.Drawing.Size(153, 30);
             this.buttonMetrologyNetEvaluate.TabIndex = 4;
@@ -74,9 +92,9 @@ namespace AccFileParserUI
             this.buttonSoAEvaluate.ForeColor = System.Drawing.Color.White;
             this.buttonSoAEvaluate.Location = new System.Drawing.Point(3, 3);
             this.buttonSoAEvaluate.Name = "buttonSoAEvaluate";
-            this.buttonSoAEvaluate.Size = new System.Drawing.Size(110, 30);
+            this.buttonSoAEvaluate.Size = new System.Drawing.Size(138, 30);
             this.buttonSoAEvaluate.TabIndex = 3;
-            this.buttonSoAEvaluate.Text = "SoA Evaluate";
+            this.buttonSoAEvaluate.Text = "MET/CAL Evaluate";
             this.buttonSoAEvaluate.UseVisualStyleBackColor = false;
             this.buttonSoAEvaluate.Click += new System.EventHandler(this.buttonSoAEvaluate_Click);
             // 
@@ -109,5 +127,6 @@ namespace AccFileParserUI
         private System.Windows.Forms.Button buttonMetrologyNetEvaluate;
         private System.Windows.Forms.Button buttonSoAEvaluate;
         private System.Windows.Forms.Panel panelMainEval;
+        private System.Windows.Forms.Button buttonPtbDcc;
     }
 }

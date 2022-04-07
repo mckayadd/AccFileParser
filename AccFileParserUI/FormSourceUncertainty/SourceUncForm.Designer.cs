@@ -33,6 +33,7 @@ namespace AccFileParserUI
             this.buttonPtbDcc = new System.Windows.Forms.Button();
             this.buttonMetCalAcc = new System.Windows.Forms.Button();
             this.panelMainSUF = new System.Windows.Forms.Panel();
+            this.buttonPTBDCC = new System.Windows.Forms.Button();
             this.panelTopSUF.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +41,7 @@ namespace AccFileParserUI
             // 
             this.panelTopSUF.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelTopSUF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTopSUF.Controls.Add(this.buttonPTBDCC);
             this.panelTopSUF.Controls.Add(this.buttonPtbDcc);
             this.panelTopSUF.Controls.Add(this.buttonMetCalAcc);
             this.panelTopSUF.Dock = System.Windows.Forms.DockStyle.Top;
@@ -58,9 +60,9 @@ namespace AccFileParserUI
             this.buttonPtbDcc.ForeColor = System.Drawing.Color.White;
             this.buttonPtbDcc.Location = new System.Drawing.Point(122, 3);
             this.buttonPtbDcc.Name = "buttonPtbDcc";
-            this.buttonPtbDcc.Size = new System.Drawing.Size(75, 30);
+            this.buttonPtbDcc.Size = new System.Drawing.Size(122, 30);
             this.buttonPtbDcc.TabIndex = 4;
-            this.buttonPtbDcc.Text = "PTB DCC";
+            this.buttonPtbDcc.Text = "Metrology.NET";
             this.buttonPtbDcc.UseVisualStyleBackColor = false;
             this.buttonPtbDcc.Click += new System.EventHandler(this.buttonPtbDcc_Click);
             // 
@@ -89,6 +91,21 @@ namespace AccFileParserUI
             this.panelMainSUF.Size = new System.Drawing.Size(950, 610);
             this.panelMainSUF.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.buttonPTBDCC.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonPTBDCC.FlatAppearance.BorderSize = 0;
+            this.buttonPTBDCC.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonPTBDCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPTBDCC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPTBDCC.ForeColor = System.Drawing.Color.White;
+            this.buttonPTBDCC.Location = new System.Drawing.Point(237, 3);
+            this.buttonPTBDCC.Name = "button1";
+            this.buttonPTBDCC.Size = new System.Drawing.Size(122, 30);
+            this.buttonPTBDCC.TabIndex = 5;
+            this.buttonPTBDCC.Text = "PTB DCC";
+            this.buttonPTBDCC.UseVisualStyleBackColor = false;
+                    // 
             // SourceUncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -111,5 +128,6 @@ namespace AccFileParserUI
         private System.Windows.Forms.Button buttonMetCalAcc;
         private System.Windows.Forms.Button buttonPtbDcc;
         private System.Windows.Forms.Panel panelMainSUF;
+        private System.Windows.Forms.Button buttonPTBDCC;
     }
 }
