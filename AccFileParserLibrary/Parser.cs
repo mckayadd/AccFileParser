@@ -40,15 +40,18 @@ namespace AccFileParserLibrary
             while ((line = sr.ReadLine()) != null)
             {
                 line = System.Text.RegularExpressions.Regex.Replace(line, @"\s+", " ");
+
+                if (line.StartsWith("#")) continue;
+
                 if (line.Contains("Begin Header")) continue;
                 else if (line.Contains("End Header")) break;
-                else if (line.Contains("instrument"))
+                else if (line.Contains("instrument") || line.Contains("Instrument"))
                 {
                     string tempstr = line.Trim();
                     string[] tempstrlist = tempstr.Split("=");
                     refStd.instrument = tempstrlist[1].Trim();
                 }
-                else if (line.Contains("interval"))
+                else if (line.Contains("interval") || line.Contains("Interval"))
                 {
                     string tempstr = line.Trim();
                     string[] tempstrlist = tempstr.Split("=");
@@ -56,7 +59,7 @@ namespace AccFileParserLibrary
                     refStd.interval = Int32.Parse(templistValueUnit[0].Trim());
                     refStd.intervalUnit = templistValueUnit[1].Trim();
                 }
-                else if (line.Contains("confidence"))
+                else if (line.Contains("confidence") || line.Contains("Confidence"))
                 {
                     string tempstr = line.Trim();
                     string[] tempstrlist = tempstr.Split("=");
@@ -95,6 +98,8 @@ namespace AccFileParserLibrary
                 line = sr.ReadLine();
                 if (line == null) break;
                 line = System.Text.RegularExpressions.Regex.Replace(line, @"\s+", " ");
+                
+                if (line.Contains("#")) continue;
 
                 if (line.Contains("Mode"))
                 {
@@ -102,12 +107,12 @@ namespace AccFileParserLibrary
                     currentMode = "";
                     currentFunction = new Function();
                     string[] tempStrList = line.Split(":");
-                    currentMode = tempStrList[1].Trim();
+                    currentMode = tempStrList[1].Trim(); // exception reading u2000
                     continue;
                 }
-               
-                if (line.Contains("#")) continue;
-                else if(line.Trim() == "") continue;
+
+                //if (line.Contains("#")) continue;
+                if(line.Trim() == "") continue;
                 else 
                 {
                     RangeAcc currentRangeAcc = new RangeAcc();

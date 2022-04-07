@@ -1,0 +1,61 @@
+  # This file contains 365 day accuracy information for the
+  # Manufacturer / Model
+
+  # $Revision: 3789 $
+
+Begin Header
+  instrument     =             Guildline 9211A
+  interval       =             365 days
+  confidence     =             2 sigma
+End Header
+
+  # Any special Notes
+               # Reference document was download from Guildline Instruments on 2 Oct 2007
+               # Part Number: 9211AV1.0 Copyright 2002.08.20 Guildline Instruments Limited
+               # The is for the Guildline 9211A High Stability Multiple Value DC Current Shunt
+
+  # DC Current only
+
+  # Any notes for Amps
+
+               # The below specifications only applies to the 9211A
+               # Does NOT include the Voltmeter accuracy specifications
+
+  # Nominal                    Mod 1                   Tolerance   Floor       Resolution
+  # ------------------------------------------------------------------------------------------
+
+Mode:          10uA
+   000.0000E+00    1.0000E-06  NA          NA                 NA          NA     1.00E-09
+     1.0000E-06   10.0000E-06  NA          NA            0.010000    5.00E-11    1.00E-09
+
+Mode:          100uA
+   000.0000E+00   10.0000E-06  NA          NA                 NA          NA     1.00E-09
+    10.0000E-06  100.0000E-06  NA          NA            0.010000    5.00E-10    1.00E-09
+
+Mode:          1mA
+   000.0000E+00  100.0000E-06  NA          NA                 NA          NA     1.00E-09
+   100.0000E-06    1.0000E-03  NA          NA            0.010000    5.00E-09    1.00E-09
+
+Mode:          10mA
+   000.0000E+00    1.0000E-03  NA          NA                 NA          NA     1.00E-09
+     1.0000E-03   10.0000E-03  NA          NA            0.010000    5.00E-08    1.00E-09
+
+Mode:          100mA
+   000.0000E+00   10.0000E-03  NA          NA                 NA          NA     1.00E-09
+    10.0000E-03  100.0000E-03  NA          NA            0.010000    5.00E-07    1.00E-09
+
+Mode:          1A
+   000.0000E+00  100.0000E-03  NA          NA                 NA          NA     1.00E-09
+   100.0000E-03    1.0000E+00  NA          NA            0.010000    1.00E-05    1.00E-09
+
+Mode:          10A
+   000.0000E+00    1.0000E+00  NA          NA                 NA          NA     1.00E-09
+     1.0000E+00   10.0000E+00  NA          NA            0.010000    1.00E-04    1.00E-09
+
+Mode:          100A
+   000.0000E+00   10.0000E+00  NA          NA                 NA          NA     1.00E-09
+    10.0000E+00  100.0000E+00  NA          NA            0.050000    3.00E-03    1.00E-09
+
+Mode:          300A
+   000.0000E+00   30.0000E+00  NA          NA                 NA          NA     1.00E-09
+    30.0000E+00  300.0000E+00  NA          NA            0.100000    9.00E-03    1.00E-09
