@@ -14,7 +14,7 @@ namespace AccFileParserUI
 
         bool isFirstClickButtonSoaEval = true;
         bool isFirstClickButtonMetNetEval = true;
-
+        // example comment
         public EvaluateForm(Parser aParser)
         {
             InitializeComponent();
